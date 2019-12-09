@@ -1,0 +1,82 @@
+---
+title: "How to fill the website"
+author: "Sébastien Rochette"
+date: "09/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Add a post to "News" section
+
+- Create a directory with name being the slug of the post under "content/post"
+    + A slug has no space, no special character except `-`, everything in lowercase
+- Create a ".Rmarkdown" file using {blogdown} addin "New Post". 
+    + Save this file as "index.Rmardown" in the directory created above
+- To add a featured image for the post, add an image called "featured.png" or "featured.jpg" in this same directory
+
+
+## Add a new "Documentation"
+
+- Create a directory with name being the slug of the post under "content/publication"
+    + A slug has no space, no special character except `-`, everything in lowercase
+- Create a ".Rmarkdown" file using {blogdown} addin "New Post". 
+    + Save this file as "index.Rmardown" in the directory created above
+- To add a featured image for the post, add an image called "featured.png" or "featured.jpg" in this same directory
+
+## Structure of the website (active widgets)
+
+The website is built on pages and widgets inside pages. 
+The content of the website that can be modified in exclusively in the "content" directory. 
+There are multiple directories, more or less linked to pages of the website.
+Except for "post", each directory contain multiple ".md" files which are called widgets. 
+They can be activated or not on the website.  
+
+Below is the list of activated widgets and how to modify their content.  
+
+See widgets available with the Academic theme: <https://sourcethemes.com/academic/docs/page-builder/>  
+
+### Home
+
+Content of home page is stored in "/content/home" directory.
+This is a page with multiple widgets, activated or not.  
+
++ **hero.md**: Get started. 
+    + <File to fill>
+    + (weight = 10)
++ **skills.md**: Characteristics of the {golemverse} with icons.
+    + <File to fill>
+    + (weight = 30)
++ **featured.md**: One specific post to highlight whatever its time of publication.
+    + <Only fill title and format. List of posts is read from "/post" directory with metadata: _featured_ set to `yes`>
+    + (weight = 40)
++ **publications.md**: List of documentation resources. 
+    + <Only fill title and format. List of documents is read from "/publication" directory>
+    + (weight = 50)
++ **posts.md**: Last News. 
+    + <Only fill title and format. List of posts is read from "/post" directory>
+    + (weight = 60)
++ **tags.md**: Tag cloud of post tags used.
+    + <Only fill format. List of tags is issued in "tags" metadata of posts in "/post">
+    + (weight = 120)
++ **contact.md**: Contacting ThinkR using formspree.io. 
+    + <File to fill>
+    + (weight = 130)
+
+### Documentation
+
+"Documentation" is a shortcut to "Documentation" section of the home page.
+See **publications.md** in home page above.
+
+### Packages
+
+
+
+
+## Modify header menu
+
+To modify header menu, go to "config/_default/menus.toml". 
+
+
