@@ -85,7 +85,7 @@ edit_page = {repo_url = "https://github.com/ThinkR-open/golemverse.org", content
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "contact@thinkr.fr"
+email = "golem@thinkr.fr"
 phone = "0033 1 85 09 14 03"
 
 # Address
@@ -121,8 +121,7 @@ contact_links = [
 ############################
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image = ""
-
+sharing_image = "golem-color-star.png"
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
 twitter = "ThinkR_FR"
 
@@ -256,5 +255,5 @@ plugins_js  = []
 ## Marketing
 ############################
 [marketing]
-  google_analytics = ""
+  google_analytics = "UA-61204095-3"
   google_tag_manager = ""

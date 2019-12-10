@@ -55,4 +55,6 @@ hero_media = "golem-hex_250.png"
 
 Build **Any Shiny App** with {golem}
 
-<span style="text-shadow: none;"><a class="github-button" href="https://github.com/ThinkR-open/golem" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star this on GitHub</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+<span style="text-shadow: none;"><a class="github-button" href="https://github.com/ThinkR-open/golem" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star this on GitHub</a></span>
+
+
