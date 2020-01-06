@@ -17,15 +17,12 @@ knitr::opts_chunk$set(echo = TRUE)
 - Create a ".Rmarkdown" file using {blogdown} addin "New Post" *or copy content from an existing one (which is easier)*. 
     + Save this file as **"index.Rmardown"** in the directory created above
 - To add a featured image for the post, add an image called **"featured.png"** or **"featured.jpg"** in this same directory
+    + Best dimension is 1024*512
 
 
-### Add a new "Documentation"
+### Add a new "Resources"
 
-- Create a directory with name being the slug of the post under "content/publication"
-    + A slug has no space, no special character except `-`, everything in lowercase
-- Create a ".Rmarkdown" file using {blogdown} addin "New Post" *or copy content from an existing one (which is easier)*. 
-    + Save this file as **"index.Rmardown"** in the directory created above
-- To add a featured image for the post, add an image called **"featured.png"** or **"featured.jpg"** in this same directory
+Add to the list in "content/home/resources".
 
 ### Add a new "Package"
 
@@ -61,10 +58,10 @@ This is a page with multiple widgets, activated or not.
 + **featured.md**: One specific post to highlight whatever its time of publication.
     + <Only fill title and format. List of posts is read from "/post" directory with metadata: _featured_ set to `yes`>
     + (weight = 40)
-+ **publications.md**: List of documentation resources. 
-    + <Only fill title and format. List of documents is read from "/publication" directory>
++ **resources.md**: List of resources. 
+    + <File to fill> with markdown syntax
     + (weight = 50)
-+ **posts.md**: Last News. 
++ **posts.md**: Recent News. 
     + <Only fill title and format. List of posts is read from "/post" directory>
     + (weight = 60)
 + **tags.md**: Tag cloud of post tags used.
