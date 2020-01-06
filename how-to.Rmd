@@ -17,6 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - Create a ".Rmarkdown" file using {blogdown} addin "New Post" *or copy content from an existing one (which is easier)*. 
     + Save this file as **"index.Rmardown"** in the directory created above
 - To add a featured image for the post, add an image called **"featured.png"** or **"featured.jpg"** in this same directory
+    + Best dimension is 1024*512
 
 
 ### Add a new "Resources"
