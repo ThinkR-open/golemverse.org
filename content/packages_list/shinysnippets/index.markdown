@@ -1,0 +1,26 @@
+---
+title: '{shinysnippets}'
+author: Cervan
+date: '2020-12-01'
+slug: shinysnippets
+categories:
+  - shinysnippets
+tags:
+  - shinysnippets
+subtitle: 'Save development time with shinysnippets'
+summary: ''
+authors: ["cervan"]
+lastmod: '2020-12-01T11:00:09+01:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+Thanks to {shinysnippets} package, you will save development time. No more need to type obverseEvent or withProgress...
+
+[More documentation on {shinysnippets}](https://github.com/ThinkR-open/shinysnippets)
+
+
