@@ -12,7 +12,7 @@ cache:
     - $HOME/bin
 
 script:
-  - Rscript -e 'blogdown::install_hugo()'
+  - Rscript -e 'blogdown::install_hugo(version = "0.60.1")'
   - Rscript -e 'blogdown::build_site()'
 
 deploy:
