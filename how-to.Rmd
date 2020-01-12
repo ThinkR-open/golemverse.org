@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - `git clone https://github.com/ThinkR-open/golemverse.org.git`
 
-- Retriece theme :
+- Retrieve theme :
     + `git submodule update --init --recursive`
 
 ## Add content
@@ -145,3 +145,18 @@ git checkout <VERSION>
 git pull upstream
 ```
 where <VERSION> is defined in the previous section
+
+## Update DESCRIPTION dependencies
+
+```{r}
+dirs <- list.dirs("content", recursive = FALSE)
+# dir.exists(dirs)
+res <- NULL
+for (i in seq_along(dirs)) {
+    res <- c(res, attachment::att_from_rmds(dirs[i], pattern = "*.(Rmd|rmd|Rmarkdown)$"))
+}
+
+pkg <- unique(c(res, "blogdown", "emo"))
+attachment::att_to_desc_from_is(imports = pkg)
+```
+

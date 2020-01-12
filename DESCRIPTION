@@ -1,6 +1,14 @@
-Package: placeholder
 Type: Website
+Package: placeholder
 Title: Does not matter.
 Version: 0.0.1
-Imports: blogdown
-Remotes: rstudio/blogdown
+Imports: 
+    blogdown,
+    details,
+    emo,
+    knitr,
+    lubridate,
+    magrittr
+Remotes: 
+    hadley/emo,
+    rstudio/blogdown
