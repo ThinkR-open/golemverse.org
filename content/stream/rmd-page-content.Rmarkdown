@@ -1,0 +1,35 @@
+---
+widget: "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless: true  # This file represents a page section.
+active: true  # Activate this widget? true/false
+weight: 16  # Order that this section will appear.
+#
+title: "Streams"
+author: "Sébastien Rochette"
+date: "10/01/2020"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### First live stream `r emo::ji("birthday_cake")` 
+
+<li> `r emo::ji("man_technologist")` Colin Fay, <a href = "https://twitter.com/_ColinFay">@_ColinFay</a> </li>
+<li> `r emo::ji("link")` https://www.twitch.tv/thinkr_fr </li>
+<li> `r emo::ji("time")` __2020-01-13 21.00 Paris Time__. </li>
+
+```{r echo = FALSE, message=FALSE}
+library(magrittr)
+library(lubridate)
+d <- ymd_hm("2020-01-13 21.00", tz = "Europe/Paris")
+list(
+  "UTC" = with_tz(d, "UTC"),
+  "America/New_York" = with_tz(d, "America/New_York"),
+  "America/Los_Angeles" = with_tz(d, "America/Los_Angeles"),
+  "Australia/Sydney" = with_tz(d, "Australia/Sydney")
+) %>%
+  details::details(summary = 'See Event in Other Timezones')
+```
+
