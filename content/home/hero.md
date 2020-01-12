@@ -41,14 +41,16 @@ hero_media = "golem-hex_250.png"
   label = "Get Started"
   icon_pack = "fas"
   icon = "caret-right"
+  target = "_blank"
   
 [cta_alt]
   url = "https://github.com/ThinkR-open/golem"
   label = "Download"
+  target = "_blank"
 
 # Note. An optional note to show underneath the links.
 [cta_note]
-#  label = '<a class="js-github-release" href="https://github.com/ThinkR-open/golem/releases" data-repo="ThinkR-open/golem">Latest release<!-- V --></a>'
+  label = '<a class="js-github-release" href="https://github.com/ThinkR-open/golem/releases" data-repo="ThinkR-open/golem">Latest release<!-- V --></a>'
 +++
 
 **The opiniated framework for building production-grade shiny applications**
