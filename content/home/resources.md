@@ -50,5 +50,60 @@ subtitle = ""
  css_class = ""
 +++
 
-- Building Big Shiny Apps - A Workflow: [Book on recommendation to build big shiny apps](https://thinkr-open.github.io/building-shiny-apps-workflow)
+## About {golem}
 
+#### Official page
+
+- <https://thinkr-open.github.io/golem/>
+
+#### Book :
+
+  - <https://thinkr-open.github.io/building-shiny-apps-workflow/>
+
+#### Blog posts :
+
+*Building Big Shiny Apps*
+
+  - Part 1:
+    <https://rtask.thinkr.fr/blog/building-big-shiny-apps-a-workflow-1/>
+  - Part 2:
+    <https://rtask.thinkr.fr/blog/building-big-shiny-apps-a-workflow-2/>
+
+#### Slide decks
+
+  - useR\! 2019 : [A Framework for Building Robust & Production Ready
+    Shiny
+    Apps](https://github.com/VincentGuyader/user2019/raw/master/golem_Vincent_Guyader_USER!2019.pdf)
+  - ThinkR x RStudio Roadshow,Paris : [Production-grade Shiny Apps with
+    {golem}](https://speakerdeck.com/colinfay/production-grade-shiny-apps-with-golem)
+
+#### Video
+
+  - [{golem} and Effective Shiny Development
+    Methods](https://www.youtube.com/watch?v=OU1-CkSVdTI)
+  - [Hands-on demonstration of
+    {golem}](https://shinydevseries.com/post/golem-demo/)
+  - useR\! 2019 : [A Framework for Building Robust & Production Ready
+    Shiny Apps](https://youtu.be/tCAan6smrjs)
+  - 🇫🇷 [Introduction to {golem}](https://youtu.be/6qI4NzxlAFU)
+
+#### Cheatsheet
+
+  - [{golem} cheatsheet](https://thinkr.fr/golem_cheatsheet_v0.1.pdf)
+
+## About {shinipsum}
+
+#### Official page
+
+- <https://thinkr-open.github.io/shinipsum/>
+
+#### Blog posts 
+
+  - Step 2 of this article :
+    <https://rtask.thinkr.fr/blog/building-big-shiny-apps-a-workflow-2/>
+    
+## About {shinysnippets}
+
+#### Official page 
+
+- <https://github.com/ThinkR-open/shinysnippets>
