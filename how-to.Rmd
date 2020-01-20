@@ -27,9 +27,18 @@ knitr::opts_chunk$set(echo = TRUE)
     + Best dimension is 1024*512
 
 
-### Add a new "Resources"
+### Add a new "Resources" on home page
 
 Add to the list in "content/home/resources".
+
+> It is better to keep this list short and link to others parts of the website. In particular to list of resources on page 'Documentation' (see below).
+
+### Update "Documentation" list
+
+Modify "content/documentation/documentation.md".  
+
+- Keep it simple
+- Link to external resources
 
 ### Add a new "Package"
 

@@ -8,8 +8,8 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 50  # Order that this section will appear.
 
-title = "Resources"
-subtitle = ""
+title = "Documentation"
+subtitle = "Blog posts, podcasts, videos, other documentation of the {golemverse}"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -50,25 +50,38 @@ subtitle = ""
  css_class = ""
 +++
 
+
 #### Book
 
 - ["Engineering Production-grade Shiny Apps"](https://thinkr-open.github.io/building-shiny-apps-workflow/)
 
-#### List of packages in the {golemverse}
-
+#### Packages documentation
 
 - [{golem}](https://thinkr-open.github.io/golem/)
 - [{shinipsum}](https://thinkr-open.github.io/shinipsum/)
 - [{shinysnippets}](https://github.com/ThinkR-open/shinysnippets)
 
-> For more information, see [{golemverse} packages page](packages)
 
-#### Blog posts, podcasts, conferences material, other documentation
+#### Blog posts :
 
-See our [documentation page](documentation)
+- [2019-09-29 - Start with {golem}](https://rtask.thinkr.fr/getting-started-with-golem/)
+- [2019-08-19 - Dash with {golem}](https://rtask.thinkr.fr/dash-with-golem-the-beginning/)
+- [Building-big-shiny-apps-a-workflow - Part 1](https://rtask.thinkr.fr/blog/building-big-shiny-apps-a-workflow-1/)
+- [Building-big-shiny-apps-a-workflow - Part 2](https://rtask.thinkr.fr/blog/building-big-shiny-apps-a-workflow-2/)
 
-#### Live stream
 
-[Follow us on Twitch](https://www.twitch.tv/thinkr_fr)  
+#### Slide decks
 
-> Upcoming and past live streams: [live stream page](stream)
+- 2019-07 - useR\! 2019 : [A Framework for Building Robust & Production Ready Shiny    Apps](https://github.com/VincentGuyader/user2019/raw/master/golem_Vincent_Guyader_USER!2019.pdf)
+- 2019-05-24 - ThinkR x RStudio Roadshow, Paris : [Production-grade Shiny Apps with    {golem}](https://speakerdeck.com/colinfay/production-grade-shiny-apps-with-golem)
+
+#### Podcasts & Videos
+
+- [{golem} and Effective Shiny Development Methods](https://www.youtube.com/watch?v=OU1-CkSVdTI)
+- [Hands-on demonstration of {golem}](https://shinydevseries.com/post/golem-demo/)
+- useR\! 2019 : [A Framework for Building Robust & Production Ready Shiny Apps](https://youtu.be/tCAan6smrjs)
+- 🇫🇷 [Introduction à {golem} en français](https://youtu.be/6qI4NzxlAFU)
+
+#### Cheatsheet
+
+- [{golem} cheatsheet](https://thinkr.fr/golem_cheatsheet_v0.1.pdf)
