@@ -72,6 +72,7 @@ subtitle = "Blog posts, podcasts, videos, other documentation of the {golemverse
 
 #### Slide decks
 
+- 2019-08-22 - R Pharma 2019 : [Creating (and Reviving) Shiny apps with {golem}!](https://rpodcast.gitlab.io/golem_rpharma2019) by [Eric Nantz](https://github.com/rpodcast)
 - 2019-07 - useR\! 2019 : [A Framework for Building Robust & Production Ready Shiny    Apps](https://github.com/VincentGuyader/user2019/raw/master/golem_Vincent_Guyader_USER!2019.pdf) by [Vincent Guyader](authors/vincent)
 - 2019-05-24 - ThinkR x RStudio Roadshow, Paris : [Production-grade Shiny Apps with    {golem}](https://speakerdeck.com/colinfay/production-grade-shiny-apps-with-golem) by [Colin Fay](authors/colin)
 
