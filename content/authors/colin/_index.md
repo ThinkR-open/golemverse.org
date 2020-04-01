@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: R expert
+role: Data Scientist and R Hacker
 
 # Organizations/Affiliations
 organizations:
@@ -21,9 +21,9 @@ organizations:
 bio: Datascientist – R Hacker – twitter addict
 
 interests:
-- Rstats
+- R
 - Shiny
-- Dataviz
+- Software engineering
 
 education:
   courses:
