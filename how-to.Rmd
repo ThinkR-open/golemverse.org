@@ -152,8 +152,10 @@ Then, update by running:
 ```
 git checkout <VERSION>
 git pull upstream
+# OU
+git pull upstream <VERSION>
 ```
-where <VERSION> is defined in the previous section
+where <VERSION> is the version in the form vX.X.X that you wish to update to. 
 
 ## Update DESCRIPTION dependencies
 
