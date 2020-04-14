@@ -19,7 +19,9 @@ image:
 projects: []
 ---
 
-Thanks to {shinysnippets} package, you will save development time. No more need to type obverseEvent or withProgress...
+Thanks to {shinysnippets} package, you will save development time. No more need to type `obverseEvent()`, `withProgress()` or `module_1_server()`/`module_1_ui()` ...  
+Use the power of Rstudio snippets !  
+
 
 [More documentation on {shinysnippets}](https://github.com/ThinkR-open/shinysnippets)
 
