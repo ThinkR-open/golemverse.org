@@ -52,7 +52,7 @@ subtitle = ""
 
 #### Book
 
-- ["Engineering Production-grade Shiny Apps"](https://thinkr-open.github.io/building-shiny-apps-workflow/)
+- ["Engineering Production-grade Shiny Apps"](https://engineering-shiny.org)
 
 #### List of packages in the {golemverse}
 

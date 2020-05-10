@@ -50,5 +50,5 @@ subtitle = ""
  css_class = ""
 +++
 
-- Building Big Shiny Apps - A Workflow: [Book on recommendation to build big shiny apps](https://thinkr-open.github.io/building-shiny-apps-workflow)
+- Building Big Shiny Apps - A Workflow: [Book on recommendation to build big shiny apps](https://engineering-shiny.org)
 
