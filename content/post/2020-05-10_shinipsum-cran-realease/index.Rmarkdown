@@ -1,0 +1,110 @@
+---
+title: "{shinipsum} is now on CRAN"
+author: colin
+date: '2020-05-10'
+slug: 2020-05-10_shinipsum-cran-realease
+categories:
+  - shinipsum
+  - release
+tags:
+  - shinipsum
+  - package
+subtitle: ''
+summary: '{shinipsum} is now available on CRAN'
+authors: [colin]
+lastmod: '2020-05-10T21:29:47+01:00'
+featured: yes
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+I'm very happy to announce that `{shinipsum}` is now on CRAN!
+
+`{shinipsum}` is a package that can help you build `{shiny}` prototypes faster by providing a series of functions that can generate random elements to populate your UI. 
+If you are familiar with "lorem ipsum", the fake text generator that is used in software design as a placeholder for text, the idea is the same: generating placeholders for Shiny outputs. 
+
+`{shinipsum}` can be installed from CRAN with:
+
+```{r eval=FALSE}
+install.packages("shinipsum")
+```
+
+You can install this package from GitHub with:
+
+```{r eval=FALSE}
+remotes::install_github("Thinkr-open/shinipsum")
+```
+
+In this package, a series of functions that generates random placeholders. 
+For example, `random_ggplot()` generates random `{ggplot2}` elements:
+
+```{r}
+library(shinipsum)
+library(ggplot2)
+```
+
+
+```{r}
+random_ggplot() + 
+  labs(title = "Random plot") 
+```
+
+```{r}
+random_ggplot() + 
+  labs(title = "Random plot") 
+```
+
+Of course, the idea is to combine this with a Shiny interface, for example `random_ggplot()` will be used with a `renderPlot()` and `plotOutput()`.
+And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, `random_ggplot()` has a `type` parameter that can help you select a specific geom. 
+
+```{r eval = FALSE}
+library(shiny)
+library(shinipsum)
+library(DT)
+ui <- fluidPage(
+  h2("A Random DT"),
+  DTOutput("data_table"),
+  h2("A Random Plot"),
+  plotOutput("plot"),
+  h2("A Random Text"),
+  tableOutput("text")
+)
+
+server <- function(input, output, session) {
+  output$data_table <- DT::renderDT({
+    random_DT(5, 5)
+  })
+  output$plot <- renderPlot({
+    random_ggplot(type = "point")
+  })
+  output$text <- renderText({
+    random_text(nwords = 50)
+  })
+}
+shinyApp(ui, server)
+```
+
+
+Other `{shinipsum}` functions include: 
+
++ tables: 
+
+```{r 10-prototyping-9 }
+random_table(nrow = 3, ncol = 10)
+```
+
++ print outputs:
+
+```{r 10-prototyping-10 }
+random_print(type = "model")
+```
+
+... and text, image, ggplotly, dygraph, and DT.
+
+Learn more about `{shinipsum}`: 
+
++ [`{shinipsum}` website](https://thinkr-open.github.io/shinipsum/)
++ [Chapter 10 Building an “ipsum-app” - Engineering Production-Grade Shiny Apps](https://engineering-shiny.org/stepprotopype.html)
