@@ -21,6 +21,11 @@ image:
 projects: []
 ---
 
+```{r include=FALSE}
+install.packages("shinipsum")
+```
+
+
 I'm very happy to announce that `{shinipsum}` is now on CRAN!
 
 `{shinipsum}` is a package that can help you build `{shiny}` prototypes faster by providing a series of functions that can generate random elements to populate your UI. 
