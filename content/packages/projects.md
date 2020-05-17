@@ -75,3 +75,4 @@ subtitle = ""
  css_class = ""
 +++
 
+<img style="max-width:60%;margin:15px auto" src="/img/golemverse_banner.png"/>

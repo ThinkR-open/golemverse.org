@@ -53,13 +53,13 @@ subtitle = "Blog posts, podcasts, videos, other documentation of the {golemverse
 
 #### Book
 
-- ["Engineering Production-grade Shiny Apps"](https://thinkr-open.github.io/building-shiny-apps-workflow/)
+- ["Engineering Production-grade Shiny Apps"](//engineering-shiny.org/)
 
 #### Packages documentation
 
 - [{golem}](https://thinkr-open.github.io/golem/)
 - [{shinipsum}](https://thinkr-open.github.io/shinipsum/)
-- [{shinysnippets}](https://github.com/ThinkR-open/shinysnippets)
+- [{shinysnippets}](https://thinkr-open.github.io/shinysnippets/)
 
 
 #### Blog posts :

@@ -13,7 +13,7 @@ subtitle: ''
 summary: 'First version of {golem} is on CRAN'
 authors: []
 lastmod: '2019-08-05T16:21:10+01:00'
-featured: yes
+featured: no
 image:
   caption: ''
   focal_point: ''
