@@ -1,5 +1,8 @@
 # {golemverse} website
 
+Find the website on : <https://golemverse.org>
+
+<img src="static/img/golemverse_banner.png">
 
 ## About
 
