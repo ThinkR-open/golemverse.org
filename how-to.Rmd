@@ -129,6 +129,11 @@ Modify HTML with Hugo template in "layouts/partials/site_footer.html"
 
 Add an image with size 512*512 in `assets/images/icon.png`
 
+## Modify CSS theme
+
+Modify main colours in "data/themes/ocean_thinkr.toml"  
+Modify scss in "assets/scss/custom.scss"
+
 
 ## Update academic theme
 Read news: https://sourcethemes.com/academic/updates
