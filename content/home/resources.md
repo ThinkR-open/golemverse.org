@@ -50,6 +50,8 @@ subtitle = ""
  css_class = ""
 +++
 
+<img class="resources-golemverse" src="img/thinkr-hex-golemverse_250.png"></img>
+
 #### Book
 
 - ["Engineering Production-grade Shiny Apps"](https://engineering-shiny.org)
