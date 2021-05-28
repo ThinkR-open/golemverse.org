@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Golemverse</title>
+    <link>/authors/</link>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright>
+    <image>
+      <url>/img/golemverse_banner.png</url>
+      <title>Authors</title>
+      <link>/authors/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;ThinkR is above all a &lt;strong&gt;team united by a common passion: R&lt;/strong&gt;.
+Passionate about data, believing strongly in the power of &lt;strong&gt;open source&lt;/strong&gt;, our team is committed every day to, and with, the user community. Coming from different backgrounds, our &lt;strong&gt;expeRts&lt;/strong&gt; know how to bring a new and unique perspective on R, and hope to participate, on their own scale, in the construction of the future of the most popular language in the world of data science.&lt;/p&gt;
+&lt;p&gt;Whether you call on us for your &lt;strong&gt;development, training or analysis&lt;/strong&gt;, we are here to provide you with a unique service: the one driven by a &lt;strong&gt;passion for a language in constant evolution&lt;/strong&gt;, which we like to learn, relearn, but above all to make you learn and share.&lt;/p&gt;
+&lt;p&gt;Do you have &lt;strong&gt;challenges&lt;/strong&gt; that seem &lt;strong&gt;insurmountable&lt;/strong&gt; to you? That’s good, we like impossible missions. Push technology to its limits, twist language to meet a need, search manuals to the last page, that’s what makes us thrilled. It is by seeking every day to &lt;strong&gt;push R’s capabilities even further&lt;/strong&gt; that we have learned to build unexpected but always high-end solutions for those who have worked with us.&lt;/p&gt;
+&lt;p&gt;Our relationship with R is a bit like a &lt;strong&gt;love story&lt;/strong&gt;: we know its every nook and cranny, we can recite its strengths and weaknesses to you without blinking, we have learned over time to love its peculiarities, its specificities, and everything that makes it unique. But above all, after so many years, it is a language that continues to amaze us: of itself, but also thanks to all the incredible resources that a &lt;strong&gt;global community of enthusiasts&lt;/strong&gt; is building, and that we take real pleasure in discovering every day, to transmit them to you tomorrow.&lt;/p&gt;
+&lt;p&gt;So, and it goes without saying, you won’t have to look any further to find the best: they’re at &lt;strong&gt;ThinkR&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/cervan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/cervan/</guid>
+      <description>&lt;p&gt;Cervan is enthusiastic and motivated when it comes to rolling up his sleeves to meet new challenges.
+Even if it means venturing dangerously into the depths of R, learning new languages and experimenting outside your comfort zone.
+Nevertheless, it remains reliable, constructive and efficient when it comes to using its skills to train or develop.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/colin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/colin/</guid>
+      <description>&lt;p&gt;When Colin doesn’t code in R, he codes in R. Eventually, we’ll find him on Twitter… talking about R. What he prefers is to put his hands in the bowels of his favorite language to extract the buried treasures.
+Dismantle, divert, assemble, improve… give him a technical challenge and he will not give up until he has settled his score, preferably with elegance, a smile and without (too) fuss. And it is with pleasure that he will share the solution within the team or with the worldwide internets.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/diane/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/diane/</guid>
+      <description>&lt;p&gt;Certified Data Scientist, it is her appetite for data and what we discover when we crush them that brought her to R. She wrote her first line of R in 2007.
+Pragmatic when it comes to implementing a product derived from the data, pedagogical when it comes to transmitting what she knows about R, committed when it comes to getting involved for her teams, her customers or the community of R users.
+She is the one who brings the values of caring and excellence to the team.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/sebastien/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/sebastien/</guid>
+      <description>&lt;p&gt;With a PhD thesis in marine ecology and experience in building data science tools for research, Sébastien now puts his scientific rigour at the service of our clients. With R of course!
+Meticulous, rigorous and patient, his battles stand around readability, reproducibility and documentation of tools.
+This aspiration for precision is not incompatible with great creativity, especially when it comes to diverting statistical methods and other tools from their original uses to achieve his goals. His purpose is to expose the mechanisms that link the data together and to extract the substantial bone marrow.
+A big consumer of spatial data, he likes to draw maps (or waffles) with R.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/vincent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/vincent/</guid>
+      <description>&lt;p&gt;With more than 10 years of experience, and with a scientific and technical background, Vincent is an R-enthusiast.
+He still has his hands in the code, whether to develop applications, analyze data or build packages. When he’s not coding, he plays with Docker and manages servers.
+Meeting highly technical challenges is not incompatible with pedagogy: he passionately trains very diverse learner profiles at R.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

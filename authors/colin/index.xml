@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golemverse</title>
+    <link>/authors/colin/</link>
+      <atom:link href="/authors/colin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Golemverse</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright>
+    <image>
+      <url>/img/golemverse_banner.png</url>
+      <title>Golemverse</title>
+      <link>/authors/colin/</link>
+    </image>
+    
+  </channel>
+</rss>

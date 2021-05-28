@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contacts | Golemverse</title>
+    <link>/contact/</link>
+      <atom:link href="/contact/index.xml" rel="self" type="application/rss+xml" />
+    <description>Contacts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright>
+    <image>
+      <url>/img/golemverse_banner.png</url>
+      <title>Contacts</title>
+      <link>/contact/</link>
+    </image>
+    
+    <item>
+      <title>Contact ThinkR</title>
+      <link>/contact/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/contact/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
