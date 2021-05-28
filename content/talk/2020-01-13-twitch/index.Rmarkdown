@@ -69,16 +69,25 @@ math: true
 <li> `r emo::ji("link")` https://www.twitch.tv/thinkr_fr </li>
 <li> `r emo::ji("time")` __2020-01-13 21.00 Paris Time__. </li>
 
-```{r echo = FALSE, message=FALSE}
-library(magrittr)
-library(lubridate)
-d <- ymd_hm("2020-01-13 21.00", tz = "Europe/Paris")
-list(
-  "UTC" = with_tz(d, "UTC"),
-  "America/New_York" = with_tz(d, "America/New_York"),
-  "America/Los_Angeles" = with_tz(d, "America/Los_Angeles"),
-  "Australia/Sydney" = with_tz(d, "Australia/Sydney")
-) %>%
-  details::details(summary = 'See Event in Other Timezones')
+<details closed>
+<summary> <span title='Click to Expand'> See Event in Other Timezones </span> </summary>
+
+```r
+
+$UTC
+[1] "2020-01-13 20:00:00 UTC"
+
+$`America/New_York`
+[1] "2020-01-13 15:00:00 EST"
+
+$`America/Los_Angeles`
+[1] "2020-01-13 12:00:00 PST"
+
+$`Australia/Sydney`
+[1] "2020-01-14 07:00:00 AEDT"
+
+
 ```
 
+</details>
+<br>
