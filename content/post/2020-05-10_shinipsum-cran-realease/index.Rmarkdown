@@ -22,9 +22,7 @@ projects: []
 ---
 
 ```{r include=FALSE}
-if (!requireNamespace("shinipsum")){
-  install.packages("shinipsum")
-}
+install.packages("shinipsum")
 ```
 
 
