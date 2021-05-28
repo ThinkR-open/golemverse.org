@@ -5,12 +5,23 @@
     <link>/authors/cervan/</link>
       <atom:link href="/authors/cervan/index.xml" rel="self" type="application/rss+xml" />
     <description>Golemverse</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>Golemverse</title>
       <link>/authors/cervan/</link>
     </image>
+    
+    <item>
+      <title>{shinysnippets}</title>
+      <link>/packages_list/shinysnippets/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/packages_list/shinysnippets/</guid>
+      <description>&lt;p&gt;Thanks to {shinysnippets} package, you will save development time. No more need to type &lt;code&gt;obverseEvent()&lt;/code&gt;, &lt;code&gt;withProgress()&lt;/code&gt; or &lt;code&gt;module_1_server()`/&lt;/code&gt;module_1_ui()` &amp;hellip;&lt;br&gt;
+Use the power of Rstudio snippets !&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thinkr-open.github.io/shinysnippets/&#34;&gt;More documentation on {shinysnippets}&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

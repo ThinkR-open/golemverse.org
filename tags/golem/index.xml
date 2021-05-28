@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golem | Golemverse</title>
+    <link>/tags/golem/</link>
+      <atom:link href="/tags/golem/index.xml" rel="self" type="application/rss+xml" />
+    <description>golem</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/golemverse_banner.png</url>
+      <title>golem</title>
+      <link>/tags/golem/</link>
+    </image>
+    
+    <item>
+      <title>About {golem} 0.3.1</title>
+      <link>/post/golem-0.3.1-release-on-cran/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      <guid>/post/golem-0.3.1-release-on-cran/</guid>
+      <description>&lt;p&gt;The new version of &lt;code&gt;{golem}&lt;/code&gt; (&lt;code&gt;0.3.1&lt;/code&gt;) have been available on CRAN 🎉 for about a month now.
+This new version includes a lot of new things, but we notably focused on working on two important new features: allowing you to extend &lt;code&gt;{golem}&lt;/code&gt; via templates, and supporting for the latest changes in &lt;code&gt;{shiny}&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;extending-golem&#34;&gt;Extending &lt;code&gt;{golem}&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;One of the challenges when it comes to building apps in a production context is that you might be repeating some patterns over and over again: adding the same CSS in every app, creating specific functions, setting a license, adding internal packages as dependencies, etc.&lt;/p&gt;
+&lt;p&gt;The key idea with &lt;code&gt;{golem}&lt;/code&gt; is to lower the number of repetitive tasks you have to perform during the engineering of your app.
+We try to achieve that by providing tools that automate these common tasks.
+But before version &lt;code&gt;0.3&lt;/code&gt;, there was no way to optimize the &amp;ldquo;business specific&amp;rdquo;, internal tasks of adding files, functions, or templating modules.
+This is now possible with this new release of &lt;code&gt;{golem}&lt;/code&gt;, which introduces the concept of &amp;ldquo;golem templates&amp;rdquo;: functions that can be used for project hooks, module templates, and JavaScript and CSS file creation.&lt;/p&gt;
+&lt;h3 id=&#34;project-hooks&#34;&gt;Project Hooks&lt;/h3&gt;
+&lt;h4 id=&#34;about-project-hooks&#34;&gt;About project hooks&lt;/h4&gt;
+&lt;p&gt;A project hook is a functions called inside &lt;code&gt;create_golem()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;It allows you to define custom behaviors when creating &lt;code&gt;{golem}&lt;/code&gt; based apps, and can be used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adding a different front-end template in &lt;code&gt;R/app_ui.R&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Changing configuration options in &lt;code&gt;inst/golem-config.yml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Copying external files in &lt;code&gt;inst/app/www&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Removing a file from the default template&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This function is called just &lt;strong&gt;after&lt;/strong&gt; the default project has been created, and is executed &lt;strong&gt;in the directory of the created package&lt;/strong&gt;.
+Here is a step by step of what happens when a project is created with &lt;code&gt;{golem}&lt;/code&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The package name is generated&lt;/li&gt;
+&lt;li&gt;The directory that will receive the package is created&lt;/li&gt;
+&lt;li&gt;Default &lt;code&gt;{golem}&lt;/code&gt; template is copied to this directory&lt;/li&gt;
+&lt;li&gt;R moves to the newly created project, and runs the &lt;code&gt;project_hook&lt;/code&gt; function&lt;/li&gt;
+&lt;li&gt;R moves back to the previous directory&lt;/li&gt;
+&lt;li&gt;If in RStudio, the project is open&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The &lt;code&gt;project_hook&lt;/code&gt; function takes three mandatory parameters, which are passed from &lt;code&gt;create_golem&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt;: the full path of the directory&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;package_name&lt;/code&gt;: the name of the package&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;...&lt;/code&gt; : further arguments that can be passed from &lt;code&gt;create_golem()&lt;/code&gt; when called from the command line&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These parameters might not be used inside your own hook, but &lt;strong&gt;they need to be set in the hook function skeleton&lt;/strong&gt; for compatibility reasons.&lt;/p&gt;
+&lt;p&gt;The best way to extend &lt;code&gt;{golem}&lt;/code&gt; via a project hook is by defining a &lt;code&gt;project_hook&lt;/code&gt; function in an external package.
+This will allow this function to be used inside the &lt;code&gt;{golem}&lt;/code&gt; creation RStudio project creation widget:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudioprojecthook.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;project-hook-example&#34;&gt;Project hook example&lt;/h4&gt;
+&lt;p&gt;Removing the dev folder:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;no_dev &amp;lt;- function(path, package_name, ...){
+   fs::dir_delete(&amp;quot;dev&amp;quot;)
+}
+create_golem(&amp;quot;ici&amp;quot;, project_hook = no_dev)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create a CSS:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;new_css &amp;lt;- function(path, package_name, ...){
+  
+  css_path &amp;lt;- fs::path_abs(&amp;quot;inst/app/www/custom.css&amp;quot;)
+  
+  fs::file_create(css_path)
+  
+  write_there &amp;lt;- function(...){
+    write(..., file = css_path, append = TRUE)
+  }
+  
+  write_there(&amp;quot;body {&amp;quot;)
+  write_there(&amp;quot;    background-color:red;&amp;quot;)
+  write_there(&amp;quot;}&amp;quot;)
+  
+  cli::cat_bullet(&amp;quot;CSS generated&amp;quot;)
+  
+}
+create_golem(&amp;quot;ici&amp;quot;, project_hook = new_css)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;module-templates&#34;&gt;Module templates&lt;/h3&gt;
+&lt;h4 id=&#34;about-module-templates&#34;&gt;About module templates&lt;/h4&gt;
+&lt;p&gt;Module templates are called inside &lt;code&gt;add_module&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;It allows you to extend &lt;code&gt;{golem}&lt;/code&gt; module template functionality by creating your own content inside the module file.&lt;/p&gt;
+&lt;p&gt;The function is called after the file(s) creation.
+Here is a step by step of what happens when the &lt;code&gt;add_module&lt;/code&gt; function is called:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The module name is generated, and the &lt;code&gt;R/&lt;/code&gt; directory is created if needed&lt;/li&gt;
+&lt;li&gt;The fct_ and utils_ files are created if needed&lt;/li&gt;
+&lt;li&gt;The path to the module is generated&lt;/li&gt;
+&lt;li&gt;If the file already exists, it opens the file&lt;/li&gt;
+&lt;li&gt;If the file doesn&#39;t exist, R creates the file and the &lt;code&gt;module_template&lt;/code&gt; function is called&lt;/li&gt;
+&lt;li&gt;File is potentially open&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(Note that the &lt;code&gt;template&lt;/code&gt; function is not called if the file already exists).&lt;/p&gt;
+&lt;p&gt;Module template functions will receive, by default, the following parameters from &lt;code&gt;add_modules()&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;name&lt;/code&gt;: the name of the module&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt;: the path to the file in R/&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export&lt;/code&gt;: a TRUE/FALSE set by the &lt;code&gt;export&lt;/code&gt; param of &lt;code&gt;add_module()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;...&lt;/code&gt; further arguments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These parameters might not be used inside your own function, but &lt;strong&gt;they need to be set in the function skeleton&lt;/strong&gt;, for compatibility reasons.&lt;/p&gt;
+&lt;h4 id=&#34;module-template-examples&#34;&gt;Module template examples&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_tmpl &amp;lt;- function(name, path, export, ...){
+  # Define a template that write to the 
+  # module file
+  write(name, path)
+}
+
+golem::add_module(name = &amp;quot;custom&amp;quot;, module_template = my_tmpl)
+
+my_other_tmpl &amp;lt;- function(name, path, export, ...){
+  # Copy and paste a file from somewhere
+  file.copy(..., path)
+}
+
+golem::add_module(name = &amp;quot;custom&amp;quot;, module_template = my_other_tmpl)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;js--css-templates&#34;&gt;JS &amp;amp; CSS templates&lt;/h3&gt;
+&lt;h4 id=&#34;about-js--css-templates&#34;&gt;About JS &amp;amp; CSS templates&lt;/h4&gt;
+&lt;p&gt;JavaScript and CSS templates work the same way as the module templates, and are used during the creation of JavaScript files, JavaScript handlers and CSS files, i.e. inside &lt;code&gt;add_js_file()&lt;/code&gt;, &lt;code&gt;add_js_handler()&lt;/code&gt; and &lt;code&gt;add_css_file()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The function is called after the file creation.
+Here is a step by step of what happens when these functions are called:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Name is created&lt;/li&gt;
+&lt;li&gt;The path is generated&lt;/li&gt;
+&lt;li&gt;If the file already exists, it opens the file&lt;/li&gt;
+&lt;li&gt;If the file doesn&#39;t exist, R creates it and the &lt;code&gt;template&lt;/code&gt; function is called&lt;/li&gt;
+&lt;li&gt;File is potentially open&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(Note that the &lt;code&gt;template&lt;/code&gt; function is not called if the file already exists).&lt;/p&gt;
+&lt;p&gt;You can then define your own function inside your &lt;code&gt;{golem}&lt;/code&gt; based application, but chances are you will be defining them into your own package.&lt;/p&gt;
+&lt;p&gt;File template functions will receive, by default, the following parameters from the &lt;code&gt;add_*()&lt;/code&gt; function.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;path&lt;/code&gt;: the path to the file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;...&lt;/code&gt; further arguments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These parameters might not be used inside your own function, but &lt;strong&gt;they need to be set in the function skeleton&lt;/strong&gt;, for compatibility reasons.&lt;/p&gt;
+&lt;h4 id=&#34;js--css-templates-examples&#34;&gt;JS &amp;amp; CSS templates examples&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_tmpl &amp;lt;- function(path, ...){
+   # Define a template that only write the name of the 
+   # module in the file
+  write_there &amp;lt;- function(...){
+    write(..., file = path, append = TRUE)
+  }
+  
+  write_there(&amp;quot;body {&amp;quot;)
+  write_there(&amp;quot;    background-color:red;&amp;quot;)
+  write_there(&amp;quot;}&amp;quot;)
+}
+golem::add_css_file(name = &amp;quot;custom&amp;quot;, template = my_tmpl)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;support-for-the-latest-shiny-features&#34;&gt;Support for the latest &lt;code&gt;{shiny}&lt;/code&gt; features&lt;/h2&gt;
+&lt;h3 id=&#34;new-module-skeleton&#34;&gt;New module skeleton&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;{shiny}&lt;/code&gt; 1.5.0, has introduced a new skeleton when it comes to modules.
+&lt;code&gt;{golem}&lt;/code&gt; now supports this new skeleton:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;&amp;gt; golem::add_module(&amp;quot;plop&amp;quot;)
+✓ File created at R/mod_plop.R
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#&#39; plop UI Function
+#&#39;
+#&#39; @description A shiny Module.
+#&#39;
+#&#39; @param id,input,output,session Internal parameters for {shiny}.
+#&#39;
+#&#39; @noRd 
+#&#39;
+#&#39; @importFrom shiny NS tagList 
+mod_plop_ui &amp;lt;- function(id){
+  ns &amp;lt;- NS(id)
+  tagList(
+ 
+  )
+}
+    
+#&#39; plop Server Functions
+#&#39;
+#&#39; @noRd 
+mod_plop_server &amp;lt;- function(id){
+  moduleServer( id, function(input, output, session){
+    ns &amp;lt;- session$ns
+ 
+  })
+}
+    
+## To be copied in the UI
+# mod_plop_ui(&amp;quot;plop_ui_1&amp;quot;)
+    
+## To be copied in the server
+# mod_plop_server(&amp;quot;plop_ui_1&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;disabling-autoload&#34;&gt;Disabling auto-load&lt;/h3&gt;
+&lt;p&gt;Since &lt;code&gt;{shiny}&lt;/code&gt; 1.5.0, the R folder is automatically sourced, in alphabetical order, when the app is loaded via &lt;code&gt;runApp()&lt;/code&gt;&amp;mdash;this used to be opt-in but is now opt-out.&lt;/p&gt;
+&lt;p&gt;This can cause some troubles with &lt;code&gt;{golem}&lt;/code&gt; package structure in some (rare) cases, and only when deploying to RStudio platform via &lt;code&gt;golem::add_rstudioconnect_file()&lt;/code&gt; and friends&amp;mdash;there is no issue with the package structure and the load whenever you load golem via the &lt;code&gt;golem::run_dev()&lt;/code&gt; or via &lt;code&gt;myapp::run_app()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This behavior can be opt-out via two mechanisms: &lt;code&gt;options(shiny.autoload.r=FALSE)&lt;/code&gt;, or via a file called &lt;code&gt;_disable_autoload.R&lt;/code&gt; in the &lt;code&gt;R/&lt;/code&gt; folder.
+Reliably setting &lt;code&gt;options&lt;/code&gt; in all projects can create some issues, so we have chosen to go for the &lt;code&gt;_disable_autoload.R&lt;/code&gt; solution.&lt;/p&gt;
+&lt;p&gt;This file is now created whenever you called one of &lt;code&gt;golem::add_rstudioconnect_file()&lt;/code&gt;, &lt;code&gt;golem::add_shinyappsio_file()&lt;/code&gt; or &lt;code&gt;golem::add_shinyserver_file()&lt;/code&gt;.
+You can also force its creation via &lt;code&gt;golem::disable_autoload()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important note&lt;/strong&gt;. This will still print a warning to your console:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Warning in loadSupport(appDir, renv = sharedEnv, globalrenv = NULL) :
+  Loading R/ subdirectory for Shiny application, but this directory appears to contain an R package. Sourcing files in R/ may cause unexpected behavior.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is unfortunately because, at the time of writing these lines, &lt;code&gt;{shiny}&lt;/code&gt; doesn&#39;t remove this warning when the &lt;code&gt;_disable_autoload.R&lt;/code&gt; file is there, so this warning will be printed to your logs.
+You can safely ignore it for now, as long as this behavior does not change (if it ever changes) in the &lt;code&gt;{shiny}&lt;/code&gt; package.
+There is an issue open &lt;a href=&#34;https://github.com/rstudio/shiny/issues/3355&#34;&gt;on the {shiny} repo&lt;/a&gt; right now, so feel free to watch the progress there!&lt;/p&gt;
+&lt;h2 id=&#34;misc&#34;&gt;Misc&lt;/h2&gt;
+&lt;p&gt;Here are a selection of changes and new features in this new version:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You no longer need to source the &lt;code&gt;dev/run_dev.R&lt;/code&gt; script and can call the &lt;code&gt;golem::run_dev()&lt;/code&gt; function from your console.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;add_html_template()&lt;/code&gt; creates an empty HTML template inside your app.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;golem::add_js_binding&lt;/code&gt; and &lt;code&gt;golem::add_js_output_binding&lt;/code&gt; create a skeleton for JavaScript bindings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;use_external_file&lt;/code&gt;, &lt;code&gt;use_external_css_file&lt;/code&gt;, &lt;code&gt;use_external_js_file&lt;/code&gt;, and &lt;code&gt;use_external_html_template&lt;/code&gt; download external files from URL and add them to the &lt;code&gt;www&lt;/code&gt; folder.
+They all have a &lt;code&gt;use_internal_&lt;/code&gt; counterpart that copies files from the local computer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;sanity_check()&lt;/code&gt; function does a series of checks inside the current project.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;soft-deprecation&#34;&gt;Soft deprecation&lt;/h2&gt;
+&lt;p&gt;We&#39;re planning on deprecating the &lt;code&gt;add_ui_server_files()&lt;/code&gt; function.
+Feel free to comment on &lt;a href=&#34;https://github.com/ThinkR-open/golem/issues/445&#34;&gt;ThinkR-open/golem/issues/445&lt;/a&gt; if you&#39;d like it to stay there.&lt;/p&gt;
+&lt;h2 id=&#34;updating-your-old-projects&#34;&gt;Updating your old projects&lt;/h2&gt;
+&lt;p&gt;If you&#39;ve built a project with an older version of &lt;code&gt;{golem}&lt;/code&gt;, there should be no re-engineering to do, everything should still be compatible.&lt;/p&gt;
+&lt;p&gt;One change though might be in the way you deploy your app on RStudio platforms, which is related to the way &lt;code&gt;{shiny}&lt;/code&gt; now handles the package structure.
+Just run &lt;code&gt;golem::disable_autoload()&lt;/code&gt; to add the support.&lt;/p&gt;
+&lt;p&gt;If ever you find any other issues with the new version of &lt;code&gt;{golem}&lt;/code&gt;, please feel free to open an issue on the repository.&lt;/p&gt;
+&lt;h2 id=&#34;feedback-and-questions&#34;&gt;Feedback and questions&lt;/h2&gt;
+&lt;p&gt;We&#39;re always happy to get new ideas and question on &lt;code&gt;{golem}&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;If you have a feature idea, or find a bug, please &lt;a href=&#34;https://github.com/ThinkR-open/golem/issues&#34;&gt;open an issue&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The best places to ask question are either &lt;a href=&#34;https://github.com/ThinkR-open/golem/discussions&#34;&gt;the GitHub &amp;ldquo;Discussions&amp;rdquo;&lt;/a&gt; panel, or &lt;a href=&#34;&#34;&gt;StackOverflow&lt;/a&gt;, using the &lt;code&gt;golem&lt;/code&gt; tag.&lt;/p&gt;
+&lt;h2 id=&#34;thanks&#34;&gt;Thanks&lt;/h2&gt;
+&lt;p&gt;We want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/abidawson&#34;&gt;@abidawson&lt;/a&gt;, &lt;a href=&#34;https://github.com/abnercasallo&#34;&gt;@abnercasallo&lt;/a&gt;, &lt;a href=&#34;https://github.com/aftonsteps&#34;&gt;@aftonsteps&lt;/a&gt;, &lt;a href=&#34;https://github.com/AMillanFL&#34;&gt;@AMillanFL&lt;/a&gt;, &lt;a href=&#34;https://github.com/antoine-sachet&#34;&gt;@antoine-sachet&lt;/a&gt;, &lt;a href=&#34;https://github.com/ArthurPERE&#34;&gt;@ArthurPERE&lt;/a&gt;, &lt;a href=&#34;https://github.com/artpulsion&#34;&gt;@artpulsion&lt;/a&gt;, &lt;a href=&#34;https://github.com/cderv&#34;&gt;@cderv&lt;/a&gt;,  &lt;a href=&#34;https://github.com/chintanp&#34;&gt;@chintanp&lt;/a&gt;, &lt;a href=&#34;https://github.com/ChrisBeeley&#34;&gt;@ChrisBeeley&lt;/a&gt;,  &lt;a href=&#34;https://github.com/CorradoLanera&#34;&gt;@CorradoLanera&lt;/a&gt;, &lt;a href=&#34;https://github.com/csgillespie&#34;&gt;@csgillespie&lt;/a&gt;, &lt;a href=&#34;https://github.com/daattali&#34;&gt;@daattali&lt;/a&gt;, &lt;a href=&#34;https://github.com/DivadNojnarg&#34;&gt;@DivadNojnarg&lt;/a&gt;, &lt;a href=&#34;https://github.com/durandsinclair&#34;&gt;@durandsinclair&lt;/a&gt;, &lt;a href=&#34;https://github.com/dwhdai&#34;&gt;@dwhdai&lt;/a&gt;, &lt;a href=&#34;https://github.com/dylanrussellmd&#34;&gt;@dylanrussellmd&lt;/a&gt;, &lt;a href=&#34;https://github.com/earnaud&#34;&gt;@earnaud&lt;/a&gt;, &lt;a href=&#34;https://github.com/fBedecarrats&#34;&gt;@fBedecarrats&lt;/a&gt;, &lt;a href=&#34;https://github.com/feddelegrand7&#34;&gt;@feddelegrand7&lt;/a&gt;, &lt;a href=&#34;https://github.com/fizic37&#34;&gt;@fizic37&lt;/a&gt;, &lt;a href=&#34;https://github.com/fvitalini&#34;&gt;@fvitalini&lt;/a&gt;, &lt;a href=&#34;https://github.com/gacolitti&#34;&gt;@gacolitti&lt;/a&gt;, &lt;a href=&#34;https://github.com/genobobeno&#34;&gt;@genobobeno&lt;/a&gt;, &lt;a href=&#34;https://github.com/hadley&#34;&gt;@hadley&lt;/a&gt;, &lt;a href=&#34;https://github.com/HanjoStudy&#34;&gt;@HanjoStudy&lt;/a&gt;, &lt;a href=&#34;https://github.com/henrique1008&#34;&gt;@henrique1008&lt;/a&gt;, &lt;a href=&#34;https://github.com/jacksonschan&#34;&gt;@jacksonschan&lt;/a&gt;, &lt;a href=&#34;https://github.com/jacobwindsor&#34;&gt;@jacobwindsor&lt;/a&gt;, &lt;a href=&#34;https://github.com/jaybee84&#34;&gt;@jaybee84&lt;/a&gt;, &lt;a href=&#34;https://github.com/jcrodriguez1989&#34;&gt;@jcrodriguez1989&lt;/a&gt;, &lt;a href=&#34;https://github.com/jennahamlin&#34;&gt;@jennahamlin&lt;/a&gt;, &lt;a href=&#34;https://github.com/julianstanley&#34;&gt;@julianstanley&lt;/a&gt;, &lt;a href=&#34;https://github.com/KasperThystrup&#34;&gt;@KasperThystrup&lt;/a&gt;, &lt;a href=&#34;https://github.com/Kastakin&#34;&gt;@Kastakin&lt;/a&gt;, &lt;a href=&#34;https://github.com/KoderKow&#34;&gt;@KoderKow&lt;/a&gt;, &lt;a href=&#34;https://github.com/kprimice&#34;&gt;@kprimice&lt;/a&gt;, &lt;a href=&#34;https://github.com/mahelious&#34;&gt;@mahelious&lt;/a&gt;, &lt;a href=&#34;https://github.com/MayaGans&#34;&gt;@MayaGans&lt;/a&gt;, &lt;a href=&#34;https://github.com/mcsiple&#34;&gt;@mcsiple&lt;/a&gt;, &lt;a href=&#34;https://github.com/michaelhogersnplm&#34;&gt;@michaelhogersnplm&lt;/a&gt;, &lt;a href=&#34;https://github.com/moodymudskipper&#34;&gt;@moodymudskipper&lt;/a&gt;, &lt;a href=&#34;https://github.com/mraess&#34;&gt;@mraess&lt;/a&gt;, &lt;a href=&#34;https://github.com/novica&#34;&gt;@novica&lt;/a&gt;, &lt;a href=&#34;https://github.com/nvelden&#34;&gt;@nvelden&lt;/a&gt;, &lt;a href=&#34;https://github.com/quickbendelat&#34;&gt;@quickbendelat&lt;/a&gt;, &lt;a href=&#34;https://github.com/rgaube&#34;&gt;@rgaube&lt;/a&gt;, &lt;a href=&#34;https://github.com/riccardoporreca&#34;&gt;@riccardoporreca&lt;/a&gt;, &lt;a href=&#34;https://github.com/RichardPilbery&#34;&gt;@RichardPilbery&lt;/a&gt;, &lt;a href=&#34;https://github.com/robertoromor&#34;&gt;@robertoromor&lt;/a&gt;, &lt;a href=&#34;https://github.com/seanhardison1&#34;&gt;@seanhardison1&lt;/a&gt;, &lt;a href=&#34;https://github.com/ShinyFabio&#34;&gt;@ShinyFabio&lt;/a&gt;, &lt;a href=&#34;https://github.com/sjspielman&#34;&gt;@sjspielman&lt;/a&gt;,  &lt;a href=&#34;https://github.com/Swechhya&#34;&gt;@Swechhya&lt;/a&gt;, &lt;a href=&#34;https://github.com/TimotheeTournier&#34;&gt;@TimotheeTournier&lt;/a&gt;, &lt;a href=&#34;https://github.com/VincentAlcazer&#34;&gt;@VincentAlcazer&lt;/a&gt;,  &lt;a href=&#34;https://github.com/Welsh44&#34;&gt;@Welsh44&lt;/a&gt;, &lt;a href=&#34;https://github.com/yogat3ch&#34;&gt;@yogat3ch&lt;/a&gt;, &lt;a href=&#34;https://github.com/yonicd&#34;&gt;@yonicd&lt;/a&gt;, &lt;a href=&#34;https://github.com/zchmielewska&#34;&gt;@zchmielewska&lt;/a&gt;, and &lt;a href=&#34;https://github.com/ZimmermannYves&#34;&gt;@ZimmermannYves&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Third live stream</title>
+      <link>/talk/2020-04-02-twitch/</link>
+      <pubDate>Thu, 02 Apr 2020 21:00:00 +0000</pubDate>
+      <guid>/talk/2020-04-02-twitch/</guid>
+      <description>&lt;h3 id=&#34;third-live-stream-&#34;&gt;Third live stream 🤓&lt;/h3&gt;
+&lt;li&gt; 👨‍💻 Colin Fay, &lt;a href = &#34;https://twitter.com/_ColinFay&#34;&gt;@_ColinFay&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; 🔗 https://www.twitch.tv/thinkr_fr &lt;/li&gt;
+&lt;li&gt; ⏳ &lt;time datetime=&#34;2020-04-02 21:00&#34;&gt;2020-04-02 21:00&lt;/time&gt; Paris Time. &lt;/li&gt;
+&lt;details closed&gt;
+&lt;summary&gt; &lt;span title=&#39;Click to Expand&#39;&gt; See Event in Other Timezones &lt;/span&gt; &lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+$UTC
+[1] &amp;quot;2020-04-02 19:00:00 UTC&amp;quot;
+
+$`America/New_York`
+[1] &amp;quot;2020-04-02 15:00:00 EDT&amp;quot;
+
+$`America/Los_Angeles`
+[1] &amp;quot;2020-04-02 12:00:00 PDT&amp;quot;
+
+$`Australia/Sydney`
+[1] &amp;quot;2020-04-03 06:00:00 AEDT&amp;quot;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Second live stream</title>
+      <link>/talk/2020-01-23-twitch/</link>
+      <pubDate>Thu, 23 Jan 2020 21:00:00 +0000</pubDate>
+      <guid>/talk/2020-01-23-twitch/</guid>
+      <description>&lt;h3 id=&#34;second-live-stream-&#34;&gt;Second live stream 🎂&lt;/h3&gt;
+&lt;li&gt; 👨‍💻 Colin Fay, &lt;a href = &#34;https://twitter.com/_ColinFay&#34;&gt;@_ColinFay&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; 🔗 https://www.twitch.tv/thinkr_fr &lt;/li&gt;
+&lt;li&gt; ⏳ __2020-01-21 21.00 Paris Time__. &lt;/li&gt;
+&lt;details closed&gt;
+&lt;summary&gt; &lt;span title=&#39;Click to Expand&#39;&gt; See Event in Other Timezones &lt;/span&gt; &lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+$UTC
+[1] &amp;quot;2020-01-21 20:00:00 UTC&amp;quot;
+
+$`America/New_York`
+[1] &amp;quot;2020-01-21 15:00:00 EST&amp;quot;
+
+$`America/Los_Angeles`
+[1] &amp;quot;2020-01-21 12:00:00 PST&amp;quot;
+
+$`Australia/Sydney`
+[1] &amp;quot;2020-01-22 07:00:00 AEDT&amp;quot;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First live stream 🎂</title>
+      <link>/talk/2020-01-13-twitch/</link>
+      <pubDate>Mon, 13 Jan 2020 21:00:00 +0000</pubDate>
+      <guid>/talk/2020-01-13-twitch/</guid>
+      <description>&lt;h3 id=&#34;first-live-stream-&#34;&gt;First live stream 🎂&lt;/h3&gt;
+&lt;li&gt; 👨‍💻 Colin Fay, &lt;a href = &#34;https://twitter.com/_ColinFay&#34;&gt;@_ColinFay&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; 🔗 https://www.twitch.tv/thinkr_fr &lt;/li&gt;
+&lt;li&gt; ⏳ __2020-01-13 21.00 Paris Time__. &lt;/li&gt;
+&lt;details closed&gt;
+&lt;summary&gt; &lt;span title=&#39;Click to Expand&#39;&gt; See Event in Other Timezones &lt;/span&gt; &lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+$UTC
+[1] &amp;quot;2020-01-13 20:00:00 UTC&amp;quot;
+
+$`America/New_York`
+[1] &amp;quot;2020-01-13 15:00:00 EST&amp;quot;
+
+$`America/Los_Angeles`
+[1] &amp;quot;2020-01-13 12:00:00 PST&amp;quot;
+
+$`Australia/Sydney`
+[1] &amp;quot;2020-01-14 07:00:00 AEDT&amp;quot;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>{golem}</title>
+      <link>/packages_list/golem/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/packages_list/golem/</guid>
+      <description>&lt;p&gt;{golem} is an opinionated framework for building production-grade shiny applications.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thinkr-open.github.io/golem/&#34;&gt;More documentation on {golem} website here&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>{golem} 0.1.0 has been released on CRAN</title>
+      <link>/post/golem-0.1.0-release-on-cran/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>/post/golem-0.1.0-release-on-cran/</guid>
+      <description>&lt;p&gt;golem (v0.1) A Framework for Building Robust Shiny Apps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/golem/index.html&#34;&gt;{golem} on CRAN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/golem&#34;&gt;{golem} no GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thinkr-open.github.io/golem/&#34;&gt;pkgdown and vignettes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

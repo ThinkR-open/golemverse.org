@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stream | Golemverse</title>
+    <link>/categories/stream/</link>
+      <atom:link href="/categories/stream/index.xml" rel="self" type="application/rss+xml" />
+    <description>stream</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Thu, 02 Apr 2020 21:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/golemverse_banner.png</url>
+      <title>stream</title>
+      <link>/categories/stream/</link>
+    </image>
+    
+    <item>
+      <title>Third live stream</title>
+      <link>/talk/2020-04-02-twitch/</link>
+      <pubDate>Thu, 02 Apr 2020 21:00:00 +0000</pubDate>
+      <guid>/talk/2020-04-02-twitch/</guid>
+      <description>&lt;h3 id=&#34;third-live-stream-&#34;&gt;Third live stream 🤓&lt;/h3&gt;
+&lt;li&gt; 👨‍💻 Colin Fay, &lt;a href = &#34;https://twitter.com/_ColinFay&#34;&gt;@_ColinFay&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; 🔗 https://www.twitch.tv/thinkr_fr &lt;/li&gt;
+&lt;li&gt; ⏳ &lt;time datetime=&#34;2020-04-02 21:00&#34;&gt;2020-04-02 21:00&lt;/time&gt; Paris Time. &lt;/li&gt;
+&lt;details closed&gt;
+&lt;summary&gt; &lt;span title=&#39;Click to Expand&#39;&gt; See Event in Other Timezones &lt;/span&gt; &lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+$UTC
+[1] &amp;quot;2020-04-02 19:00:00 UTC&amp;quot;
+
+$`America/New_York`
+[1] &amp;quot;2020-04-02 15:00:00 EDT&amp;quot;
+
+$`America/Los_Angeles`
+[1] &amp;quot;2020-04-02 12:00:00 PDT&amp;quot;
+
+$`Australia/Sydney`
+[1] &amp;quot;2020-04-03 06:00:00 AEDT&amp;quot;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Second live stream</title>
+      <link>/talk/2020-01-23-twitch/</link>
+      <pubDate>Thu, 23 Jan 2020 21:00:00 +0000</pubDate>
+      <guid>/talk/2020-01-23-twitch/</guid>
+      <description>&lt;h3 id=&#34;second-live-stream-&#34;&gt;Second live stream 🎂&lt;/h3&gt;
+&lt;li&gt; 👨‍💻 Colin Fay, &lt;a href = &#34;https://twitter.com/_ColinFay&#34;&gt;@_ColinFay&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; 🔗 https://www.twitch.tv/thinkr_fr &lt;/li&gt;
+&lt;li&gt; ⏳ __2020-01-21 21.00 Paris Time__. &lt;/li&gt;
+&lt;details closed&gt;
+&lt;summary&gt; &lt;span title=&#39;Click to Expand&#39;&gt; See Event in Other Timezones &lt;/span&gt; &lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+$UTC
+[1] &amp;quot;2020-01-21 20:00:00 UTC&amp;quot;
+
+$`America/New_York`
+[1] &amp;quot;2020-01-21 15:00:00 EST&amp;quot;
+
+$`America/Los_Angeles`
+[1] &amp;quot;2020-01-21 12:00:00 PST&amp;quot;
+
+$`Australia/Sydney`
+[1] &amp;quot;2020-01-22 07:00:00 AEDT&amp;quot;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First live stream 🎂</title>
+      <link>/talk/2020-01-13-twitch/</link>
+      <pubDate>Mon, 13 Jan 2020 21:00:00 +0000</pubDate>
+      <guid>/talk/2020-01-13-twitch/</guid>
+      <description>&lt;h3 id=&#34;first-live-stream-&#34;&gt;First live stream 🎂&lt;/h3&gt;
+&lt;li&gt; 👨‍💻 Colin Fay, &lt;a href = &#34;https://twitter.com/_ColinFay&#34;&gt;@_ColinFay&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; 🔗 https://www.twitch.tv/thinkr_fr &lt;/li&gt;
+&lt;li&gt; ⏳ __2020-01-13 21.00 Paris Time__. &lt;/li&gt;
+&lt;details closed&gt;
+&lt;summary&gt; &lt;span title=&#39;Click to Expand&#39;&gt; See Event in Other Timezones &lt;/span&gt; &lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+$UTC
+[1] &amp;quot;2020-01-13 20:00:00 UTC&amp;quot;
+
+$`America/New_York`
+[1] &amp;quot;2020-01-13 15:00:00 EST&amp;quot;
+
+$`America/Los_Angeles`
+[1] &amp;quot;2020-01-13 12:00:00 PST&amp;quot;
+
+$`Australia/Sydney`
+[1] &amp;quot;2020-01-14 07:00:00 AEDT&amp;quot;
+
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

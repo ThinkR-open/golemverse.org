@@ -7,13 +7,178 @@
   </url>
   
   <url>
+    <loc>/authors/colin/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/golem-0.3.1-release-on-cran/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/golem/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/golem/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/package/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/release/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-05-28T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/shinipsum/</loc>
+    <lastmod>2020-05-10T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/shinipsum/</loc>
+    <lastmod>2020-05-10T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2020-05-10_shinipsum-cran-realease/</loc>
+    <lastmod>2020-05-10T21:29:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
+    <lastmod>2020-04-02T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/stream/</loc>
+    <lastmod>2020-04-02T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2020-04-02-twitch/</loc>
+    <lastmod>2020-04-02T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2020-01-23-twitch/</loc>
+    <lastmod>2020-01-23T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2020-01-13-twitch/</loc>
+    <lastmod>2020-01-13T21:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/stream/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/sebastien/</loc>
+    <lastmod>2019-12-10T17:00:53+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/package/</loc>
+    <lastmod>2019-12-10T17:00:53+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/packages_list/</loc>
+    <lastmod>2019-12-10T17:00:53+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/packages_list/shinipsum-package/</loc>
+    <lastmod>2019-12-10T17:00:53+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/book/</loc>
+    <lastmod>2019-12-09T17:32:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/bookdown/</loc>
+    <lastmod>2019-12-09T17:32:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/building-big-shiny-apps-a-workflow-building-big-shiny-apps-a-workflow/</loc>
+    <lastmod>2019-12-09T17:32:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2019-12-09T17:32:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/shiny/</loc>
+    <lastmod>2019-12-09T17:32:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/packages_list/golem/</loc>
+    <lastmod>2019-12-09T16:05:09+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/cervan/</loc>
+    <lastmod>2019-12-01T11:00:09+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/shinysnippets/</loc>
+    <lastmod>2019-12-01T11:00:09+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/shinysnippets/</loc>
+    <lastmod>2019-12-01T11:00:09+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/packages_list/shinysnippets/</loc>
+    <lastmod>2019-12-01T11:00:09+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/golem-0.1.0-release-on-cran/</loc>
+    <lastmod>2019-08-05T16:21:10+01:00</lastmod>
   </url>
   
   <url>
@@ -36,19 +201,7 @@
   </url>
   
   <url>
-    <loc>/authors/cervan/</loc>
-  </url>
-  
-  <url>
-    <loc>/authors/colin/</loc>
-  </url>
-  
-  <url>
     <loc>/authors/diane/</loc>
-  </url>
-  
-  <url>
-    <loc>/authors/sebastien/</loc>
   </url>
   
   <url>
@@ -56,35 +209,11 @@
   </url>
   
   <url>
-    <loc>/authors/</loc>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-  </url>
-  
-  <url>
     <loc>/contact/</loc>
   </url>
   
   <url>
-    <loc>/post/</loc>
-  </url>
-  
-  <url>
     <loc>/publication_types/</loc>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-  </url>
-  
-  <url>
-    <loc>/talk/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
   </url>
   
 </urlset>

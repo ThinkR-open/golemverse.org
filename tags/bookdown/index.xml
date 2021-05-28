@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bookdown | Golemverse</title>
+    <link>/tags/bookdown/</link>
+      <atom:link href="/tags/bookdown/index.xml" rel="self" type="application/rss+xml" />
+    <description>bookdown</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/golemverse_banner.png</url>
+      <title>bookdown</title>
+      <link>/tags/bookdown/</link>
+    </image>
+    
+    <item>
+      <title>Building Big Shiny Apps - A Workflow</title>
+      <link>/publication/building-big-shiny-apps-a-workflow-building-big-shiny-apps-a-workflow/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/building-big-shiny-apps-a-workflow-building-big-shiny-apps-a-workflow/</guid>
+      <description>&lt;p&gt;The book is in construction here: &lt;a href=&#34;https://engineering-shiny.org&#34;&gt;https://engineering-shiny.org&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
