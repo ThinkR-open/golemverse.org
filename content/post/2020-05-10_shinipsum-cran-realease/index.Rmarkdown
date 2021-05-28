@@ -13,7 +13,7 @@ subtitle: ''
 summary: '{shinipsum} is now available on CRAN'
 authors: [colin]
 lastmod: '2020-05-10T21:29:47+01:00'
-featured: yes
+featured: no
 image:
   caption: ''
   focal_point: ''
@@ -22,7 +22,9 @@ projects: []
 ---
 
 ```{r include=FALSE}
-install.packages("shinipsum")
+if (!requireNamespace("shinipsum")){
+  install.packages("shinipsum")
+}
 ```
 
 
