@@ -718,6 +718,8 @@ library(ggplot2)
 <pre><code class="language-r">random_ggplot() + 
   labs(title = &quot;Random plot&quot;) 
 </code></pre>
+<pre><code>## Warning: Removed 37 rows containing non-finite values (stat_boxplot).
+</code></pre>
 <p><img src="/post/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>Of course, the idea is to combine this with a Shiny interface, for example <code>random_ggplot()</code> will be used with a <code>renderPlot()</code> and <code>plotOutput()</code>.
 And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, <code>random_ggplot()</code> has a <code>type</code> parameter that can help you select a specific geom.</p>
@@ -752,14 +754,10 @@ shinyApp(ui, server)
 </ul>
 <pre><code class="language-r">random_table(nrow = 3, ncol = 10)
 </code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.Length.1
-## 1          5.1         3.5          1.4         0.2  setosa            5.1
-## 2          4.9         3.0          1.4         0.2  setosa            4.9
-## 3          4.7         3.2          1.3         0.2  setosa            4.7
-##   Sepal.Width.1 Petal.Length.1 Petal.Width.1 Species.1
-## 1           3.5            1.4           0.2    setosa
-## 2           3.0            1.4           0.2    setosa
-## 3           3.2            1.3           0.2    setosa
+<pre><code>##   day time  temp activ day.1 time.1 temp.1 activ.1 day.2 time.2
+## 1 346  840 36.33     0   346    840  36.33       0   346    840
+## 2 346  850 36.34     0   346    850  36.34       0   346    850
+## 3 346  900 36.35     0   346    900  36.35       0   346    900
 </code></pre>
 <ul>
 <li>print outputs:</li>
@@ -767,12 +765,16 @@ shinyApp(ui, server)
 <pre><code class="language-r">random_print(type = &quot;model&quot;)
 </code></pre>
 <pre><code>## 
-## Call:
-## lm(formula = Sepal.Length ~ Sepal.Width, data = datasets::iris)
+## 	Pearson's product-moment correlation
 ## 
-## Coefficients:
-## (Intercept)  Sepal.Width  
-##      6.5262      -0.2234
+## data:  datasets::mtcars$mpg and datasets::mtcars$cyl
+## t = -8.9197, df = 30, p-value = 6.113e-10
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  -0.9257694 -0.7163171
+## sample estimates:
+##       cor 
+## -0.852162
 </code></pre>
 <p>&hellip; and text, image, ggplotly, dygraph, and DT.</p>
 <p>Learn more about <code>{shinipsum}</code>:</p>

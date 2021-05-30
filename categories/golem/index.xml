@@ -17,7 +17,7 @@
       <link>/post/golem-0.3.1-release-on-cran/</link>
       <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
       <guid>/post/golem-0.3.1-release-on-cran/</guid>
-      <description>&lt;p&gt;The new version of &lt;code&gt;{golem}&lt;/code&gt; (&lt;code&gt;0.3.1&lt;/code&gt;) have been available on CRAN 🎉 for about a month now.
+      <description>&lt;p&gt;The new version of &lt;code&gt;{golem}&lt;/code&gt; (&lt;code&gt;0.3.1&lt;/code&gt;) has been available on CRAN 🎉 for about a month now.
 This new version includes a lot of new things, but we notably focused on working on two important new features: allowing you to extend &lt;code&gt;{golem}&lt;/code&gt; via templates, and supporting for the latest changes in &lt;code&gt;{shiny}&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;extending-golem&#34;&gt;Extending &lt;code&gt;{golem}&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;One of the challenges when it comes to building apps in a production context is that you might be repeating some patterns over and over again: adding the same CSS in every app, creating specific functions, setting a license, adding internal packages as dependencies, etc.&lt;/p&gt;
