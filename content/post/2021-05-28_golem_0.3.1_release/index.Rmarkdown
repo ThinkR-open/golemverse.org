@@ -31,7 +31,7 @@ if (!requireNamespace("emo")){
 ```
 
 
-The new version of `{golem}` (`0.3.1`) have been available on CRAN `r emo::ji("tada")` for about a month now.
+The new version of `{golem}` (`0.3.1`) has been available on CRAN `r emo::ji("tada")` for about a month now.
 This new version includes a lot of new things, but we notably focused on working on two important new features: allowing you to extend `{golem}` via templates, and supporting for the latest changes in `{shiny}`.
 
 ## Extending `{golem}`
