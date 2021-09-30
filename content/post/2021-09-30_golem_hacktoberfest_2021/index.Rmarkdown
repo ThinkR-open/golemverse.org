@@ -41,6 +41,7 @@ You don't feel like working on `{golem}`?
 We have also labelled other repositories inside the ThinkR [GitHub organisation](https://github.com/search?p=1&q=topic%3Ahacktoberfest+org%3AThinkR-open+fork%3Atrue&type=Repositories) with the `hacktoberfest` tag: 
 
 + [`{attachment}`](https://github.com/ThinkR-open/attachment), a package for working with dependencies in your scripts, Rmds, and packages. 
++ [`{fusen}`](https://github.com/ThinkR-open/fusen), a package to build a package from a Rmd.
 + [`{shinipsum}`](https://github.com/ThinkR-open/shinipsum), a lorem-ipsum generator for `{shiny}` elements.
 + [`{fakir}`](https://github.com/ThinkR-open/fakir), a fake data generator.
 + [`Companies, Officials and NGO Using R`](https://github.com/ThinkR-open/companies-using-r), our collaborative list of R in the real world. 
