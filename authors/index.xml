@@ -5,7 +5,7 @@
     <link>/authors/</link>
       <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>Authors</title>
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>/authors/colin/</link>
-      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       <guid>/authors/colin/</guid>
       <description>&lt;p&gt;When Colin doesn’t code in R, he codes in R. Eventually, we’ll find him on Twitter… talking about R. What he prefers is to put his hands in the bowels of his favorite language to extract the buried treasures.
 Dismantle, divert, assemble, improve… give him a technical challenge and he will not give up until he has settled his score, preferably with elegance, a smile and without (too) fuss. And it is with pleasure that he will share the solution within the team or with the worldwide internets.&lt;/p&gt;

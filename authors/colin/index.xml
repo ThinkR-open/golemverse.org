@@ -5,12 +5,31 @@
     <link>/authors/colin/</link>
       <atom:link href="/authors/colin/index.xml" rel="self" type="application/rss+xml" />
     <description>Golemverse</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>Golemverse</title>
       <link>/authors/colin/</link>
     </image>
+    
+    <item>
+      <title>Join HacktoberFest 2021 with {golem}!</title>
+      <link>/post/golem-hacktoberfest-2021/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/post/golem-hacktoberfest-2021/</guid>
+      <description>&lt;p&gt;Join us for &lt;a href=&#34;https://hacktoberfest.digitalocean.com/&#34;&gt;Hacktoberfest 2021&lt;/a&gt; with &lt;code&gt;{golem}&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;Hacktoberfest is an online event, happening all over the world, where everyone is invited to open a pull request on a repo that has issues labelled &lt;code&gt;hacktoberfest&lt;/code&gt;.
+The idea of this event is to gather developers (newbies or seasoned), and make them work together on open source projects.&lt;/p&gt;
+&lt;p&gt;For this second year, I&#39;m happy to invite developers from the R community to take part to Hacktoberfest with &lt;code&gt;{golem}&lt;/code&gt;.
+I&#39;ve started to label some issues inside the repository with the &lt;code&gt;hacktoberfest&lt;/code&gt; label, so that you can join the party, starting tomorrow!&lt;/p&gt;
+&lt;p&gt;Every time you&#39;ll open an issue with this label, you&#39;ll also find two other labels: the difficulty level (novice, intermediate, advanced), and a time estimate (low, medium, high).
+This will help you evaluate if you can try and tackle this issue or not.&lt;/p&gt;
+&lt;p&gt;You&#39;ll find them all on the &lt;a href=&#34;https://github.com/ThinkR-open/golem/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ahacktoberfest&#34;&gt;GitHub repository&lt;/a&gt;.
+Feel free to leave a comment on the issue you&#39;d like to tackle, and of course to ask questions if the issue is not detailled enough.&lt;/p&gt;
+&lt;p&gt;I&#39;m planning on release a minor version of &lt;code&gt;{golem}&lt;/code&gt; (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘&lt;/p&gt;
+&lt;p&gt;See you on GitHub!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>About {golem} 0.3.1</title>
@@ -273,8 +292,6 @@ library(ggplot2)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_ggplot() + 
   labs(title = &amp;quot;Random plot&amp;quot;) 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Removed 37 rows containing non-finite values (stat_boxplot).
-&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Of course, the idea is to combine this with a Shiny interface, for example &lt;code&gt;random_ggplot()&lt;/code&gt; will be used with a &lt;code&gt;renderPlot()&lt;/code&gt; and &lt;code&gt;plotOutput()&lt;/code&gt;.
 And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, &lt;code&gt;random_ggplot()&lt;/code&gt; has a &lt;code&gt;type&lt;/code&gt; parameter that can help you select a specific geom.&lt;/p&gt;
@@ -309,10 +326,14 @@ shinyApp(ui, server)
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_table(nrow = 3, ncol = 10)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   day time  temp activ day.1 time.1 temp.1 activ.1 day.2 time.2
-## 1 346  840 36.33     0   346    840  36.33       0   346    840
-## 2 346  850 36.34     0   346    850  36.34       0   346    850
-## 3 346  900 36.35     0   346    900  36.35       0   346    900
+&lt;pre&gt;&lt;code&gt;##   agegp     alcgp    tobgp ncases ncontrols agegp.1   alcgp.1  tobgp.1 ncases.1
+## 1 25-34 0-39g/day 0-9g/day      0        40   25-34 0-39g/day 0-9g/day        0
+## 2 25-34 0-39g/day    10-19      0        10   25-34 0-39g/day    10-19        0
+## 3 25-34 0-39g/day    20-29      0         6   25-34 0-39g/day    20-29        0
+##   ncontrols.1
+## 1          40
+## 2          10
+## 3           6
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;print outputs:&lt;/li&gt;
@@ -320,16 +341,10 @@ shinyApp(ui, server)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_print(type = &amp;quot;model&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## 	Pearson&#39;s product-moment correlation
+## 	Shapiro-Wilk normality test
 ## 
-## data:  datasets::mtcars$mpg and datasets::mtcars$cyl
-## t = -8.9197, df = 30, p-value = 6.113e-10
-## alternative hypothesis: true correlation is not equal to 0
-## 95 percent confidence interval:
-##  -0.9257694 -0.7163171
-## sample estimates:
-##       cor 
-## -0.852162
+## data:  datasets::airquality$Ozone
+## W = 0.87867, p-value = 2.79e-08
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;hellip; and text, image, ggplotly, dygraph, and DT.&lt;/p&gt;
 &lt;p&gt;Learn more about &lt;code&gt;{shinipsum}&lt;/code&gt;:&lt;/p&gt;

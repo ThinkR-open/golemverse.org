@@ -5,12 +5,31 @@
     <link>/tags/golem/</link>
       <atom:link href="/tags/golem/index.xml" rel="self" type="application/rss+xml" />
     <description>golem</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>golem</title>
       <link>/tags/golem/</link>
     </image>
+    
+    <item>
+      <title>Join HacktoberFest 2021 with {golem}!</title>
+      <link>/post/golem-hacktoberfest-2021/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/post/golem-hacktoberfest-2021/</guid>
+      <description>&lt;p&gt;Join us for &lt;a href=&#34;https://hacktoberfest.digitalocean.com/&#34;&gt;Hacktoberfest 2021&lt;/a&gt; with &lt;code&gt;{golem}&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;Hacktoberfest is an online event, happening all over the world, where everyone is invited to open a pull request on a repo that has issues labelled &lt;code&gt;hacktoberfest&lt;/code&gt;.
+The idea of this event is to gather developers (newbies or seasoned), and make them work together on open source projects.&lt;/p&gt;
+&lt;p&gt;For this second year, I&#39;m happy to invite developers from the R community to take part to Hacktoberfest with &lt;code&gt;{golem}&lt;/code&gt;.
+I&#39;ve started to label some issues inside the repository with the &lt;code&gt;hacktoberfest&lt;/code&gt; label, so that you can join the party, starting tomorrow!&lt;/p&gt;
+&lt;p&gt;Every time you&#39;ll open an issue with this label, you&#39;ll also find two other labels: the difficulty level (novice, intermediate, advanced), and a time estimate (low, medium, high).
+This will help you evaluate if you can try and tackle this issue or not.&lt;/p&gt;
+&lt;p&gt;You&#39;ll find them all on the &lt;a href=&#34;https://github.com/ThinkR-open/golem/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ahacktoberfest&#34;&gt;GitHub repository&lt;/a&gt;.
+Feel free to leave a comment on the issue you&#39;d like to tackle, and of course to ask questions if the issue is not detailled enough.&lt;/p&gt;
+&lt;p&gt;I&#39;m planning on release a minor version of &lt;code&gt;{golem}&lt;/code&gt; (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘&lt;/p&gt;
+&lt;p&gt;See you on GitHub!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>About {golem} 0.3.1</title>
