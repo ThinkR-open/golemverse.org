@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Join HacktoberFest 2021 with {golem}!</title>
+      <title>Join HacktoberFest 2021 with {golem} (and more)!</title>
       <link>/post/golem-hacktoberfest-2021/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       <guid>/post/golem-hacktoberfest-2021/</guid>
@@ -25,8 +25,17 @@ I&#39;ve started to label some issues inside the repository with the &lt;code&gt
 &lt;p&gt;Every time you&#39;ll open an issue with this label, you&#39;ll also find two other labels: the difficulty level (novice, intermediate, advanced), and a time estimate (low, medium, high).
 This will help you evaluate if you can try and tackle this issue or not.&lt;/p&gt;
 &lt;p&gt;You&#39;ll find them all on the &lt;a href=&#34;https://github.com/ThinkR-open/golem/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ahacktoberfest&#34;&gt;GitHub repository&lt;/a&gt;.
-Feel free to leave a comment on the issue you&#39;d like to tackle, and of course to ask questions if the issue is not detailled enough.&lt;/p&gt;
+Feel free to leave a comment on the issue you&#39;d like to tackle, and of course to ask questions if the issue is not detailed enough.&lt;/p&gt;
 &lt;p&gt;I&#39;m planning on release a minor version of &lt;code&gt;{golem}&lt;/code&gt; (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘&lt;/p&gt;
+&lt;p&gt;You don&#39;t feel like working on &lt;code&gt;{golem}&lt;/code&gt;?
+We have also labelled other repositories inside the ThinkR &lt;a href=&#34;https://github.com/search?p=1&amp;amp;q=topic%3Ahacktoberfest+org%3AThinkR-open+fork%3Atrue&amp;amp;type=Repositories&#34;&gt;GitHub organisation&lt;/a&gt; with the &lt;code&gt;hacktoberfest&lt;/code&gt; tag:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/attachment&#34;&gt;&lt;code&gt;{attachment}&lt;/code&gt;&lt;/a&gt;, a package for working with dependencies in your scripts, Rmds, and packages.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/shinipsum&#34;&gt;&lt;code&gt;{shinipsum}&lt;/code&gt;&lt;/a&gt;, a lorem-ipsum generator for &lt;code&gt;{shiny}&lt;/code&gt; elements.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/fakir&#34;&gt;&lt;code&gt;{fakir}&lt;/code&gt;&lt;/a&gt;, a fake data generator.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/companies-using-r&#34;&gt;&lt;code&gt;Companies, Officials and NGO Using R&lt;/code&gt;&lt;/a&gt;, our collaborative list of R in the real world.&lt;/li&gt;
+&lt;li&gt;And more&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;See you on GitHub!&lt;/p&gt;
 </description>
     </item>
@@ -326,14 +335,10 @@ shinyApp(ui, server)
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_table(nrow = 3, ncol = 10)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   agegp     alcgp    tobgp ncases ncontrols agegp.1   alcgp.1  tobgp.1 ncases.1
-## 1 25-34 0-39g/day 0-9g/day      0        40   25-34 0-39g/day 0-9g/day        0
-## 2 25-34 0-39g/day    10-19      0        10   25-34 0-39g/day    10-19        0
-## 3 25-34 0-39g/day    20-29      0         6   25-34 0-39g/day    20-29        0
-##   ncontrols.1
-## 1          40
-## 2          10
-## 3           6
+&lt;pre&gt;&lt;code&gt;##   x1 x2 x3 x4   y1   y2    y3   y4 x1.1 x2.1
+## 1 10 10 10  8 8.04 9.14  7.46 6.58   10   10
+## 2  8  8  8  8 6.95 8.14  6.77 5.76    8    8
+## 3 13 13 13  8 7.58 8.74 12.74 7.71   13   13
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;print outputs:&lt;/li&gt;
@@ -341,10 +346,12 @@ shinyApp(ui, server)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_print(type = &amp;quot;model&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## 	Shapiro-Wilk normality test
+## Call:
+## lm(formula = Sepal.Length ~ Sepal.Width, data = datasets::iris)
 ## 
-## data:  datasets::airquality$Ozone
-## W = 0.87867, p-value = 2.79e-08
+## Coefficients:
+## (Intercept)  Sepal.Width  
+##      6.5262      -0.2234
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;hellip; and text, image, ggplotly, dygraph, and DT.&lt;/p&gt;
 &lt;p&gt;Learn more about &lt;code&gt;{shinipsum}&lt;/code&gt;:&lt;/p&gt;

@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Join HacktoberFest 2021 with {golem}!</title>
+      <title>Join HacktoberFest 2021 with {golem} (and more)!</title>
       <link>/post/golem-hacktoberfest-2021/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       <guid>/post/golem-hacktoberfest-2021/</guid>
@@ -25,8 +25,17 @@ I&#39;ve started to label some issues inside the repository with the &lt;code&gt
 &lt;p&gt;Every time you&#39;ll open an issue with this label, you&#39;ll also find two other labels: the difficulty level (novice, intermediate, advanced), and a time estimate (low, medium, high).
 This will help you evaluate if you can try and tackle this issue or not.&lt;/p&gt;
 &lt;p&gt;You&#39;ll find them all on the &lt;a href=&#34;https://github.com/ThinkR-open/golem/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ahacktoberfest&#34;&gt;GitHub repository&lt;/a&gt;.
-Feel free to leave a comment on the issue you&#39;d like to tackle, and of course to ask questions if the issue is not detailled enough.&lt;/p&gt;
+Feel free to leave a comment on the issue you&#39;d like to tackle, and of course to ask questions if the issue is not detailed enough.&lt;/p&gt;
 &lt;p&gt;I&#39;m planning on release a minor version of &lt;code&gt;{golem}&lt;/code&gt; (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘&lt;/p&gt;
+&lt;p&gt;You don&#39;t feel like working on &lt;code&gt;{golem}&lt;/code&gt;?
+We have also labelled other repositories inside the ThinkR &lt;a href=&#34;https://github.com/search?p=1&amp;amp;q=topic%3Ahacktoberfest+org%3AThinkR-open+fork%3Atrue&amp;amp;type=Repositories&#34;&gt;GitHub organisation&lt;/a&gt; with the &lt;code&gt;hacktoberfest&lt;/code&gt; tag:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/attachment&#34;&gt;&lt;code&gt;{attachment}&lt;/code&gt;&lt;/a&gt;, a package for working with dependencies in your scripts, Rmds, and packages.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/shinipsum&#34;&gt;&lt;code&gt;{shinipsum}&lt;/code&gt;&lt;/a&gt;, a lorem-ipsum generator for &lt;code&gt;{shiny}&lt;/code&gt; elements.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/fakir&#34;&gt;&lt;code&gt;{fakir}&lt;/code&gt;&lt;/a&gt;, a fake data generator.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/companies-using-r&#34;&gt;&lt;code&gt;Companies, Officials and NGO Using R&lt;/code&gt;&lt;/a&gt;, our collaborative list of R in the real world.&lt;/li&gt;
+&lt;li&gt;And more&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;See you on GitHub!&lt;/p&gt;
 </description>
     </item>

@@ -72,14 +72,10 @@ shinyApp(ui, server)
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_table(nrow = 3, ncol = 10)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   agegp     alcgp    tobgp ncases ncontrols agegp.1   alcgp.1  tobgp.1 ncases.1
-## 1 25-34 0-39g/day 0-9g/day      0        40   25-34 0-39g/day 0-9g/day        0
-## 2 25-34 0-39g/day    10-19      0        10   25-34 0-39g/day    10-19        0
-## 3 25-34 0-39g/day    20-29      0         6   25-34 0-39g/day    20-29        0
-##   ncontrols.1
-## 1          40
-## 2          10
-## 3           6
+&lt;pre&gt;&lt;code&gt;##   x1 x2 x3 x4   y1   y2    y3   y4 x1.1 x2.1
+## 1 10 10 10  8 8.04 9.14  7.46 6.58   10   10
+## 2  8  8  8  8 6.95 8.14  6.77 5.76    8    8
+## 3 13 13 13  8 7.58 8.74 12.74 7.71   13   13
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;print outputs:&lt;/li&gt;
@@ -87,10 +83,12 @@ shinyApp(ui, server)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_print(type = &amp;quot;model&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## 	Shapiro-Wilk normality test
+## Call:
+## lm(formula = Sepal.Length ~ Sepal.Width, data = datasets::iris)
 ## 
-## data:  datasets::airquality$Ozone
-## W = 0.87867, p-value = 2.79e-08
+## Coefficients:
+## (Intercept)  Sepal.Width  
+##      6.5262      -0.2234
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;hellip; and text, image, ggplotly, dygraph, and DT.&lt;/p&gt;
 &lt;p&gt;Learn more about &lt;code&gt;{shinipsum}&lt;/code&gt;:&lt;/p&gt;
