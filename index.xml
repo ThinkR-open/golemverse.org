@@ -39,6 +39,7 @@ Feel free to leave a comment on the issue you&#39;d like to tackle, and of cours
 We have also labelled other repositories inside the ThinkR &lt;a href=&#34;https://github.com/search?p=1&amp;amp;q=topic%3Ahacktoberfest+org%3AThinkR-open+fork%3Atrue&amp;amp;type=Repositories&#34;&gt;GitHub organisation&lt;/a&gt; with the &lt;code&gt;hacktoberfest&lt;/code&gt; tag:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/attachment&#34;&gt;&lt;code&gt;{attachment}&lt;/code&gt;&lt;/a&gt;, a package for working with dependencies in your scripts, Rmds, and packages.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/fusen&#34;&gt;&lt;code&gt;{fusen}&lt;/code&gt;&lt;/a&gt;, a package to build a package from a Rmd.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/shinipsum&#34;&gt;&lt;code&gt;{shinipsum}&lt;/code&gt;&lt;/a&gt;, a lorem-ipsum generator for &lt;code&gt;{shiny}&lt;/code&gt; elements.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/fakir&#34;&gt;&lt;code&gt;{fakir}&lt;/code&gt;&lt;/a&gt;, a fake data generator.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ThinkR-open/companies-using-r&#34;&gt;&lt;code&gt;Companies, Officials and NGO Using R&lt;/code&gt;&lt;/a&gt;, our collaborative list of R in the real world.&lt;/li&gt;

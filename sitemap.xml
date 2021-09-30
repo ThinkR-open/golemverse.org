@@ -22,12 +22,12 @@
   </url>
   
   <url>
-    <loc>/tags/golem/</loc>
+    <loc>/categories/golem/</loc>
     <lastmod>2021-09-30T01:29:47+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/golem/</loc>
+    <loc>/tags/golem/</loc>
     <lastmod>2021-09-30T01:29:47+01:00</lastmod>
   </url>
   
@@ -37,12 +37,12 @@
   </url>
   
   <url>
-    <loc>/tags/hacktoberfest/</loc>
+    <loc>/categories/hacktoberfest/</loc>
     <lastmod>2021-09-30T01:29:47+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/hacktoberfest/</loc>
+    <loc>/tags/hacktoberfest/</loc>
     <lastmod>2021-09-30T01:29:47+01:00</lastmod>
   </url>
   
@@ -177,12 +177,12 @@
   </url>
   
   <url>
-    <loc>/categories/shinysnippets/</loc>
+    <loc>/tags/shinysnippets/</loc>
     <lastmod>2019-12-01T11:00:09+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/shinysnippets/</loc>
+    <loc>/categories/shinysnippets/</loc>
     <lastmod>2019-12-01T11:00:09+01:00</lastmod>
   </url>
   
