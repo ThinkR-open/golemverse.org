@@ -1,5 +1,5 @@
 ---
-title: "Join HacktoberFest 2021 with {golem}!"
+title: "Join HacktoberFest 2021 with {golem} (and more)!"
 author: colin
 date: '2021-09-30'
 slug: golem-hacktoberfest-2021
@@ -10,7 +10,7 @@ tags:
   - golem
   - hacktoberfest
 subtitle: ''
-summary: 'Take part to Hacktoberfest 2021 with {golem}'
+summary: 'Take part to Hacktoberfest 2021 with {golem}, or with other packages from ThinkR.'
 authors: [colin]
 lastmod: '2021-09-30T01:29:47+01:00'
 featured: yes
@@ -36,5 +36,14 @@ You'll find them all on the [GitHub repository](https://github.com/ThinkR-open/g
 Feel free to leave a comment on the issue you'd like to tackle, and of course to ask questions if the issue is not detailed enough. 
 
 I'm planning on release a minor version of `{golem}` (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘
+
+You don't feel like working on `{golem}`?
+We have also labelled other repositories inside the ThinkR [GitHub organisation](https://github.com/search?p=1&q=topic%3Ahacktoberfest+org%3AThinkR-open+fork%3Atrue&type=Repositories) with the `hacktoberfest` tag: 
+
++ [`{attachment}`](https://github.com/ThinkR-open/attachment), a package for working with dependencies in your scripts, Rmds, and packages. 
++ [`{shinipsum}`](https://github.com/ThinkR-open/shinipsum), a lorem-ipsum generator for `{shiny}` elements.
++ [`{fakir}`](https://github.com/ThinkR-open/fakir), a fake data generator.
++ [`Companies, Officials and NGO Using R`](https://github.com/ThinkR-open/companies-using-r), our collaborative list of R in the real world. 
++ And more...
 
 See you on GitHub! 
