@@ -1,0 +1,40 @@
+---
+title: "Join HacktoberFest 2021 with {golem}!"
+author: colin
+date: '2021-09-30'
+slug: golem-hacktoberfest-2021
+categories:
+  - golem
+  - hacktoberfest
+tags:
+  - golem
+  - hacktoberfest
+subtitle: ''
+summary: 'Take part to Hacktoberfest 2021 with {golem}'
+authors: [colin]
+lastmod: '2021-09-30T01:29:47+01:00'
+featured: yes
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+Join us for [Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/) with `{golem}`! 
+
+Hacktoberfest is an online event, happening all over the world, where everyone is invited to open a pull request on a repo that has issues labelled `hacktoberfest`. 
+The idea of this event is to gather developers (newbies or seasoned), and make them work together on open source projects. 
+
+For this second year, I'm happy to invite developers from the R community to take part to Hacktoberfest with `{golem}`. 
+I've started to label some issues inside the repository with the `hacktoberfest` label, so that you can join the party, starting tomorrow! 
+
+Every time you'll open an issue with this label, you'll also find two other labels: the difficulty level (novice, intermediate, advanced), and a time estimate (low, medium, high).
+This will help you evaluate if you can try and tackle this issue or not. 
+
+You'll find them all on the [GitHub repository](https://github.com/ThinkR-open/golem/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ahacktoberfest).
+Feel free to leave a comment on the issue you'd like to tackle, and of course to ask questions if the issue is not detailled enough. 
+
+I'm planning on release a minor version of `{golem}` (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘
+
+See you on GitHub! 
