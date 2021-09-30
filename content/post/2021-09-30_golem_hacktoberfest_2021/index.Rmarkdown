@@ -33,7 +33,7 @@ Every time you'll open an issue with this label, you'll also find two other labe
 This will help you evaluate if you can try and tackle this issue or not. 
 
 You'll find them all on the [GitHub repository](https://github.com/ThinkR-open/golem/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Ahacktoberfest).
-Feel free to leave a comment on the issue you'd like to tackle, and of course to ask questions if the issue is not detailled enough. 
+Feel free to leave a comment on the issue you'd like to tackle, and of course to ask questions if the issue is not detailed enough. 
 
 I'm planning on release a minor version of `{golem}` (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘
 
