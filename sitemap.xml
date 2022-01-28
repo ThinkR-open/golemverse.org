@@ -8,31 +8,51 @@
   
   <url>
     <loc>/authors/colin/</loc>
-    <lastmod>2021-09-30T01:29:47+01:00</lastmod>
+    <lastmod>2022-02-10T20:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2022-02-10-twitch/</loc>
+    <lastmod>2022-02-10T20:30:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2021-09-30T01:29:47+01:00</lastmod>
+    <lastmod>2022-02-10T20:30:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2021-09-30T01:29:47+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/golem/</loc>
-    <lastmod>2021-09-30T01:29:47+01:00</lastmod>
+    <lastmod>2022-02-10T20:30:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/golem/</loc>
-    <lastmod>2021-09-30T01:29:47+01:00</lastmod>
+    <lastmod>2022-02-10T20:30:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
+    <lastmod>2022-02-10T20:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
+    <lastmod>2022-02-10T20:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/stream/</loc>
+    <lastmod>2022-02-10T20:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2022-02-10T20:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/golem/</loc>
     <lastmod>2021-09-30T01:29:47+01:00</lastmod>
   </url>
   
@@ -53,11 +73,6 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2021-09-30T01:29:47+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2021-09-30T01:29:47+01:00</lastmod>
   </url>
   
@@ -89,16 +104,6 @@
   <url>
     <loc>/post/2020-05-10_shinipsum-cran-realease/</loc>
     <lastmod>2020-05-10T21:29:47+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/</loc>
-    <lastmod>2020-04-02T21:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/stream/</loc>
-    <lastmod>2020-04-02T21:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -177,12 +182,12 @@
   </url>
   
   <url>
-    <loc>/tags/shinysnippets/</loc>
+    <loc>/categories/shinysnippets/</loc>
     <lastmod>2019-12-01T11:00:09+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/shinysnippets/</loc>
+    <loc>/tags/shinysnippets/</loc>
     <lastmod>2019-12-01T11:00:09+01:00</lastmod>
   </url>
   

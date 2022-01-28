@@ -5,7 +5,7 @@
     <link>/categories/shinipsum/</link>
       <atom:link href="/categories/shinipsum/index.xml" rel="self" type="application/rss+xml" />
     <description>shinipsum</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>shinipsum</title>
@@ -29,7 +29,11 @@ If you are familiar with &amp;ldquo;lorem ipsum&amp;rdquo;, the fake text genera
 &lt;p&gt;In this package, a series of functions that generates random placeholders.
 For example, &lt;code&gt;random_ggplot()&lt;/code&gt; generates random &lt;code&gt;{ggplot2}&lt;/code&gt; elements:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(shinipsum)
-library(ggplot2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in register(): Can&#39;t find generic `scale_type` in package ggplot2 to
+## register S3 method.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot2)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_ggplot() + 
   labs(title = &amp;quot;Random plot&amp;quot;) 
@@ -72,10 +76,14 @@ shinyApp(ui, server)
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_table(nrow = 3, ncol = 10)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   x1 x2 x3 x4   y1   y2    y3   y4 x1.1 x2.1
-## 1 10 10 10  8 8.04 9.14  7.46 6.58   10   10
-## 2  8  8  8  8 6.95 8.14  6.77 5.76    8    8
-## 3 13 13 13  8 7.58 8.74 12.74 7.71   13   13
+&lt;pre&gt;&lt;code&gt;##         general picture  blocks   maze reading  vocab general picture  blocks
+## general  24.641   5.991  33.520  6.023  20.755 29.701  24.641   5.991  33.520
+## picture   5.991   6.700  18.137  1.782   4.936  7.204   5.991   6.700  18.137
+## blocks   33.520  18.137 149.831 19.424  31.430 50.753  33.520  18.137 149.831
+##           maze
+## general  6.023
+## picture  1.782
+## blocks  19.424
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;print outputs:&lt;/li&gt;
@@ -83,12 +91,16 @@ shinyApp(ui, server)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_print(type = &amp;quot;model&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## Call:
-## lm(formula = Sepal.Length ~ Sepal.Width, data = datasets::iris)
+## 	Pearson&#39;s product-moment correlation
 ## 
-## Coefficients:
-## (Intercept)  Sepal.Width  
-##      6.5262      -0.2234
+## data:  datasets::mtcars$mpg and datasets::mtcars$cyl
+## t = -8.9197, df = 30, p-value = 6.113e-10
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  -0.9257694 -0.7163171
+## sample estimates:
+##       cor 
+## -0.852162
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;hellip; and text, image, ggplotly, dygraph, and DT.&lt;/p&gt;
 &lt;p&gt;Learn more about &lt;code&gt;{shinipsum}&lt;/code&gt;:&lt;/p&gt;

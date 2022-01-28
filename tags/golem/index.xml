@@ -5,12 +5,65 @@
     <link>/tags/golem/</link>
       <atom:link href="/tags/golem/index.xml" rel="self" type="application/rss+xml" />
     <description>golem</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Thu, 10 Feb 2022 20:30:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>golem</title>
       <link>/tags/golem/</link>
     </image>
+    
+    <item>
+      <title>2022 first stream</title>
+      <link>/talk/2022-02-10-twitch/</link>
+      <pubDate>Thu, 10 Feb 2022 20:30:00 +0000</pubDate>
+      <guid>/talk/2022-02-10-twitch/</guid>
+      <description>&lt;h3 id=&#34;2022-first-stream-&#34;&gt;2022 first stream 🤓&lt;/h3&gt;
+&lt;li&gt; 👨‍💻 Colin Fay, &lt;a href = &#34;https://twitter.com/_ColinFay&#34;&gt;@_ColinFay&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; 🔗 https://www.twitch.tv/thinkr_fr &lt;/li&gt;
+&lt;li&gt; ⏳ &lt;time datetime=&#34;2022-02-10 20.30&#34;&gt;2022-02-10 20.30&lt;/time&gt; Paris Time. &lt;/li&gt;
+&lt;details closed&gt;
+&lt;summary&gt; &lt;span title=&#39;Click to Expand&#39;&gt; See Event in Other Timezones &lt;/span&gt; &lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;twitch_date &amp;lt;- lubridate::ymd_hm(
+  &amp;quot;2022-02-10 20.30&amp;quot;, 
+  tz = &amp;quot;Europe/Paris&amp;quot;
+)
+
+list(
+  UTC = lubridate::with_tz(
+    twitch_date, 
+    &amp;quot;UTC&amp;quot;
+  ),
+  UTC = lubridate::with_tz(
+    twitch_date, 
+    &amp;quot;America/New_York&amp;quot;
+  ),
+  UTC = lubridate::with_tz(
+    twitch_date, 
+    &amp;quot;America/Los_Angeles&amp;quot;
+  ),
+  UTC = lubridate::with_tz(
+    twitch_date, 
+    &amp;quot;Australia/Sydney&amp;quot;
+  )
+)
+
+$UTC
+[1] &amp;quot;2022-02-10 19:30:00 UTC&amp;quot;
+
+$UTC
+[1] &amp;quot;2022-02-10 14:30:00 EST&amp;quot;
+
+$UTC
+[1] &amp;quot;2022-02-10 11:30:00 PST&amp;quot;
+
+$UTC
+[1] &amp;quot;2022-02-11 06:30:00 AEDT&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;br&gt;
+</description>
+    </item>
     
     <item>
       <title>Join HacktoberFest 2021 with {golem} (and more)!</title>

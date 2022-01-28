@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Golemverse</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2021</copyright><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Thu, 10 Feb 2022 20:30:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>Golemverse</title>
@@ -18,6 +18,59 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/contact/contact/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>2022 first stream</title>
+      <link>/talk/2022-02-10-twitch/</link>
+      <pubDate>Thu, 10 Feb 2022 20:30:00 +0000</pubDate>
+      <guid>/talk/2022-02-10-twitch/</guid>
+      <description>&lt;h3 id=&#34;2022-first-stream-&#34;&gt;2022 first stream 🤓&lt;/h3&gt;
+&lt;li&gt; 👨‍💻 Colin Fay, &lt;a href = &#34;https://twitter.com/_ColinFay&#34;&gt;@_ColinFay&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt; 🔗 https://www.twitch.tv/thinkr_fr &lt;/li&gt;
+&lt;li&gt; ⏳ &lt;time datetime=&#34;2022-02-10 20.30&#34;&gt;2022-02-10 20.30&lt;/time&gt; Paris Time. &lt;/li&gt;
+&lt;details closed&gt;
+&lt;summary&gt; &lt;span title=&#39;Click to Expand&#39;&gt; See Event in Other Timezones &lt;/span&gt; &lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;twitch_date &amp;lt;- lubridate::ymd_hm(
+  &amp;quot;2022-02-10 20.30&amp;quot;, 
+  tz = &amp;quot;Europe/Paris&amp;quot;
+)
+
+list(
+  UTC = lubridate::with_tz(
+    twitch_date, 
+    &amp;quot;UTC&amp;quot;
+  ),
+  UTC = lubridate::with_tz(
+    twitch_date, 
+    &amp;quot;America/New_York&amp;quot;
+  ),
+  UTC = lubridate::with_tz(
+    twitch_date, 
+    &amp;quot;America/Los_Angeles&amp;quot;
+  ),
+  UTC = lubridate::with_tz(
+    twitch_date, 
+    &amp;quot;Australia/Sydney&amp;quot;
+  )
+)
+
+$UTC
+[1] &amp;quot;2022-02-10 19:30:00 UTC&amp;quot;
+
+$UTC
+[1] &amp;quot;2022-02-10 14:30:00 EST&amp;quot;
+
+$UTC
+[1] &amp;quot;2022-02-10 11:30:00 PST&amp;quot;
+
+$UTC
+[1] &amp;quot;2022-02-11 06:30:00 AEDT&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;br&gt;
+</description>
     </item>
     
     <item>
@@ -301,7 +354,11 @@ If you are familiar with &amp;ldquo;lorem ipsum&amp;rdquo;, the fake text genera
 &lt;p&gt;In this package, a series of functions that generates random placeholders.
 For example, &lt;code&gt;random_ggplot()&lt;/code&gt; generates random &lt;code&gt;{ggplot2}&lt;/code&gt; elements:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(shinipsum)
-library(ggplot2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in register(): Can&#39;t find generic `scale_type` in package ggplot2 to
+## register S3 method.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot2)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_ggplot() + 
   labs(title = &amp;quot;Random plot&amp;quot;) 
@@ -344,10 +401,14 @@ shinyApp(ui, server)
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_table(nrow = 3, ncol = 10)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   x1 x2 x3 x4   y1   y2    y3   y4 x1.1 x2.1
-## 1 10 10 10  8 8.04 9.14  7.46 6.58   10   10
-## 2  8  8  8  8 6.95 8.14  6.77 5.76    8    8
-## 3 13 13 13  8 7.58 8.74 12.74 7.71   13   13
+&lt;pre&gt;&lt;code&gt;##         general picture  blocks   maze reading  vocab general picture  blocks
+## general  24.641   5.991  33.520  6.023  20.755 29.701  24.641   5.991  33.520
+## picture   5.991   6.700  18.137  1.782   4.936  7.204   5.991   6.700  18.137
+## blocks   33.520  18.137 149.831 19.424  31.430 50.753  33.520  18.137 149.831
+##           maze
+## general  6.023
+## picture  1.782
+## blocks  19.424
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;print outputs:&lt;/li&gt;
@@ -355,12 +416,16 @@ shinyApp(ui, server)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_print(type = &amp;quot;model&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## Call:
-## lm(formula = Sepal.Length ~ Sepal.Width, data = datasets::iris)
+## 	Pearson&#39;s product-moment correlation
 ## 
-## Coefficients:
-## (Intercept)  Sepal.Width  
-##      6.5262      -0.2234
+## data:  datasets::mtcars$mpg and datasets::mtcars$cyl
+## t = -8.9197, df = 30, p-value = 6.113e-10
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  -0.9257694 -0.7163171
+## sample estimates:
+##       cor 
+## -0.852162
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;hellip; and text, image, ggplotly, dygraph, and DT.&lt;/p&gt;
 &lt;p&gt;Learn more about &lt;code&gt;{shinipsum}&lt;/code&gt;:&lt;/p&gt;

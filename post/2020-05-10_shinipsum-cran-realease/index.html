@@ -709,7 +709,11 @@ If you are familiar with &ldquo;lorem ipsum&rdquo;, the fake text generator that
 <p>In this package, a series of functions that generates random placeholders.
 For example, <code>random_ggplot()</code> generates random <code>{ggplot2}</code> elements:</p>
 <pre><code class="language-r">library(shinipsum)
-library(ggplot2)
+</code></pre>
+<pre><code>## Warning in register(): Can't find generic `scale_type` in package ggplot2 to
+## register S3 method.
+</code></pre>
+<pre><code class="language-r">library(ggplot2)
 </code></pre>
 <pre><code class="language-r">random_ggplot() + 
   labs(title = &quot;Random plot&quot;) 
@@ -752,10 +756,14 @@ shinyApp(ui, server)
 </ul>
 <pre><code class="language-r">random_table(nrow = 3, ncol = 10)
 </code></pre>
-<pre><code>##   x1 x2 x3 x4   y1   y2    y3   y4 x1.1 x2.1
-## 1 10 10 10  8 8.04 9.14  7.46 6.58   10   10
-## 2  8  8  8  8 6.95 8.14  6.77 5.76    8    8
-## 3 13 13 13  8 7.58 8.74 12.74 7.71   13   13
+<pre><code>##         general picture  blocks   maze reading  vocab general picture  blocks
+## general  24.641   5.991  33.520  6.023  20.755 29.701  24.641   5.991  33.520
+## picture   5.991   6.700  18.137  1.782   4.936  7.204   5.991   6.700  18.137
+## blocks   33.520  18.137 149.831 19.424  31.430 50.753  33.520  18.137 149.831
+##           maze
+## general  6.023
+## picture  1.782
+## blocks  19.424
 </code></pre>
 <ul>
 <li>print outputs:</li>
@@ -763,12 +771,16 @@ shinyApp(ui, server)
 <pre><code class="language-r">random_print(type = &quot;model&quot;)
 </code></pre>
 <pre><code>## 
-## Call:
-## lm(formula = Sepal.Length ~ Sepal.Width, data = datasets::iris)
+## 	Pearson's product-moment correlation
 ## 
-## Coefficients:
-## (Intercept)  Sepal.Width  
-##      6.5262      -0.2234
+## data:  datasets::mtcars$mpg and datasets::mtcars$cyl
+## t = -8.9197, df = 30, p-value = 6.113e-10
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  -0.9257694 -0.7163171
+## sample estimates:
+##       cor 
+## -0.852162
 </code></pre>
 <p>&hellip; and text, image, ggplotly, dygraph, and DT.</p>
 <p>Learn more about <code>{shinipsum}</code>:</p>
@@ -1137,7 +1149,7 @@ shinyApp(ui, server)
   
 
   <p class="powered-by">
-    © ThinkR - 2021 &middot; 
+    © ThinkR - 2022 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
