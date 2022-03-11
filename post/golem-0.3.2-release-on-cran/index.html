@@ -650,7 +650,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -698,23 +698,23 @@
 
     <div class="article-style">
       <p>The new version of <code>{golem}</code> is now available!</p>
-<p>You can now download it from your favorite CRAN repository, or by running the following command:</p>
+<p>You can download it from your favorite CRAN repository, or by running the following command:</p>
 <pre><code class="language-r">remotes::install_github(
   &quot;thinkr-open/golem@v0.3.2&quot;
 )
 </code></pre>
 <h2 id="whats-up-with-this-new-version">What's up with this new version?</h2>
-<p>In this release, we have been focusing on a closer integration of tests inside the application building process, notably via <a href="https://shiny.rstudio.com/articles/server-function-testing.html">Server function testing with Shiny</a>, adding tests to <code>fct</code>, <code>utils</code>, and the ui &amp; server util functions that comes with <code>{golem}</code>.</p>
+<p>In this release, we have been focusing on a closer integration of tests inside the application building process, notably via <a href="https://shiny.rstudio.com/articles/server-function-testing.html">Server function testing with Shiny</a>, adding tests to <code>fct</code>, <code>utils</code>, and the ui &amp; server functions that comes with <code>{golem}</code>.</p>
 <p>Starting with this version of <code>{golem}</code>, the integration of tests is opt-in:</p>
 <pre><code class="language-r">golem::add_module(&quot;plop&quot;, with_test = TRUE)
 golem::add_fct(&quot;helpers&quot;, with_test = TRUE)
 </code></pre>
-<p>Note that these will be opt-out in te next release &mdash; in other words they will be <code>TRUE</code> by default.</p>
+<p>Note that these will be opt-out in the next release &mdash; in other words they will be <code>TRUE</code> by default in the future.</p>
 <p>We also have squashed a bunch of issues, for example <code>amend_config()</code> now keeps <code>!expr</code> (this use to cause some errors when the project was shared across multiple computers), <code>expect_running()</code> now finds <code>R.exe</code>, some adjustments has been made to fit new version of packages (for example <code>testthat::expect_is</code> is no longer used, and we require the correct version of <code>{usethis}</code>).</p>
 <p>For a full list of changes, please refer to the <a href="https://github.com/ThinkR-open/golem/blob/master/NEWS.md">NEWS.md</a> file.</p>
 <h2 id="whats-next">What's next</h2>
-<p>Now that this version is stable, we can start working on the next version, which will be <code>0.4.0</code>.
-One of the thing that has been an issue with the way <code>{golem}</code> works is that it is used in two contexts: for dev, and for deployment.</p>
+<p>Now that this version is stable, we can start working on the next version, which will be <code>0.4.0</code>.</p>
+<p>One of the thing that has been an issue with the way <code>{golem}</code> works is that it is used in two contexts: for dev, and for deployment.</p>
 <p>The issue with that approach is that when deloying a golem-based app, you will have to install packages that are only used for dev, for exemple <code>{usethis}</code>, while they are not required to run the app.</p>
 <p>This next version will focus on removing these packages from hard dependencies and move them to suggest, so that you can install them while developing but not when deploying, making the deployment process way easier and lighter.
 Note that the current version of <code>{golem}</code> (0.3.2) has already made a move in this direction by moving <code>{dockerfiler}</code> to <code>Suggest</code>, and making it only required when building the containers.</p>

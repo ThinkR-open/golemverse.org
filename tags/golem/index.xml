@@ -18,23 +18,23 @@
       <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
       <guid>/post/golem-0.3.2-release-on-cran/</guid>
       <description>&lt;p&gt;The new version of &lt;code&gt;{golem}&lt;/code&gt; is now available!&lt;/p&gt;
-&lt;p&gt;You can now download it from your favorite CRAN repository, or by running the following command:&lt;/p&gt;
+&lt;p&gt;You can download it from your favorite CRAN repository, or by running the following command:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;remotes::install_github(
   &amp;quot;thinkr-open/golem@v0.3.2&amp;quot;
 )
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;whats-up-with-this-new-version&#34;&gt;What&#39;s up with this new version?&lt;/h2&gt;
-&lt;p&gt;In this release, we have been focusing on a closer integration of tests inside the application building process, notably via &lt;a href=&#34;https://shiny.rstudio.com/articles/server-function-testing.html&#34;&gt;Server function testing with Shiny&lt;/a&gt;, adding tests to &lt;code&gt;fct&lt;/code&gt;, &lt;code&gt;utils&lt;/code&gt;, and the ui &amp;amp; server util functions that comes with &lt;code&gt;{golem}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In this release, we have been focusing on a closer integration of tests inside the application building process, notably via &lt;a href=&#34;https://shiny.rstudio.com/articles/server-function-testing.html&#34;&gt;Server function testing with Shiny&lt;/a&gt;, adding tests to &lt;code&gt;fct&lt;/code&gt;, &lt;code&gt;utils&lt;/code&gt;, and the ui &amp;amp; server functions that comes with &lt;code&gt;{golem}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Starting with this version of &lt;code&gt;{golem}&lt;/code&gt;, the integration of tests is opt-in:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;golem::add_module(&amp;quot;plop&amp;quot;, with_test = TRUE)
 golem::add_fct(&amp;quot;helpers&amp;quot;, with_test = TRUE)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note that these will be opt-out in te next release &amp;mdash; in other words they will be &lt;code&gt;TRUE&lt;/code&gt; by default.&lt;/p&gt;
+&lt;p&gt;Note that these will be opt-out in the next release &amp;mdash; in other words they will be &lt;code&gt;TRUE&lt;/code&gt; by default in the future.&lt;/p&gt;
 &lt;p&gt;We also have squashed a bunch of issues, for example &lt;code&gt;amend_config()&lt;/code&gt; now keeps &lt;code&gt;!expr&lt;/code&gt; (this use to cause some errors when the project was shared across multiple computers), &lt;code&gt;expect_running()&lt;/code&gt; now finds &lt;code&gt;R.exe&lt;/code&gt;, some adjustments has been made to fit new version of packages (for example &lt;code&gt;testthat::expect_is&lt;/code&gt; is no longer used, and we require the correct version of &lt;code&gt;{usethis}&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;For a full list of changes, please refer to the &lt;a href=&#34;https://github.com/ThinkR-open/golem/blob/master/NEWS.md&#34;&gt;NEWS.md&lt;/a&gt; file.&lt;/p&gt;
 &lt;h2 id=&#34;whats-next&#34;&gt;What&#39;s next&lt;/h2&gt;
-&lt;p&gt;Now that this version is stable, we can start working on the next version, which will be &lt;code&gt;0.4.0&lt;/code&gt;.
-One of the thing that has been an issue with the way &lt;code&gt;{golem}&lt;/code&gt; works is that it is used in two contexts: for dev, and for deployment.&lt;/p&gt;
+&lt;p&gt;Now that this version is stable, we can start working on the next version, which will be &lt;code&gt;0.4.0&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;One of the thing that has been an issue with the way &lt;code&gt;{golem}&lt;/code&gt; works is that it is used in two contexts: for dev, and for deployment.&lt;/p&gt;
 &lt;p&gt;The issue with that approach is that when deloying a golem-based app, you will have to install packages that are only used for dev, for exemple &lt;code&gt;{usethis}&lt;/code&gt;, while they are not required to run the app.&lt;/p&gt;
 &lt;p&gt;This next version will focus on removing these packages from hard dependencies and move them to suggest, so that you can install them while developing but not when deploying, making the deployment process way easier and lighter.
 Note that the current version of &lt;code&gt;{golem}&lt;/code&gt; (0.3.2) has already made a move in this direction by moving &lt;code&gt;{dockerfiler}&lt;/code&gt; to &lt;code&gt;Suggest&lt;/code&gt;, and making it only required when building the containers.&lt;/p&gt;

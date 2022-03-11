@@ -714,7 +714,7 @@ library(ggplot2)
 <pre><code class="language-r">random_ggplot() + 
   labs(title = &quot;Random plot&quot;) 
 </code></pre>
-<pre><code>## Warning: Computation failed in `stat_binhex()`:
+<pre><code>## Warning: Removed 37 rows containing non-finite values (stat_boxplot).
 </code></pre>
 <p><img src="/post/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <pre><code class="language-r">random_ggplot() + 
@@ -754,14 +754,10 @@ shinyApp(ui, server)
 </ul>
 <pre><code class="language-r">random_table(nrow = 3, ncol = 10)
 </code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.Length.1
-## 1          5.1         3.5          1.4         0.2  setosa            5.1
-## 2          4.9         3.0          1.4         0.2  setosa            4.9
-## 3          4.7         3.2          1.3         0.2  setosa            4.7
-##   Sepal.Width.1 Petal.Length.1 Petal.Width.1 Species.1
-## 1           3.5            1.4           0.2    setosa
-## 2           3.0            1.4           0.2    setosa
-## 3           3.2            1.3           0.2    setosa
+<pre><code>##   conc rate   state conc.1 rate.1 state.1 conc.2 rate.2 state.2 conc.3
+## 1 0.02   76 treated   0.02     76 treated   0.02     76 treated   0.02
+## 2 0.02   47 treated   0.02     47 treated   0.02     47 treated   0.02
+## 3 0.06   97 treated   0.06     97 treated   0.06     97 treated   0.06
 </code></pre>
 <ul>
 <li>print outputs:</li>
