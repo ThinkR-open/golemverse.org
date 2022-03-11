@@ -5,7 +5,7 @@
     <link>/tags/</link>
       <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Thu, 10 Feb 2022 20:30:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Fri, 11 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>Tags</title>
@@ -15,8 +15,16 @@
     <item>
       <title>golem</title>
       <link>/tags/golem/</link>
-      <pubDate>Thu, 10 Feb 2022 20:30:00 +0000</pubDate>
+      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
       <guid>/tags/golem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>package</title>
+      <link>/tags/package/</link>
+      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>/tags/package/</guid>
       <description></description>
     </item>
     
@@ -25,14 +33,6 @@
       <link>/tags/hacktoberfest/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       <guid>/tags/hacktoberfest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>package</title>
-      <link>/tags/package/</link>
-      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
-      <guid>/tags/package/</guid>
       <description></description>
     </item>
     

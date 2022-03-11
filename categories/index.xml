@@ -5,12 +5,28 @@
     <link>/categories/</link>
       <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Thu, 10 Feb 2022 20:30:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Fri, 11 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>Categories</title>
       <link>/categories/</link>
     </image>
+    
+    <item>
+      <title>golem</title>
+      <link>/categories/golem/</link>
+      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>/categories/golem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>release</title>
+      <link>/categories/release/</link>
+      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>/categories/release/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>stream</title>
@@ -21,26 +37,10 @@
     </item>
     
     <item>
-      <title>golem</title>
-      <link>/categories/golem/</link>
-      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>/categories/golem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>hacktoberfest</title>
       <link>/categories/hacktoberfest/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       <guid>/categories/hacktoberfest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>release</title>
-      <link>/categories/release/</link>
-      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
-      <guid>/categories/release/</guid>
       <description></description>
     </item>
     

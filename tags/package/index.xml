@@ -5,12 +5,45 @@
     <link>/tags/package/</link>
       <atom:link href="/tags/package/index.xml" rel="self" type="application/rss+xml" />
     <description>package</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Fri, 11 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>package</title>
       <link>/tags/package/</link>
     </image>
+    
+    <item>
+      <title>{golem} 0.3.2 is now available</title>
+      <link>/post/golem-0.3.2-release-on-cran/</link>
+      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>/post/golem-0.3.2-release-on-cran/</guid>
+      <description>&lt;p&gt;The new version of &lt;code&gt;{golem}&lt;/code&gt; is now available!&lt;/p&gt;
+&lt;p&gt;You can now download it from your favorite CRAN repository, or by running the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;remotes::install_github(
+  &amp;quot;thinkr-open/golem@v0.3.2&amp;quot;
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;whats-up-with-this-new-version&#34;&gt;What&#39;s up with this new version?&lt;/h2&gt;
+&lt;p&gt;In this release, we have been focusing on a closer integration of tests inside the application building process, notably via &lt;a href=&#34;https://shiny.rstudio.com/articles/server-function-testing.html&#34;&gt;Server function testing with Shiny&lt;/a&gt;, adding tests to &lt;code&gt;fct&lt;/code&gt;, &lt;code&gt;utils&lt;/code&gt;, and the ui &amp;amp; server util functions that comes with &lt;code&gt;{golem}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Starting with this version of &lt;code&gt;{golem}&lt;/code&gt;, the integration of tests is opt-in:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;golem::add_module(&amp;quot;plop&amp;quot;, with_test = TRUE)
+golem::add_fct(&amp;quot;helpers&amp;quot;, with_test = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that these will be opt-out in te next release &amp;mdash; in other words they will be &lt;code&gt;TRUE&lt;/code&gt; by default.&lt;/p&gt;
+&lt;p&gt;We also have squashed a bunch of issues, for example &lt;code&gt;amend_config()&lt;/code&gt; now keeps &lt;code&gt;!expr&lt;/code&gt; (this use to cause some errors when the project was shared across multiple computers), &lt;code&gt;expect_running()&lt;/code&gt; now finds &lt;code&gt;R.exe&lt;/code&gt;, some adjustments has been made to fit new version of packages (for example &lt;code&gt;testthat::expect_is&lt;/code&gt; is no longer used, and we require the correct version of &lt;code&gt;{usethis}&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;For a full list of changes, please refer to the &lt;a href=&#34;https://github.com/ThinkR-open/golem/blob/master/NEWS.md&#34;&gt;NEWS.md&lt;/a&gt; file.&lt;/p&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&#39;s next&lt;/h2&gt;
+&lt;p&gt;Now that this version is stable, we can start working on the next version, which will be &lt;code&gt;0.4.0&lt;/code&gt;.
+One of the thing that has been an issue with the way &lt;code&gt;{golem}&lt;/code&gt; works is that it is used in two contexts: for dev, and for deployment.&lt;/p&gt;
+&lt;p&gt;The issue with that approach is that when deloying a golem-based app, you will have to install packages that are only used for dev, for exemple &lt;code&gt;{usethis}&lt;/code&gt;, while they are not required to run the app.&lt;/p&gt;
+&lt;p&gt;This next version will focus on removing these packages from hard dependencies and move them to suggest, so that you can install them while developing but not when deploying, making the deployment process way easier and lighter.
+Note that the current version of &lt;code&gt;{golem}&lt;/code&gt; (0.3.2) has already made a move in this direction by moving &lt;code&gt;{dockerfiler}&lt;/code&gt; to &lt;code&gt;Suggest&lt;/code&gt;, and making it only required when building the containers.&lt;/p&gt;
+&lt;p&gt;Follow the &lt;a href=&#34;https://github.com/ThinkR-open/golem/projects/8&#34;&gt;Version 0.4.0 &lt;/a&gt; board for more!&lt;/p&gt;
+&lt;h2 id=&#34;thanks&#34;&gt;Thanks&lt;/h2&gt;
+&lt;p&gt;We want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/abidawson&#34;&gt;@abidawson&lt;/a&gt;, &lt;a href=&#34;https://github.com/abnercasallo&#34;&gt;@abnercasallo&lt;/a&gt;, &lt;a href=&#34;https://github.com/aftonsteps&#34;&gt;@aftonsteps&lt;/a&gt;, &lt;a href=&#34;https://github.com/AMillanFL&#34;&gt;@AMillanFL&lt;/a&gt;, &lt;a href=&#34;https://github.com/antoine-sachet&#34;&gt;@antoine-sachet&lt;/a&gt;, &lt;a href=&#34;https://github.com/ArthurPERE&#34;&gt;@ArthurPERE&lt;/a&gt;, &lt;a href=&#34;https://github.com/artpulsion&#34;&gt;@artpulsion&lt;/a&gt;, &lt;a href=&#34;https://github.com/cderv&#34;&gt;@cderv&lt;/a&gt;,  &lt;a href=&#34;https://github.com/chintanp&#34;&gt;@chintanp&lt;/a&gt;, &lt;a href=&#34;https://github.com/ChrisBeeley&#34;&gt;@ChrisBeeley&lt;/a&gt;,  &lt;a href=&#34;https://github.com/CorradoLanera&#34;&gt;@CorradoLanera&lt;/a&gt;, &lt;a href=&#34;https://github.com/csgillespie&#34;&gt;@csgillespie&lt;/a&gt;, &lt;a href=&#34;https://github.com/daattali&#34;&gt;@daattali&lt;/a&gt;, &lt;a href=&#34;https://github.com/DivadNojnarg&#34;&gt;@DivadNojnarg&lt;/a&gt;, &lt;a href=&#34;https://github.com/durandsinclair&#34;&gt;@durandsinclair&lt;/a&gt;, &lt;a href=&#34;https://github.com/dwhdai&#34;&gt;@dwhdai&lt;/a&gt;, &lt;a href=&#34;https://github.com/dylanrussellmd&#34;&gt;@dylanrussellmd&lt;/a&gt;, &lt;a href=&#34;https://github.com/earnaud&#34;&gt;@earnaud&lt;/a&gt;, &lt;a href=&#34;https://github.com/fBedecarrats&#34;&gt;@fBedecarrats&lt;/a&gt;, &lt;a href=&#34;https://github.com/feddelegrand7&#34;&gt;@feddelegrand7&lt;/a&gt;, &lt;a href=&#34;https://github.com/fizic37&#34;&gt;@fizic37&lt;/a&gt;, &lt;a href=&#34;https://github.com/fvitalini&#34;&gt;@fvitalini&lt;/a&gt;, &lt;a href=&#34;https://github.com/gacolitti&#34;&gt;@gacolitti&lt;/a&gt;, &lt;a href=&#34;https://github.com/genobobeno&#34;&gt;@genobobeno&lt;/a&gt;, &lt;a href=&#34;https://github.com/hadley&#34;&gt;@hadley&lt;/a&gt;, &lt;a href=&#34;https://github.com/HanjoStudy&#34;&gt;@HanjoStudy&lt;/a&gt;, &lt;a href=&#34;https://github.com/henrique1008&#34;&gt;@henrique1008&lt;/a&gt;, &lt;a href=&#34;https://github.com/jacksonschan&#34;&gt;@jacksonschan&lt;/a&gt;, &lt;a href=&#34;https://github.com/jacobwindsor&#34;&gt;@jacobwindsor&lt;/a&gt;, &lt;a href=&#34;https://github.com/jaybee84&#34;&gt;@jaybee84&lt;/a&gt;, &lt;a href=&#34;https://github.com/jcrodriguez1989&#34;&gt;@jcrodriguez1989&lt;/a&gt;, &lt;a href=&#34;https://github.com/jennahamlin&#34;&gt;@jennahamlin&lt;/a&gt;, &lt;a href=&#34;https://github.com/julianstanley&#34;&gt;@julianstanley&lt;/a&gt;, &lt;a href=&#34;https://github.com/KasperThystrup&#34;&gt;@KasperThystrup&lt;/a&gt;, &lt;a href=&#34;https://github.com/Kastakin&#34;&gt;@Kastakin&lt;/a&gt;, &lt;a href=&#34;https://github.com/KoderKow&#34;&gt;@KoderKow&lt;/a&gt;, &lt;a href=&#34;https://github.com/kprimice&#34;&gt;@kprimice&lt;/a&gt;, &lt;a href=&#34;https://github.com/mahelious&#34;&gt;@mahelious&lt;/a&gt;, &lt;a href=&#34;https://github.com/MayaGans&#34;&gt;@MayaGans&lt;/a&gt;, &lt;a href=&#34;https://github.com/mcsiple&#34;&gt;@mcsiple&lt;/a&gt;, &lt;a href=&#34;https://github.com/michaelhogersnplm&#34;&gt;@michaelhogersnplm&lt;/a&gt;, &lt;a href=&#34;https://github.com/moodymudskipper&#34;&gt;@moodymudskipper&lt;/a&gt;, &lt;a href=&#34;https://github.com/mraess&#34;&gt;@mraess&lt;/a&gt;, &lt;a href=&#34;https://github.com/novica&#34;&gt;@novica&lt;/a&gt;, &lt;a href=&#34;https://github.com/nvelden&#34;&gt;@nvelden&lt;/a&gt;, &lt;a href=&#34;https://github.com/quickbendelat&#34;&gt;@quickbendelat&lt;/a&gt;, &lt;a href=&#34;https://github.com/rgaube&#34;&gt;@rgaube&lt;/a&gt;, &lt;a href=&#34;https://github.com/riccardoporreca&#34;&gt;@riccardoporreca&lt;/a&gt;, &lt;a href=&#34;https://github.com/RichardPilbery&#34;&gt;@RichardPilbery&lt;/a&gt;, &lt;a href=&#34;https://github.com/robertoromor&#34;&gt;@robertoromor&lt;/a&gt;, &lt;a href=&#34;https://github.com/seanhardison1&#34;&gt;@seanhardison1&lt;/a&gt;, &lt;a href=&#34;https://github.com/ShinyFabio&#34;&gt;@ShinyFabio&lt;/a&gt;, &lt;a href=&#34;https://github.com/sjspielman&#34;&gt;@sjspielman&lt;/a&gt;,  &lt;a href=&#34;https://github.com/Swechhya&#34;&gt;@Swechhya&lt;/a&gt;, &lt;a href=&#34;https://github.com/TimotheeTournier&#34;&gt;@TimotheeTournier&lt;/a&gt;, &lt;a href=&#34;https://github.com/VincentAlcazer&#34;&gt;@VincentAlcazer&lt;/a&gt;,  &lt;a href=&#34;https://github.com/Welsh44&#34;&gt;@Welsh44&lt;/a&gt;, &lt;a href=&#34;https://github.com/yogat3ch&#34;&gt;@yogat3ch&lt;/a&gt;, &lt;a href=&#34;https://github.com/yonicd&#34;&gt;@yonicd&lt;/a&gt;, &lt;a href=&#34;https://github.com/zchmielewska&#34;&gt;@zchmielewska&lt;/a&gt;, and &lt;a href=&#34;https://github.com/ZimmermannYves&#34;&gt;@ZimmermannYves&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>About {golem} 0.3.1</title>
@@ -264,14 +297,12 @@ If you are familiar with &amp;ldquo;lorem ipsum&amp;rdquo;, the fake text genera
 &lt;p&gt;In this package, a series of functions that generates random placeholders.
 For example, &lt;code&gt;random_ggplot()&lt;/code&gt; generates random &lt;code&gt;{ggplot2}&lt;/code&gt; elements:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(shinipsum)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in register(): Can&#39;t find generic `scale_type` in package ggplot2 to
-## register S3 method.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot2)
+library(ggplot2)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_ggplot() + 
   labs(title = &amp;quot;Random plot&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Computation failed in `stat_binhex()`:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_ggplot() + 
@@ -311,14 +342,14 @@ shinyApp(ui, server)
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_table(nrow = 3, ncol = 10)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##         general picture  blocks   maze reading  vocab general picture  blocks
-## general  24.641   5.991  33.520  6.023  20.755 29.701  24.641   5.991  33.520
-## picture   5.991   6.700  18.137  1.782   4.936  7.204   5.991   6.700  18.137
-## blocks   33.520  18.137 149.831 19.424  31.430 50.753  33.520  18.137 149.831
-##           maze
-## general  6.023
-## picture  1.782
-## blocks  19.424
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.Length.1
+## 1          5.1         3.5          1.4         0.2  setosa            5.1
+## 2          4.9         3.0          1.4         0.2  setosa            4.9
+## 3          4.7         3.2          1.3         0.2  setosa            4.7
+##   Sepal.Width.1 Petal.Length.1 Petal.Width.1 Species.1
+## 1           3.5            1.4           0.2    setosa
+## 2           3.0            1.4           0.2    setosa
+## 3           3.2            1.3           0.2    setosa
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;print outputs:&lt;/li&gt;

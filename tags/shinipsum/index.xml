@@ -29,14 +29,12 @@ If you are familiar with &amp;ldquo;lorem ipsum&amp;rdquo;, the fake text genera
 &lt;p&gt;In this package, a series of functions that generates random placeholders.
 For example, &lt;code&gt;random_ggplot()&lt;/code&gt; generates random &lt;code&gt;{ggplot2}&lt;/code&gt; elements:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(shinipsum)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in register(): Can&#39;t find generic `scale_type` in package ggplot2 to
-## register S3 method.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot2)
+library(ggplot2)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_ggplot() + 
   labs(title = &amp;quot;Random plot&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Computation failed in `stat_binhex()`:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_ggplot() + 
@@ -76,14 +74,14 @@ shinyApp(ui, server)
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_table(nrow = 3, ncol = 10)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##         general picture  blocks   maze reading  vocab general picture  blocks
-## general  24.641   5.991  33.520  6.023  20.755 29.701  24.641   5.991  33.520
-## picture   5.991   6.700  18.137  1.782   4.936  7.204   5.991   6.700  18.137
-## blocks   33.520  18.137 149.831 19.424  31.430 50.753  33.520  18.137 149.831
-##           maze
-## general  6.023
-## picture  1.782
-## blocks  19.424
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.Length.1
+## 1          5.1         3.5          1.4         0.2  setosa            5.1
+## 2          4.9         3.0          1.4         0.2  setosa            4.9
+## 3          4.7         3.2          1.3         0.2  setosa            4.7
+##   Sepal.Width.1 Petal.Length.1 Petal.Width.1 Species.1
+## 1           3.5            1.4           0.2    setosa
+## 2           3.0            1.4           0.2    setosa
+## 3           3.2            1.3           0.2    setosa
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;print outputs:&lt;/li&gt;
