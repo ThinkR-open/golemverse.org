@@ -32,7 +32,7 @@ if (!requireNamespace("emo")){
 
 The new version of `{golem}` is now available!
 
-You can now download it from your favorite CRAN repository, or by running the following command: 
+You can download it from your favorite CRAN repository, or by running the following command: 
 
 ```r
 remotes::install_github(
@@ -42,7 +42,7 @@ remotes::install_github(
 
 ## What's up with this new version? 
 
-In this release, we have been focusing on a closer integration of tests inside the application building process, notably via [Server function testing with Shiny](https://shiny.rstudio.com/articles/server-function-testing.html), adding tests to `fct`, `utils`, and the ui & server util functions that comes with `{golem}`.
+In this release, we have been focusing on a closer integration of tests inside the application building process, notably via [Server function testing with Shiny](https://shiny.rstudio.com/articles/server-function-testing.html), adding tests to `fct`, `utils`, and the ui & server functions that comes with `{golem}`.
 
 Starting with this version of `{golem}`, the integration of tests is opt-in: 
 
@@ -51,7 +51,7 @@ golem::add_module("plop", with_test = TRUE)
 golem::add_fct("helpers", with_test = TRUE)
 ```
 
-Note that these will be opt-out in te next release --- in other words they will be `TRUE` by default. 
+Note that these will be opt-out in the next release --- in other words they will be `TRUE` by default in the future. 
 
 We also have squashed a bunch of issues, for example `amend_config()` now keeps `!expr` (this use to cause some errors when the project was shared across multiple computers), `expect_running()` now finds `R.exe`, some adjustments has been made to fit new version of packages (for example `testthat::expect_is` is no longer used, and we require the correct version of `{usethis}`). 
 
@@ -60,6 +60,7 @@ For a full list of changes, please refer to the [NEWS.md](https://github.com/Thi
 ## What's next
 
 Now that this version is stable, we can start working on the next version, which will be `0.4.0`. 
+
 One of the thing that has been an issue with the way `{golem}` works is that it is used in two contexts: for dev, and for deployment. 
 
 The issue with that approach is that when deloying a golem-based app, you will have to install packages that are only used for dev, for exemple `{usethis}`, while they are not required to run the app. 
