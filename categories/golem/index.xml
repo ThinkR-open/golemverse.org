@@ -433,7 +433,7 @@ In other words, how many packages does &lt;code&gt;{golem}&lt;/code&gt; depend o
 &lt;p&gt;So yes, adding a dependency adds a small risk.
 But now it&#39;s up to you to decide if trying to remove &lt;code&gt;{golem}&lt;/code&gt; from your dependency tree is worth the time, compared to the time gained while developing and deploying 😅&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Note that soon, we&#39;ll work on removing &lt;code&gt;{attempt}&lt;/code&gt; and &lt;code&gt;{here}&lt;/code&gt; from the dependencies, but these three being&lt;/p&gt;
+&lt;p&gt;Note that soon, we&#39;ll work on removing &lt;code&gt;{attempt}&lt;/code&gt; and &lt;code&gt;{here}&lt;/code&gt; from the dependencies, but these two being light in terms of dependencies, we&#39;ve kept them for now.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h5 id=&#34;goleminstalldevdeps&#34;&gt;&lt;code&gt;golem::install_dev_deps()&lt;/code&gt;&lt;/h5&gt;
 &lt;p&gt;To be sure that you have all the dependencies needed when developing, &lt;code&gt;{golem}&lt;/code&gt; now has a &lt;code&gt;install_dev_deps()&lt;/code&gt; function.

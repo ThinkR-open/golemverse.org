@@ -433,7 +433,7 @@ In other words, how many packages does &lt;code&gt;{golem}&lt;/code&gt; depend o
 &lt;p&gt;So yes, adding a dependency adds a small risk.
 But now it&#39;s up to you to decide if trying to remove &lt;code&gt;{golem}&lt;/code&gt; from your dependency tree is worth the time, compared to the time gained while developing and deploying 😅&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Note that soon, we&#39;ll work on removing &lt;code&gt;{attempt}&lt;/code&gt; and &lt;code&gt;{here}&lt;/code&gt; from the dependencies, but these three being&lt;/p&gt;
+&lt;p&gt;Note that soon, we&#39;ll work on removing &lt;code&gt;{attempt}&lt;/code&gt; and &lt;code&gt;{here}&lt;/code&gt; from the dependencies, but these two being light in terms of dependencies, we&#39;ve kept them for now.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h5 id=&#34;goleminstalldevdeps&#34;&gt;&lt;code&gt;golem::install_dev_deps()&lt;/code&gt;&lt;/h5&gt;
 &lt;p&gt;To be sure that you have all the dependencies needed when developing, &lt;code&gt;{golem}&lt;/code&gt; now has a &lt;code&gt;install_dev_deps()&lt;/code&gt; function.
@@ -866,12 +866,11 @@ library(ggplot2)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_ggplot() +
   labs(title = &amp;quot;Random plot&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Bin width defaults to 1/30 of the range of the data. Pick better value with
-## `binwidth`.
-&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_ggplot() +
   labs(title = &amp;quot;Random plot&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 7 rows containing missing values (`geom_point()`).
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Of course, the idea is to combine this with a Shiny interface, for example &lt;code&gt;random_ggplot()&lt;/code&gt; will be used with a &lt;code&gt;renderPlot()&lt;/code&gt; and &lt;code&gt;plotOutput()&lt;/code&gt;.
@@ -907,10 +906,14 @@ shinyApp(ui, server)
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_table(nrow = 3, ncol = 10)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##                mpg cyl disp  hp drat    wt  qsec vs am gear
-## Mazda RX4     21.0   6  160 110 3.90 2.620 16.46  0  1    4
-## Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4
-## Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4
+&lt;pre&gt;&lt;code&gt;##   rating complaints privileges learning raises critical advance rating.1
+## 1     43         51         30       39     61       92      45       43
+## 2     63         64         51       54     63       73      47       63
+## 3     71         70         68       69     76       86      48       71
+##   complaints.1 privileges.1
+## 1           51           30
+## 2           64           51
+## 3           70           68
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;print outputs:&lt;/li&gt;
@@ -918,16 +921,10 @@ shinyApp(ui, server)
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;random_print(type = &amp;quot;model&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
-## 	Pearson&#39;s product-moment correlation
+## 	Shapiro-Wilk normality test
 ## 
-## data:  datasets::mtcars$mpg and datasets::mtcars$cyl
-## t = -8.9197, df = 30, p-value = 6.113e-10
-## alternative hypothesis: true correlation is not equal to 0
-## 95 percent confidence interval:
-##  -0.9257694 -0.7163171
-## sample estimates:
-##       cor 
-## -0.852162
+## data:  datasets::airquality$Ozone
+## W = 0.87867, p-value = 2.79e-08
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&amp;hellip; and text, image, ggplotly, dygraph, and DT.&lt;/p&gt;
 &lt;p&gt;Learn more about &lt;code&gt;{shinipsum}&lt;/code&gt;:&lt;/p&gt;
