@@ -30,7 +30,7 @@ jobs:
         shell: Rscript {0}
 
       - name: Build site
-        run: blogdown::build_site(TRUE)
+        run: blogdown::build_site(build_rmd = TRUE)
         shell: Rscript {0}
 
       - uses: actions/upload-artifact@v1
