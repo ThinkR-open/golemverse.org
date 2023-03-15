@@ -148,7 +148,7 @@ That's `r length(setdiff(v040$package,shiny$package))` additional packages.
 So yes, adding a dependency adds a small risk.
 But now it's up to you to decide if trying to remove `{golem}` from your dependency tree is worth the time, compared to the time gained while developing and deploying 😅
 
-> Note that soon, we'll work on removing `{attempt}` and `{here}` from the dependencies, but these three being
+> Note that soon, we'll work on removing `{attempt}` and `{here}` from the dependencies, but these two being light in terms of dependencies, we've kept them for now. 
 
 ##### `golem::install_dev_deps()`
 
