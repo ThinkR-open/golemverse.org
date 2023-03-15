@@ -167,6 +167,8 @@ It will look like this:
 
 ![](golem_config_active.png)
 
+> Big Up to my dear colleague [Arthur](https://github.com/ArthurData) for developing this feature!
+
 To visualize the maintenance page locally, you can run the following code:
 
 ```r

@@ -4,11 +4,12 @@ Title: Does not matter.
 Version: 0.0.1
 Imports: 
     blogdown,
-    details,
     emo,
+    ggplot2,
     knitr,
     lubridate,
-    magrittr
+    remotes,
+    shinipsum
 Remotes: 
     hadley/emo,
     rstudio/blogdown
