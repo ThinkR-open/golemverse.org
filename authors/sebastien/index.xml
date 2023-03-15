@@ -5,12 +5,32 @@
     <link>/authors/sebastien/</link>
       <atom:link href="/authors/sebastien/index.xml" rel="self" type="application/rss+xml" />
     <description>Golemverse</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2023</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2023</copyright><lastBuildDate>Tue, 10 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>Golemverse</title>
       <link>/authors/sebastien/</link>
     </image>
+    
+    <item>
+      <title>{shinipsum}</title>
+      <link>/packages_list/shinipsum-package/</link>
+      <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/packages_list/shinipsum-package/</guid>
+      <description>&lt;p&gt;The goal of {shinipsum} is to provide random shiny elements for easiest shiny app prototyping, so that you can focus on building the frontend before building the backend.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thinkr-open.github.io/shinipsum/&#34;&gt;More documentation of shinipsum on its dedicated website&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>{golem}</title>
+      <link>/packages_list/golem/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/packages_list/golem/</guid>
+      <description>&lt;p&gt;{golem} is an opinionated framework for building production-grade shiny applications.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://thinkr-open.github.io/golem/&#34;&gt;More documentation on {golem} website here&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

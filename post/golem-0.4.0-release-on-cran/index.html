@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Sébastien Rochette">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="The new version of {golem} is now available on CRAN">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/golem-0.4.0-release-on-cran/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#7176b8">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61204095-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-61204095-3', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu58f2ff25fef1c17ebea6a29b50517dcb_53022_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu58f2ff25fef1c17ebea6a29b50517dcb_53022_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/golem-0.4.0-release-on-cran/">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@ThinkR_FR">
+  <meta property="twitter:creator" content="@ThinkR_FR">
+  
+  <meta property="og:site_name" content="Golemverse">
+  <meta property="og:url" content="/post/golem-0.4.0-release-on-cran/">
+  <meta property="og:title" content="{golem} 0.4.0 is now available | Golemverse">
+  <meta property="og:description" content="The new version of {golem} is now available on CRAN"><meta property="og:image" content="/post/golem-0.4.0-release-on-cran/featured.png">
+  <meta property="twitter:image" content="/post/golem-0.4.0-release-on-cran/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2023-03-15T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2023-03-15T00:00:00&#43;01:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/golem-0.4.0-release-on-cran/"
+  },
+  "headline": "{golem} 0.4.0 is now available",
+  
+  "image": [
+    "/post/golem-0.4.0-release-on-cran/featured.png"
+  ],
+  
+  "datePublished": "2023-03-15T00:00:00Z",
+  "dateModified": "2023-03-15T00:00:00+01:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Colin Fay"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "ThinkR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu58f2ff25fef1c17ebea6a29b50517dcb_53022_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "The new version of {golem} is now available on CRAN"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>{golem} 0.4.0 is now available | Golemverse</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Golemverse</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Golemverse</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/documentation"><span>Documentation</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/packages"><span>Packages</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/news"><span>News</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/stream"><span>Stream</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>{golem} 0.4.0 is now available</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span><a href="/authors/colin/">Colin Fay</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Mar 15, 2023
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    14 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/golem/">golem</a>, <a href="/categories/release/">release</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 360px;">
+  <div style="position: relative">
+    <img src="/post/golem-0.4.0-release-on-cran/featured_hu5bf22c687221d8e56598b5ba55fa4221_68058_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>The new version of <code>{golem}</code> is available!</p>
+<p>You can download it from your favorite CRAN repository, or by running the following command:</p>
+<pre><code class="language-r">pak::pak(
+  &quot;thinkr-open/golem@v0.4.0&quot;
+)
+</code></pre>
+<h2 id="whats-up-with-this-new-version">What's up with this new version?</h2>
+<h3 id="lighter-dependency-tree">Lighter dependency tree</h3>
+<h4 id="about-dependencies">About dependencies</h4>
+<p>When we released the first version of <code>{golem}</code> on CRAN, we decided that all <code>{golem}</code>-based app should depend on <code>{golem}</code>.
+This was a conscious decision, and we made it because <code>{golem}</code> comes with a bunch of internal functions that are used at runtime.</p>
+<p>For example <code>bundle_resources()</code> links all the external resources (CSS, JS, &hellip;), <code>is_running()</code> detects that the current app is a <code>{golem}</code> app, <code>with_golem_options()</code> allows passing arguments to your <code>run_app()</code> functions (and to set a new cool option that I'll talk about below), and others.
+We were very aware that this choice came with a drawback: adding a dependency to every  <code>{golem}</code>-based app.</p>
+<p>Dependency management is a big topic in the software engineering world, and some projects tend to go for minimizing as much as possible the number of dependencies.</p>
+<p>They are right (to a certain extent): adding dependencies means that you can be subject to some troubles, notably if one of the packages you're relying on gets removed from the CRAN.</p>
+<p>Even in a contained world where you have your own CRAN-like repository, there is always the drawback of installation time: the more dependencies you have, the longer it takes to install the package, and by extension to compile a Docker image (for example).
+This is why we could have been tempted to imagine a different approach for <code>{golem}</code>: creating files inside your project that would contain everything you need.
+But I think that this approach can be way less safe and practical, for reasons I'll develop below.</p>
+<ol>
+<li>You need dependencies for a <code>{shiny}</code> app</li>
+</ol>
+<p>First, whatever happens, you'll need to rely on <code>{shiny}</code>, as you are building a <code>{shiny}</code> app.
+And you're likely to add a bunch of other packages along the way.
+So the &ldquo;very small dependency tree&rdquo; is a myth if you're building a web app.
+<code>{shiny}</code> itself already has 31 dependencies.</p>
+<details>
+<summary>Click to show <code>{shiny}</code> dependency tree</summary>
+<pre><code class="language-r">packageVersion(&quot;shiny&quot;)
+</code></pre>
+<pre><code>## [1] '1.7.4'
+</code></pre>
+<pre><code class="language-r">shiny &lt;- pak::pkg_deps_tree(&quot;shiny&quot;)
+</code></pre>
+<pre><code>## 
+</code></pre>
+<pre><code>## ✔ Updated metadata database: 3.44 MB in 7 files.
+## ✔ Updated metadata database: 3.44 MB in 7 files.
+</code></pre>
+<pre><code>## 
+</code></pre>
+<pre><code>## ℹ Updating metadata database
+## ℹ Updating metadata database
+</code></pre>
+<pre><code>## ✔ Updating metadata database ... done
+## ✔ Updating metadata database ... done
+</code></pre>
+<pre><code>## 
+</code></pre>
+<pre><code>## shiny 1.7.4 [new][bld][dl] (2.48 MB)
+## ├─httpuv 1.6.9 [new][bld][cmp][dl] (1.88 MB)
+## │ ├─Rcpp 1.0.10 [new][bld][cmp][dl] (2.94 MB)
+## │ ├─R6 2.5.1 [new][bld][dl] (63.42 kB)
+## │ ├─promises 1.2.0.1 [new][bld][cmp][dl] (3.12 MB)
+## │ │ ├─R6
+## │ │ ├─Rcpp
+## │ │ ├─later 1.3.0 [new][bld][cmp][dl] (63.78 kB)
+## │ │ │ ├─Rcpp
+## │ │ │ └─rlang 1.1.0 [new][bld][cmp][dl] (742.51 kB)
+## │ │ ├─rlang
+## │ │ └─magrittr 2.0.3 [new][bld][cmp][dl] (267.07 kB)
+## │ └─later
+## ├─mime 0.12 [new][bld][cmp][dl] (12.56 kB)
+## ├─jsonlite 1.8.4 [new][bld][cmp][dl] (1.05 MB)
+## ├─xtable 1.8-4 [new][bld][dl] (564.59 kB)
+## ├─fontawesome 0.5.0 [new][bld][dl] (1.29 MB)
+## │ ├─rlang
+## │ └─htmltools 0.5.4 [new][bld][cmp][dl] (131.05 kB)
+## │   ├─digest 0.6.31 [new][bld][cmp][dl] (163.50 kB)
+## │   ├─base64enc 0.1-3 [new][bld][cmp][dl] (7.83 kB)
+## │   ├─rlang
+## │   ├─fastmap 1.1.1 [new][bld][cmp][dl] (46.41 kB)
+## │   └─ellipsis 0.3.2 [new][bld][cmp][dl] (8.07 kB)
+## │     └─rlang
+## ├─htmltools
+## ├─R6
+## ├─sourcetools 0.1.7-1 [new][bld][cmp][dl] (24.09 kB)
+## ├─later
+## ├─promises
+## ├─crayon 1.5.2 [new][bld][dl] (40.57 kB)
+## ├─rlang
+## ├─fastmap
+## ├─withr 2.5.0 [new][bld][dl] (102.09 kB)
+## ├─commonmark 1.8.1 [new][bld][cmp][dl] (139.64 kB)
+## ├─glue 1.6.2 [new][bld][cmp][dl] (106.51 kB)
+## ├─bslib 0.4.2 [new][bld][dl] (4.83 MB)
+## │ ├─htmltools
+## │ ├─jsonlite
+## │ ├─sass 0.4.5 [new][bld][cmp][dl] (3.03 MB)
+## │ │ ├─fs 1.6.1 [new][bld][cmp][dl] (1.19 MB)
+## │ │ ├─rlang
+## │ │ ├─htmltools
+## │ │ ├─R6
+## │ │ └─rappdirs 0.3.3 [new][bld][cmp][dl] (12.29 kB)
+## │ ├─jquerylib 0.1.4 [new][bld][dl] (520.21 kB)
+## │ │ └─htmltools
+## │ ├─rlang
+## │ ├─cachem 1.0.7 [new][bld][cmp][dl] (26.21 kB)
+## │ │ ├─rlang
+## │ │ └─fastmap
+## │ ├─memoise 2.0.1 [new][bld][dl] (17.85 kB)
+## │ │ ├─rlang
+## │ │ └─cachem
+## │ ├─base64enc
+## │ └─mime
+## ├─cachem
+## ├─ellipsis
+## └─lifecycle 1.0.3 [new][bld][dl] (106.85 kB)
+##   ├─cli 3.6.0 [new][bld][cmp][dl] (565.15 kB)
+##   ├─glue
+##   └─rlang
+## 
+## Key:  [new] new | [dl] download | [bld] build | [cmp] compile
+</code></pre>
+</details>
+<ol start="2">
+<li>Updating your code base</li>
+</ol>
+<p>On a larger scale, adding scripts to your app for functions that can come from a dependency is an issue in terms of security and maintenance.
+For example, let's imagine that tomorrow, we discover a security breach in <code>{shiny}</code>, or in the way <code>{golem}</code> bundles the resources, or any other package.</p>
+<p>How can we be sure that all your apps are updated once we've built a patch?
+Yep, updating the packages.
+The solution of adding files would mean that you would have to go inside all your applications and update the files, with all the issues that come with this process (time-consuming, the risk of forgetting to update, typos&hellip;)</p>
+<h3 id="dev-dependencies-vs-runtime-dependencies-in-golem">Dev dependencies vs runtime dependencies in <code>{golem}</code></h3>
+<p>That being said, it's true that previous versions of <code>{golem}</code> used to have too many hard dependencies, creating issues when sending the apps to production.
+In prod, many of <code>{golem}</code> dependencies were useless, and you don't need them at runtime.</p>
+<p>That's because <code>{golem}</code> has two types of dependencies: dev dependencies (the packages you're using when developing with <code>{golem}</code>) and runtime dependencies (the ones used when the application runs).</p>
+<p>In version 0.3.3 of <code>{golem}</code>, we started removing dev dependencies.
+The first to go was <code>{dockerfiler}</code>, and now with 0.4.0 we have moved all the dev dependencies to the <code>Suggests</code> section of the <code>DESCRIPTION</code>.
+What that means is that if you're using <code>{golem}</code> in a fresh R distribution, the dependency tree is way lighter, as you can see below.
+65 dependencies for 0.3.5, and 37 for 0.4.0.</p>
+<details>
+<summary>Click to show <code>{golem@v0.3.5}</code> dependency tree</summary>
+<pre><code class="language-r">v035 &lt;- pak::pkg_deps_tree(&quot;thinkr-open/golem@v0.3.5&quot;)
+</code></pre>
+<pre><code>## thinkr-open/golem@v0.3.5 0.3.5 [new][bld][cmp][dl] (unknown size)
+## ├─attempt 0.3.1 [new][bld][dl] (79.26 kB)
+## │ └─rlang 1.1.0 [new][bld][cmp][dl] (742.51 kB)
+## ├─cli 3.6.0 [new][bld][cmp][dl] (565.15 kB)
+## ├─config 0.3.1 [new][bld][dl] (69.06 kB)
+## │ └─yaml 2.3.7 [new][bld][cmp][dl] (94.33 kB)
+## ├─crayon 1.5.2 [new][bld][dl] (40.57 kB)
+## ├─desc 1.4.2 [new][bld][dl] (79.25 kB)
+## │ ├─cli
+## │ ├─R6 2.5.1 [new][bld][dl] (63.42 kB)
+## │ └─rprojroot 2.0.3 [new][bld][dl] (59.94 kB)
+## ├─fs 1.6.1 [new][bld][cmp][dl] (1.19 MB)
+## ├─here 1.0.1 [new][bld][dl] (32.95 kB)
+## │ └─rprojroot
+## ├─htmltools 0.5.4 [new][bld][cmp][dl] (131.05 kB)
+## │ ├─digest 0.6.31 [new][bld][cmp][dl] (163.50 kB)
+## │ ├─base64enc 0.1-3 [new][bld][cmp][dl] (7.83 kB)
+## │ ├─rlang
+## │ ├─fastmap 1.1.1 [new][bld][cmp][dl] (46.41 kB)
+## │ └─ellipsis 0.3.2 [new][bld][cmp][dl] (8.07 kB)
+## │   └─rlang
+## ├─pkgload 1.3.2 [new][bld][dl] (76.70 kB)
+## │ ├─cli
+## │ ├─crayon
+## │ ├─desc
+## │ ├─fs
+## │ ├─glue 1.6.2 [new][bld][cmp][dl] (106.51 kB)
+## │ ├─rlang
+## │ ├─rprojroot
+## │ └─withr 2.5.0 [new][bld][dl] (102.09 kB)
+## ├─roxygen2 7.2.3 [new][bld][cmp][dl] (279.44 kB)
+## │ ├─brew 1.0-8 [new][bld][dl] (73.56 kB)
+## │ ├─cli
+## │ ├─commonmark 1.8.1 [new][bld][cmp][dl] (139.64 kB)
+## │ ├─desc
+## │ ├─knitr 1.42 [new][bld][dl] (893.59 kB)
+## │ │ ├─evaluate 0.20 [new][bld][dl] (26.66 kB)
+## │ │ ├─highr 0.10 [new][bld][dl] (15.08 kB)
+## │ │ │ └─xfun 0.37 [new][bld][cmp][dl] (130.06 kB)
+## │ │ ├─yaml
+## │ │ └─xfun
+## │ ├─pkgload
+## │ ├─purrr 1.0.1 [new][bld][cmp][dl] (220.63 kB)
+## │ │ ├─cli
+## │ │ ├─lifecycle 1.0.3 [new][bld][dl] (106.85 kB)
+## │ │ │ ├─cli
+## │ │ │ ├─glue
+## │ │ │ └─rlang
+## │ │ ├─magrittr 2.0.3 [new][bld][cmp][dl] (267.07 kB)
+## │ │ ├─rlang
+## │ │ └─vctrs 0.5.2 [new][bld][cmp][dl] (967.43 kB)
+## │ │   ├─cli
+## │ │   ├─glue
+## │ │   ├─lifecycle
+## │ │   └─rlang
+## │ ├─R6
+## │ ├─rlang
+## │ ├─stringi 1.7.12 [new][bld][cmp][dl] (7.60 MB)
+## │ ├─stringr 1.5.0 [new][bld][dl] (175.70 kB)
+## │ │ ├─cli
+## │ │ ├─glue
+## │ │ ├─lifecycle
+## │ │ ├─magrittr
+## │ │ ├─rlang
+## │ │ ├─stringi
+## │ │ └─vctrs
+## │ ├─withr
+## │ ├─xml2 1.3.3 [new][bld][cmp][dl] (283.96 kB)
+## │ └─cpp11 0.4.3 [new][bld][dl] (304.53 kB)
+## ├─rstudioapi 0.14 [new][bld][dl] (115.39 kB)
+## ├─shiny 1.7.4 [new][bld][dl] (2.48 MB)
+## │ ├─httpuv 1.6.9 [new][bld][cmp][dl] (1.88 MB)
+## │ │ ├─Rcpp 1.0.10 [new][bld][cmp][dl] (2.94 MB)
+## │ │ ├─R6
+## │ │ ├─promises 1.2.0.1 [new][bld][cmp][dl] (3.12 MB)
+## │ │ │ ├─R6
+## │ │ │ ├─Rcpp
+## │ │ │ ├─later 1.3.0 [new][bld][cmp][dl] (63.78 kB)
+## │ │ │ │ ├─Rcpp
+## │ │ │ │ └─rlang
+## │ │ │ ├─rlang
+## │ │ │ └─magrittr
+## │ │ └─later
+## │ ├─mime 0.12 [new][bld][cmp][dl] (12.56 kB)
+## │ ├─jsonlite 1.8.4 [new][bld][cmp][dl] (1.05 MB)
+## │ ├─xtable 1.8-4 [new][bld][dl] (564.59 kB)
+## │ ├─fontawesome 0.5.0 [new][bld][dl] (1.29 MB)
+## │ │ ├─rlang
+## │ │ └─htmltools
+## │ ├─htmltools
+## │ ├─R6
+## │ ├─sourcetools 0.1.7-1 [new][bld][cmp][dl] (24.09 kB)
+## │ ├─later
+## │ ├─promises
+## │ ├─crayon
+## │ ├─rlang
+## │ ├─fastmap
+## │ ├─withr
+## │ ├─commonmark
+## │ ├─glue
+## │ ├─bslib 0.4.2 [new][bld][dl] (4.83 MB)
+## │ │ ├─htmltools
+## │ │ ├─jsonlite
+## │ │ ├─sass 0.4.5 [new][bld][cmp][dl] (3.03 MB)
+## │ │ │ ├─fs
+## │ │ │ ├─rlang
+## │ │ │ ├─htmltools
+## │ │ │ ├─R6
+## │ │ │ └─rappdirs 0.3.3 [new][bld][cmp][dl] (12.29 kB)
+## │ │ ├─jquerylib 0.1.4 [new][bld][dl] (520.21 kB)
+## │ │ │ └─htmltools
+## │ │ ├─rlang
+## │ │ ├─cachem 1.0.7 [new][bld][cmp][dl] (26.21 kB)
+## │ │ │ ├─rlang
+## │ │ │ └─fastmap
+## │ │ ├─memoise 2.0.1 [new][bld][dl] (17.85 kB)
+## │ │ │ ├─rlang
+## │ │ │ └─cachem
+## │ │ ├─base64enc
+## │ │ └─mime
+## │ ├─cachem
+## │ ├─ellipsis
+## │ └─lifecycle
+## ├─usethis 2.1.6 [new][bld][dl] (342.35 kB)
+## │ ├─cli
+## │ ├─clipr 0.8.0 [new][bld][dl] (21.90 kB)
+## │ ├─crayon
+## │ ├─curl 5.0.0 [new][bld][cmp][dl] (682.05 kB)
+## │ ├─desc
+## │ ├─fs
+## │ ├─gert 1.9.2 [new][bld][cmp][dl] (121.09 kB)
+## │ │ ├─askpass 1.1 [new][bld][cmp][dl] (5.73 kB)
+## │ │ │ └─sys 3.4.1 [new][bld][cmp][dl] (20.13 kB)
+## │ │ ├─credentials 1.3.2 [new][bld][dl] (230.07 kB)
+## │ │ │ ├─openssl 2.0.6 [new][bld][cmp][dl] (1.21 MB)
+## │ │ │ │ └─askpass
+## │ │ │ ├─sys
+## │ │ │ ├─curl
+## │ │ │ ├─jsonlite
+## │ │ │ └─askpass
+## │ │ ├─openssl
+## │ │ ├─rstudioapi
+## │ │ ├─sys
+## │ │ └─zip 2.2.2 [new][bld][cmp][dl] (103.40 kB)
+## │ ├─gh 1.4.0 [new][bld][dl] (41.21 kB)
+## │ │ ├─cli
+## │ │ ├─gitcreds 0.1.2 [new][bld][dl] (62.57 kB)
+## │ │ ├─httr2 0.2.2 [new][bld][dl] (121.36 kB)
+## │ │ │ ├─cli
+## │ │ │ ├─curl
+## │ │ │ ├─glue
+## │ │ │ ├─magrittr
+## │ │ │ ├─openssl
+## │ │ │ ├─R6
+## │ │ │ ├─rappdirs
+## │ │ │ ├─rlang
+## │ │ │ └─withr
+## │ │ ├─ini 0.3.1 [new][bld][dl] (3.49 kB)
+## │ │ ├─jsonlite
+## │ │ └─rlang
+## │ ├─glue
+## │ ├─jsonlite
+## │ ├─lifecycle
+## │ ├─purrr
+## │ ├─rappdirs
+## │ ├─rlang
+## │ ├─rprojroot
+## │ ├─rstudioapi
+## │ ├─whisker 0.4.1 [new][bld][dl] (28.59 kB)
+## │ ├─withr
+## │ └─yaml
+## └─yaml
+## 
+## Key:  [new] new | [dl] download | [bld] build | [cmp] compile
+</code></pre>
+<pre><code class="language-r">nrow(v035)
+</code></pre>
+<pre><code>## [1] 66
+</code></pre>
+</details>
+<div>&nbsp;</div>
+<details>
+<summary>Click to show <code>{golem@v0.4.0}</code> dependency tree</summary>
+<pre><code class="language-r">v040 &lt;- pak::pkg_deps_tree(&quot;thinkr-open/golem@v0.4.0&quot;)
+</code></pre>
+<pre><code>## thinkr-open/golem@v0.4.0 0.4.0 [new][bld][cmp][dl] (unknown size)
+## ├─attempt 0.3.1 [new][bld][dl] (79.26 kB)
+## │ └─rlang 1.1.0 [new][bld][cmp][dl] (742.51 kB)
+## ├─config 0.3.1 [new][bld][dl] (69.06 kB)
+## │ └─yaml 2.3.7 [new][bld][cmp][dl] (94.33 kB)
+## ├─here 1.0.1 [new][bld][dl] (32.95 kB)
+## │ └─rprojroot 2.0.3 [new][bld][dl] (59.94 kB)
+## ├─htmltools 0.5.4 [new][bld][cmp][dl] (131.05 kB)
+## │ ├─digest 0.6.31 [new][bld][cmp][dl] (163.50 kB)
+## │ ├─base64enc 0.1-3 [new][bld][cmp][dl] (7.83 kB)
+## │ ├─rlang
+## │ ├─fastmap 1.1.1 [new][bld][cmp][dl] (46.41 kB)
+## │ └─ellipsis 0.3.2 [new][bld][cmp][dl] (8.07 kB)
+## │   └─rlang
+## ├─rlang
+## ├─shiny 1.7.4 [new][bld][dl] (2.48 MB)
+## │ ├─httpuv 1.6.9 [new][bld][cmp][dl] (1.88 MB)
+## │ │ ├─Rcpp 1.0.10 [new][bld][cmp][dl] (2.94 MB)
+## │ │ ├─R6 2.5.1 [new][bld][dl] (63.42 kB)
+## │ │ ├─promises 1.2.0.1 [new][bld][cmp][dl] (3.12 MB)
+## │ │ │ ├─R6
+## │ │ │ ├─Rcpp
+## │ │ │ ├─later 1.3.0 [new][bld][cmp][dl] (63.78 kB)
+## │ │ │ │ ├─Rcpp
+## │ │ │ │ └─rlang
+## │ │ │ ├─rlang
+## │ │ │ └─magrittr 2.0.3 [new][bld][cmp][dl] (267.07 kB)
+## │ │ └─later
+## │ ├─mime 0.12 [new][bld][cmp][dl] (12.56 kB)
+## │ ├─jsonlite 1.8.4 [new][bld][cmp][dl] (1.05 MB)
+## │ ├─xtable 1.8-4 [new][bld][dl] (564.59 kB)
+## │ ├─fontawesome 0.5.0 [new][bld][dl] (1.29 MB)
+## │ │ ├─rlang
+## │ │ └─htmltools
+## │ ├─htmltools
+## │ ├─R6
+## │ ├─sourcetools 0.1.7-1 [new][bld][cmp][dl] (24.09 kB)
+## │ ├─later
+## │ ├─promises
+## │ ├─crayon 1.5.2 [new][bld][dl] (40.57 kB)
+## │ ├─rlang
+## │ ├─fastmap
+## │ ├─withr 2.5.0 [new][bld][dl] (102.09 kB)
+## │ ├─commonmark 1.8.1 [new][bld][cmp][dl] (139.64 kB)
+## │ ├─glue 1.6.2 [new][bld][cmp][dl] (106.51 kB)
+## │ ├─bslib 0.4.2 [new][bld][dl] (4.83 MB)
+## │ │ ├─htmltools
+## │ │ ├─jsonlite
+## │ │ ├─sass 0.4.5 [new][bld][cmp][dl] (3.03 MB)
+## │ │ │ ├─fs 1.6.1 [new][bld][cmp][dl] (1.19 MB)
+## │ │ │ ├─rlang
+## │ │ │ ├─htmltools
+## │ │ │ ├─R6
+## │ │ │ └─rappdirs 0.3.3 [new][bld][cmp][dl] (12.29 kB)
+## │ │ ├─jquerylib 0.1.4 [new][bld][dl] (520.21 kB)
+## │ │ │ └─htmltools
+## │ │ ├─rlang
+## │ │ ├─cachem 1.0.7 [new][bld][cmp][dl] (26.21 kB)
+## │ │ │ ├─rlang
+## │ │ │ └─fastmap
+## │ │ ├─memoise 2.0.1 [new][bld][dl] (17.85 kB)
+## │ │ │ ├─rlang
+## │ │ │ └─cachem
+## │ │ ├─base64enc
+## │ │ └─mime
+## │ ├─cachem
+## │ ├─ellipsis
+## │ └─lifecycle 1.0.3 [new][bld][dl] (106.85 kB)
+## │   ├─cli 3.6.0 [new][bld][cmp][dl] (565.15 kB)
+## │   ├─glue
+## │   └─rlang
+## └─yaml
+## 
+## Key:  [new] new | [dl] download | [bld] build | [cmp] compile
+</code></pre>
+<pre><code class="language-r">nrow(v040)
+</code></pre>
+<pre><code>## [1] 37
+</code></pre>
+</details>
+<div>&nbsp;</div>
+<p>But that's still 35 packages, right?</p>
+<p>Yes, but as I said before, every <code>{shiny}</code> app will depend on <code>{shiny}</code>.
+So how many packages does <code>{golem}</code> <strong>actually add to your dependency tree</strong>?
+In other words, how many packages does <code>{golem}</code> depend on that are not already a <code>{shiny}</code> dependency?</p>
+<pre><code class="language-r">setdiff(
+  v040$package,
+  shiny$package
+)
+</code></pre>
+<pre><code>## [1] &quot;golem&quot;     &quot;attempt&quot;   &quot;config&quot;    &quot;here&quot;      &quot;rprojroot&quot; &quot;yaml&quot;
+</code></pre>
+<p>That's 6 additional packages.
+<code>{golem}</code> &amp; <code>{attempt}</code> being packages from ThinkR, and <code>{config}</code>, <code>{here}</code>, <code>{rprojroot}</code>, <code>{yaml}</code> packages from Posit open source team.</p>
+<p>So yes, adding a dependency adds a small risk.
+But now it's up to you to decide if trying to remove <code>{golem}</code> from your dependency tree is worth the time, compared to the time gained while developing and deploying 😅</p>
+<blockquote>
+<p>Note that soon, we'll work on removing <code>{attempt}</code> and <code>{here}</code> from the dependencies, but these three being</p>
+</blockquote>
+<h5 id="goleminstalldevdeps"><code>golem::install_dev_deps()</code></h5>
+<p>To be sure that you have all the dependencies needed when developing, <code>{golem}</code> now has a <code>install_dev_deps()</code> function.
+This function will check that you have everything needed to develop, and it will not be called at deployment time.</p>
+<p>You'll now find this function at the top of your 01_start.R script.</p>
+<h3 id="maintenance-mode">Maintenance mode</h3>
+<p>One new feature I'm particularly excited about is the &ldquo;Maintenance mode&rdquo; option.</p>
+<p>This feature was born out of a specific need: in production, I needed to make an application go &ldquo;offline&rdquo;, as I knew the db was about to migrate.
+That implied doing some weird changes in the UI for a short period of time, before putting the app back.</p>
+<p>That's when the idea of a &ldquo;Maintenance mode&rdquo; was born, for the times when you need your application to be unavailable: database updates, API changes, etc.
+When this maintenance mode is turned on, your application will be paused and a specific page will be displayed to your users.
+And the cool thing is that it's just an environment variable away: you don't need to change anything in your app.</p>
+<p>The maintenance mode will be turned on whenever the R process detects that the GOLEM_MAINTENANCE_ACTIVE environment variable is set to TRUE.
+It will look like this:</p>
+<p><img src="golem_config_active.png" alt=""></p>
+<blockquote>
+<p>Big Up to my dear colleague <a href="https://github.com/ArthurData">Arthur</a> for developing this feature!</p>
+</blockquote>
+<p>To visualize the maintenance page locally, you can run the following code:</p>
+<pre><code class="language-r">withr::with_envvar(
+  c(&quot;GOLEM_MAINTENANCE_ACTIVE&quot; = TRUE),
+  {
+    golem::run_dev()
+  }
+)
+</code></pre>
+<p>Note that <code>{golem}</code> comes with a default maintenance page, and you can replace it with your own page by passing either an <code>html_document</code> or a <code>tagList</code> to the <code>with_golem_options</code> function in <code>run_app.R</code>:</p>
+<pre><code class="language-r">run_app &lt;- function(
+    onStart = NULL,
+    options = list(),
+    enableBookmarking = NULL,
+    uiPattern = &quot;/&quot;,
+    ...
+) {
+  with_golem_options(
+    app = shinyApp(
+      ui = app_ui,
+      server = app_server,
+      onStart = onStart,
+      options = options,
+      enableBookmarking = enableBookmarking,
+      uiPattern = uiPattern
+    ),
+    golem_opts = list(...),
+    maintenance_page = shiny::htmlTemplate(
+      filename = app_sys(
+        &quot;custom_maintenance_page.html&quot;
+      )
+    )
+  )
+}
+</code></pre>
+<h3 id="other-changes">Other changes</h3>
+<p>Please refer to the  <a href="https://github.com/ThinkR-open/golem/releases">https://github.com/ThinkR-open/golem/releases</a> page for a list of all the news!</p>
+<h2 id="thanks">Thanks</h2>
+<p>We want to thank all the people who have contributed to this release since the v0.3.1, either by opening PR, feature requests, or bug report.</p>
+<p><a href="https://github.com/agronomofiorentini">@agronomofiorentini</a>, <a href="https://github.com/ajmoralesa">@ajmoralesa</a>, <a href="https://github.com/ALanguillaume">@ALanguillaume</a>, <a href="https://github.com/Andryas">@Andryas</a>, <a href="https://github.com/ArthurData">@ArthurData</a>, <a href="https://github.com/asadow">@asadow</a>, <a href="https://github.com/asbates">@asbates</a>, <a href="https://github.com/asiripanich">@asiripanich</a>, <a href="https://github.com/avsolovey">@avsolovey</a>, <a href="https://github.com/Camil88">@Camil88</a>, <a href="https://github.com/campbead">@campbead</a>, <a href="https://github.com/Cervangirard">@Cervangirard</a>, <a href="https://github.com/ColinFay">@ColinFay</a>, <a href="https://github.com/connorcarolan">@connorcarolan</a>, <a href="https://github.com/D3SL">@D3SL</a>, <a href="https://github.com/DivadNojnarg">@DivadNojnarg</a>, <a href="https://github.com/dmenne">@dmenne</a>, <a href="https://github.com/Dobrokhotov1989">@Dobrokhotov1989</a>, <a href="https://github.com/earnaud">@earnaud</a>, <a href="https://github.com/em-dataIntegrityEnthusiast">@em-dataIntegrityEnthusiast</a>, <a href="https://github.com/erikvona">@erikvona</a>, <a href="https://github.com/ethantenison">@ethantenison</a>, <a href="https://github.com/etiennebacher">@etiennebacher</a>, <a href="https://github.com/fBedecarrats">@fBedecarrats</a>, <a href="https://github.com/gabrielburcea">@gabrielburcea</a>, <a href="https://github.com/ggpinto">@ggpinto</a>, <a href="https://github.com/gioneves">@gioneves</a>, <a href="https://github.com/guivivi">@guivivi</a>, <a href="https://github.com/harell">@harell</a>, <a href="https://github.com/hedjour">@hedjour</a>, <a href="https://github.com/henrique1008">@henrique1008</a>, <a href="https://github.com/ilyaZar">@ilyaZar</a>, <a href="https://github.com/isaactpetersen">@isaactpetersen</a>, <a href="https://github.com/ivokwee">@ivokwee</a>, <a href="https://github.com/jamieRowen">@jamieRowen</a>, <a href="https://github.com/jl5000">@jl5000</a>, <a href="https://github.com/JMPivette">@JMPivette</a>, <a href="https://github.com/Jodavid">@Jodavid</a>, <a href="https://github.com/JohnStaples">@JohnStaples</a>, <a href="https://github.com/Jopgood">@Jopgood</a>, <a href="https://github.com/JulianoAtto">@JulianoAtto</a>, <a href="https://github.com/KittJonathan">@KittJonathan</a>, <a href="https://github.com/KoderKow">@KoderKow</a>, <a href="https://github.com/kyleweise">@kyleweise</a>, <a href="https://github.com/leeroyaus">@leeroyaus</a>, <a href="https://github.com/lijian007">@lijian007</a>, <a href="https://github.com/MargotBr">@MargotBr</a>, <a href="https://github.com/mark-druffel">@mark-druffel</a>, <a href="https://github.com/mcsiple">@mcsiple</a>, <a href="https://github.com/mjbroerman">@mjbroerman</a>, <a href="https://github.com/nathansquan">@nathansquan</a>, <a href="https://github.com/ncls33">@ncls33</a>, <a href="https://github.com/ncullen93">@ncullen93</a>, <a href="https://github.com/novica">@novica</a>, <a href="https://github.com/pachadotdev">@pachadotdev</a>, <a href="https://github.com/psolymos">@psolymos</a>, <a href="https://github.com/pythiantech">@pythiantech</a>, <a href="https://github.com/rezasz969">@rezasz969</a>, <a href="https://github.com/seanhardison1">@seanhardison1</a>, <a href="https://github.com/shahreyar-abeer">@shahreyar-abeer</a>, <a href="https://github.com/statnmap">@statnmap</a>, <a href="https://github.com/stheil15">@stheil15</a>, <a href="https://github.com/svenb78">@svenb78</a>, <a href="https://github.com/Swechhya">@Swechhya</a>, <a href="https://github.com/Teebusch">@Teebusch</a>, <a href="https://github.com/teofiln">@teofiln</a>, <a href="https://github.com/VincentGuyader">@VincentGuyader</a>, <a href="https://github.com/waiteb5">@waiteb5</a>, <a href="https://github.com/whipson">@whipson</a>, <a href="https://github.com/wurli">@wurli</a>, <a href="https://github.com/yogat3ch">@yogat3ch</a>, and <a href="https://github.com/YonghuiDong">@YonghuiDong</a>.</p>
+
+    </div>
+
+    
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/ThinkR-open/golemverse.org/edit/master/content/post/2023-03-08_golem_0.4.0_release/index.markdown">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/golem/">golem</a>
+  
+  <a class="badge badge-light" href="/tags/package/">package</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/golem-0.4.0-release-on-cran/&amp;text=%7bgolem%7d%200.4.0%20is%20now%20available" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/golem-0.4.0-release-on-cran/&amp;t=%7bgolem%7d%200.4.0%20is%20now%20available" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=%7bgolem%7d%200.4.0%20is%20now%20available&amp;body=/post/golem-0.4.0-release-on-cran/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/golem-0.4.0-release-on-cran/&amp;title=%7bgolem%7d%200.4.0%20is%20now%20available" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=%7bgolem%7d%200.4.0%20is%20now%20available%20/post/golem-0.4.0-release-on-cran/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/golem-0.4.0-release-on-cran/&amp;title=%7bgolem%7d%200.4.0%20is%20now%20available" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/colin/avatar_hu87586c6a74e3cfaf487d94b8ad1d535e_787190_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/colin/">Colin Fay</a></h5>
+      <h6 class="card-subtitle">Data Scientist and R Hacker</h6>
+      <p class="card-text">Datascientist – R Hacker – twitter addict</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/_colinfay" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/colinfay" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/golem-0.3.2-release-on-cran/">{golem} 0.3.2 is now available</a></li>
+      
+      <li><a href="/post/golem-0.3.1-release-on-cran/">About {golem} 0.3.1</a></li>
+      
+      <li><a href="/post/golem-0.1.0-release-on-cran/">{golem} 0.1.0 has been released on CRAN</a></li>
+      
+      <li><a href="/talk/2022-02-10-twitch/">2022 first stream</a></li>
+      
+      <li><a href="/post/golem-hacktoberfest-2021/">Join HacktoberFest 2021 with {golem} (and more)!</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.c816d323c3a55093dae0829b44ea1ca8.js"></script>
+
+    
+<script src="https://buttons.github.io/buttons.js"></script>
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  <div align = "center" class="nav-footer">
+    <a href="https://rtask.thinkr.fr"><h4>ThinkR is a french company of R experts.</h4></a>
+    <p>Find us on the web:</p>
+    <a href="https://rtask.thinkr.fr"> <i class="fa fa-link fa-2x"></i> </a>
+    <a href="https://twitter.com/thinkr_fr"> <i class="fab fa-twitter fa-2x"></i> </a>
+    <a href="https://github.com/thinkr-open"> <i class="fab fa-github fa-2x"></i>
+    <a href="contact@thinkr.fr"> <i class="fa fa-envelope fa-2x"></i> </a>
+  </div>
+
+  
+
+  <p class="powered-by">
+    © ThinkR - 2023 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
