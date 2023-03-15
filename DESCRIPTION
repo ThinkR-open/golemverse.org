@@ -2,7 +2,7 @@ Type: Website
 Package: placeholder
 Title: Does not matter.
 Version: 0.0.1
-Imports: 
+Imports:
     blogdown,
     emo,
     ggplot2,
@@ -10,7 +10,8 @@ Imports:
     lubridate,
     pak,
     remotes,
-    shinipsum
-Remotes: 
+    shinipsum,
+    shiny
+Remotes:
     hadley/emo,
     rstudio/blogdown

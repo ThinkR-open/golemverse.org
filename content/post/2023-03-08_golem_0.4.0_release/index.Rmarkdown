@@ -28,6 +28,12 @@ if (!requireNamespace("emo")){
   }
   remotes::install_github("hadley/emo")
 }
+if (!requireNamespace("shiny")){
+  if (!requireNamespace("remotes")){
+    install.packages("remotes")
+  }
+  remotes::install_cran("shiny)
+}
 ```
 
 The new version of `{golem}` is available!
