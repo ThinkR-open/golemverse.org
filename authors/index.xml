@@ -5,45 +5,12 @@
     <link>/authors/</link>
       <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2022</copyright><lastBuildDate>Fri, 11 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© ThinkR - 2023</copyright>
     <image>
       <url>/img/golemverse_banner.png</url>
       <title>Authors</title>
       <link>/authors/</link>
     </image>
-    
-    <item>
-      <title></title>
-      <link>/authors/colin/</link>
-      <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>/authors/colin/</guid>
-      <description>&lt;p&gt;When Colin doesn’t code in R, he codes in R. Eventually, we’ll find him on Twitter… talking about R. What he prefers is to put his hands in the bowels of his favorite language to extract the buried treasures.
-Dismantle, divert, assemble, improve… give him a technical challenge and he will not give up until he has settled his score, preferably with elegance, a smile and without (too) fuss. And it is with pleasure that he will share the solution within the team or with the worldwide internets.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/authors/sebastien/</link>
-      <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/authors/sebastien/</guid>
-      <description>&lt;p&gt;With a PhD thesis in marine ecology and experience in building data science tools for research, Sébastien now puts his scientific rigour at the service of our clients. With R of course!
-Meticulous, rigorous and patient, his battles stand around readability, reproducibility and documentation of tools.
-This aspiration for precision is not incompatible with great creativity, especially when it comes to diverting statistical methods and other tools from their original uses to achieve his goals. His purpose is to expose the mechanisms that link the data together and to extract the substantial bone marrow.
-A big consumer of spatial data, he likes to draw maps (or waffles) with R.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/authors/cervan/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/authors/cervan/</guid>
-      <description>&lt;p&gt;Cervan is enthusiastic and motivated when it comes to rolling up his sleeves to meet new challenges.
-Even if it means venturing dangerously into the depths of R, learning new languages and experimenting outside your comfort zone.
-Nevertheless, it remains reliable, constructive and efficient when it comes to using its skills to train or develop.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title></title>
@@ -61,12 +28,45 @@ Passionate about data, believing strongly in the power of &lt;strong&gt;open sou
     
     <item>
       <title></title>
+      <link>/authors/cervan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/cervan/</guid>
+      <description>&lt;p&gt;Cervan is enthusiastic and motivated when it comes to rolling up his sleeves to meet new challenges.
+Even if it means venturing dangerously into the depths of R, learning new languages and experimenting outside your comfort zone.
+Nevertheless, it remains reliable, constructive and efficient when it comes to using its skills to train or develop.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/colin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/colin/</guid>
+      <description>&lt;p&gt;When Colin doesn’t code in R, he codes in R. Eventually, we’ll find him on Twitter… talking about R. What he prefers is to put his hands in the bowels of his favorite language to extract the buried treasures.
+Dismantle, divert, assemble, improve… give him a technical challenge and he will not give up until he has settled his score, preferably with elegance, a smile and without (too) fuss. And it is with pleasure that he will share the solution within the team or with the worldwide internets.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>/authors/diane/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/authors/diane/</guid>
       <description>&lt;p&gt;Certified Data Scientist, it is her appetite for data and what we discover when we crush them that brought her to R. She wrote her first line of R in 2007.
 Pragmatic when it comes to implementing a product derived from the data, pedagogical when it comes to transmitting what she knows about R, committed when it comes to getting involved for her teams, her customers or the community of R users.
 She is the one who brings the values of caring and excellence to the team.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/sebastien/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/sebastien/</guid>
+      <description>&lt;p&gt;With a PhD thesis in marine ecology and experience in building data science tools for research, Sébastien now puts his scientific rigour at the service of our clients. With R of course!
+Meticulous, rigorous and patient, his battles stand around readability, reproducibility and documentation of tools.
+This aspiration for precision is not incompatible with great creativity, especially when it comes to diverting statistical methods and other tools from their original uses to achieve his goals. His purpose is to expose the mechanisms that link the data together and to extract the substantial bone marrow.
+A big consumer of spatial data, he likes to draw maps (or waffles) with R.&lt;/p&gt;
 </description>
     </item>
     
