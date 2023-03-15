@@ -8,12 +8,14 @@ name: blogdown
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    # Only restrict concurrency for non-PR jobs
+    concurrency:
+      group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - uses: r-lib/actions/setup-pandoc@v2
 
@@ -21,21 +23,15 @@ jobs:
         with:
           use-public-rspm: true
 
-      - name: Install pandoc
-        run: |
-          brew install pandoc
-
-      - name: Install blogdown
-        run: |
-          R -e 'install.packages("blogdown")'
+      - uses: r-lib/actions/setup-renv@v2
 
       - name: Install hugo
-        run: |
-          R -e 'install.packages("remotes");remotes::install_local();blogdown::install_hugo(version = "0.60.1")'
+        run: blogdown::install_hugo()
+        shell: Rscript {0}
 
       - name: Build site
-        run: |
-          R -e 'blogdown::build_site(build_rmd = TRUE)'
+        run: blogdown::build_site(TRUE)
+        shell: Rscript {0}
 
       - uses: actions/upload-artifact@v1
         with:

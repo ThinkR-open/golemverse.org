@@ -8,6 +8,7 @@ Imports:
     ggplot2,
     knitr,
     lubridate,
+    pak,
     remotes,
     shinipsum
 Remotes: 
