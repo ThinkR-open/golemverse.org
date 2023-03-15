@@ -32,7 +32,7 @@ if (!requireNamespace("shiny")){
   if (!requireNamespace("remotes")){
     install.packages("remotes")
   }
-  remotes::install_cran("shiny)
+  remotes::install_cran("shiny")
 }
 ```
 
