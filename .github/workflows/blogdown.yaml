@@ -29,6 +29,10 @@ jobs:
         run: blogdown::install_hugo("0.60.1")
         shell: Rscript {0}
 
+      - name: Install deps
+        run: install.packages(c("remotes"));remotes::install_local()
+        shell: Rscript {0}
+
       - name: Build site
         run: blogdown::build_site(build_rmd = TRUE)
         shell: Rscript {0}
