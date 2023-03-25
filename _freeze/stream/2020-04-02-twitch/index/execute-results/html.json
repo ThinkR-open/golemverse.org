@@ -1,0 +1,14 @@
+{
+  "hash": "0c53f99d2861cd940b60360412bc73fa",
+  "result": {
+    "markdown": "---\ntitle: \"Overview of {hexmake}\"\ndate: \"2020-04-02 21:00:00\"\n---\n\n\n![](/img/twitch.jpeg)\n\nColin will be live talking about the internals of {hexmake}.\n\n<hr>\n\n<li> 👨‍💻 Colin Fay, <a href = \"https://twitter.com/_ColinFay\">@_ColinFay</a> </li>\n<li> 🔗 https://www.twitch.tv/thinkr_fr </li>\n<li> ⏳ __2020-04-02 21:00:00 Paris Time__. </li>\n\n<hr>\n\n<details closed>\n<summary> <span title='Click to Expand'> See Event in Other Timezones </span> </summary>\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndate <- lubridate::ymd_hms(\"2020-04-02 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"2020-04-02 19:00:00 UTC\"\n```\n:::\n\n```{.r .cell-code}\nlubridate::with_tz(date, \"America/New_York\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"2020-04-02 15:00:00 EDT\"\n```\n:::\n\n```{.r .cell-code}\nlubridate::with_tz(date, \"America/Los_Angeles\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"2020-04-02 12:00:00 PDT\"\n```\n:::\n\n```{.r .cell-code}\nlubridate::with_tz(date, \"Australia/Sydney\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"2020-04-03 06:00:00 AEDT\"\n```\n:::\n:::\n\n\n</details>\n<br>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

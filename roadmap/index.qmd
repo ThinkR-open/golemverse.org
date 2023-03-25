@@ -1,0 +1,41 @@
+---
+title: "golemverse's roadmap"
+page-layout: full
+---
+
+Here is a list of things the `golemverse` team plans on working on.
+
+If you feel like helping, feel free to open an issue / discussion / PR on one of the repository.
+
+## Short term
+
++ `{golem}` milestone 0.5.0 <https://github.com/ThinkR-open/golem/milestone/1>
+
++ More hooks for `{ghooks}` https://github.com/ThinkR-open/ghooks
+
++ Release on CRAN :
+  - `{fakir}`
+  - `{bank}`
+  - `{elvis}`
+
+## Mid term
+
++ Stable, production ready `{brochure}`
+
++ Blog post about :
+  - `{gargoyle}`
+  - `{elvis}`
+
+## Long term
+
++ Package idea: monkey testing for your shiny app
+
++ New fake data in `{fakir}`
+
++ Finish `{w3css}`
+
++ More features in `{gemstones}`
+
++ Prepare a talk about "Hidden gems of the golemverse"
+
++ Short live streams presenting the packages (20 minutes + 10 min Q & A)

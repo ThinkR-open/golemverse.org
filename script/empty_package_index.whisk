@@ -1,0 +1,29 @@
+---
+title: "Packages"
+page-layout: full
+title-block-banner: false
+listing:
+  contents: .
+  id: package-listing
+  sort: "date desc"
+  type: grid
+  image-height: 100%
+  grid-columns: 4
+  sort-ui: false
+  filter-ui: false
+---
+
+## Package details
+
+::: {#package-listing}
+:::
+
+
+
+## CRAN status, Monthly download, and other stats
+
+|Package|Lifecycle|GitHub Stars|On Cran|Monthly Downloads (if on CRAN)|
+|---|---|---|---|---|
+{{{content}}}
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>

@@ -1,0 +1,56 @@
+package:
+  golem:
+    title: "`{golem}` is an opiniated framework for building production-grade `{shiny}` applications."
+    description: "It provides a set of tools to help you build a `{shiny}` application in a structured way automates routine tasks, facilitate deployment, and is extendable to feat your needs."
+    repo: https://github.com/ThinkR-open/golem
+    lifecycle: stable
+  shinipsum:
+    title: "`{shinipsum}` provides a set of functions to generate dummy widgets and content for `{shiny}` applications."
+    description: "This R package is a simple package designed to generate placeholder elements for `{shiny}` applications. It provides a set of functions that can be used to generate 'lorem ipsum' style elements that can be used as filler in Shiny applications while prototyping."
+    repo: https://github.com/ThinkR-open/shinipsum
+    lifecycle: stable
+  fakir:
+    title: "`{fakir}` provides a set of functions to generate random data that can be used for prototyping."
+    description: "`{fakir}` contains a set of functions for creating synthetic datasets that mimic real-world data, allowing users to test their code under a variety of different scenarios."
+    repo: https://github.com/ThinkR-open/fakir
+    lifecycle: stable
+  gargoyle:
+    title: "`{gargoyle}` is an alternative way to manage reactivity in `{shiny}`."
+    repo: https://github.com/colinfay/gargoyle
+    description: "{gargoyle} is a package that provides wrappers around {shiny} to turn your app into and event-based application instead of a full reactive app. The framework is centered around a listen & trigger mechanism. It works with classical UI, and just needs tweaking the server side of your app."
+    lifecycle: stable
+  dockerfiler:
+    title: "Build dockerfile straight from R."
+    description: "The goal of `{dockerfiler}` is to provide an easy way to create Dockerfiles from R. You can use `{dockerfiler}` to programatically create a Dockerfile."
+    repo: https://github.com/thinkr-open/dockerfiler
+    lifecycle: stable
+  gemstones:
+    title: "Extend your `{golem}` application with external JS libraries."
+    description: "The goal of `{gemstones}` is to allow you to add some JavaScript libraries to your {golem} based app. `{gemstones}` will automate the download and the linking of some JS libraries, but it’s important to understand that `{gemstones}` is not providing a full wrapper or widget for these libraries. You’ll still have to code some elements to make it work."
+    repo: https://github.com/thinkr-open/gemstones
+    lifecycle: experimental
+  elvis:
+    title: "'Shiny' renderers and observers made safer."
+    repo: https://github.com/thinkr-open/elvis
+    description: "The goal of `{elvis}` is to provide safer render* and observe* in `{shiny}` by providing a native tryCatch() mechanism."
+    lifecycle: experimental
+  bank:
+    title: "Alternative caching backends for `{memoise}` & `{shiny}`."
+    description: "Alternative backend for caching `{shiny}`: MongoDB, Redis, Postgre."
+    repo: https://github.com/thinkr-open/bank
+    lifecycle: experimental
+  w3css:
+    title: "W3 CSS in `{shiny}`."
+    description: 'An implementation of W3 CSS https://www.w3schools.com/w3css/ for `{shiny}``.'
+    repo: https://github.com/thinkr-open/w3css
+    lifecycle: experimental
+  brochure:
+    title: "Natively multipage `{shiny}` apps."
+    description: "The goal of `{brochure}` is to provide a mechanism for creating natively multi-page `{shiny}`applications, i.e that can serve content on multiple endpoints."
+    repo: https://github.com/colinfay/brochure
+    lifecycle: experimental
+  ghooks:
+    title: "{golem} hooks."
+    description: "The goal of `{ghooks}` is to provide `{golem}` hooks for standard `{shiny}` apps."
+    repo: https://github.com/thinkr-open/ghooks
+    lifecycle: experimental

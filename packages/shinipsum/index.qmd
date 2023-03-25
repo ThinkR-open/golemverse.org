@@ -1,0 +1,34 @@
+---
+title: "shinipsum"
+image: "/img/shinipsum.png"
+---
+
+::: {.grid}
+
+::: {.g-col-6}
+
+![](/img/shinipsum.png)
+
+:::
+
+::: {.g-col-6}
+
+`{shinipsum}` provides a set of functions to generate dummy widgets and content for `{shiny}` applications.
+
+This R package is a simple package designed to generate placeholder elements for `{shiny}` applications. It provides a set of functions that can be used to generate 'lorem ipsum' style elements that can be used as filler in Shiny applications while prototyping.
+
+<div align = "center">
+
+<img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg">
+
+<img src = "https://www.r-pkg.org/badges/version/shinipsum">
+
+<img src = "https://cranlogs.r-pkg.org/badges/shinipsum">
+
+<span style="text-shadow: none;"><a class="github-button" href="https://github.com/ThinkR-open/shinipsum" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star shinipsum on Github</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+
+</div>
+
+:::
+
+:::

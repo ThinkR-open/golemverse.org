@@ -1,0 +1,33 @@
+streams:
+  one:
+    filename: "2020-01-13-twitch"
+    name: "First live stream 🎂"
+    description: "Colin will live stream on Twitch how to build a Shiny application with {golem}."
+    who: "Colin Fay"
+    twitter_link: https://twitter.com/_ColinFay
+    twitter_name: "@_ColinFay"
+    date: "2020-01-13 21:00:00"
+  two:
+    filename: "2020-01-23-twitch"
+    name: "Second live stream"
+    description: "Colin will live stream on Twitch how to build a Shiny application with {golem}."
+    who: "Colin Fay"
+    twitter_link: https://twitter.com/_ColinFay
+    twitter_name: "@_ColinFay"
+    date: "2020-01-23 21:00:00"
+  three:
+    filename: "2020-04-02-twitch"
+    name: "Overview of {hexmake}"
+    description: "Colin will be live talking about the internals of {hexmake}."
+    who: "Colin Fay"
+    twitter_link: https://twitter.com/_ColinFay
+    twitter_name: "@_ColinFay"
+    date: "2020-04-02 21:00:00"
+  four:
+    filename: "2022-02-10-twitch"
+    name: "Let's build a new app!"
+    description: "Let's start building a new app with {golem} and {brochure}."
+    who: "Colin Fay"
+    twitter_link: https://twitter.com/_ColinFay
+    twitter_name: "@_ColinFay"
+    date: "2022-02-10 21:00:00"

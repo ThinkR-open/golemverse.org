@@ -1,0 +1,34 @@
+---
+title: "dockerfiler"
+image: "/img/dockerfiler.png"
+---
+
+::: {.grid}
+
+::: {.g-col-6}
+
+![](/img/dockerfiler.png)
+
+:::
+
+::: {.g-col-6}
+
+Build dockerfile straight from R.
+
+The goal of `{dockerfiler}` is to provide an easy way to create Dockerfiles from R. You can use `{dockerfiler}` to programatically create a Dockerfile.
+
+<div align = "center">
+
+<img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg">
+
+<img src = "https://www.r-pkg.org/badges/version/dockerfiler">
+
+<img src = "https://cranlogs.r-pkg.org/badges/dockerfiler">
+
+<span style="text-shadow: none;"><a class="github-button" href="https://github.com/thinkr-open/dockerfiler" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star dockerfiler on Github</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+
+</div>
+
+:::
+
+:::

@@ -1,0 +1,83 @@
+---
+title: "R packages for building robust, production grade `{shiny}` apps."
+about:
+  id: hero-heading
+  template: broadside
+  image: img/profile.png
+listing:
+  - contents: news
+    type: default
+    id: blog-listings
+    max-items: 3
+    sort: "date desc"
+---
+
+:::{#hero-heading}
+
+The golemverse is a collection of R packages for building `{shiny}` apps that need to be safely shipped to production.
+
+<!-- Install them all with:
+
+```r
+install.packages("golemverse")
+``` -->
+
+### Packages from the golemverse
+
+- `{bank}`, `r utils::packageDescription("bank")[["Title"]]`
+
+- `{brochure}`, `r utils::packageDescription("brochure")[["Title"]]`
+
+- `{dockerfiler}`, `r utils::packageDescription("dockerfiler")[["Title"]]`
+
+- `{elvis}`, `r utils::packageDescription("elvis")[["Title"]]`
+
+- `{fakir}`, `r utils::packageDescription("fakir")[["Title"]]`
+
+- `{gargoyle}`, `r utils::packageDescription("gargoyle")[["Title"]]`
+
+- `{gemstones}`, `r utils::packageDescription("gemstones")[["Title"]]`
+
+- `{golem}`, `r utils::packageDescription("gemstones")[["Title"]]`
+
+- `{ghooks}`, `r utils::packageDescription("ghooks")[["Title"]]`
+
+- `{shinipsum}`, `r utils::packageDescription("shinipsum")[["Title"]]`
+
+- `{w3css}`, `r utils::packageDescription("w3css")[["Title"]]`
+
+
+:::
+
+## Read the book 📚
+
+::: {.grid}
+
+::: {.g-col-6}
+
+Learn more about building `{shiny}` apps for production with the _Engineering Production-Grade Shiny Apps_.
+
+The online version of the book is free to read on <https://engineering-shiny.org/>.
+
+This book is available in print, published in the R Series by Chapman and Hall/CRC.
+You can grab a copy on [routledge.com](https://www.routledge.com/Engineering-Production-Grade-Shiny-Apps/Fay-Rochette-Guyader-Girard/p/book/9780367466022).
+
+:::
+
+::: {.g-col-6}
+
+![](img/engineering-shiny.jpg)
+
+:::
+
+:::
+
+## On the blog ✍️
+
+::: {#blog-listings}
+:::
+
+## Contact 📲
+
+Contact us via the <a href = "https://rtask.thinkr.fr/contact/">ThinkR website</a>!
+

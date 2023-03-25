@@ -1,0 +1,16 @@
+---
+title: "{golem} 0.1.0 has been released on CRAN"
+author: "Sebastien Rochette"
+date: '2019-08-05'
+categories:
+  - golem
+  - release
+---
+
+![](featured.png)
+
+golem (v0.1) A Framework for Building Robust Shiny Apps:
+
+- [{golem} on CRAN](https://cran.r-project.org/web/packages/golem/index.html)
+- [{golem} on GitHub](https://github.com/ThinkR-open/golem)
+- [pkgdown and vignettes](https://thinkr-open.github.io/golem/)

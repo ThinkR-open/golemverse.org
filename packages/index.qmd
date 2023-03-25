@@ -1,0 +1,39 @@
+---
+title: "Packages"
+page-layout: full
+title-block-banner: false
+listing:
+  contents: .
+  id: package-listing
+  sort: "date desc"
+  type: grid
+  image-height: 100%
+  grid-columns: 4
+  sort-ui: false
+  filter-ui: false
+---
+
+## Package details
+
+::: {#package-listing}
+:::
+
+
+
+## CRAN status, Monthly download, and other stats
+
+|Package|Lifecycle|GitHub Stars|On Cran|Monthly Downloads (if on CRAN)|
+|---|---|---|---|---|
+|golem|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/ThinkR-open/golem" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/golem"/>|<img src="https://cranlogs.r-pkg.org/badges/golem"/>|
+|shinipsum|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/ThinkR-open/shinipsum" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/shinipsum"/>|<img src="https://cranlogs.r-pkg.org/badges/shinipsum"/>|
+|fakir|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/ThinkR-open/fakir" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/fakir"/>|<img src="https://cranlogs.r-pkg.org/badges/fakir"/>|
+|gargoyle|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/colinfay/gargoyle" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/gargoyle"/>|<img src="https://cranlogs.r-pkg.org/badges/gargoyle"/>|
+|dockerfiler|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/thinkr-open/dockerfiler" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/dockerfiler"/>|<img src="https://cranlogs.r-pkg.org/badges/dockerfiler"/>|
+|gemstones|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/thinkr-open/gemstones" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/gemstones"/>|<img src="https://cranlogs.r-pkg.org/badges/gemstones"/>|
+|elvis|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/thinkr-open/elvis" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/elvis"/>|<img src="https://cranlogs.r-pkg.org/badges/elvis"/>|
+|bank|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/thinkr-open/bank" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/bank"/>|<img src="https://cranlogs.r-pkg.org/badges/bank"/>|
+|w3css|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/thinkr-open/w3css" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/w3css"/>|<img src="https://cranlogs.r-pkg.org/badges/w3css"/>|
+|brochure|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/colinfay/brochure" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/brochure"/>|<img src="https://cranlogs.r-pkg.org/badges/brochure"/>|
+|ghooks|<img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"/>|<span style="text-shadow: none;"><a class="github-button" href="https://github.com/thinkr-open/ghooks" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>|<img src="https://www.r-pkg.org/badges/version/ghooks"/>|<img src="https://cranlogs.r-pkg.org/badges/ghooks"/>|
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
