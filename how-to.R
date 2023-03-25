@@ -2,9 +2,26 @@
 
 ### Add an article
 
+article_slug <- "golem-0.4.0-release-eeee"
+dir.create(
+  file.path("news", article_slug)
+)
+file.create(
+  file.path("news", article_slug, "index.qmd")
+)
+write(
+  sprintf(
+   '---
+title: "Join HacktoberFest 2021 with {golem} (and more)!"
+author: colin
+date: "%s"
+---', Sys.Date()
+  ),
+  file.path("news", article_slug, "index.qmd")
+)
 ### Add a package
 
-#### Render all
+#### Render all packages
 
 pkgs <- yaml::read_yaml("packages/packages.yaml")
 
@@ -29,6 +46,7 @@ for (pak in names(pkgs$package)) {
   )
 }
 
+#### Render the package index page
 
 whisker::whisker.render(
   template = readLines("script/empty_package_index.whisk"),
