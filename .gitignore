@@ -1,7 +1,0 @@
-public/
-.idea/
-.Rproj.user
-.Rhistory
-_gen/
-resources/_gen/
-*.markdown
