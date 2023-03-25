@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="colin">
+<meta name="dcterms.date" content="2021-05-28">
+
+<title>golemverse - About {golem} 0.3.1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">golemverse</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources/index.html">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../packages/index.html">
+ <span class="menu-text">Packages</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../roadmap/index.html">
+ <span class="menu-text">Roadmap</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../news/index.html">
+ <span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../stream/index.html">
+ <span class="menu-text">Stream</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html#contact">
+ <span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/topics/golemverse"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/thinkr_fr"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">About {golem} 0.3.1</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>colin </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 28, 2021</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p><img src="featured.png" class="img-fluid"></p>
+<p>The new version of <code>{golem}</code> (<code>0.3.1</code>) has been available on CRAN 🎉 for about a month now. This new version includes a lot of new things, but we notably focused on working on two important new features: allowing you to extend <code>{golem}</code> via templates, and supporting for the latest changes in <code>{shiny}</code>.</p>
+<section id="extending-golem" class="level2">
+<h2 class="anchored" data-anchor-id="extending-golem">Extending <code>{golem}</code></h2>
+<p>One of the challenges when it comes to building apps in a production context is that you might be repeating some patterns over and over again: adding the same CSS in every app, creating specific functions, setting a license, adding internal packages as dependencies, etc.</p>
+<p>The key idea with <code>{golem}</code> is to lower the number of repetitive tasks you have to perform during the engineering of your app. We try to achieve that by providing tools that automate these common tasks. But before version <code>0.3</code>, there was no way to optimize the “business specific”, internal tasks of adding files, functions, or templating modules. This is now possible with this new release of <code>{golem}</code>, which introduces the concept of “golem templates”: functions that can be used for project hooks, module templates, and JavaScript and CSS file creation.</p>
+<section id="project-hooks" class="level3">
+<h3 class="anchored" data-anchor-id="project-hooks">Project Hooks</h3>
+<section id="about-project-hooks" class="level4">
+<h4 class="anchored" data-anchor-id="about-project-hooks">About project hooks</h4>
+<p>A project hook is a functions called inside <code>create_golem()</code>.</p>
+<p>It allows you to define custom behaviors when creating <code>{golem}</code> based apps, and can be used for:</p>
+<ul>
+<li>Adding a different front-end template in <code>R/app_ui.R</code></li>
+<li>Changing configuration options in <code>inst/golem-config.yml</code></li>
+<li>Copying external files in <code>inst/app/www</code></li>
+<li>Removing a file from the default template</li>
+<li>etc.</li>
+</ul>
+<p>This function is called just <strong>after</strong> the default project has been created, and is executed <strong>in the directory of the created package</strong>. Here is a step by step of what happens when a project is created with <code>{golem}</code>:</p>
+<ol type="1">
+<li>The package name is generated</li>
+<li>The directory that will receive the package is created</li>
+<li>Default <code>{golem}</code> template is copied to this directory</li>
+<li>R moves to the newly created project, and runs the <code>project_hook</code> function</li>
+<li>R moves back to the previous directory</li>
+<li>If in RStudio, the project is open</li>
+</ol>
+<p>The <code>project_hook</code> function takes three mandatory parameters, which are passed from <code>create_golem</code>:</p>
+<ul>
+<li><code>path</code>: the full path of the directory</li>
+<li><code>package_name</code>: the name of the package</li>
+<li><code>...</code> : further arguments that can be passed from <code>create_golem()</code> when called from the command line</li>
+</ul>
+<p>These parameters might not be used inside your own hook, but <strong>they need to be set in the hook function skeleton</strong> for compatibility reasons.</p>
+<p>The best way to extend <code>{golem}</code> via a project hook is by defining a <code>project_hook</code> function in an external package. This will allow this function to be used inside the <code>{golem}</code> creation RStudio project creation widget:</p>
+<p><img src="rstudioprojecthook.png" class="img-fluid"></p>
+</section>
+<section id="project-hook-example" class="level4">
+<h4 class="anchored" data-anchor-id="project-hook-example">Project hook example</h4>
+<p>Removing the dev folder:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>no_dev <span class="ot">&lt;-</span> <span class="cf">function</span>(path, package_name, ...){</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>   fs<span class="sc">::</span><span class="fu">dir_delete</span>(<span class="st">"dev"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">create_golem</span>(<span class="st">"ici"</span>, <span class="at">project_hook =</span> no_dev)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create a CSS:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>new_css <span class="ot">&lt;-</span> <span class="cf">function</span>(path, package_name, ...){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  css_path <span class="ot">&lt;-</span> fs<span class="sc">::</span><span class="fu">path_abs</span>(<span class="st">"inst/app/www/custom.css"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  fs<span class="sc">::</span><span class="fu">file_create</span>(css_path)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  write_there <span class="ot">&lt;-</span> <span class="cf">function</span>(...){</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(..., <span class="at">file =</span> css_path, <span class="at">append =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_there</span>(<span class="st">"body {"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_there</span>(<span class="st">"    background-color:red;"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_there</span>(<span class="st">"}"</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  cli<span class="sc">::</span><span class="fu">cat_bullet</span>(<span class="st">"CSS generated"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">create_golem</span>(<span class="st">"ici"</span>, <span class="at">project_hook =</span> new_css)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="module-templates" class="level3">
+<h3 class="anchored" data-anchor-id="module-templates">Module templates</h3>
+<section id="about-module-templates" class="level4">
+<h4 class="anchored" data-anchor-id="about-module-templates">About module templates</h4>
+<p>Module templates are called inside <code>add_module</code>.</p>
+<p>It allows you to extend <code>{golem}</code> module template functionality by creating your own content inside the module file.</p>
+<p>The function is called after the file(s) creation. Here is a step by step of what happens when the <code>add_module</code> function is called:</p>
+<ol type="1">
+<li>The module name is generated, and the <code>R/</code> directory is created if needed</li>
+<li>The fct_ and utils_ files are created if needed</li>
+<li>The path to the module is generated</li>
+<li>If the file already exists, it opens the file</li>
+<li>If the file doesn’t exist, R creates the file and the <code>module_template</code> function is called</li>
+<li>File is potentially open</li>
+</ol>
+<p>(Note that the <code>template</code> function is not called if the file already exists).</p>
+<p>Module template functions will receive, by default, the following parameters from <code>add_modules()</code>.</p>
+<ul>
+<li><code>name</code>: the name of the module</li>
+<li><code>path</code>: the path to the file in R/</li>
+<li><code>export</code>: a TRUE/FALSE set by the <code>export</code> param of <code>add_module()</code></li>
+<li><code>...</code> further arguments</li>
+</ul>
+<p>These parameters might not be used inside your own function, but <strong>they need to be set in the function skeleton</strong>, for compatibility reasons.</p>
+</section>
+<section id="module-template-examples" class="level4">
+<h4 class="anchored" data-anchor-id="module-template-examples">Module template examples</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_tmpl <span class="ot">&lt;-</span> <span class="cf">function</span>(name, path, export, ...){</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Define a template that write to the</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># module file</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write</span>(name, path)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">add_module</span>(<span class="at">name =</span> <span class="st">"custom"</span>, <span class="at">module_template =</span> my_tmpl)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>my_other_tmpl <span class="ot">&lt;-</span> <span class="cf">function</span>(name, path, export, ...){</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Copy and paste a file from somewhere</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">file.copy</span>(..., path)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">add_module</span>(<span class="at">name =</span> <span class="st">"custom"</span>, <span class="at">module_template =</span> my_other_tmpl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="js-css-templates" class="level3">
+<h3 class="anchored" data-anchor-id="js-css-templates">JS &amp; CSS templates</h3>
+<section id="about-js-css-templates" class="level4">
+<h4 class="anchored" data-anchor-id="about-js-css-templates">About JS &amp; CSS templates</h4>
+<p>JavaScript and CSS templates work the same way as the module templates, and are used during the creation of JavaScript files, JavaScript handlers and CSS files, i.e.&nbsp;inside <code>add_js_file()</code>, <code>add_js_handler()</code> and <code>add_css_file()</code>.</p>
+<p>The function is called after the file creation. Here is a step by step of what happens when these functions are called:</p>
+<ol type="1">
+<li>Name is created</li>
+<li>The path is generated</li>
+<li>If the file already exists, it opens the file</li>
+<li>If the file doesn’t exist, R creates it and the <code>template</code> function is called</li>
+<li>File is potentially open</li>
+</ol>
+<p>(Note that the <code>template</code> function is not called if the file already exists).</p>
+<p>You can then define your own function inside your <code>{golem}</code> based application, but chances are you will be defining them into your own package.</p>
+<p>File template functions will receive, by default, the following parameters from the <code>add_*()</code> function.</p>
+<ul>
+<li><code>path</code>: the path to the file</li>
+<li><code>...</code> further arguments</li>
+</ul>
+<p>These parameters might not be used inside your own function, but <strong>they need to be set in the function skeleton</strong>, for compatibility reasons.</p>
+</section>
+<section id="js-css-templates-examples" class="level4">
+<h4 class="anchored" data-anchor-id="js-css-templates-examples">JS &amp; CSS templates examples</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_tmpl <span class="ot">&lt;-</span> <span class="cf">function</span>(path, ...){</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Define a template that only write the name of the</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>   <span class="co"># module in the file</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  write_there <span class="ot">&lt;-</span> <span class="cf">function</span>(...){</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write</span>(..., <span class="at">file =</span> path, <span class="at">append =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_there</span>(<span class="st">"body {"</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_there</span>(<span class="st">"    background-color:red;"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_there</span>(<span class="st">"}"</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">add_css_file</span>(<span class="at">name =</span> <span class="st">"custom"</span>, <span class="at">template =</span> my_tmpl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="support-for-the-latest-shiny-features" class="level2">
+<h2 class="anchored" data-anchor-id="support-for-the-latest-shiny-features">Support for the latest <code>{shiny}</code> features</h2>
+<section id="new-module-skeleton" class="level3">
+<h3 class="anchored" data-anchor-id="new-module-skeleton">New module skeleton</h3>
+<p><code>{shiny}</code> 1.5.0, has introduced a new skeleton when it comes to modules. <code>{golem}</code> now supports this new skeleton:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> golem<span class="sc">::</span><span class="fu">add_module</span>(<span class="st">"plop"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>✓ File created at R<span class="sc">/</span>mod_plop.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' plop UI Function</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' @description A shiny Module.</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param id,input,output,session Internal parameters for {shiny}.</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#' @noRd</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">#' @importFrom shiny NS tagList</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>mod_plop_ui <span class="ot">&lt;-</span> <span class="cf">function</span>(id){</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  ns <span class="ot">&lt;-</span> <span class="fu">NS</span>(id)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>(</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co">#' plop Server Functions</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co">#' @noRd</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>mod_plop_server <span class="ot">&lt;-</span> <span class="cf">function</span>(id){</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">moduleServer</span>( id, <span class="cf">function</span>(input, output, session){</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    ns <span class="ot">&lt;-</span> session<span class="sc">$</span>ns</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="do">## To be copied in the UI</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># mod_plop_ui("plop_ui_1")</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="do">## To be copied in the server</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co"># mod_plop_server("plop_ui_1")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="disabling-auto-load" class="level3">
+<h3 class="anchored" data-anchor-id="disabling-auto-load">Disabling auto-load</h3>
+<p>Since <code>{shiny}</code> 1.5.0, the R folder is automatically sourced, in alphabetical order, when the app is loaded via <code>runApp()</code>—this used to be opt-in but is now opt-out.</p>
+<p>This can cause some troubles with <code>{golem}</code> package structure in some (rare) cases, and only when deploying to RStudio platform via <code>golem::add_rstudioconnect_file()</code> and friends—there is no issue with the package structure and the load whenever you load golem via the <code>golem::run_dev()</code> or via <code>myapp::run_app()</code>.</p>
+<p>This behavior can be opt-out via two mechanisms: <code>options(shiny.autoload.r=FALSE)</code>, or via a file called <code>_disable_autoload.R</code> in the <code>R/</code> folder. Reliably setting <code>options</code> in all projects can create some issues, so we have chosen to go for the <code>_disable_autoload.R</code> solution.</p>
+<p>This file is now created whenever you called one of <code>golem::add_rstudioconnect_file()</code>, <code>golem::add_shinyappsio_file()</code> or <code>golem::add_shinyserver_file()</code>. You can also force its creation via <code>golem::disable_autoload()</code>.</p>
+<p><strong>Important note</strong>. This will still print a warning to your console:</p>
+<pre><code>Warning in loadSupport(appDir, renv = sharedEnv, globalrenv = NULL) :
+  Loading R/ subdirectory for Shiny application, but this directory appears to contain an R package. Sourcing files in R/ may cause unexpected behavior.</code></pre>
+<p>This is unfortunately because, at the time of writing these lines, <code>{shiny}</code> doesn’t remove this warning when the <code>_disable_autoload.R</code> file is there, so this warning will be printed to your logs. You can safely ignore it for now, as long as this behavior does not change (if it ever changes) in the <code>{shiny}</code> package. There is an issue open <a href="https://github.com/rstudio/shiny/issues/3355">on the {shiny} repo</a> right now, so feel free to watch the progress there!</p>
+</section>
+</section>
+<section id="misc" class="level2">
+<h2 class="anchored" data-anchor-id="misc">Misc</h2>
+<p>Here are a selection of changes and new features in this new version:</p>
+<ul>
+<li><p>You no longer need to source the <code>dev/run_dev.R</code> script and can call the <code>golem::run_dev()</code> function from your console.</p></li>
+<li><p><code>add_html_template()</code> creates an empty HTML template inside your app.</p></li>
+<li><p><code>golem::add_js_binding</code> and <code>golem::add_js_output_binding</code> create a skeleton for JavaScript bindings.</p></li>
+<li><p><code>use_external_file</code>, <code>use_external_css_file</code>, <code>use_external_js_file</code>, and <code>use_external_html_template</code> download external files from URL and add them to the <code>www</code> folder. They all have a <code>use_internal_</code> counterpart that copies files from the local computer.</p></li>
+<li><p>The <code>sanity_check()</code> function does a series of checks inside the current project.</p></li>
+</ul>
+</section>
+<section id="soft-deprecation" class="level2">
+<h2 class="anchored" data-anchor-id="soft-deprecation">Soft deprecation</h2>
+<p>We’re planning on deprecating the <code>add_ui_server_files()</code> function. Feel free to comment on <a href="https://github.com/ThinkR-open/golem/issues/445">ThinkR-open/golem/issues/445</a> if you’d like it to stay there.</p>
+</section>
+<section id="updating-your-old-projects" class="level2">
+<h2 class="anchored" data-anchor-id="updating-your-old-projects">Updating your old projects</h2>
+<p>If you’ve built a project with an older version of <code>{golem}</code>, there should be no re-engineering to do, everything should still be compatible.</p>
+<p>One change though might be in the way you deploy your app on RStudio platforms, which is related to the way <code>{shiny}</code> now handles the package structure. Just run <code>golem::disable_autoload()</code> to add the support.</p>
+<p>If ever you find any other issues with the new version of <code>{golem}</code>, please feel free to open an issue on the repository.</p>
+</section>
+<section id="feedback-and-questions" class="level2">
+<h2 class="anchored" data-anchor-id="feedback-and-questions">Feedback and questions</h2>
+<p>We’re always happy to get new ideas and question on <code>{golem}</code>!</p>
+<p>If you have a feature idea, or find a bug, please <a href="https://github.com/ThinkR-open/golem/issues">open an issue</a>.</p>
+<p>The best places to ask question are either <a href="https://github.com/ThinkR-open/golem/discussions">the GitHub “Discussions”</a> panel, or <a href="">StackOverflow</a>, using the <code>golem</code> tag.</p>
+</section>
+<section id="thanks" class="level2">
+<h2 class="anchored" data-anchor-id="thanks">Thanks</h2>
+<p>We want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.</p>
+<p><a href="https://github.com/abidawson">@abidawson</a>, <a href="https://github.com/abnercasallo">@abnercasallo</a>, <a href="https://github.com/aftonsteps">@aftonsteps</a>, <a href="https://github.com/AMillanFL">@AMillanFL</a>, <a href="https://github.com/antoine-sachet">@antoine-sachet</a>, <a href="https://github.com/ArthurPERE">@ArthurPERE</a>, <a href="https://github.com/artpulsion">@artpulsion</a>, <a href="https://github.com/cderv">@cderv</a>, <a href="https://github.com/chintanp">@chintanp</a>, <a href="https://github.com/ChrisBeeley">@ChrisBeeley</a>, <a href="https://github.com/CorradoLanera">@CorradoLanera</a>, <a href="https://github.com/csgillespie">@csgillespie</a>, <a href="https://github.com/daattali">@daattali</a>, <a href="https://github.com/DivadNojnarg">@DivadNojnarg</a>, <a href="https://github.com/durandsinclair">@durandsinclair</a>, <a href="https://github.com/dwhdai">@dwhdai</a>, <a href="https://github.com/dylanrussellmd">@dylanrussellmd</a>, <a href="https://github.com/earnaud">@earnaud</a>, <a href="https://github.com/fBedecarrats">@fBedecarrats</a>, <a href="https://github.com/feddelegrand7">@feddelegrand7</a>, <a href="https://github.com/fizic37">@fizic37</a>, <a href="https://github.com/fvitalini">@fvitalini</a>, <a href="https://github.com/gacolitti">@gacolitti</a>, <a href="https://github.com/genobobeno">@genobobeno</a>, <a href="https://github.com/hadley">@hadley</a>, <a href="https://github.com/HanjoStudy">@HanjoStudy</a>, <a href="https://github.com/henrique1008">@henrique1008</a>, <a href="https://github.com/jacksonschan">@jacksonschan</a>, <a href="https://github.com/jacobwindsor">@jacobwindsor</a>, <a href="https://github.com/jaybee84">@jaybee84</a>, <a href="https://github.com/jcrodriguez1989">@jcrodriguez1989</a>, <a href="https://github.com/jennahamlin">@jennahamlin</a>, <a href="https://github.com/julianstanley">@julianstanley</a>, <a href="https://github.com/KasperThystrup">@KasperThystrup</a>, <a href="https://github.com/Kastakin">@Kastakin</a>, <a href="https://github.com/KoderKow">@KoderKow</a>, <a href="https://github.com/kprimice">@kprimice</a>, <a href="https://github.com/mahelious">@mahelious</a>, <a href="https://github.com/MayaGans">@MayaGans</a>, <a href="https://github.com/mcsiple">@mcsiple</a>, <a href="https://github.com/michaelhogersnplm">@michaelhogersnplm</a>, <a href="https://github.com/moodymudskipper">@moodymudskipper</a>, <a href="https://github.com/mraess">@mraess</a>, <a href="https://github.com/novica">@novica</a>, <a href="https://github.com/nvelden">@nvelden</a>, <a href="https://github.com/quickbendelat">@quickbendelat</a>, <a href="https://github.com/rgaube">@rgaube</a>, <a href="https://github.com/riccardoporreca">@riccardoporreca</a>, <a href="https://github.com/RichardPilbery">@RichardPilbery</a>, <a href="https://github.com/robertoromor">@robertoromor</a>, <a href="https://github.com/seanhardison1">@seanhardison1</a>, <a href="https://github.com/ShinyFabio">@ShinyFabio</a>, <a href="https://github.com/sjspielman">@sjspielman</a>, <a href="https://github.com/Swechhya">@Swechhya</a>, <a href="https://github.com/TimotheeTournier">@TimotheeTournier</a>, <a href="https://github.com/VincentAlcazer">@VincentAlcazer</a>, <a href="https://github.com/Welsh44">@Welsh44</a>, <a href="https://github.com/yogat3ch">@yogat3ch</a>, <a href="https://github.com/yonicd">@yonicd</a>, <a href="https://github.com/zchmielewska">@zchmielewska</a>, and <a href="https://github.com/ZimmermannYves">@ZimmermannYves</a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org">Website built with Quarto</a>
+  </li>  
+</ul>
+    </div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://rtask.thinkr.fr">© ThinkR - A French company of R experts</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+
+
+
+</body></html>

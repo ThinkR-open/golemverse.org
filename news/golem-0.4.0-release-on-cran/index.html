@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="colin">
+<meta name="dcterms.date" content="2023-03-15">
+
+<title>golemverse - {golem} 0.4.0 is now available</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">golemverse</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources/index.html">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../packages/index.html">
+ <span class="menu-text">Packages</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../roadmap/index.html">
+ <span class="menu-text">Roadmap</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../news/index.html">
+ <span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../stream/index.html">
+ <span class="menu-text">Stream</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html#contact">
+ <span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/topics/golemverse"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/thinkr_fr"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">{golem} 0.4.0 is now available</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>colin </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 15, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p><img src="featured.png" class="img-fluid"></p>
+<p>The new version of <code>{golem}</code> is available!</p>
+<p>You can download it from your favorite CRAN repository, or by running the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"thinkr-open/golem@v0.4.0"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="whats-up-with-this-new-version" class="level2">
+<h2 class="anchored" data-anchor-id="whats-up-with-this-new-version">What’s up with this new version?</h2>
+<section id="lighter-dependency-tree" class="level3">
+<h3 class="anchored" data-anchor-id="lighter-dependency-tree">Lighter dependency tree</h3>
+<section id="about-dependencies" class="level4">
+<h4 class="anchored" data-anchor-id="about-dependencies">About dependencies</h4>
+<p>When we released the first version of <code>{golem}</code> on CRAN, we decided that all <code>{golem}</code>-based app should depend on <code>{golem}</code>. This was a conscious decision, and we made it because <code>{golem}</code> comes with a bunch of internal functions that are used at runtime.</p>
+<p>For example <code>bundle_resources()</code> links all the external resources (CSS, JS, …), <code>is_running()</code> detects that the current app is a <code>{golem}</code> app, <code>with_golem_options()</code> allows passing arguments to your <code>run_app()</code> functions (and to set a new cool option that I’ll talk about below), and others. We were very aware that this choice came with a drawback: adding a dependency to every <code>{golem}</code>-based app.</p>
+<p>Dependency management is a big topic in the software engineering world, and some projects tend to go for minimizing as much as possible the number of dependencies.</p>
+<p>They are right (to a certain extent): adding dependencies means that you can be subject to some troubles, notably if one of the packages you’re relying on gets removed from the CRAN.</p>
+<p>Even in a contained world where you have your own CRAN-like repository, there is always the drawback of installation time: the more dependencies you have, the longer it takes to install the package, and by extension to compile a Docker image (for example). This is why we could have been tempted to imagine a different approach for <code>{golem}</code>: creating files inside your project that would contain everything you need. But I think that this approach can be way less safe and practical, for reasons I’ll develop below.</p>
+<ol type="1">
+<li>You need dependencies for a <code>{shiny}</code> app</li>
+</ol>
+<p>First, whatever happens, you’ll need to rely on <code>{shiny}</code>, as you are building a <code>{shiny}</code> app. And you’re likely to add a bunch of other packages along the way. So the “very small dependency tree” is a myth if you’re building a web app. <code>{shiny}</code> itself already has 31 dependencies.</p>
+<details>
+<summary>
+Click to show <code>{shiny}</code> dependency tree
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">"shiny"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] '1.7.4'</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>shiny <span class="ot">&lt;-</span> pak<span class="sc">::</span><span class="fu">pkg_deps_tree</span>(<span class="st">"shiny"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ Loading metadata database
+ℹ Loading metadata database</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Loading metadata database ... done
+✔ Loading metadata database ... done</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code></code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>shiny 1.7.4 ✨ ⬇ (unknown size)
+├─httpuv 1.6.9 ✨ ⬇ (unknown size)
+│ ├─Rcpp 1.0.10 ✨ ⬇ (unknown size)
+│ ├─R6 2.5.1 ✨ ⬇ (unknown size)
+│ ├─promises 1.2.0.1 ✨ ⬇ (unknown size)
+│ │ ├─R6
+│ │ ├─Rcpp
+│ │ ├─later 1.3.0 ✨ ⬇ (unknown size)
+│ │ │ ├─Rcpp
+│ │ │ └─rlang 1.1.0 ✨ ⬇ (unknown size)
+│ │ ├─rlang
+│ │ └─magrittr 2.0.3 ✨ ⬇ (unknown size)
+│ └─later
+├─mime 0.12 ✨ ⬇ (unknown size)
+├─jsonlite 1.8.4 ✨ ⬇ (unknown size)
+├─xtable 1.8-4 ✨ ⬇ (unknown size)
+├─fontawesome 0.5.0 ✨ ⬇ (unknown size)
+│ ├─rlang
+│ └─htmltools 0.5.5 ✨ ⬇ (unknown size)
+│   ├─digest 0.6.31 ✨ ⬇ (unknown size)
+│   ├─base64enc 0.1-3 ✨ ⬇ (unknown size)
+│   ├─rlang
+│   ├─fastmap 1.1.1 ✨ ⬇ (unknown size)
+│   └─ellipsis 0.3.2 ✨ ⬇ (unknown size)
+│     └─rlang
+├─htmltools
+├─R6
+├─sourcetools 0.1.7-1 ✨ ⬇ (unknown size)
+├─later
+├─promises
+├─crayon 1.5.2 ✨ ⬇ (unknown size)
+├─rlang
+├─fastmap
+├─withr 2.5.0 ✨ ⬇ (unknown size)
+├─commonmark 1.9.0 ✨ ⬇ (unknown size)
+├─glue 1.6.2 ✨ ⬇ (unknown size)
+├─bslib 0.4.2 ✨ ⬇ (unknown size)
+│ ├─htmltools
+│ ├─jsonlite
+│ ├─sass 0.4.5 ✨ ⬇ (unknown size)
+│ │ ├─fs 1.6.1 ✨ ⬇ (unknown size)
+│ │ ├─rlang
+│ │ ├─htmltools
+│ │ ├─R6
+│ │ └─rappdirs 0.3.3 ✨ ⬇ (unknown size)
+│ ├─jquerylib 0.1.4 ✨ ⬇ (unknown size)
+│ │ └─htmltools
+│ ├─rlang
+│ ├─cachem 1.0.7 ✨ ⬇ (unknown size)
+│ │ ├─rlang
+│ │ └─fastmap
+│ ├─memoise 2.0.1 ✨ ⬇ (unknown size)
+│ │ ├─rlang
+│ │ └─cachem
+│ ├─base64enc
+│ └─mime
+├─cachem
+├─ellipsis
+└─lifecycle 1.0.3 ✨ ⬇ (unknown size)
+  ├─cli 3.6.1 ✨ ⬇ (unknown size)
+  ├─glue
+  └─rlang
+
+Key:  ✨ new |  ⬇ download</code></pre>
+</div>
+</div>
+</details>
+<ol start="2" type="1">
+<li>Updating your code base</li>
+</ol>
+<p>On a larger scale, adding scripts to your app for functions that can come from a dependency is an issue in terms of security and maintenance. For example, let’s imagine that tomorrow, we discover a security breach in <code>{shiny}</code>, or in the way <code>{golem}</code> bundles the resources, or any other package.</p>
+<p>How can we be sure that all your apps are updated once we’ve built a patch? Yep, updating the packages. The solution of adding files would mean that you would have to go inside all your applications and update the files, with all the issues that come with this process (time-consuming, the risk of forgetting to update, typos…)</p>
+</section>
+</section>
+<section id="dev-dependencies-vs-runtime-dependencies-in-golem" class="level3">
+<h3 class="anchored" data-anchor-id="dev-dependencies-vs-runtime-dependencies-in-golem">Dev dependencies vs runtime dependencies in <code>{golem}</code></h3>
+<p>That being said, it’s true that previous versions of <code>{golem}</code> used to have too many hard dependencies, creating issues when sending the apps to production. In prod, many of <code>{golem}</code> dependencies were useless, and you don’t need them at runtime.</p>
+<p>That’s because <code>{golem}</code> has two types of dependencies: dev dependencies (the packages you’re using when developing with <code>{golem}</code>) and runtime dependencies (the ones used when the application runs).</p>
+<p>In version 0.3.3 of <code>{golem}</code>, we started removing dev dependencies. The first to go was <code>{dockerfiler}</code>, and now with 0.4.0 we have moved all the dev dependencies to the <code>Suggests</code> section of the <code>DESCRIPTION</code>. What that means is that if you’re using <code>{golem}</code> in a fresh R distribution, the dependency tree is way lighter, as you can see below. 65 dependencies for 0.3.5, and 37 for 0.4.0.</p>
+<details>
+<summary>
+Click to show <code>{golem@v0.3.5}</code> dependency tree
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>v035 <span class="ot">&lt;-</span> pak<span class="sc">::</span><span class="fu">pkg_deps_tree</span>(<span class="st">"thinkr-open/golem@v0.3.5"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>thinkr-open/golem@v0.3.5 0.3.5 ✨👷🏽🔧 ⬇ (unknown size)
+├─attempt 0.3.1 ✨ ⬇ (unknown size)
+│ └─rlang 1.1.0 ✨ ⬇ (unknown size)
+├─cli 3.6.1 ✨ ⬇ (unknown size)
+├─config 0.3.1 ✨ ⬇ (unknown size)
+│ └─yaml 2.3.7 ✨ ⬇ (unknown size)
+├─crayon 1.5.2 ✨ ⬇ (unknown size)
+├─desc 1.4.2 ✨ ⬇ (unknown size)
+│ ├─cli
+│ ├─R6 2.5.1 ✨ ⬇ (unknown size)
+│ └─rprojroot 2.0.3 ✨ ⬇ (unknown size)
+├─fs 1.6.1 ✨ ⬇ (unknown size)
+├─here 1.0.1 ✨ ⬇ (unknown size)
+│ └─rprojroot
+├─htmltools 0.5.5 ✨ ⬇ (unknown size)
+│ ├─digest 0.6.31 ✨ ⬇ (unknown size)
+│ ├─base64enc 0.1-3 ✨ ⬇ (unknown size)
+│ ├─rlang
+│ ├─fastmap 1.1.1 ✨ ⬇ (unknown size)
+│ └─ellipsis 0.3.2 ✨ ⬇ (unknown size)
+│   └─rlang
+├─pkgload 1.3.2 ✨ ⬇ (unknown size)
+│ ├─cli
+│ ├─crayon
+│ ├─desc
+│ ├─fs
+│ ├─glue 1.6.2 ✨ ⬇ (unknown size)
+│ ├─rlang
+│ ├─rprojroot
+│ └─withr 2.5.0 ✨ ⬇ (unknown size)
+├─roxygen2 7.2.3 ✨ ⬇ (unknown size)
+│ ├─brew 1.0-8 ✨ ⬇ (unknown size)
+│ ├─cli
+│ ├─commonmark 1.9.0 ✨ ⬇ (unknown size)
+│ ├─desc
+│ ├─knitr 1.42 ✨ ⬇ (unknown size)
+│ │ ├─evaluate 0.20 ✨ ⬇ (unknown size)
+│ │ ├─highr 0.10 ✨ ⬇ (unknown size)
+│ │ │ └─xfun 0.37 ✨ ⬇ (unknown size)
+│ │ ├─yaml
+│ │ └─xfun
+│ ├─pkgload
+│ ├─purrr 1.0.1 ✨ ⬇ (unknown size)
+│ │ ├─cli
+│ │ ├─lifecycle 1.0.3 ✨ ⬇ (unknown size)
+│ │ │ ├─cli
+│ │ │ ├─glue
+│ │ │ └─rlang
+│ │ ├─magrittr 2.0.3 ✨ ⬇ (unknown size)
+│ │ ├─rlang
+│ │ └─vctrs 0.6.1 ✨ ⬇ (unknown size)
+│ │   ├─cli
+│ │   ├─glue
+│ │   ├─lifecycle
+│ │   └─rlang
+│ ├─R6
+│ ├─rlang
+│ ├─stringi 1.7.12 ✨ ⬇ (unknown size)
+│ ├─stringr 1.5.0 ✨ ⬇ (unknown size)
+│ │ ├─cli
+│ │ ├─glue
+│ │ ├─lifecycle
+│ │ ├─magrittr
+│ │ ├─rlang
+│ │ ├─stringi
+│ │ └─vctrs
+│ ├─withr
+│ └─xml2 1.3.3 ✨ ⬇ (unknown size)
+├─rstudioapi 0.14 ✨ ⬇ (unknown size)
+├─shiny 1.7.4 ✨ ⬇ (unknown size)
+│ ├─httpuv 1.6.9 ✨ ⬇ (unknown size)
+│ │ ├─Rcpp 1.0.10 ✨ ⬇ (unknown size)
+│ │ ├─R6
+│ │ ├─promises 1.2.0.1 ✨ ⬇ (unknown size)
+│ │ │ ├─R6
+│ │ │ ├─Rcpp
+│ │ │ ├─later 1.3.0 ✨ ⬇ (unknown size)
+│ │ │ │ ├─Rcpp
+│ │ │ │ └─rlang
+│ │ │ ├─rlang
+│ │ │ └─magrittr
+│ │ └─later
+│ ├─mime 0.12 ✨ ⬇ (unknown size)
+│ ├─jsonlite 1.8.4 ✨ ⬇ (unknown size)
+│ ├─xtable 1.8-4 ✨ ⬇ (unknown size)
+│ ├─fontawesome 0.5.0 ✨ ⬇ (unknown size)
+│ │ ├─rlang
+│ │ └─htmltools
+│ ├─htmltools
+│ ├─R6
+│ ├─sourcetools 0.1.7-1 ✨ ⬇ (unknown size)
+│ ├─later
+│ ├─promises
+│ ├─crayon
+│ ├─rlang
+│ ├─fastmap
+│ ├─withr
+│ ├─commonmark
+│ ├─glue
+│ ├─bslib 0.4.2 ✨ ⬇ (unknown size)
+│ │ ├─htmltools
+│ │ ├─jsonlite
+│ │ ├─sass 0.4.5 ✨ ⬇ (unknown size)
+│ │ │ ├─fs
+│ │ │ ├─rlang
+│ │ │ ├─htmltools
+│ │ │ ├─R6
+│ │ │ └─rappdirs 0.3.3 ✨ ⬇ (unknown size)
+│ │ ├─jquerylib 0.1.4 ✨ ⬇ (unknown size)
+│ │ │ └─htmltools
+│ │ ├─rlang
+│ │ ├─cachem 1.0.7 ✨ ⬇ (unknown size)
+│ │ │ ├─rlang
+│ │ │ └─fastmap
+│ │ ├─memoise 2.0.1 ✨ ⬇ (unknown size)
+│ │ │ ├─rlang
+│ │ │ └─cachem
+│ │ ├─base64enc
+│ │ └─mime
+│ ├─cachem
+│ ├─ellipsis
+│ └─lifecycle
+├─usethis 2.1.6 ✨ ⬇ (unknown size)
+│ ├─cli
+│ ├─clipr 0.8.0 ✨ ⬇ (unknown size)
+│ ├─crayon
+│ ├─curl 5.0.0 ✨ ⬇ (unknown size)
+│ ├─desc
+│ ├─fs
+│ ├─gert 1.9.2 ✨ ⬇ (unknown size)
+│ │ ├─askpass 1.1 ✨ ⬇ (unknown size)
+│ │ │ └─sys 3.4.1 ✨ ⬇ (unknown size)
+│ │ ├─credentials 1.3.2 ✨ ⬇ (unknown size)
+│ │ │ ├─openssl 2.0.6 ✨ ⬇ (unknown size)
+│ │ │ │ └─askpass
+│ │ │ ├─sys
+│ │ │ ├─curl
+│ │ │ ├─jsonlite
+│ │ │ └─askpass
+│ │ ├─openssl
+│ │ ├─rstudioapi
+│ │ ├─sys
+│ │ └─zip 2.2.2 ✨ ⬇ (unknown size)
+│ ├─gh 1.4.0 ✨ ⬇ (unknown size)
+│ │ ├─cli
+│ │ ├─gitcreds 0.1.2 ✨ ⬇ (unknown size)
+│ │ ├─httr2 0.2.2 ✨ ⬇ (unknown size)
+│ │ │ ├─cli
+│ │ │ ├─curl
+│ │ │ ├─glue
+│ │ │ ├─magrittr
+│ │ │ ├─openssl
+│ │ │ ├─R6
+│ │ │ ├─rappdirs
+│ │ │ ├─rlang
+│ │ │ └─withr
+│ │ ├─ini 0.3.1 ✨ ⬇ (unknown size)
+│ │ ├─jsonlite
+│ │ └─rlang
+│ ├─glue
+│ ├─jsonlite
+│ ├─lifecycle
+│ ├─purrr
+│ ├─rappdirs
+│ ├─rlang
+│ ├─rprojroot
+│ ├─rstudioapi
+│ ├─whisker 0.4.1 ✨ ⬇ (unknown size)
+│ ├─withr
+│ └─yaml
+└─yaml
+
+Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(v035)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 65</code></pre>
+</div>
+</div>
+</details>
+<div>
+&nbsp;
+</div>
+<details>
+<summary>
+Click to show <code>{golem@v0.4.0}</code> dependency tree
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>v040 <span class="ot">&lt;-</span> pak<span class="sc">::</span><span class="fu">pkg_deps_tree</span>(<span class="st">"thinkr-open/golem@v0.4.0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>thinkr-open/golem@v0.4.0 0.4.0 ✨👷🏽🔧 ⬇ (unknown size)
+├─attempt 0.3.1 ✨ ⬇ (unknown size)
+│ └─rlang 1.1.0 ✨ ⬇ (unknown size)
+├─config 0.3.1 ✨ ⬇ (unknown size)
+│ └─yaml 2.3.7 ✨ ⬇ (unknown size)
+├─here 1.0.1 ✨ ⬇ (unknown size)
+│ └─rprojroot 2.0.3 ✨ ⬇ (unknown size)
+├─htmltools 0.5.5 ✨ ⬇ (unknown size)
+│ ├─digest 0.6.31 ✨ ⬇ (unknown size)
+│ ├─base64enc 0.1-3 ✨ ⬇ (unknown size)
+│ ├─rlang
+│ ├─fastmap 1.1.1 ✨ ⬇ (unknown size)
+│ └─ellipsis 0.3.2 ✨ ⬇ (unknown size)
+│   └─rlang
+├─rlang
+├─shiny 1.7.4 ✨ ⬇ (unknown size)
+│ ├─httpuv 1.6.9 ✨ ⬇ (unknown size)
+│ │ ├─Rcpp 1.0.10 ✨ ⬇ (unknown size)
+│ │ ├─R6 2.5.1 ✨ ⬇ (unknown size)
+│ │ ├─promises 1.2.0.1 ✨ ⬇ (unknown size)
+│ │ │ ├─R6
+│ │ │ ├─Rcpp
+│ │ │ ├─later 1.3.0 ✨ ⬇ (unknown size)
+│ │ │ │ ├─Rcpp
+│ │ │ │ └─rlang
+│ │ │ ├─rlang
+│ │ │ └─magrittr 2.0.3 ✨ ⬇ (unknown size)
+│ │ └─later
+│ ├─mime 0.12 ✨ ⬇ (unknown size)
+│ ├─jsonlite 1.8.4 ✨ ⬇ (unknown size)
+│ ├─xtable 1.8-4 ✨ ⬇ (unknown size)
+│ ├─fontawesome 0.5.0 ✨ ⬇ (unknown size)
+│ │ ├─rlang
+│ │ └─htmltools
+│ ├─htmltools
+│ ├─R6
+│ ├─sourcetools 0.1.7-1 ✨ ⬇ (unknown size)
+│ ├─later
+│ ├─promises
+│ ├─crayon 1.5.2 ✨ ⬇ (unknown size)
+│ ├─rlang
+│ ├─fastmap
+│ ├─withr 2.5.0 ✨ ⬇ (unknown size)
+│ ├─commonmark 1.9.0 ✨ ⬇ (unknown size)
+│ ├─glue 1.6.2 ✨ ⬇ (unknown size)
+│ ├─bslib 0.4.2 ✨ ⬇ (unknown size)
+│ │ ├─htmltools
+│ │ ├─jsonlite
+│ │ ├─sass 0.4.5 ✨ ⬇ (unknown size)
+│ │ │ ├─fs 1.6.1 ✨ ⬇ (unknown size)
+│ │ │ ├─rlang
+│ │ │ ├─htmltools
+│ │ │ ├─R6
+│ │ │ └─rappdirs 0.3.3 ✨ ⬇ (unknown size)
+│ │ ├─jquerylib 0.1.4 ✨ ⬇ (unknown size)
+│ │ │ └─htmltools
+│ │ ├─rlang
+│ │ ├─cachem 1.0.7 ✨ ⬇ (unknown size)
+│ │ │ ├─rlang
+│ │ │ └─fastmap
+│ │ ├─memoise 2.0.1 ✨ ⬇ (unknown size)
+│ │ │ ├─rlang
+│ │ │ └─cachem
+│ │ ├─base64enc
+│ │ └─mime
+│ ├─cachem
+│ ├─ellipsis
+│ └─lifecycle 1.0.3 ✨ ⬇ (unknown size)
+│   ├─cli 3.6.1 ✨ ⬇ (unknown size)
+│   ├─glue
+│   └─rlang
+└─yaml
+
+Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(v040)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 37</code></pre>
+</div>
+</div>
+</details>
+<div>
+&nbsp;
+</div>
+<p>But that’s still 35 packages, right?</p>
+<p>Yes, but as I said before, every <code>{shiny}</code> app will depend on <code>{shiny}</code>. So how many packages does <code>{golem}</code> <strong>actually add to your dependency tree</strong>? In other words, how many packages does <code>{golem}</code> depend on that are not already a <code>{shiny}</code> dependency?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setdiff</span>(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  v040<span class="sc">$</span>package,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  shiny<span class="sc">$</span>package</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "golem"     "attempt"   "config"    "here"      "rprojroot" "yaml"     </code></pre>
+</div>
+</div>
+<p>That’s 6 additional packages. <code>{golem}</code> &amp; <code>{attempt}</code> being packages from ThinkR, and <code>{config}</code>, <code>{here}</code>, <code>{rprojroot}</code>, <code>{yaml}</code> packages from Posit open source team.</p>
+<p>So yes, adding a dependency adds a small risk. But now it’s up to you to decide if trying to remove <code>{golem}</code> from your dependency tree is worth the time, compared to the time gained while developing and deploying 😅</p>
+<blockquote class="blockquote">
+<p>Note that soon, we’ll work on removing <code>{attempt}</code> and <code>{here}</code> from the dependencies, but these three being</p>
+</blockquote>
+<section id="goleminstall_dev_deps" class="level5">
+<h5 class="anchored" data-anchor-id="goleminstall_dev_deps"><code>golem::install_dev_deps()</code></h5>
+<p>To be sure that you have all the dependencies needed when developing, <code>{golem}</code> now has a <code>install_dev_deps()</code> function. This function will check that you have everything needed to develop, and it will not be called at deployment time.</p>
+<p>You’ll now find this function at the top of your 01_start.R script.</p>
+</section>
+</section>
+<section id="maintenance-mode" class="level3">
+<h3 class="anchored" data-anchor-id="maintenance-mode">Maintenance mode</h3>
+<p>One new feature I’m particularly excited about is the “Maintenance mode” option.</p>
+<p>This feature was born out of a specific need: in production, I needed to make an application go “offline”, as I knew the db was about to migrate. That implied doing some weird changes in the UI for a short period of time, before putting the app back.</p>
+<p>That’s when the idea of a “Maintenance mode” was born, for the times when you need your application to be unavailable: database updates, API changes, etc. When this maintenance mode is turned on, your application will be paused and a specific page will be displayed to your users. And the cool thing is that it’s just an environment variable away: you don’t need to change anything in your app.</p>
+<p>The maintenance mode will be turned on whenever the R process detects that the GOLEM_MAINTENANCE_ACTIVE environment variable is set to TRUE. It will look like this:</p>
+<p><img src="golem_config_active.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p>Big Up to my dear colleague <a href="https://github.com/ArthurData">Arthur</a> for developing this feature!</p>
+</blockquote>
+<p>To visualize the maintenance page locally, you can run the following code:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>withr<span class="sc">::</span><span class="fu">with_envvar</span>(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"GOLEM_MAINTENANCE_ACTIVE"</span> <span class="ot">=</span> <span class="cn">TRUE</span>),</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    golem<span class="sc">::</span><span class="fu">run_dev</span>()</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note that <code>{golem}</code> comes with a default maintenance page, and you can replace it with your own page by passing either an <code>html_document</code> or a <code>tagList</code> to the <code>with_golem_options</code> function in <code>run_app.R</code>:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>run_app <span class="ot">&lt;-</span> <span class="cf">function</span>(</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">onStart =</span> <span class="cn">NULL</span>,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">options =</span> <span class="fu">list</span>(),</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">enableBookmarking =</span> <span class="cn">NULL</span>,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">uiPattern =</span> <span class="st">"/"</span>,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>) {</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with_golem_options</span>(</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">app =</span> <span class="fu">shinyApp</span>(</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">ui =</span> app_ui,</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">server =</span> app_server,</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">onStart =</span> onStart,</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">options =</span> options,</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">enableBookmarking =</span> enableBookmarking,</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">uiPattern =</span> uiPattern</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">golem_opts =</span> <span class="fu">list</span>(...),</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">maintenance_page =</span> shiny<span class="sc">::</span><span class="fu">htmlTemplate</span>(</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">filename =</span> <span class="fu">app_sys</span>(</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"custom_maintenance_page.html"</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="other-changes" class="level3">
+<h3 class="anchored" data-anchor-id="other-changes">Other changes</h3>
+<p>Please refer to the https://github.com/ThinkR-open/golem/releases page for a list of all the news!</p>
+</section>
+</section>
+<section id="thanks" class="level2">
+<h2 class="anchored" data-anchor-id="thanks">Thanks</h2>
+<p>We want to thank all the people who have contributed to this release since the v0.3.1, either by opening PR, feature requests, or bug report.</p>
+<p><a href="https://github.com/agronomofiorentini">@agronomofiorentini</a>, <a href="https://github.com/ajmoralesa">@ajmoralesa</a>, <a href="https://github.com/ALanguillaume">@ALanguillaume</a>, <a href="https://github.com/Andryas">@Andryas</a>, <a href="https://github.com/ArthurData">@ArthurData</a>, <a href="https://github.com/asadow">@asadow</a>, <a href="https://github.com/asbates">@asbates</a>, <a href="https://github.com/asiripanich">@asiripanich</a>, <a href="https://github.com/avsolovey">@avsolovey</a>, <a href="https://github.com/Camil88">@Camil88</a>, <a href="https://github.com/campbead">@campbead</a>, <a href="https://github.com/Cervangirard">@Cervangirard</a>, <a href="https://github.com/ColinFay">@ColinFay</a>, <a href="https://github.com/connorcarolan">@connorcarolan</a>, <a href="https://github.com/D3SL">@D3SL</a>, <a href="https://github.com/DivadNojnarg">@DivadNojnarg</a>, <a href="https://github.com/dmenne">@dmenne</a>, <a href="https://github.com/Dobrokhotov1989">@Dobrokhotov1989</a>, <a href="https://github.com/earnaud">@earnaud</a>, <a href="https://github.com/em-dataIntegrityEnthusiast">@em-dataIntegrityEnthusiast</a>, <a href="https://github.com/erikvona">@erikvona</a>, <a href="https://github.com/ethantenison">@ethantenison</a>, <a href="https://github.com/etiennebacher">@etiennebacher</a>, <a href="https://github.com/fBedecarrats">@fBedecarrats</a>, <a href="https://github.com/gabrielburcea">@gabrielburcea</a>, <a href="https://github.com/ggpinto">@ggpinto</a>, <a href="https://github.com/gioneves">@gioneves</a>, <a href="https://github.com/guivivi">@guivivi</a>, <a href="https://github.com/harell">@harell</a>, <a href="https://github.com/hedjour">@hedjour</a>, <a href="https://github.com/henrique1008">@henrique1008</a>, <a href="https://github.com/ilyaZar">@ilyaZar</a>, <a href="https://github.com/isaactpetersen">@isaactpetersen</a>, <a href="https://github.com/ivokwee">@ivokwee</a>, <a href="https://github.com/jamieRowen">@jamieRowen</a>, <a href="https://github.com/jl5000">@jl5000</a>, <a href="https://github.com/JMPivette">@JMPivette</a>, <a href="https://github.com/Jodavid">@Jodavid</a>, <a href="https://github.com/JohnStaples">@JohnStaples</a>, <a href="https://github.com/Jopgood">@Jopgood</a>, <a href="https://github.com/JulianoAtto">@JulianoAtto</a>, <a href="https://github.com/KittJonathan">@KittJonathan</a>, <a href="https://github.com/KoderKow">@KoderKow</a>, <a href="https://github.com/kyleweise">@kyleweise</a>, <a href="https://github.com/leeroyaus">@leeroyaus</a>, <a href="https://github.com/lijian007">@lijian007</a>, <a href="https://github.com/MargotBr">@MargotBr</a>, <a href="https://github.com/mark-druffel">@mark-druffel</a>, <a href="https://github.com/mcsiple">@mcsiple</a>, <a href="https://github.com/mjbroerman">@mjbroerman</a>, <a href="https://github.com/nathansquan">@nathansquan</a>, <a href="https://github.com/ncls33">@ncls33</a>, <a href="https://github.com/ncullen93">@ncullen93</a>, <a href="https://github.com/novica">@novica</a>, <a href="https://github.com/pachadotdev">@pachadotdev</a>, <a href="https://github.com/psolymos">@psolymos</a>, <a href="https://github.com/pythiantech">@pythiantech</a>, <a href="https://github.com/rezasz969">@rezasz969</a>, <a href="https://github.com/seanhardison1">@seanhardison1</a>, <a href="https://github.com/shahreyar-abeer">@shahreyar-abeer</a>, <a href="https://github.com/statnmap">@statnmap</a>, <a href="https://github.com/stheil15">@stheil15</a>, <a href="https://github.com/svenb78">@svenb78</a>, <a href="https://github.com/Swechhya">@Swechhya</a>, <a href="https://github.com/Teebusch">@Teebusch</a>, <a href="https://github.com/teofiln">@teofiln</a>, <a href="https://github.com/VincentGuyader">@VincentGuyader</a>, <a href="https://github.com/waiteb5">@waiteb5</a>, <a href="https://github.com/whipson">@whipson</a>, <a href="https://github.com/wurli">@wurli</a>, <a href="https://github.com/yogat3ch">@yogat3ch</a>, and <a href="https://github.com/YonghuiDong">@YonghuiDong</a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org">Website built with Quarto</a>
+  </li>  
+</ul>
+    </div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://rtask.thinkr.fr">© ThinkR - A French company of R experts</a>
+  </li>  
+</ul>
+      </div>
+  </div>
+</footer>
+
+
+
+</body></html>
