@@ -1,10 +1,7 @@
----
-title: "Posts"
-listing:
-  contents: .
-  sort: "date desc"
-  type: default
-  sort-ui: false
-  filter-ui: false
-  id: sample-listings
----
+<!doctype html>
+<html>
+    <head>
+	<meta http-equiv="refresh" content="0; url=/news/">
+	<link rel="canonical" href="/news/" />
+    </head>
+</html>
