@@ -18,6 +18,17 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
   - `{bank}`
   - `{elvis}`
 
++ Questionning: should the following repos/packages be included to the golemverse?
+  - https://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny
+  - https://github.com/ColinFay/skeleton, Skeleton CSS for Shiny
+  - https://github.com/ColinFay/feathericons, Feather Icons for Shiny
+  - https://github.com/ColinFay/nessy, A 'NES' css for 'Shiny'
+  - https://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny
+  - https://github.com/ColinFay/geoloc, Add geolocation inside your shiny app
+  - https://github.com/ColinFay/darkmode, 'darkmode.js' for 'Shiny'
+  - https://github.com/ColinFay/dockerstats, R Wrapper Around 'docker stats'
+  - https://github.com/ColinFay/crrry, 'crrri' recipes for 'shiny'
+
 ## Mid term
 
 + Stable, production ready `{brochure}`
