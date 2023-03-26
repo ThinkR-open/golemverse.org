@@ -5,7 +5,7 @@ execute:
   freeze: auto
 
 website:
-
+  favicon: /img/favicon.ico
   title: "golemverse"
   search: true
   site-url: https://www.golemverse.org
