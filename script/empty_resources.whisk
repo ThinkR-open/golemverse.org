@@ -1,0 +1,27 @@
+---
+title: "Documentation and resources"
+page-layout: full
+---
+
+> Notes: The golemverse is constantly evolving. We gather here resources back from 2019, so some of the resources below might be outdated.
+
+## Book 📚
+
+- ["Engineering Production-grade Shiny Apps"](//engineering-shiny.org/)
+
+## Blog posts ✍️
+
+For the latest news, read the [golemverse blog](/news/).
+
+You can also browse the ["golem" tag](https://rtask.thinkr.fr/golem/) on the RTask website.
+
+## Conferences, videos, podcasts 🤩
+
+Have any resource to add here? [Feel free to open an issue!](https://github.com/ThinkR-open/golemverse.org/issues).
+
+{{confs}}
+
+## Cheatsheet 📑
+
+- [{golem} cheatsheet](https://thinkr.fr/golem_cheatsheet_v0.1.pdf)
+

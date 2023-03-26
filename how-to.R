@@ -107,3 +107,45 @@ for (stream in stream$streams) {
     sprintf("stream/%s/index.qmd", stream$filename)
   )
 }
+
+## Render confs
+
+talks <- yaml::read_yaml("resources/talks.yaml")$talks
+
+# Descending order
+dates <- names(talks) |> sort() |> rev()
+
+conf <- c()
+for (date in dates){
+  this_year <- talks[[date]] |>
+    purrr::map_df(as.data.frame) |>
+    dplyr::mutate(
+      date = lubridate::ymd(date)
+    ) |>
+    dplyr::arrange(desc(date)) |>
+    dplyr::mutate(
+     content = sprintf(
+      '- %s %s [%s](%s) %s, by [%s](%s)',
+      date,
+      emoji,
+      title,
+      link,
+      lieu,
+      author,
+      author_link
+     )
+    )  |>
+    dplyr::pull(content)
+
+    conf <- c(conf, "\n", sprintf("## %s", date), "\n", this_year)
+
+}
+
+whisker::whisker.render(
+  template = readLines("script/empty_resources.whisk"),
+  data = list(
+    confs = paste(conf, collapse = "\n")
+  )
+) |> write(
+  sprintf("resources/index.qmd")
+)

@@ -1,0 +1,159 @@
+talks:
+  2019:
+    - date: 2019-05-24
+      emoji: ""
+      title: Production-grade Shiny Apps with {golem}
+      link: https://speakerdeck.com/colinfay/production-grade-shiny-apps-with-golem
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: Paris
+    - date: 2019-06-19
+      emoji: 🎥
+      title: Hands-on demonstration of {golem}
+      link: https://www.youtube.com/watch?v=3-p9XLvoJV0
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: Shiny Dev Series
+    - date: 2019-06-19
+      emoji: 🎥
+      title: golem} and Effective Shiny Development Methods
+      link: https://www.youtube.com/watch?v=OU1-CkSVdTI
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: Shiny Dev Series
+    - date: 2019-07-10
+      emoji: 🎥
+      title: A Framework for Building Robust & Production Ready Shiny Apps
+      link: https://youtu.be/tCAan6smrjs
+      author: Vincent Guyader
+      author_link: https://github.com/VincentGuyader
+      lieu: useR\! 2019
+    - date: 2019-08-22
+      emoji: ""
+      title: Creating (and Reviving) Shiny apps with {golem}!
+      link: https://rpodcast.gitlab.io/golem_rpharma2019/
+      author: Eric Nantz
+      author_link: https://twitter.com/theRcast
+      lieu: R Pharma 2019
+    - date: 2019-11-20
+      emoji: 🇫🇷
+      title: Introduction à {golem} en français
+      link: https://youtu.be/6qI4NzxlAFU
+      author: Cervan Girard
+      author_link: https://github.com/Cervangirard
+      lieu: Online
+  2020:
+    - date: 2019-12-03
+      emoji: ""
+      title: "{golem} - Engineering Production-Grade Shiny Apps"
+      link: https://speakerdeck.com/colinfay/engineering-production-grade-shiny-apps-with-golem
+      lieu: Barcelona R Meetup
+      author: Colin Fay
+      author_link: https://colinfay.me/
+    - date: 2020-01-30
+      emoji: 🎥
+      title: Production-grade Shiny Apps with golem
+      link: https://resources.rstudio.com/rstudio-conf-2020/production-grade-shiny-apps-with-golem-colin-fay
+      lieu: rstudio::conf(2020L)
+      author: Colin Fay / Vincent Guyader
+      author_link: https://thinkr.fr/
+    - date: 2020-03-06
+      emoji: ""
+      title: Workshop - Building Successful Shiny Apps with {golem}
+      link: https://speakerdeck.com/colinfay/workshop-building-successful-shiny-apps-with-golem
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: "satRday Johannesburg"
+    - date: 2020-04-27
+      emoji: 🎥
+      title: Engineering Shiny Apps with {golem}
+      link: https://youtu.be/aY5ekC4-WQs?t=1784
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: BristolR Online Meetup
+    - date: 2020-06-18
+      emoji: ""
+      title: Testing Shiny - Why, what, and how
+      link: https://speakerdeck.com/colinfay/erum-2020-testing-shiny-why-what-and-how
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: e-Rum
+    - date: 2020-07-28
+      emoji: 🎥
+      title: Everything not Tested Will Eventually Fail
+      link: https://www.youtube.com/watch?v=Zw-u02up3q4
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: NYR Meetup
+    - date: 2020-08-26
+      emoji: 🎥
+      title: Production R Shiny Made Easy-- the Golem Framework
+      link: https://www.youtube.com/watch?v=Xl-xb7y15Ls
+      author: Liz Nelson
+      author_link: https://www.liz-nelson.com/
+      lieu: Cleveland R User Group
+    - date: 2020-09-09
+      emoji: ""
+      title: An overview of testing in R
+      link: https://speakerdeck.com/colinfay/an-overview-of-testing-in-r
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: AI Testing online meetup
+    - date: 2020-09-25
+      emoji: ""
+      title: Workshop - Engineering {shiny} with {golem}
+      link: https://speakerdeck.com/colinfay/engineering-shiny-with-golem-whyr
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: WhyR
+    - date: 2020-10-01
+      emoji: ""
+      title: Building a modularized Shiny App with {golem} and htmlwidgets
+      link: https://www.youtube.com/watch?v=zCG3xk-QLSI
+      author: Cedric Scherer
+      author_link: https://www.cedricscherer.com/
+      lieu: CorrelCon
+  2021:
+    - date: 2021-07-12
+      emoji: 🎥
+      title: 🇫🇷 Conception d'applications Shiny avec {golem}
+      link: https://www.youtube.com/watch?v=0f5Me1PFGDs
+      author: Vincent Guyader
+      author_link: https://github.com/VincentGuyader
+      lieu: Online
+    - date: 2021-10-15
+      emoji: ""
+      title: Workshop - Good Practices for {shiny} development with {golem}
+      link: https://speakerdeck.com/colinfay/workshop-good-practices-for-shiny-development-with-golem
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: EARL
+    - date: 2021-12-13
+      emoji: 🎥
+      title: Shiny Dev Series - Colin Fay is back
+      link: https://speakerdeck.com/colinfay/workshop-good-practices-for-shiny-development-with-golem
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: Shiny Dev Series
+  2022:
+    - date: 2022-02-16
+      emoji: 🎥
+      title: Building Multiple Page Shiny Apps with {brochure}
+      link: https://www.youtube.com/watch?v=8UiCqSKlfew
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: NHSR
+    - date: 2022-02-24
+      emoji: 🎥
+      title: 🇫🇷 De la Création au Déploiement d’Applications {shiny} avec {golem}
+      link: https://www.youtube.com/watch?v=nfP-mGIsqVs
+      author: Margot Brard
+      author_link: https://github.com/MargotBr
+      lieu: Meetup R Lille et Tunis R User Group
+    - date: 2022-11-23
+      emoji: 🎥
+      title: Building Production-Quality Shiny Applications
+      link: https://www.youtube.com/watch?v=_zm2GuSrZ14
+      author: Eric Nantz
+      author_link: https://twitter.com/theRcast
+      lieu: R/Pharma
