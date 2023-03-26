@@ -1,5 +1,16 @@
 [
   {
+    "listing": "/post/index.html",
+    "items": [
+      "/post/golem-0.3.1-release-on-cran/index.html",
+      "/post/golem-0.4.0-release-on-cran/index.html",
+      "/post/2020-05-10_shinipsum-cran-realease/index.html",
+      "/post/golem-0.1.0-release-on-cran/index.html",
+      "/post/golem-hacktoberfest-2021/index.html",
+      "/post/golem-0.3.2-release-on-cran/index.html"
+    ]
+  },
+  {
     "listing": "/news/index.html",
     "items": [
       "/news/golem-0.4.0-release-on-cran/index.html",
