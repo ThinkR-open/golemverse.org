@@ -42,7 +42,6 @@ talks:
       author: Cervan Girard
       author_link: https://github.com/Cervangirard
       lieu: Online
-  2020:
     - date: 2019-12-03
       emoji: ""
       title: "{golem} - Engineering Production-Grade Shiny Apps"
@@ -50,6 +49,7 @@ talks:
       lieu: Barcelona R Meetup
       author: Colin Fay
       author_link: https://colinfay.me/
+  2020:
     - date: 2020-01-30
       emoji: 🎥
       title: Production-grade Shiny Apps with golem

@@ -49,12 +49,12 @@ Have any resource to add here? [Feel free to open an issue!](https://github.com/
 - 2020-04-27 🎥 [Engineering Shiny Apps with {golem}](https://youtu.be/aY5ekC4-WQs?t=1784) BristolR Online Meetup, by [Colin Fay](https://colinfay.me/)
 - 2020-03-06  [Workshop - Building Successful Shiny Apps with {golem}](https://speakerdeck.com/colinfay/workshop-building-successful-shiny-apps-with-golem) satRday Johannesburg, by [Colin Fay](https://colinfay.me/)
 - 2020-01-30 🎥 [Production-grade Shiny Apps with golem](https://resources.rstudio.com/rstudio-conf-2020/production-grade-shiny-apps-with-golem-colin-fay) rstudio::conf(2020L), by [Colin Fay / Vincent Guyader](https://thinkr.fr/)
-- 2019-12-03  [{golem} - Engineering Production-Grade Shiny Apps](https://speakerdeck.com/colinfay/engineering-production-grade-shiny-apps-with-golem) Barcelona R Meetup, by [Colin Fay](https://colinfay.me/)
 
 
 ## 2019
 
 
+- 2019-12-03  [{golem} - Engineering Production-Grade Shiny Apps](https://speakerdeck.com/colinfay/engineering-production-grade-shiny-apps-with-golem) Barcelona R Meetup, by [Colin Fay](https://colinfay.me/)
 - 2019-11-20 🇫🇷 [Introduction à {golem} en français](https://youtu.be/6qI4NzxlAFU) Online, by [Cervan Girard](https://github.com/Cervangirard)
 - 2019-08-22  [Creating (and Reviving) Shiny apps with {golem}!](https://rpodcast.gitlab.io/golem_rpharma2019/) R Pharma 2019, by [Eric Nantz](https://twitter.com/theRcast)
 - 2019-07-10 🎥 [A Framework for Building Robust &amp; Production Ready Shiny Apps](https://youtu.be/tCAan6smrjs) useR\! 2019, by [Vincent Guyader](https://github.com/VincentGuyader)
