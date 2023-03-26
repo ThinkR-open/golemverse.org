@@ -8,7 +8,9 @@ website:
 
   favicon: /img/favicon.ico
   title: "golemverse"
-  search: true
+  search:
+    location: navbar
+    type: textbox
   site-url: https://www.golemverse.org
   description: "Welcome to the golemverse!"
   repo-url: https://github.com/ThinkR-open/golemverse.org
