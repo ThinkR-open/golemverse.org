@@ -7,4 +7,5 @@ listing:
   sort-ui: false
   filter-ui: false
   id: sample-listings
+  image-align: left
 ---
