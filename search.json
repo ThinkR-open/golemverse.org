@@ -228,14 +228,14 @@
     "href": "resources/index.html#section-2",
     "title": "Documentation and resources",
     "section": "2020",
-    "text": "2020\n\n2020-10-01 Building a modularized Shiny App with {golem} and htmlwidgets CorrelCon, by Cedric Scherer\n2020-09-25 Workshop - Engineering {shiny} with {golem} WhyR, by Colin Fay\n2020-09-09 An overview of testing in R AI Testing online meetup, by Colin Fay\n2020-08-26 🎥 Production R Shiny Made Easy– the Golem Framework Cleveland R User Group, by Liz Nelson\n2020-07-28 🎥 Everything not Tested Will Eventually Fail NYR Meetup, by Colin Fay\n2020-06-18 Testing Shiny - Why, what, and how e-Rum, by Colin Fay\n2020-04-27 🎥 Engineering Shiny Apps with {golem} BristolR Online Meetup, by Colin Fay\n2020-03-06 Workshop - Building Successful Shiny Apps with {golem} satRday Johannesburg, by Colin Fay\n2020-01-30 🎥 Production-grade Shiny Apps with golem rstudio::conf(2020L), by Colin Fay / Vincent Guyader\n2019-12-03 {golem} - Engineering Production-Grade Shiny Apps Barcelona R Meetup, by Colin Fay"
+    "text": "2020\n\n2020-10-01 Building a modularized Shiny App with {golem} and htmlwidgets CorrelCon, by Cedric Scherer\n2020-09-25 Workshop - Engineering {shiny} with {golem} WhyR, by Colin Fay\n2020-09-09 An overview of testing in R AI Testing online meetup, by Colin Fay\n2020-08-26 🎥 Production R Shiny Made Easy– the Golem Framework Cleveland R User Group, by Liz Nelson\n2020-07-28 🎥 Everything not Tested Will Eventually Fail NYR Meetup, by Colin Fay\n2020-06-18 Testing Shiny - Why, what, and how e-Rum, by Colin Fay\n2020-04-27 🎥 Engineering Shiny Apps with {golem} BristolR Online Meetup, by Colin Fay\n2020-03-06 Workshop - Building Successful Shiny Apps with {golem} satRday Johannesburg, by Colin Fay\n2020-01-30 🎥 Production-grade Shiny Apps with golem rstudio::conf(2020L), by Colin Fay / Vincent Guyader"
   },
   {
     "objectID": "resources/index.html#section-3",
     "href": "resources/index.html#section-3",
     "title": "Documentation and resources",
     "section": "2019",
-    "text": "2019\n\n2019-11-20 🇫🇷 Introduction à {golem} en français Online, by Cervan Girard\n2019-08-22 Creating (and Reviving) Shiny apps with {golem}! R Pharma 2019, by Eric Nantz\n2019-07-10 🎥 A Framework for Building Robust & Production Ready Shiny Apps useR! 2019, by Vincent Guyader\n2019-06-19 🎥 Hands-on demonstration of {golem} Shiny Dev Series, by Colin Fay\n2019-06-19 🎥 golem} and Effective Shiny Development Methods Shiny Dev Series, by Colin Fay\n2019-05-24 Production-grade Shiny Apps with {golem} Paris, by Colin Fay"
+    "text": "2019\n\n2019-12-03 {golem} - Engineering Production-Grade Shiny Apps Barcelona R Meetup, by Colin Fay\n2019-11-20 🇫🇷 Introduction à {golem} en français Online, by Cervan Girard\n2019-08-22 Creating (and Reviving) Shiny apps with {golem}! R Pharma 2019, by Eric Nantz\n2019-07-10 🎥 A Framework for Building Robust & Production Ready Shiny Apps useR! 2019, by Vincent Guyader\n2019-06-19 🎥 Hands-on demonstration of {golem} Shiny Dev Series, by Colin Fay\n2019-06-19 🎥 golem} and Effective Shiny Development Methods Shiny Dev Series, by Colin Fay\n2019-05-24 Production-grade Shiny Apps with {golem} Paris, by Colin Fay"
   },
   {
     "objectID": "resources/index.html#cheatsheet",
