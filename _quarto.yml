@@ -15,6 +15,7 @@ website:
   description: "Welcome to the golemverse!"
   repo-url: https://github.com/ThinkR-open/golemverse.org
   repo-actions: [edit, issue]
+  twitter-card: true
   navbar:
     left:
       - text: "Resources"
