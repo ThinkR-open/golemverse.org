@@ -368,7 +368,7 @@
     "href": "roadmap/index.html#short-term",
     "title": "golemverse’s roadmap",
     "section": "Short term",
-    "text": "Short term\n\n{golem} milestone 0.5.0 https://github.com/ThinkR-open/golem/milestone/1\nMore hooks for {ghooks} https://github.com/ThinkR-open/ghooks\nRelease on CRAN :\n\n{fakir}\n{bank}\n{elvis}"
+    "text": "Short term\n\n{golem} milestone 0.5.0 https://github.com/ThinkR-open/golem/milestone/1\nMore hooks for {ghooks} https://github.com/ThinkR-open/ghooks\nRelease on CRAN :\n\n{fakir}\n{bank}\n{elvis}\n\nQuestionning: should the following repos/packages be included to the golemverse?\n\nhttps://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny\nhttps://github.com/ColinFay/skeleton, Skeleton CSS for Shiny\nhttps://github.com/ColinFay/feathericons, Feather Icons for Shiny\nhttps://github.com/ColinFay/nessy, A ‘NES’ css for ‘Shiny’\nhttps://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny\nhttps://github.com/ColinFay/geoloc, Add geolocation inside your shiny app\nhttps://github.com/ColinFay/darkmode, ‘darkmode.js’ for ‘Shiny’\nhttps://github.com/ColinFay/dockerstats, R Wrapper Around ‘docker stats’\nhttps://github.com/ColinFay/crrry, ‘crrri’ recipes for ‘shiny’"
   },
   {
     "objectID": "roadmap/index.html#mid-term",
