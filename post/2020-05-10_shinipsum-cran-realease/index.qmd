@@ -1,0 +1,7 @@
+<!doctype html>
+<html>
+    <head>
+	<meta http-equiv="refresh" content="0; url=/resources/">
+	<link rel="canonical" href="/news/2020-05-10_shinipsum-cran-realease/" />
+    </head>
+</html>

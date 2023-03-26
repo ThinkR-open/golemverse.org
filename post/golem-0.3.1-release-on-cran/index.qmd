@@ -1,0 +1,7 @@
+<!doctype html>
+<html>
+    <head>
+	<meta http-equiv="refresh" content="0; url=/resources/">
+	<link rel="canonical" href="/news/golem-0.3.1-release-on-cran/" />
+    </head>
+</html>

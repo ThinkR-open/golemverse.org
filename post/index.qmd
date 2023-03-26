@@ -1,0 +1,10 @@
+---
+title: "Posts"
+listing:
+  contents: .
+  sort: "date desc"
+  type: default
+  sort-ui: false
+  filter-ui: false
+  id: sample-listings
+---
