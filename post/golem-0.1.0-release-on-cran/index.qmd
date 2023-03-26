@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-	<meta http-equiv="refresh" content="0; url=/resources/">
+	<meta http-equiv="refresh" content="0; url=/news/golem-0.1.0-release-on-cran/">
 	<link rel="canonical" href="/news/golem-0.1.0-release-on-cran/" />
     </head>
 </html>
