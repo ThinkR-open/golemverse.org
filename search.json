@@ -417,20 +417,20 @@
     "href": "roadmap/index.html#short-term",
     "title": "golemverse’s roadmap",
     "section": "Short term",
-    "text": "Short term\n\n{golem} milestone 0.5.0 https://github.com/ThinkR-open/golem/milestone/1\nMore hooks for {ghooks} https://github.com/ThinkR-open/ghooks\nRelease on CRAN :\n\n{fakir}\n{bank}\n{elvis}\n\nQuestionning: should the following repos/packages be included to the golemverse?\n\nhttps://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny\nhttps://github.com/ColinFay/skeleton, Skeleton CSS for Shiny\nhttps://github.com/ColinFay/feathericons, Feather Icons for Shiny\nhttps://github.com/ColinFay/nessy, A ‘NES’ css for ‘Shiny’\nhttps://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny\nhttps://github.com/ColinFay/geoloc, Add geolocation inside your shiny app\nhttps://github.com/ColinFay/darkmode, ‘darkmode.js’ for ‘Shiny’\nhttps://github.com/ColinFay/dockerstats, R Wrapper Around ‘docker stats’\nhttps://github.com/ColinFay/crrry, ‘crrri’ recipes for ‘shiny’"
+    "text": "Short term\n\n{golem} milestone 0.5.0 https://github.com/ThinkR-open/golem/milestone/1\nMore hooks for {ghooks} https://github.com/ThinkR-open/ghooks\nRelease on CRAN :\n\n{fakir}\n{bank}\n{elvis}\n\nQuestionning: should the following repos/packages be included to the golemverse?\n\nhttps://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny\nhttps://github.com/ColinFay/skeleton, Skeleton CSS for Shiny\nhttps://github.com/ColinFay/feathericons, Feather Icons for Shiny\nhttps://github.com/ColinFay/nessy, A ‘NES’ css for ‘Shiny’\nhttps://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny\nhttps://github.com/ColinFay/geoloc, Add geolocation inside your shiny app\nhttps://github.com/ColinFay/darkmode, ‘darkmode.js’ for ‘Shiny’\nhttps://github.com/ColinFay/dockerstats, R Wrapper Around ‘docker stats’\nhttps://github.com/ColinFay/crrry, ‘crrri’ recipes for ‘shiny’\n\nWrite a blogpost about Prototyping (Excalidraw / shinipsum / fakir)"
   },
   {
     "objectID": "roadmap/index.html#mid-term",
     "href": "roadmap/index.html#mid-term",
     "title": "golemverse’s roadmap",
     "section": "Mid term",
-    "text": "Mid term\n\nStable, production ready {brochure}\nBlog post about :\n\n{gargoyle}\n{elvis}"
+    "text": "Mid term\n\nStable, production ready {brochure}\nBlog post about :\n\n{gargoyle}\n{elvis}\n\nNew fake data in {fakir}\nNew ipsum in {shinipsum}"
   },
   {
     "objectID": "roadmap/index.html#long-term",
     "href": "roadmap/index.html#long-term",
     "title": "golemverse’s roadmap",
     "section": "Long term",
-    "text": "Long term\n\nPackage idea: monkey testing for your shiny app\nNew fake data in {fakir}\nFinish {w3css}\nMore features in {gemstones}\nPrepare a talk about “Hidden gems of the golemverse”\nShort live streams presenting the packages (20 minutes + 10 min Q & A)"
+    "text": "Long term\n\nFinish {w3css}\nMore features in {gemstones}\nPrepare a talk about “Hidden gems of the golemverse”\nShort live streams presenting the packages (20 minutes + 10 min Q & A)"
   }
 ]
