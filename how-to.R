@@ -2,7 +2,7 @@
 
 ### Add an article
 
-article_slug <- "golem-0.4.0-release-eeee"
+article_slug <- "about-prototyping-shiny-apps"
 dir.create(
   file.path("news", article_slug)
 )
@@ -12,13 +12,14 @@ file.create(
 write(
   sprintf(
    '---
-title: "Join HacktoberFest 2021 with {golem} (and more)!"
+title: "About prototyping shiny apps"
 author: colin
 date: "%s"
 ---', Sys.Date()
   ),
   file.path("news", article_slug, "index.qmd")
 )
+file.edit(file.path("news", article_slug, "index.qmd"))
 ### Add a package
 
 #### Render all packages
@@ -55,19 +56,40 @@ whisker::whisker.render(
      names(pkgs$package) |>
        purrr::map(
         ~ sprintf(
-          "|%s|%s|%s|%s|%s|",
+          "|%s|%s|%s|%s|%s|%s|%s|",
           .x,
           htmltools::tags$img(
             src =  sprintf('https://lifecycle.r-lib.org/articles/figures/lifecycle-%s.svg', pkgs$package[[.x]]$lifecycle)
           ) |> as.character(),
-          sprintf('<span style="text-shadow: none;"><a class="github-button" href="%s" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Github stars</a></span>', pkgs$package[[.x]]$repo
-          ) |> as.character(),
-          htmltools::tags$img(
-            src = sprintf("https://www.r-pkg.org/badges/version/%s", .x)
-          ),
-          htmltools::tags$img(
-            src = sprintf("https://cranlogs.r-pkg.org/badges/%s", .x)
-          )
+          htmltools::tags$a(
+            href = sprintf("https://CRAN.R-project.org/package=%s", .x),
+            htmltools::tags$img(
+              src = sprintf("https://www.r-pkg.org/badges/version/%s", .x)
+            )
+          ) |> as.character() |> gsub("\n", "", x = _),
+          htmltools::tags$a(
+            href = sprintf("https://cranlogs.r-pkg.org/downloads/total/last-month/%s", .x),
+            htmltools::tags$img(
+              src = sprintf("https://cranlogs.r-pkg.org/badges/%s", .x)
+            )
+          ) |> as.character() |> gsub("\n", "", x = _),
+          htmltools::tags$a(
+            href = sprintf("%s/actions", pkgs$package[[.x]]$repo),
+            htmltools::tags$img(
+              src = sprintf("%s/workflows/R-CMD-check/badge.svg", pkgs$package[[.x]]$repo),
+              alt = "R-CMD-check"
+            )
+          ) |>
+            as.character() |>
+            gsub("\n", "", x = _),
+            sprintf(
+              '<a class="github-button" href="%s" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a>',
+              pkgs$package[[.x]]$repo
+            ) |> as.character(),
+            sprintf(
+              '<a class="github-button" href="%s/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>',
+              pkgs$package[[.x]]$repo
+            ) |> as.character()
         )
 
        ) |>

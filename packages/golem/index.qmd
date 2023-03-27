@@ -21,14 +21,26 @@ It provides a set of tools to help you build a `{shiny}` application in a struct
 
 <img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg">
 
+<a href="https://CRAN.R-project.org/package=golem">
 <img src = "https://www.r-pkg.org/badges/version/golem">
+</a>
 
-<img src = "https://cranlogs.r-pkg.org/badges/golem">
+<a href="https://cranlogs.r-pkg.org/downloads/total/last-month/golem">
+  <img src = "https://cranlogs.r-pkg.org/badges/golem">
+</a>
 
-<span style="text-shadow: none;"><a class="github-button" href="https://github.com/ThinkR-open/golem" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star golem on Github</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+<a href="https://github.com/ThinkR-open/golem/actions">
+ <img src="https://github.com/ThinkR-open/golem/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
+</a>
 
+<a class="github-button" href="https://github.com/ThinkR-open/golem" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Star golem on Github</a>
+
+<a class="github-button" href="https://github.com/ThinkR-open/golem/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>
 </div>
 
 :::
 
 :::
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>

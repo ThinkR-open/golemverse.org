@@ -21,14 +21,26 @@ image: "/img/{{pkg}}.png"
 
 <img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-{{lifecycle}}.svg">
 
+<a href="https://CRAN.R-project.org/package={{pkg}}">
 <img src = "https://www.r-pkg.org/badges/version/{{pkg}}">
+</a>
 
-<img src = "https://cranlogs.r-pkg.org/badges/{{pkg}}">
+<a href="https://cranlogs.r-pkg.org/downloads/total/last-month/{{pkg}}">
+  <img src = "https://cranlogs.r-pkg.org/badges/{{pkg}}">
+</a>
 
-<span style="text-shadow: none;"><a class="github-button" href="{{github}}" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star {{pkg}} on Github</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+<a href="{{github}}/actions">
+ <img src="{{github}}/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
+</a>
 
+<a class="github-button" href="{{github}}" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Star {{pkg}} on Github</a>
+
+<a class="github-button" href="{{github}}/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>
 </div>
 
 :::
 
 :::
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>

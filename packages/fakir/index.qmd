@@ -21,14 +21,26 @@ image: "/img/fakir.png"
 
 <img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg">
 
+<a href="https://CRAN.R-project.org/package=fakir">
 <img src = "https://www.r-pkg.org/badges/version/fakir">
+</a>
 
-<img src = "https://cranlogs.r-pkg.org/badges/fakir">
+<a href="https://cranlogs.r-pkg.org/downloads/total/last-month/fakir">
+  <img src = "https://cranlogs.r-pkg.org/badges/fakir">
+</a>
 
-<span style="text-shadow: none;"><a class="github-button" href="https://github.com/ThinkR-open/fakir" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star fakir on Github</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+<a href="https://github.com/ThinkR-open/fakir/actions">
+ <img src="https://github.com/ThinkR-open/fakir/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
+</a>
 
+<a class="github-button" href="https://github.com/ThinkR-open/fakir" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Star fakir on Github</a>
+
+<a class="github-button" href="https://github.com/ThinkR-open/fakir/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>
 </div>
 
 :::
 
 :::
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>

@@ -21,14 +21,26 @@ This R package is a simple package designed to generate placeholder elements for
 
 <img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg">
 
+<a href="https://CRAN.R-project.org/package=shinipsum">
 <img src = "https://www.r-pkg.org/badges/version/shinipsum">
+</a>
 
-<img src = "https://cranlogs.r-pkg.org/badges/shinipsum">
+<a href="https://cranlogs.r-pkg.org/downloads/total/last-month/shinipsum">
+  <img src = "https://cranlogs.r-pkg.org/badges/shinipsum">
+</a>
 
-<span style="text-shadow: none;"><a class="github-button" href="https://github.com/ThinkR-open/shinipsum" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star shinipsum on Github</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+<a href="https://github.com/ThinkR-open/shinipsum/actions">
+ <img src="https://github.com/ThinkR-open/shinipsum/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
+</a>
 
+<a class="github-button" href="https://github.com/ThinkR-open/shinipsum" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Star shinipsum on Github</a>
+
+<a class="github-button" href="https://github.com/ThinkR-open/shinipsum/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>
 </div>
 
 :::
 
 :::
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>

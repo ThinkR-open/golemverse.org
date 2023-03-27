@@ -22,8 +22,13 @@ listing:
 
 ## CRAN status, Monthly download, and other stats
 
-|Package|Lifecycle|GitHub Stars|On Cran|Monthly Downloads (if on CRAN)|
-|---|---|---|---|---|
+|Package|Lifecycle|CRAN Version|Monthly Downloads| R-CMD-Check|GitHub Stars|GitHub Issues|
+|---|---|---|---|---|---|---|
 {{{content}}}
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+> Note that CRAN version & Monthly Downloads are shown only for packages on CRAN
+

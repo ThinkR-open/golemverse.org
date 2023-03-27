@@ -1,0 +1,10 @@
+---
+title: "About prototyping shiny apps"
+author: colin
+date: "2023-03-27"
+---
+
+Coders like coding, that's a golden truth.
+The joy of taking an idea and bringing it to life by writing a bunch of characters in a text file is one of the most powerful for anyone who loves engineering software.
+
+One of the

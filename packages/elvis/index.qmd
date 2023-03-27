@@ -21,14 +21,26 @@ The goal of `{elvis}` is to provide safer render* and observe* in `{shiny}` by p
 
 <img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg">
 
+<a href="https://CRAN.R-project.org/package=elvis">
 <img src = "https://www.r-pkg.org/badges/version/elvis">
+</a>
 
-<img src = "https://cranlogs.r-pkg.org/badges/elvis">
+<a href="https://cranlogs.r-pkg.org/downloads/total/last-month/elvis">
+  <img src = "https://cranlogs.r-pkg.org/badges/elvis">
+</a>
 
-<span style="text-shadow: none;"><a class="github-button" href="https://github.com/thinkr-open/elvis" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star elvis on Github</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+<a href="https://github.com/thinkr-open/elvis/actions">
+ <img src="https://github.com/thinkr-open/elvis/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
+</a>
 
+<a class="github-button" href="https://github.com/thinkr-open/elvis" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Star elvis on Github</a>
+
+<a class="github-button" href="https://github.com/thinkr-open/elvis/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>
 </div>
 
 :::
 
 :::
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
