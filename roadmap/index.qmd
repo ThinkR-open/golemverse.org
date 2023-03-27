@@ -29,6 +29,8 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
   - https://github.com/ColinFay/dockerstats, R Wrapper Around 'docker stats'
   - https://github.com/ColinFay/crrry, 'crrri' recipes for 'shiny'
 
++ Write a blogpost about Prototyping (Excalidraw / shinipsum / fakir)
+
 ## Mid term
 
 + Stable, production ready `{brochure}`
@@ -37,11 +39,12 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
   - `{gargoyle}`
   - `{elvis}`
 
++ New fake data in `{fakir}`
+
++ New ipsum in `{shinipsum}`
+
 ## Long term
 
-+ Package idea: monkey testing for your shiny app
-
-+ New fake data in `{fakir}`
 
 + Finish `{w3css}`
 
