@@ -140,13 +140,6 @@
     "text": "golem (v0.1) A Framework for Building Robust Shiny Apps:\n\n{golem} on CRAN\n{golem} on GitHub\npkgdown and vignettes"
   },
   {
-    "objectID": "news/about-prototyping-shiny-apps/index.html",
-    "href": "news/about-prototyping-shiny-apps/index.html",
-    "title": "About prototyping shiny apps",
-    "section": "",
-    "text": "Coders like coding, that’s a golden truth. The joy of taking an idea and bringing it to life by writing a bunch of characters in a text file is one of the most powerful for anyone who loves engineering software.\nOne of the"
-  },
-  {
     "objectID": "news/golem-hacktoberfest-2021/index.html",
     "href": "news/golem-hacktoberfest-2021/index.html",
     "title": "Join HacktoberFest 2021 with {golem} (and more)!",
@@ -186,7 +179,7 @@
     "href": "news/index.html",
     "title": "Posts",
     "section": "",
-    "text": "About prototyping shiny apps\n\n\n\n\n\n\n\n\n\n\n\n\nMar 27, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\n\nNo matching items"
+    "text": "{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "resources/index.html",
@@ -270,7 +263,7 @@
     "href": "index.html#on-the-blog",
     "title": "R packages for building robust, production grade {shiny} apps.",
     "section": "On the blog ✍️",
-    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nAbout prototyping shiny apps\n\n\n\n\n\n\n\n\n\n\n\n\nMar 27, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\nNo matching items"
+    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#contact",
