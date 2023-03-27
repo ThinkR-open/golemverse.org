@@ -35,6 +35,8 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 
 + Stable, production ready `{brochure}`
 
++ Dashboard template for `{brochure}`
+
 + Blog post about :
   - `{gargoyle}`
   - `{elvis}`
@@ -44,7 +46,6 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 + New ipsum in `{shinipsum}`
 
 ## Long term
-
 
 + Finish `{w3css}`
 
