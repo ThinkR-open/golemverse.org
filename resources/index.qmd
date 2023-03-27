@@ -49,6 +49,7 @@ Have any resource to add here? [Feel free to open an issue!](https://github.com/
 - 2020-07-28 🎥 [Everything not Tested Will Eventually Fail](https://www.youtube.com/watch?v=Zw-u02up3q4) NYR Meetup, by [Colin Fay](https://colinfay.me/)
 - 2020-06-18  [Testing Shiny - Why, what, and how](https://speakerdeck.com/colinfay/erum-2020-testing-shiny-why-what-and-how) e-Rum, by [Colin Fay](https://colinfay.me/)
 - 2020-04-27 🎥 [Engineering Shiny Apps with {golem}](https://youtu.be/aY5ekC4-WQs?t=1784) BristolR Online Meetup, by [Colin Fay](https://colinfay.me/)
+- 2020-03-26 🎥 [Create meaningful fake tidy datasets in R using fakir](https://www.youtube.com/watch?v=EhhljL5zaWs) Online, by [Abdul Majed](https://twitter.com/1littlecoder)
 - 2020-03-06  [Workshop - Building Successful Shiny Apps with {golem}](https://speakerdeck.com/colinfay/workshop-building-successful-shiny-apps-with-golem) satRday Johannesburg, by [Colin Fay](https://colinfay.me/)
 - 2020-01-30 🎥 [Production-grade Shiny Apps with golem](https://resources.rstudio.com/rstudio-conf-2020/production-grade-shiny-apps-with-golem-colin-fay) rstudio::conf(2020L), by [Colin Fay / Vincent Guyader](https://thinkr.fr/)
 

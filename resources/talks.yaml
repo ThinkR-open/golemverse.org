@@ -64,6 +64,13 @@ talks:
       author: Colin Fay
       author_link: https://colinfay.me/
       lieu: "satRday Johannesburg"
+    - date: 2020-03-26
+      emoji:  🎥
+      title: Create meaningful fake tidy datasets in R using fakir
+      link: https://www.youtube.com/watch?v=EhhljL5zaWs
+      author: Abdul Majed
+      author_link: https://twitter.com/1littlecoder
+      lieu: Online
     - date: 2020-04-27
       emoji: 🎥
       title: Engineering Shiny Apps with {golem}
