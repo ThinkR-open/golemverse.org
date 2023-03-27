@@ -114,6 +114,13 @@ talks:
       author_link: https://www.cedricscherer.com/
       lieu: CorrelCon
   2021:
+    - date: 2021-05-18
+      emoji: 🎥
+      title: Mastering Shiny Book Club the golem package
+      link: https://www.youtube.com/watch?v=Vq2GKCbfpTI
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: Online
     - date: 2021-07-12
       emoji: 🎥
       title: 🇫🇷 Conception d'applications Shiny avec {golem}
@@ -150,6 +157,13 @@ talks:
       author: Margot Brard
       author_link: https://github.com/MargotBr
       lieu: Meetup R Lille et Tunis R User Group
+    - date: 2022-07-27
+      emoji: 🎥
+      title: 🇫🇷 Déploiement d'une application {shiny} dans docker avec {renv} et {golem}.
+      link: https://www.youtube.com/watch?v=diCG4t76k78
+      author: Vincent Guyader
+      author_link: https://github.com/VincentGuyader
+      lieu: Online
     - date: 2022-11-23
       emoji: 🎥
       title: Building Production-Quality Shiny Applications

@@ -25,6 +25,7 @@ Have any resource to add here? [Feel free to open an issue!](https://github.com/
 
 
 - 2022-11-23 🎥 [Building Production-Quality Shiny Applications](https://www.youtube.com/watch?v=_zm2GuSrZ14) R/Pharma, by [Eric Nantz](https://twitter.com/theRcast)
+- 2022-07-27 🎥 [🇫🇷 Déploiement d'une application {shiny} dans docker avec {renv} et {golem}.](https://www.youtube.com/watch?v=diCG4t76k78) Online, by [Vincent Guyader](https://github.com/VincentGuyader)
 - 2022-02-24 🎥 [🇫🇷 De la Création au Déploiement d’Applications {shiny} avec {golem}](https://www.youtube.com/watch?v=nfP-mGIsqVs) Meetup R Lille et Tunis R User Group, by [Margot Brard](https://github.com/MargotBr)
 - 2022-02-16 🎥 [Building Multiple Page Shiny Apps with {brochure}](https://www.youtube.com/watch?v=8UiCqSKlfew) NHSR, by [Colin Fay](https://colinfay.me/)
 
@@ -35,6 +36,7 @@ Have any resource to add here? [Feel free to open an issue!](https://github.com/
 - 2021-12-13 🎥 [Shiny Dev Series - Colin Fay is back](https://speakerdeck.com/colinfay/workshop-good-practices-for-shiny-development-with-golem) Shiny Dev Series, by [Colin Fay](https://colinfay.me/)
 - 2021-10-15  [Workshop - Good Practices for {shiny} development with {golem}](https://speakerdeck.com/colinfay/workshop-good-practices-for-shiny-development-with-golem) EARL, by [Colin Fay](https://colinfay.me/)
 - 2021-07-12 🎥 [🇫🇷 Conception d'applications Shiny avec {golem}](https://www.youtube.com/watch?v=0f5Me1PFGDs) Online, by [Vincent Guyader](https://github.com/VincentGuyader)
+- 2021-05-18 🎥 [Mastering Shiny Book Club the golem package](https://www.youtube.com/watch?v=Vq2GKCbfpTI) Online, by [Colin Fay](https://colinfay.me/)
 
 
 ## 2020
