@@ -2,6 +2,7 @@
 title: "About prototyping shiny apps"
 author: colin
 date: "2023-03-27"
+draft: true
 ---
 
 Coders like coding, that's a golden truth.
