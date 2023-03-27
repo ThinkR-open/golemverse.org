@@ -15,6 +15,7 @@ write(
 title: "About prototyping shiny apps"
 author: colin
 date: "%s"
+draft: true
 ---', Sys.Date()
   ),
   file.path("news", article_slug, "index.qmd")
