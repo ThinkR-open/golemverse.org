@@ -68,12 +68,14 @@ whisker::whisker.render(
             )
           ) |> as.character() |> gsub("\n", "", x = _),
           htmltools::tags$a(
+            target = "_blank",
             href = sprintf("https://cranlogs.r-pkg.org/downloads/total/last-month/%s", .x),
             htmltools::tags$img(
               src = sprintf("https://cranlogs.r-pkg.org/badges/%s", .x)
             )
           ) |> as.character() |> gsub("\n", "", x = _),
           htmltools::tags$a(
+            target = "_blank",
             href = sprintf("%s/actions", pkgs$package[[.x]]$repo),
             htmltools::tags$img(
               src = sprintf("%s/workflows/R-CMD-check/badge.svg", pkgs$package[[.x]]$repo),
@@ -83,11 +85,11 @@ whisker::whisker.render(
             as.character() |>
             gsub("\n", "", x = _),
             sprintf(
-              '<a class="github-button" href="%s" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a>',
+              '<a class="github-button" target = "_blank" href="%s" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a>',
               pkgs$package[[.x]]$repo
             ) |> as.character(),
             sprintf(
-              '<a class="github-button" href="%s/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>',
+              '<a class="github-button" href="%s/issues" target = "_blank" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a>',
               pkgs$package[[.x]]$repo
             ) |> as.character()
         )

@@ -21,21 +21,21 @@ The goal of `{elvis}` is to provide safer render* and observe* in `{shiny}` by p
 
 <img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg">
 
-<a href="https://CRAN.R-project.org/package=elvis">
+<a  target = "_blank" href="https://CRAN.R-project.org/package=elvis">
 <img src = "https://www.r-pkg.org/badges/version/elvis">
 </a>
 
-<a href="https://cranlogs.r-pkg.org/downloads/total/last-month/elvis">
+<a  target = "_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/elvis">
   <img src = "https://cranlogs.r-pkg.org/badges/elvis">
 </a>
 
-<a href="https://github.com/thinkr-open/elvis/actions">
+<a  target = "_blank" href="https://github.com/thinkr-open/elvis/actions">
  <img src="https://github.com/thinkr-open/elvis/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
 </a>
 
-<a class="github-button" href="https://github.com/thinkr-open/elvis" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Star elvis on Github</a>
+<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/elvis" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a>
 
-<a class="github-button" href="https://github.com/thinkr-open/elvis/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>
+<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/elvis/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a>
 </div>
 
 :::

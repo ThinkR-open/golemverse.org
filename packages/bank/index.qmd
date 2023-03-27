@@ -21,21 +21,21 @@ Alternative backend for caching `{shiny}`: MongoDB, Redis, Postgre.
 
 <img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg">
 
-<a href="https://CRAN.R-project.org/package=bank">
+<a  target = "_blank" href="https://CRAN.R-project.org/package=bank">
 <img src = "https://www.r-pkg.org/badges/version/bank">
 </a>
 
-<a href="https://cranlogs.r-pkg.org/downloads/total/last-month/bank">
+<a  target = "_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/bank">
   <img src = "https://cranlogs.r-pkg.org/badges/bank">
 </a>
 
-<a href="https://github.com/thinkr-open/bank/actions">
+<a  target = "_blank" href="https://github.com/thinkr-open/bank/actions">
  <img src="https://github.com/thinkr-open/bank/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
 </a>
 
-<a class="github-button" href="https://github.com/thinkr-open/bank" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Star bank on Github</a>
+<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/bank" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a>
 
-<a class="github-button" href="https://github.com/thinkr-open/bank/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>
+<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/bank/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a>
 </div>
 
 :::
