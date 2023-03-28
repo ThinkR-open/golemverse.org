@@ -11,12 +11,12 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 
 + `{golem}` milestone 0.5.0 <https://github.com/ThinkR-open/golem/milestone/1>
 
++ Integrate a storage mechanism in `{gargoyle}`. I'm thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12
+
 + More hooks for `{ghooks}` https://github.com/ThinkR-open/ghooks
 
 + Release on CRAN :
   - `{fakir}`
-  - `{bank}`
-  - `{elvis}`
 
 + Questionning: should the following repos/packages be included to the golemverse?
   - https://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny
@@ -44,6 +44,10 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 + New fake data in `{fakir}`
 
 + New ipsum in `{shinipsum}`
+
++ Release on CRAN :
+  - `{bank}`
+  - `{elvis}`
 
 ## Long term
 
