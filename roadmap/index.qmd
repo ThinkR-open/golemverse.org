@@ -13,19 +13,23 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 
 + Integrate a storage mechanism in `{gargoyle}`. I'm thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12
 
++ `{shinidraw}` : excalidraw in `{shiny}`
+
 + More hooks for `{ghooks}` https://github.com/ThinkR-open/ghooks
 
 + Release on CRAN :
   - `{fakir}`
 
++ Bring these packages to the golemverse:
+  - https://github.com/ColinFay/darkmode, 'darkmode.js' for 'Shiny'
+  - https://github.com/ColinFay/skeleton, Skeleton CSS for Shiny
+
 + Questionning: should the following repos/packages be included to the golemverse?
   - https://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny
-  - https://github.com/ColinFay/skeleton, Skeleton CSS for Shiny
   - https://github.com/ColinFay/feathericons, Feather Icons for Shiny
   - https://github.com/ColinFay/nessy, A 'NES' css for 'Shiny'
   - https://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny
   - https://github.com/ColinFay/geoloc, Add geolocation inside your shiny app
-  - https://github.com/ColinFay/darkmode, 'darkmode.js' for 'Shiny'
   - https://github.com/ColinFay/dockerstats, R Wrapper Around 'docker stats'
   - https://github.com/ColinFay/crrry, 'crrri' recipes for 'shiny'
 
