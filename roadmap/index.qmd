@@ -17,8 +17,7 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 
 + More hooks for `{ghooks}` https://github.com/ThinkR-open/ghooks
 
-+ Release on CRAN :
-  - `{fakir}`
++ Release `{fakir}` on CRAN https://github.com/ThinkR-open/fakir/issues/6
 
 + Bring these packages to the golemverse:
   - https://github.com/ColinFay/darkmode, 'darkmode.js' for 'Shiny'
