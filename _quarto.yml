@@ -5,7 +5,7 @@ execute:
   freeze: auto
 
 website:
-
+  google-analytics: "UA-61204095-3"
   favicon: /img/favicon.ico
   title: "golemverse"
   search:
