@@ -1,0 +1,14 @@
+{
+  "hash": "6080cc67415d66d1829aaeefa7d65e02",
+  "result": {
+    "markdown": "---\ntitle: \"{golem} 0.4.0 is now available\"\nauthor: colin\ndate: '2023-03-15'\nslug: golem-0.4.0-release-on-cran\n---\n\n\n\n\n![](featured.png)\n\n\n\n\n\nThis is a semi automatic blogpost about the state of the golemverse in April 2023.\n\nAs of now, 4 packages are on the CRAN.\n\nHere is the\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

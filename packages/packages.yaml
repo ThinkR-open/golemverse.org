@@ -54,3 +54,8 @@ package:
     description: "The goal of `{ghooks}` is to provide `{golem}` hooks for standard `{shiny}` apps."
     repo: https://github.com/thinkr-open/ghooks
     lifecycle: experimental
+  skeleton:
+    title: "Skeleton CSS in `{shiny}`."
+    description: "`{skeleton}` brings the [skeleton CSS](http://getskeleton.com/) to `{shiny}` for lightweight, minimal and elegant web apps ."
+    repo: https://github.com/colinfay/skeleton
+    lifecycle: experimental
