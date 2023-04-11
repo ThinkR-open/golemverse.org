@@ -18,7 +18,7 @@
     "href": "index.html#on-the-blog",
     "title": "R packages for building robust, production grade {shiny} apps.",
     "section": "On the blog ✍️",
-    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\nNo matching items"
+    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#contact",
@@ -165,7 +165,7 @@
     "href": "news/index.html",
     "title": "Posts",
     "section": "",
-    "text": "{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\n\nNo matching items"
+    "text": "{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "news/golem-0.3.2-release-on-cran/index.html",
@@ -257,13 +257,6 @@
     "title": "About {golem} 0.3.1",
     "section": "Thanks",
     "text": "Thanks\nWe want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.\n@abidawson, @abnercasallo, @aftonsteps, @AMillanFL, @antoine-sachet, @ArthurPERE, @artpulsion, @cderv, @chintanp, @ChrisBeeley, @CorradoLanera, @csgillespie, @daattali, @DivadNojnarg, @durandsinclair, @dwhdai, @dylanrussellmd, @earnaud, @fBedecarrats, @feddelegrand7, @fizic37, @fvitalini, @gacolitti, @genobobeno, @hadley, @HanjoStudy, @henrique1008, @jacksonschan, @jacobwindsor, @jaybee84, @jcrodriguez1989, @jennahamlin, @julianstanley, @KasperThystrup, @Kastakin, @KoderKow, @kprimice, @mahelious, @MayaGans, @mcsiple, @michaelhogersnplm, @moodymudskipper, @mraess, @novica, @nvelden, @quickbendelat, @rgaube, @riccardoporreca, @RichardPilbery, @robertoromor, @seanhardison1, @ShinyFabio, @sjspielman, @Swechhya, @TimotheeTournier, @VincentAlcazer, @Welsh44, @yogat3ch, @yonicd, @zchmielewska, and @ZimmermannYves."
-  },
-  {
-    "objectID": "news/state-of-the-golemverse-2023-05/index.html",
-    "href": "news/state-of-the-golemverse-2023-05/index.html",
-    "title": "{golem} 0.4.0 is now available",
-    "section": "",
-    "text": "This is a semi automatic blogpost about the state of the golemverse in April 2023.\nAs of now, 4 packages are on the CRAN.\nHere is the"
   },
   {
     "objectID": "news/2020-05-10_shinipsum-cran-realease/index.html",
