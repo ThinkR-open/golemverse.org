@@ -871,65 +871,71 @@ font-style: italic;">## To be copied in the server</span></span>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;">random_ggplot</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
 <span id="cb5-2">  <span class="fu" style="color: #4758AB;">labs</span>(<span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">"Random plot"</span>)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Bin width defaults to 1/30 of the range of the data. Pick better value with
-`binwidth`.</code></pre>
-</div>
 <div class="cell-output-display">
 <p><img src="https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Of course, the idea is to combine this with a Shiny interface, for example <code>random_ggplot()</code> will be used with a <code>renderPlot()</code> and <code>plotOutput()</code>. And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, <code>random_ggplot()</code> has a <code>type</code> parameter that can help you select a specific geom.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;">library</span>(shiny)</span>
-<span id="cb7-2"><span class="fu" style="color: #4758AB;">library</span>(shinipsum)</span>
-<span id="cb7-3"><span class="fu" style="color: #4758AB;">library</span>(DT)</span>
-<span id="cb7-4">ui <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">fluidPage</span>(</span>
-<span id="cb7-5">  <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A Random DT"</span>),</span>
-<span id="cb7-6">  <span class="fu" style="color: #4758AB;">DTOutput</span>(<span class="st" style="color: #20794D;">"data_table"</span>),</span>
-<span id="cb7-7">  <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A Random Plot"</span>),</span>
-<span id="cb7-8">  <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot"</span>),</span>
-<span id="cb7-9">  <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A Random Text"</span>),</span>
-<span id="cb7-10">  <span class="fu" style="color: #4758AB;">tableOutput</span>(<span class="st" style="color: #20794D;">"text"</span>)</span>
-<span id="cb7-11">)</span>
-<span id="cb7-12"></span>
-<span id="cb7-13">server <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(input, output, session) {</span>
-<span id="cb7-14">  output<span class="sc" style="color: #5E5E5E;">$</span>data_table <span class="ot" style="color: #003B4F;">&lt;-</span> DT<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">renderDT</span>({</span>
-<span id="cb7-15">    <span class="fu" style="color: #4758AB;">random_DT</span>(<span class="dv" style="color: #AD0000;">5</span>, <span class="dv" style="color: #AD0000;">5</span>)</span>
-<span id="cb7-16">  })</span>
-<span id="cb7-17">  output<span class="sc" style="color: #5E5E5E;">$</span>plot <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderPlot</span>({</span>
-<span id="cb7-18">    <span class="fu" style="color: #4758AB;">random_ggplot</span>(<span class="at" style="color: #657422;">type =</span> <span class="st" style="color: #20794D;">"point"</span>)</span>
-<span id="cb7-19">  })</span>
-<span id="cb7-20">  output<span class="sc" style="color: #5E5E5E;">$</span>text <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderText</span>({</span>
-<span id="cb7-21">    <span class="fu" style="color: #4758AB;">random_text</span>(<span class="at" style="color: #657422;">nwords =</span> <span class="dv" style="color: #AD0000;">50</span>)</span>
-<span id="cb7-22">  })</span>
-<span id="cb7-23">}</span>
-<span id="cb7-24"><span class="fu" style="color: #4758AB;">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;">library</span>(shiny)</span>
+<span id="cb6-2"><span class="fu" style="color: #4758AB;">library</span>(shinipsum)</span>
+<span id="cb6-3"><span class="fu" style="color: #4758AB;">library</span>(DT)</span>
+<span id="cb6-4">ui <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">fluidPage</span>(</span>
+<span id="cb6-5">  <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A Random DT"</span>),</span>
+<span id="cb6-6">  <span class="fu" style="color: #4758AB;">DTOutput</span>(<span class="st" style="color: #20794D;">"data_table"</span>),</span>
+<span id="cb6-7">  <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A Random Plot"</span>),</span>
+<span id="cb6-8">  <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot"</span>),</span>
+<span id="cb6-9">  <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A Random Text"</span>),</span>
+<span id="cb6-10">  <span class="fu" style="color: #4758AB;">tableOutput</span>(<span class="st" style="color: #20794D;">"text"</span>)</span>
+<span id="cb6-11">)</span>
+<span id="cb6-12"></span>
+<span id="cb6-13">server <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(input, output, session) {</span>
+<span id="cb6-14">  output<span class="sc" style="color: #5E5E5E;">$</span>data_table <span class="ot" style="color: #003B4F;">&lt;-</span> DT<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">renderDT</span>({</span>
+<span id="cb6-15">    <span class="fu" style="color: #4758AB;">random_DT</span>(<span class="dv" style="color: #AD0000;">5</span>, <span class="dv" style="color: #AD0000;">5</span>)</span>
+<span id="cb6-16">  })</span>
+<span id="cb6-17">  output<span class="sc" style="color: #5E5E5E;">$</span>plot <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderPlot</span>({</span>
+<span id="cb6-18">    <span class="fu" style="color: #4758AB;">random_ggplot</span>(<span class="at" style="color: #657422;">type =</span> <span class="st" style="color: #20794D;">"point"</span>)</span>
+<span id="cb6-19">  })</span>
+<span id="cb6-20">  output<span class="sc" style="color: #5E5E5E;">$</span>text <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderText</span>({</span>
+<span id="cb6-21">    <span class="fu" style="color: #4758AB;">random_text</span>(<span class="at" style="color: #657422;">nwords =</span> <span class="dv" style="color: #AD0000;">50</span>)</span>
+<span id="cb6-22">  })</span>
+<span id="cb6-23">}</span>
+<span id="cb6-24"><span class="fu" style="color: #4758AB;">shinyApp</span>(ui, server)</span></code></pre></div>
 </div>
 <p>Other <code>{shinipsum}</code> functions include:</p>
 <ul>
 <li>tables:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;">random_table</span>(<span class="at" style="color: #657422;">nrow =</span> <span class="dv" style="color: #AD0000;">3</span>, <span class="at" style="color: #657422;">ncol =</span> <span class="dv" style="color: #AD0000;">10</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;">random_table</span>(<span class="at" style="color: #657422;">nrow =</span> <span class="dv" style="color: #AD0000;">3</span>, <span class="at" style="color: #657422;">ncol =</span> <span class="dv" style="color: #AD0000;">10</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  x1 x2 x3 x4   y1   y2    y3   y4 x1.1 x2.1
-1 10 10 10  8 8.04 9.14  7.46 6.58   10   10
-2  8  8  8  8 6.95 8.14  6.77 5.76    8    8
-3 13 13 13  8 7.58 8.74 12.74 7.71   13   13</code></pre>
+<pre><code>  Plant   Type  Treatment conc uptake Plant.1 Type.1 Treatment.1 conc.1
+1   Qn1 Quebec nonchilled   95   16.0     Qn1 Quebec  nonchilled     95
+2   Qn1 Quebec nonchilled  175   30.4     Qn1 Quebec  nonchilled    175
+3   Qn1 Quebec nonchilled  250   34.8     Qn1 Quebec  nonchilled    250
+  uptake.1
+1     16.0
+2     30.4
+3     34.8</code></pre>
 </div>
 </div>
 <ul>
 <li>print outputs:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="fu" style="color: #4758AB;">random_print</span>(<span class="at" style="color: #657422;">type =</span> <span class="st" style="color: #20794D;">"model"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;">random_print</span>(<span class="at" style="color: #657422;">type =</span> <span class="st" style="color: #20794D;">"model"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Shapiro-Wilk normality test
+    Pearson's product-moment correlation
 
-data:  datasets::airquality$Ozone
-W = 0.87867, p-value = 2.79e-08</code></pre>
+data:  datasets::mtcars$mpg and datasets::mtcars$cyl
+t = -8.9197, df = 30, p-value = 6.113e-10
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.9257694 -0.7163171
+sample estimates:
+      cor 
+-0.852162 </code></pre>
 </div>
 </div>
 <p>… and text, image, ggplotly, dygraph, and DT.</p>
@@ -986,7 +992,7 @@ W = 0.87867, p-value = 2.79e-08</code></pre>
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-sample-listings">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1681199542102" data-listing-reading-time-sort="6.215">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1681199928866" data-listing-reading-time-sort="6.215">
 <div class="thumbnail">
 <p><a href="../news/golem-0.4.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.4.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1014,7 +1020,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1681199542102" data-listing-reading-time-sort="2.12">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1681199928866" data-listing-reading-time-sort="2.12">
 <div class="thumbnail">
 <p><a href="../news/golem-0.3.2-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.2-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1042,7 +1048,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1681199542106" data-listing-reading-time-sort="1.375">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1681199928870" data-listing-reading-time-sort="1.375">
 <div class="thumbnail">
 <p><a href="../news/golem-hacktoberfest-2021/index.html"> <img src="https://www.golemverse.org/news/golem-hacktoberfest-2021/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1070,7 +1076,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1681199542098" data-listing-reading-time-sort="8.04">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1681199928862" data-listing-reading-time-sort="8.04">
 <div class="thumbnail">
 <p><a href="../news/golem-0.3.1-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.1-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1098,7 +1104,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1681199542098" data-listing-reading-time-sort="1.42">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1681199928862" data-listing-reading-time-sort="1.42">
 <div class="thumbnail">
 <p><a href="../news/2020-05-10_shinipsum-cran-realease/index.html"> <img src="https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1126,7 +1132,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1681199542098" data-listing-reading-time-sort="0.09">
+<div class="quarto-post image-right" data-index="5" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1681199928862" data-listing-reading-time-sort="0.09">
 <div class="thumbnail">
 <p><a href="../news/golem-0.1.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.1.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1160,7 +1166,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://www.golemverse.org/news/index.html</guid>
-  <pubDate>Tue, 11 Apr 2023 07:53:01 GMT</pubDate>
+  <pubDate>Tue, 11 Apr 2023 07:59:18 GMT</pubDate>
 </item>
 </channel>
 </rss>
