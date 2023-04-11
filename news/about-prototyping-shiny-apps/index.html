@@ -9,7 +9,7 @@
 <meta name="author" content="colin">
 <meta name="dcterms.date" content="2023-03-27">
 
-<title>golemverse - About prototyping shiny apps</title>
+<title>golemverse - About Designing &amp; Prototyping shiny apps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -78,7 +141,7 @@ ga('send', {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="golemverse - About prototyping shiny apps">
+<meta name="twitter:title" content="golemverse - About Designing &amp; Prototyping shiny apps">
 <meta name="twitter:description" content="Coders like coding, that’s a golden truth.">
 <meta name="twitter:card" content="summary">
 </head>
@@ -150,7 +213,7 @@ ga('send', {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">About prototyping shiny apps</h1>
+      <h1 class="title">About Designing &amp; Prototyping shiny apps</h1>
                       </div>
   </div>
     
@@ -185,10 +248,180 @@ ga('send', {
 
 
 
-<p>Coders like coding, that’s a golden truth. The joy of taking an idea and bringing it to life by writing a bunch of characters in a text file is one of the most powerful for anyone who loves engineering software.</p>
-<p>One of the</p>
+<blockquote class="blockquote">
+<p>Prototyping first may help keep you from investing far too much time for marginal gains.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><a href="http://www.catb.org/~esr/writings/taoup/html/ch01s06.html">The Art of UNIX Programming</a></p>
+</blockquote>
+<p>Coders like coding, that’s a golden truth. The joy of taking an idea and bringing it to life by writing a bunch of characters in a text file is one of the most empowering feelings for anyone who loves engineering software.</p>
+<p>This creates a bad habit for us all: jumping into coding as soon as we get the requirement. Doing that will not set the perfect condition for our <code>{shiny}</code> app, and for several reasons:</p>
+<ul>
+<li>Specifications are by essence incomplete: no matter how precise we think they are, they are not enough.</li>
+<li>Things can change during the development process.</li>
+<li>Separation of concerns makes things easier to reason about, hence the importance of separating UI and backend validation.</li>
+<li>Small, working prototypes can reveal misconceptions/misunderstandings, so the quicker we get a working prototype, the better</li>
+</ul>
+<p>In this blog post, I’ll present three packages from the golemverse that can you help make things easier for designing and prototyping.</p>
+<section id="shinidraw" class="level2">
+<h2 class="anchored" data-anchor-id="shinidraw"><code>{shinidraw}</code></h2>
+<p><code>{shinidraw}</code> is to bring the amazing <a href="https://excalidraw.com/">Exaclidraw</a> to your R console.</p>
+<p>It can be installed with</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"thinkr-open/shinidraw"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Excalidraw is a whiteboard, in the browser, designed to sketch diagrams. In our context (designing and prototyping), Excalidraw is the tool of choice for:</p>
+<ul>
+<li>Concept Maps</li>
+<li>Infrastructure schema</li>
+</ul>
+<p>At <a href="https://rtask.thinkr.fr/">ThinkR</a>, we’ve been using it for a while now, during the design and prototype stage of any <code>{shiny}</code> project. We use it for two purposes:</p>
+<ul>
+<li><p>listing all the elements and interactions of the UI, server, and infrastructure elements (DB, deployment server…), so that at any moment of the project we can refer to this schema and know what we are developing.</p></li>
+<li><p>as we build it with our clients, it is used as a tool to clarify our understanding of the project.</p></li>
+</ul>
+<section id="about-shinidraw" class="level3">
+<h3 class="anchored" data-anchor-id="about-shinidraw">About <code>{shinidraw}</code></h3>
+<p>Excalidraw is awesome, and we’ve been using it for prototyping <code>{shiny}</code> apps for a while now. So what was missing, and what does <code>{shinidraw}</code> brings to the table?</p>
+</section>
+<section id="projects" class="level3">
+<h3 class="anchored" data-anchor-id="projects">Projects</h3>
+<p>When used in the browser, Excalidraw saves your drawings in your browser’s local storage, and you can export and save them locally.</p>
+<p>When using <code>{shinidraw}</code>, you’ll have a built-in project system, where the <code>.excalidraw</code> files are stored on the machine running the app.</p>
+<p>If you work on an existing project, <code>{shinidraw}</code> will load the latest version of the <code>.excalidraw</code> file.</p>
+<p>Here are the commands you can use to manage your projects:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an empty, temp file (will not be saved)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">excalidraw</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># This will create a new project</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">excalidraw_new_project</span>()</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># This will open an existing project</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">excalidraw_open_project</span>(<span class="st">"rr-2023"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Simply open a file</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">excalidraw_open_file</span>(<span class="st">"inst/rect.excalidraw"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="autosaving" class="level3">
+<h3 class="anchored" data-anchor-id="autosaving">Autosaving</h3>
+<p>The app will auto-save your drawings at a given interval, so you don’t have to worry about losing your work.</p>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<p>Here is a small example of what could be an infrastructure schema for an app:</p>
+<p><img src="../../img/fake_excalidraw.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="ui-prototyping-with-shinipsum-and-fakir" class="level2">
+<h2 class="anchored" data-anchor-id="ui-prototyping-with-shinipsum-and-fakir">UI prototyping with <code>{shinipsum}</code> and <code>{fakir}</code></h2>
+<p>One common joke in the software engineering world is that you can have the best backend algorithm ever, the first feedback you will get about your app is that the buttons’ color should be blue. This sounds like a fun discussion, but that’s another golden truth of web apps: the user will always focus on the UI first, and you can ask for feedback about the backend as many times as you want, you’ll always get feedback about the UI.</p>
+<p>That’s why we advise two things:</p>
+<ul>
+<li>Separate the backend and the frontend, as much as you can, so that you can validate both separately (you can for example use <a href="https://thinkr-open.github.io/fusen/"><code>{fusen}</code></a> for developing the backend).</li>
+<li>Prototype and validate an “ipsum app” before connecting the UI to a backend.</li>
+</ul>
+<p>To build this prototype, the golemverse comes with the following packages:</p>
+<section id="shinipsum" class="level3">
+<h3 class="anchored" data-anchor-id="shinipsum"><code>{shinipsum}</code></h3>
+<p>This package comes with a series of functions generating random UI elements so that you can use them in an ipsum app:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shinipsum)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>(<span class="st">"package:shinipsum"</span>, <span class="at">pattern =</span> <span class="st">"random"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>random_DT
+random_dygraph
+random_ggplot
+random_ggplotly
+random_image
+random_print
+random_table
+random_text</code></pre>
+</div>
+</div>
+<p>Here is what it looks like in a <code>{shiny}</code> app:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shinipsum)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">h2</span>(<span class="st">"A Random DT"</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">DTOutput</span>(<span class="st">"data_table"</span>),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">h2</span>(<span class="st">"A Random Image"</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plotOutput</span>(<span class="st">"image"</span>, <span class="at">height =</span> <span class="st">"300px"</span>),</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">h2</span>(<span class="st">"A Random Plot"</span>),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plotOutput</span>(<span class="st">"plot"</span>),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">h2</span>(<span class="st">"A Random Print"</span>),</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">verbatimTextOutput</span>(<span class="st">"print"</span>),</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">h2</span>(<span class="st">"A Random Table"</span>),</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tableOutput</span>(<span class="st">"table"</span>),</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">h2</span>(<span class="st">"A Random Text"</span>),</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tableOutput</span>(<span class="st">"text"</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>data_table <span class="ot">&lt;-</span> DT<span class="sc">::</span><span class="fu">renderDT</span>({</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">random_DT</span>(<span class="dv">10</span>, <span class="dv">5</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>image <span class="ot">&lt;-</span> <span class="fu">renderImage</span>({</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">random_image</span>()</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>plot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">random_ggplot</span>()</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>print <span class="ot">&lt;-</span> <span class="fu">renderPrint</span>({</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">random_print</span>(<span class="st">"model"</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>table <span class="ot">&lt;-</span> <span class="fu">renderTable</span>({</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">random_table</span>(<span class="dv">10</span>, <span class="dv">5</span>)</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>text <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">random_text</span>(<span class="at">nwords =</span> <span class="dv">50</span>)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can install it with:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"shinipsum"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="fakir" class="level3">
+<h3 class="anchored" data-anchor-id="fakir"><code>{fakir}</code></h3>
+<p><code>{shinipsum}</code> creates fake UI elements, <code>{fakir}</code> creates fake datasets.</p>
+<p>You can install it with:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"fakir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>With this package, we’ve aimed at mimicking “real life” datasets, so that you can use them in case you need to simulate inputs, models, backend elements, and others, before having access to DB and/or real datasets.</p>
+<p>Here is for example a fake dataset of visits on a website:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fakir<span class="sc">::</span><span class="fu">fake_visits</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 365 × 8
+   timestamp   year month   day  home about  blog contact
+ * &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;
+ 1 2017-01-01  2017     1     1    NA    64   446     145
+ 2 2017-01-02  2017     1     2   159   102   487     250
+ 3 2017-01-03  2017     1     3    NA    59   479     433
+ 4 2017-01-04  2017     1     4   123   202   601     109
+ 5 2017-01-05  2017     1     5   362   162   311     378
+ 6 2017-01-06  2017     1     6    NA   244   450     350
+ 7 2017-01-07  2017     1     7    NA   298   343     232
+ 8 2017-01-08  2017     1     8   461   121   389     122
+ 9 2017-01-09  2017     1     9   337   171    NA     150
+10 2017-01-10  2017     1    10   155   151   515      NA
+# ℹ 355 more rows</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li>Engineering Production-Grade Shiny Apps:
+<ul>
+<li><a href="https://engineering-shiny.org/dont-rush-into-coding.html">Chapter 7 - Don’t Rush into Coding</a></li>
+<li><a href="https://engineering-shiny.org/building-ispum-app.html">Chapter 9 - Building an “ipsum-app”</a></li>
+</ul></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
