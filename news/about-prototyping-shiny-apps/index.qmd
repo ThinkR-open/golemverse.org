@@ -1,11 +1,182 @@
 ---
-title: "About prototyping shiny apps"
+title: "About Designing & Prototyping shiny apps"
 author: colin
 date: "2023-03-27"
 draft: true
 ---
 
-Coders like coding, that's a golden truth.
-The joy of taking an idea and bringing it to life by writing a bunch of characters in a text file is one of the most powerful for anyone who loves engineering software.
+> Prototyping first may help keep you from investing far too much time for marginal gains.
 
-One of the
+> [The Art of UNIX Programming](http://www.catb.org/~esr/writings/taoup/html/ch01s06.html)
+
+Coders like coding, that's a golden truth.
+The joy of taking an idea and bringing it to life by writing a bunch of characters in a text file is one of the most empowering feelings for anyone who loves engineering software.
+
+This creates a bad habit for us all: jumping into coding as soon as we get the requirement.
+Doing that will not set the perfect condition for our `{shiny}` app, and for several reasons:
+
+- Specifications are by essence incomplete: no matter how precise we think they are, they are not enough.
+- Things can change during the development process.
+- Separation of concerns makes things easier to reason about, hence the importance of separating UI and backend validation.
+- Small, working prototypes can reveal misconceptions/misunderstandings, so the quicker we get a working prototype, the better
+
+In this blog post, I'll present three packages from the golemverse that can you help make things easier for designing and prototyping.
+
+## `{shinidraw}`
+
+`{shinidraw}` is to bring the amazing [Exaclidraw](https://excalidraw.com/) to your R console.
+
+It can be installed with
+
+```r
+pak::pak("thinkr-open/shinidraw")
+```
+
+Excalidraw is a whiteboard, in the browser, designed to sketch diagrams.
+In our context (designing and prototyping), Excalidraw is the tool of choice for:
+
+- Concept Maps
+- Infrastructure schema
+
+At [ThinkR](https://rtask.thinkr.fr/), we've been using it for a while now, during the design and prototype stage of any `{shiny}` project.
+We use it for two purposes:
+
+- listing all the elements and interactions of the UI, server, and infrastructure elements (DB, deployment server...), so that at any moment of the project we can refer to this schema and know what we are developing.
+
+- as we build it with our clients, it is used as a tool to clarify our understanding of the project.
+
+### About `{shinidraw}`
+
+Excalidraw is awesome, and we've been using it for prototyping `{shiny}` apps for a while now.
+So what was missing, and what does `{shinidraw}` brings to the table?
+
+### Projects
+
+When used in the browser, Excalidraw saves your drawings in your browser's local storage, and you can export and save them locally.
+
+When using `{shinidraw}`, you'll have a built-in project system, where the `.excalidraw` files are stored on the machine running the app.
+
+If you work on an existing project, `{shinidraw}` will load the latest version of the `.excalidraw` file.
+
+Here are the commands you can use to manage your projects:
+
+```r
+# Create an empty, temp file (will not be saved)
+excalidraw()
+
+# This will create a new project
+excalidraw_new_project()
+
+# This will open an existing project
+excalidraw_open_project("rr-2023")
+
+# Simply open a file
+excalidraw_open_file("inst/rect.excalidraw")
+```
+
+### Autosaving
+
+The app will auto-save your drawings at a given interval, so you don't have to worry about losing your work.
+
+### Example
+
+Here is a small example of what could be an infrastructure schema for an app:
+
+![](/img/fake_excalidraw.png)
+
+
+## UI prototyping with `{shinipsum}` and  `{fakir}`
+
+One common joke in the software engineering world is that you can have the best backend algorithm ever, the first feedback you will get about your app is that the buttons' color should be blue.
+This sounds like a fun discussion, but that's another golden truth of web apps: the user will always focus on the UI first, and you can ask for feedback about the backend as many times as you want, you'll always get feedback about the UI.
+
+That's why we advise two things:
+
+- Separate the backend and the frontend, as much as you can, so that you can validate both separately (you can for example use [`{fusen}`](https://thinkr-open.github.io/fusen/) for developing the backend).
+- Prototype and validate an "ipsum app" before connecting the UI to a backend.
+
+To build this prototype, the golemverse comes with the following packages:
+
+###  `{shinipsum}`
+
+This package comes with a series of functions generating random UI elements so that you can use them in an ipsum app:
+
+```{r}
+library(shinipsum)
+ls("package:shinipsum", pattern = "random") |>
+cat(sep = "\n")
+```
+
+Here is what it looks like in a `{shiny}` app:
+
+```{r eval = FALSE}
+library(shiny)
+library(shinipsum)
+library(DT)
+ui <- fluidPage(
+  h2("A Random DT"),
+  DTOutput("data_table"),
+  h2("A Random Image"),
+  plotOutput("image", height = "300px"),
+  h2("A Random Plot"),
+  plotOutput("plot"),
+  h2("A Random Print"),
+  verbatimTextOutput("print"),
+  h2("A Random Table"),
+  tableOutput("table"),
+  h2("A Random Text"),
+  tableOutput("text")
+)
+
+server <- function(input, output, session) {
+  output$data_table <- DT::renderDT({
+    random_DT(10, 5)
+  })
+  output$image <- renderImage({
+    random_image()
+  })
+  output$plot <- renderPlot({
+    random_ggplot()
+  })
+  output$print <- renderPrint({
+    random_print("model")
+  })
+  output$table <- renderTable({
+    random_table(10, 5)
+  })
+  output$text <- renderText({
+    random_text(nwords = 50)
+  })
+}
+shinyApp(ui, server)
+```
+
+You can install it with:
+
+```r
+pak::pak("shinipsum")
+```
+
+###  `{fakir}`
+
+`{shinipsum}` creates fake UI elements, `{fakir}` creates fake datasets.
+
+You can install it with:
+
+```r
+pak::pak("fakir")
+```
+
+With this package, we've aimed at mimicking "real life" datasets, so that you can use them in case you need to simulate inputs, models, backend elements, and others, before having access to DB and/or real datasets.
+
+Here is for example a fake dataset of visits on a website:
+
+```{r}
+fakir::fake_visits()
+```
+
+## Further reading
+
++ Engineering Production-Grade Shiny Apps:
+  - [Chapter 7 - Don’t Rush into Coding](https://engineering-shiny.org/dont-rush-into-coding.html)
+  - [Chapter 9 - Building an "ipsum-app"](https://engineering-shiny.org/building-ispum-app.html)
