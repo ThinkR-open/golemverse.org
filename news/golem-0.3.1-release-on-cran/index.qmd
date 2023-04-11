@@ -3,6 +3,7 @@ title: "About {golem} 0.3.1"
 author: colin
 date: '2021-05-28'
 slug: golem-0.3.1-release-on-cran
+redirect: /post/golem-0.3.1-release-on-cran/
 ---
 
 ![](featured.png)

@@ -1,7 +1,0 @@
-<!doctype html>
-<html>
-    <head>
-	<meta http-equiv="refresh" content="0; url=/news/">
-	<link rel="canonical" href="/news/" />
-    </head>
-</html>
