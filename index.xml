@@ -14,6 +14,27 @@
 <item>
   <title>{golem} 0.4.0 is now available</title>
   <dc:creator>colin</dc:creator>
+  <link>https://www.golemverse.org/news/state-of-the-golemverse-2023-05/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://www.golemverse.org/news/state-of-the-golemverse-2023-05/featured.png" class="img-fluid"></p>
+<p>This is a semi automatic blogpost about the state of the golemverse in April 2023.</p>
+<p>As of now, 4 packages are on the CRAN.</p>
+<p>Here is the</p>
+
+
+
+ ]]></description>
+  <guid>https://www.golemverse.org/news/state-of-the-golemverse-2023-05/index.html</guid>
+  <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://www.golemverse.org/news/state-of-the-golemverse-2023-05/featured.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>{golem} 0.4.0 is now available</title>
+  <dc:creator>colin</dc:creator>
   <link>https://www.golemverse.org/news/golem-0.4.0-release-on-cran/index.html</link>
   <description><![CDATA[ 
 
@@ -984,7 +1005,35 @@ Coefficients:
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-sample-listings">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1680164578968" data-listing-reading-time-sort="6.215">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1681199262518" data-listing-reading-time-sort="0.33">
+<div class="thumbnail">
+<p><a href="../news/state-of-the-golemverse-2023-05/index.html"> <img src="https://www.golemverse.org/news/state-of-the-golemverse-2023-05/featured.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../news/state-of-the-golemverse-2023-05/index.html">
+<h3 class="no-anchor listing-title">
+{golem} 0.4.0 is now available
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<!-- desc(5A0113B34292)[max=175]:news/state-of-the-golemverse-2023-05/index.html -->
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../news/state-of-the-golemverse-2023-05/index.html">
+<div class="listing-date">
+Mar 15, 2023
+</div>
+<div class="listing-author">
+colin
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1681199262518" data-listing-reading-time-sort="6.215">
 <div class="thumbnail">
 <p><a href="../news/golem-0.4.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.4.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1012,7 +1061,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1680164578964" data-listing-reading-time-sort="2.12">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1681199262514" data-listing-reading-time-sort="2.12">
 <div class="thumbnail">
 <p><a href="../news/golem-0.3.2-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.2-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1040,7 +1089,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1680164578968" data-listing-reading-time-sort="1.375">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1681199262518" data-listing-reading-time-sort="1.375">
 <div class="thumbnail">
 <p><a href="../news/golem-hacktoberfest-2021/index.html"> <img src="https://www.golemverse.org/news/golem-hacktoberfest-2021/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1068,7 +1117,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1680164578964" data-listing-reading-time-sort="8.04">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1681199262514" data-listing-reading-time-sort="8.04">
 <div class="thumbnail">
 <p><a href="../news/golem-0.3.1-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.1-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1096,7 +1145,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1680164578964" data-listing-reading-time-sort="1.42">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1681199262514" data-listing-reading-time-sort="1.42">
 <div class="thumbnail">
 <p><a href="../news/2020-05-10_shinipsum-cran-realease/index.html"> <img src="https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1124,7 +1173,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1680164578964" data-listing-reading-time-sort="0.09">
+<div class="quarto-post image-right" data-index="6" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1681199262514" data-listing-reading-time-sort="0.09">
 <div class="thumbnail">
 <p><a href="../news/golem-0.1.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.1.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1158,7 +1207,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://www.golemverse.org/news/index.html</guid>
-  <pubDate>Thu, 30 Mar 2023 08:23:52 GMT</pubDate>
+  <pubDate>Tue, 11 Apr 2023 07:47:57 GMT</pubDate>
 </item>
 </channel>
 </rss>
