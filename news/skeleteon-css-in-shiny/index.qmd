@@ -147,7 +147,7 @@ golem::create_golem(
 )
 golem::create_golem(
   "skdashboard",
-  project_hook = skeleton::ghook_sk_boilerplate
+  project_hook = skeleton::ghook_sk_dashboard
 )
 ```
 
