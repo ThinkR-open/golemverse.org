@@ -10,7 +10,154 @@
 <atom:link href="https://www.golemverse.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to the golemverse!</description>
 <generator>quarto-1.2.475</generator>
-<lastBuildDate>Wed, 15 Mar 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 13 Apr 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Minimalist and Elegant {shiny} apps with {skeleton}</title>
+  <dc:creator>colin</dc:creator>
+  <link>https://www.golemverse.org/news/skeleteon-css-in-shiny/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>A dead simple, responsive, minimalist CSS framework.</p>
+<p><img src="https://www.golemverse.org/news/skeleteon-css-in-shiny/featured.png" class="img-fluid"></p>
+<p><a href="http://getskeleton.com/">Skeleton css</a> is a “a dead simple, responsive” CSS framework focused on mobile-first design and a minimalistic approach. It comes with a set of pre-defined styles for basic HTML elements such as typography, forms, buttons, tables, and grids, which can be easily customized. It is built with a 12-column grid system, making it easy to create flexible and responsive layouts for different screen sizes and devices.</p>
+<section id="skeleton" class="level2">
+<h2 class="anchored" data-anchor-id="skeleton">{skeleton}</h2>
+<p>I’m very happy to announce that the <code>{shiny}</code> wrapper for this framework is now fully functional, and available to download with:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">pak</span>(<span class="st" style="color: #20794D;">"ColinFay/skeleton"</span>)</span></code></pre></div>
+<p>For a demo of an app built with <code>{skeleton}</code>, you can browse <a href="https://connect.thinkr.fr/prenoms/" class="uri">https://connect.thinkr.fr/prenoms/</a>.</p>
+<p><a hreaf="https://connect.thinkr.fr/prenoms/" target="_blank"><img src="https://www.golemverse.org/news/skeleteon-css-in-shiny/prenomsapp.png" width="100%"></a></p>
+</section>
+<section id="building-an-app-with-skeleton" class="level2">
+<h2 class="anchored" data-anchor-id="building-an-app-with-skeleton">Building an app with {skeleton}</h2>
+<section id="basic-apps" class="level3">
+<h3 class="anchored" data-anchor-id="basic-apps">Basic apps</h3>
+<p>Building an app with <code>{skeleton}</code> follows the same spirit as with <code>{shiny}</code> standard components: you start with a page, define a row, and this row can be split into 12 columns.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;">library</span>(shiny)</span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;">library</span>(skeleton)</span>
+<span id="cb2-3"></span>
+<span id="cb2-4">ui <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">sk_page</span>(</span>
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;">h1</span>(<span class="st" style="color: #20794D;">"Hello world"</span>),</span>
+<span id="cb2-6">  <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
+<span id="cb2-7">    <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
+<span id="cb2-8">      <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">6</span>,</span>
+<span id="cb2-9">      <span class="st" style="color: #20794D;">"Hello"</span></span>
+<span id="cb2-10">    ),</span>
+<span id="cb2-11">    <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
+<span id="cb2-12">      <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">6</span>,</span>
+<span id="cb2-13">      <span class="st" style="color: #20794D;">"World"</span></span>
+<span id="cb2-14">    )</span>
+<span id="cb2-15">  ),</span>
+<span id="cb2-16">  <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
+<span id="cb2-17">    <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
+<span id="cb2-18">      <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">12</span>,</span>
+<span id="cb2-19">      <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot1"</span>)</span>
+<span id="cb2-20">    )</span>
+<span id="cb2-21">  )</span>
+<span id="cb2-22">)</span>
+<span id="cb2-23"></span>
+<span id="cb2-24">server <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(input, output) {</span>
+<span id="cb2-25">  output<span class="sc" style="color: #5E5E5E;">$</span>plot1 <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderPlot</span>({</span>
+<span id="cb2-26">    <span class="fu" style="color: #4758AB;">plot</span>(mtcars)</span>
+<span id="cb2-27">  })</span>
+<span id="cb2-28">}</span>
+<span id="cb2-29"></span>
+<span id="cb2-30"><span class="fu" style="color: #4758AB;">shinyApp</span>(ui, server)</span></code></pre></div>
+</section>
+<section id="built-in-dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="built-in-dashboard">Built-in dashboard</h3>
+<p><code>{skeleton}</code> also comes with a built-it dashboard mechanism, that can be defined with:</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;">sk_nav</span>(</span>
+<span id="cb3-2">  <span class="fu" style="color: #4758AB;">sk_nav_item</span>(</span>
+<span id="cb3-3">    <span class="at" style="color: #657422;">id =</span> <span class="st" style="color: #20794D;">"one"</span>,</span>
+<span id="cb3-4">    <span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">"ONE"</span>,</span>
+<span id="cb3-5">    <span class="at" style="color: #657422;">ui =</span> <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
+<span id="cb3-6">      <span class="at" style="color: #657422;">width =</span> <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
+<span id="cb3-7">        <span class="dv" style="color: #AD0000;">6</span>,</span>
+<span id="cb3-8">        <span class="st" style="color: #20794D;">"Hello plot1"</span></span>
+<span id="cb3-9">      ),</span>
+<span id="cb3-10">      <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
+<span id="cb3-11">        <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">6</span>,</span>
+<span id="cb3-12">        <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot1"</span>)</span>
+<span id="cb3-13">      )</span>
+<span id="cb3-14">    )</span>
+<span id="cb3-15">  )</span>
+<span id="cb3-16">)</span></code></pre></div>
+<p>And for a full app:</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;">library</span>(shiny)</span>
+<span id="cb4-2"><span class="fu" style="color: #4758AB;">library</span>(skeleton)</span>
+<span id="cb4-3">ui <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">sk_page</span>(</span>
+<span id="cb4-4">  <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
+<span id="cb4-5">    <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A dead simple, responsive boilerplate."</span>),</span>
+<span id="cb4-6">  ),</span>
+<span id="cb4-7">  <span class="fu" style="color: #4758AB;">sk_nav</span>(</span>
+<span id="cb4-8">    <span class="fu" style="color: #4758AB;">sk_nav_item</span>(</span>
+<span id="cb4-9">      <span class="at" style="color: #657422;">id =</span> <span class="st" style="color: #20794D;">"one"</span>,</span>
+<span id="cb4-10">      <span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">"ONE"</span>,</span>
+<span id="cb4-11">      <span class="at" style="color: #657422;">ui =</span> <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
+<span id="cb4-12">        <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
+<span id="cb4-13">          <span class="dv" style="color: #AD0000;">6</span>,</span>
+<span id="cb4-14">          <span class="st" style="color: #20794D;">"Hello plot1"</span></span>
+<span id="cb4-15">        ),</span>
+<span id="cb4-16">        <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
+<span id="cb4-17">          <span class="dv" style="color: #AD0000;">6</span>,</span>
+<span id="cb4-18">          <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot1"</span>)</span>
+<span id="cb4-19">        )</span>
+<span id="cb4-20">      )</span>
+<span id="cb4-21">    ),</span>
+<span id="cb4-22">    <span class="fu" style="color: #4758AB;">sk_nav_item</span>(</span>
+<span id="cb4-23">      <span class="at" style="color: #657422;">id =</span> <span class="st" style="color: #20794D;">"two"</span>,</span>
+<span id="cb4-24">      <span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">"TWO"</span>,</span>
+<span id="cb4-25">      <span class="at" style="color: #657422;">ui =</span> <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
+<span id="cb4-26">        <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
+<span id="cb4-27">          <span class="dv" style="color: #AD0000;">6</span>,</span>
+<span id="cb4-28">          <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot2"</span>)</span>
+<span id="cb4-29">        ),</span>
+<span id="cb4-30">        <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
+<span id="cb4-31">          <span class="dv" style="color: #AD0000;">6</span>,</span>
+<span id="cb4-32">          <span class="st" style="color: #20794D;">"Hello plot2"</span></span>
+<span id="cb4-33">        ),</span>
+<span id="cb4-34">      )</span>
+<span id="cb4-35">    )</span>
+<span id="cb4-36">  )</span>
+<span id="cb4-37">)</span>
+<span id="cb4-38"><span class="fu" style="color: #4758AB;">shinyApp</span>(ui, <span class="cf" style="color: #003B4F;">function</span>(input, output) {</span>
+<span id="cb4-39">  output<span class="sc" style="color: #5E5E5E;">$</span>plot1 <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderPlot</span>({</span>
+<span id="cb4-40">    <span class="fu" style="color: #4758AB;">plot</span>(mtcars)</span>
+<span id="cb4-41">  })</span>
+<span id="cb4-42">  output<span class="sc" style="color: #5E5E5E;">$</span>plot2 <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderPlot</span>({</span>
+<span id="cb4-43">    <span class="fu" style="color: #4758AB;">plot</span>(airquality)</span>
+<span id="cb4-44">  })</span>
+<span id="cb4-45">})</span></code></pre></div>
+<p>If you want to see a real life example of a dashboard built with <code>{skeleton}</code>, feel free to browse the source code of the <code>prenoms</code> app at <a href="https://github.com/ThinkR-open/prenoms-app" class="uri">https://github.com/ThinkR-open/prenoms-app</a>.</p>
+</section>
+<section id="golem-hooks" class="level3">
+<h3 class="anchored" data-anchor-id="golem-hooks">{golem} hooks</h3>
+<p>You can get a boilerplate of a page or a dashboard when creating an app with <code>{golem}</code>, using the built-in <code>{golem}</code> hooks:</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">create_golem</span>(</span>
+<span id="cb5-2">  <span class="st" style="color: #20794D;">"skboilerplate"</span>,</span>
+<span id="cb5-3">  <span class="at" style="color: #657422;">project_hook =</span> skeleton<span class="sc" style="color: #5E5E5E;">::</span>ghook_sk_boilerplate</span>
+<span id="cb5-4">)</span>
+<span id="cb5-5">golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">create_golem</span>(</span>
+<span id="cb5-6">  <span class="st" style="color: #20794D;">"skdashboard"</span>,</span>
+<span id="cb5-7">  <span class="at" style="color: #657422;">project_hook =</span> skeleton<span class="sc" style="color: #5E5E5E;">::</span>skeleton<span class="sc" style="color: #5E5E5E;">::</span>ghook_sk_boilerplate</span>
+<span id="cb5-8">)</span></code></pre></div>
+</section>
+</section>
+<section id="contribution-and-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="contribution-and-feedback">Contribution and feedback</h2>
+<p>If you have any feedback, feel free to open an issue at <a href="https://github.com/ColinFay/skeleton" class="uri">https://github.com/ColinFay/skeleton</a>!</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.golemverse.org/news/skeleteon-css-in-shiny/index.html</guid>
+  <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://www.golemverse.org/news/skeleteon-css-in-shiny/featured.png" medium="image" type="image/png" height="72" width="144"/>
+</item>
 <item>
   <title>{golem} 0.4.0 is now available</title>
   <dc:creator>colin</dc:creator>
@@ -992,7 +1139,35 @@ sample estimates:
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-sample-listings">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1681206954110" data-listing-reading-time-sort="6.215">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1681377720599" data-listing-reading-time-sort="3.47">
+<div class="thumbnail">
+<p><a href="../news/skeleteon-css-in-shiny/index.html"> <img src="https://www.golemverse.org/news/skeleteon-css-in-shiny/featured.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../news/skeleteon-css-in-shiny/index.html">
+<h3 class="no-anchor listing-title">
+Minimalist and Elegant {shiny} apps with {skeleton}
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<!-- desc(5A0113B34292)[max=175]:news/skeleteon-css-in-shiny/index.html -->
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../news/skeleteon-css-in-shiny/index.html">
+<div class="listing-date">
+Apr 13, 2023
+</div>
+<div class="listing-author">
+colin
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1681377720599" data-listing-reading-time-sort="6.215">
 <div class="thumbnail">
 <p><a href="../news/golem-0.4.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.4.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1020,7 +1195,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1681206954106" data-listing-reading-time-sort="2.12">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1681377720595" data-listing-reading-time-sort="2.12">
 <div class="thumbnail">
 <p><a href="../news/golem-0.3.2-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.2-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1048,7 +1223,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1681206954110" data-listing-reading-time-sort="1.375">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1681377720599" data-listing-reading-time-sort="1.375">
 <div class="thumbnail">
 <p><a href="../news/golem-hacktoberfest-2021/index.html"> <img src="https://www.golemverse.org/news/golem-hacktoberfest-2021/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1076,7 +1251,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1681206954106" data-listing-reading-time-sort="8.04">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1681377720595" data-listing-reading-time-sort="8.04">
 <div class="thumbnail">
 <p><a href="../news/golem-0.3.1-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.1-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1104,7 +1279,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1681206954106" data-listing-reading-time-sort="1.42">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1681377720591" data-listing-reading-time-sort="1.42">
 <div class="thumbnail">
 <p><a href="../news/2020-05-10_shinipsum-cran-realease/index.html"> <img src="https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1132,7 +1307,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1681206954106" data-listing-reading-time-sort="0.09">
+<div class="quarto-post image-right" data-index="6" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1681377720595" data-listing-reading-time-sort="0.09">
 <div class="thumbnail">
 <p><a href="../news/golem-0.1.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.1.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1166,7 +1341,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://www.golemverse.org/news/index.html</guid>
-  <pubDate>Tue, 11 Apr 2023 09:56:10 GMT</pubDate>
+  <pubDate>Thu, 13 Apr 2023 09:22:15 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -18,7 +18,7 @@
     "href": "index.html#on-the-blog",
     "title": "R packages for building robust, production grade {shiny} apps.",
     "section": "On the blog ✍️",
-    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\nNo matching items"
+    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#contact",
@@ -39,7 +39,7 @@
     "href": "roadmap/index.html#short-term",
     "title": "golemverse’s roadmap",
     "section": "Short term",
-    "text": "Short term\n\n{golem} milestone 0.5.0 https://github.com/ThinkR-open/golem/milestone/1\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\n{shinidraw} : excalidraw in {shiny}\nMore hooks for {ghooks} https://github.com/ThinkR-open/ghooks\nRelease {fakir} on CRAN https://github.com/ThinkR-open/fakir/issues/6\nBring these packages to the golemverse:\n\nhttps://github.com/ColinFay/darkmode, ‘darkmode.js’ for ‘Shiny’\nhttps://github.com/ColinFay/skeleton, Skeleton CSS for Shiny\n\nQuestionning: should the following repos/packages be included to the golemverse?\n\nhttps://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny\nhttps://github.com/ColinFay/feathericons, Feather Icons for Shiny\nhttps://github.com/ColinFay/nessy, A ‘NES’ css for ‘Shiny’\nhttps://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny\nhttps://github.com/ColinFay/geoloc, Add geolocation inside your shiny app\nhttps://github.com/ColinFay/dockerstats, R Wrapper Around ‘docker stats’\nhttps://github.com/ColinFay/crrry, ‘crrri’ recipes for ‘shiny’\n\nWrite a blogpost about Prototyping (Excalidraw / shinipsum / fakir)"
+    "text": "Short term\n\n{golem} milestone 0.5.0 https://github.com/ThinkR-open/golem/milestone/1\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\n{shinidraw} : excalidraw in {shiny}\nMore hooks for {ghooks} https://github.com/ThinkR-open/ghooks\nRelease {fakir} on CRAN https://github.com/ThinkR-open/fakir/issues/6\nBring these packages to the golemverse:\n\nhttps://github.com/ColinFay/darkmode, ‘darkmode.js’ for ‘Shiny’\n\nQuestionning: should the following repos/packages be included to the golemverse?\n\nhttps://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny\nhttps://github.com/ColinFay/feathericons, Feather Icons for Shiny\nhttps://github.com/ColinFay/nessy, A ‘NES’ css for ‘Shiny’\nhttps://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny\nhttps://github.com/ColinFay/geoloc, Add geolocation inside your shiny app\nhttps://github.com/ColinFay/dockerstats, R Wrapper Around ‘docker stats’\nhttps://github.com/ColinFay/crrry, ‘crrri’ recipes for ‘shiny’\n\nWrite a blogpost about Prototyping (Excalidraw / shinipsum / fakir)"
   },
   {
     "objectID": "roadmap/index.html#mid-term",
@@ -165,7 +165,7 @@
     "href": "news/index.html",
     "title": "Posts",
     "section": "",
-    "text": "{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\n\nNo matching items"
+    "text": "Minimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "news/golem-0.3.2-release-on-cran/index.html",
@@ -285,6 +285,34 @@
     "title": "{golem} 0.4.0 is now available",
     "section": "Thanks",
     "text": "Thanks\nWe want to thank all the people who have contributed to this release since the v0.3.1, either by opening PR, feature requests, or bug report.\n@agronomofiorentini, @ajmoralesa, @ALanguillaume, @Andryas, @ArthurData, @asadow, @asbates, @asiripanich, @avsolovey, @Camil88, @campbead, @Cervangirard, @ColinFay, @connorcarolan, @D3SL, @DivadNojnarg, @dmenne, @Dobrokhotov1989, @earnaud, @em-dataIntegrityEnthusiast, @erikvona, @ethantenison, @etiennebacher, @fBedecarrats, @gabrielburcea, @ggpinto, @gioneves, @guivivi, @harell, @hedjour, @henrique1008, @ilyaZar, @isaactpetersen, @ivokwee, @jamieRowen, @jl5000, @JMPivette, @Jodavid, @JohnStaples, @Jopgood, @JulianoAtto, @KittJonathan, @KoderKow, @kyleweise, @leeroyaus, @lijian007, @MargotBr, @mark-druffel, @mcsiple, @mjbroerman, @nathansquan, @ncls33, @ncullen93, @novica, @pachadotdev, @psolymos, @pythiantech, @rezasz969, @seanhardison1, @shahreyar-abeer, @statnmap, @stheil15, @svenb78, @Swechhya, @Teebusch, @teofiln, @VincentGuyader, @waiteb5, @whipson, @wurli, @yogat3ch, and @YonghuiDong."
+  },
+  {
+    "objectID": "news/skeleteon-css-in-shiny/index.html",
+    "href": "news/skeleteon-css-in-shiny/index.html",
+    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
+    "section": "",
+    "text": "A dead simple, responsive, minimalist CSS framework.\nSkeleton css is a “a dead simple, responsive” CSS framework focused on mobile-first design and a minimalistic approach. It comes with a set of pre-defined styles for basic HTML elements such as typography, forms, buttons, tables, and grids, which can be easily customized. It is built with a 12-column grid system, making it easy to create flexible and responsive layouts for different screen sizes and devices."
+  },
+  {
+    "objectID": "news/skeleteon-css-in-shiny/index.html#skeleton",
+    "href": "news/skeleteon-css-in-shiny/index.html#skeleton",
+    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
+    "section": "{skeleton}",
+    "text": "{skeleton}\nI’m very happy to announce that the {shiny} wrapper for this framework is now fully functional, and available to download with:\npak::pak(\"ColinFay/skeleton\")\nFor a demo of an app built with {skeleton}, you can browse https://connect.thinkr.fr/prenoms/."
+  },
+  {
+    "objectID": "news/skeleteon-css-in-shiny/index.html#building-an-app-with-skeleton",
+    "href": "news/skeleteon-css-in-shiny/index.html#building-an-app-with-skeleton",
+    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
+    "section": "Building an app with {skeleton}",
+    "text": "Building an app with {skeleton}\n\nBasic apps\nBuilding an app with {skeleton} follows the same spirit as with {shiny} standard components: you start with a page, define a row, and this row can be split into 12 columns.\nlibrary(shiny)\nlibrary(skeleton)\n\nui <- sk_page(\n  h1(\"Hello world\"),\n  sk_row(\n    sk_col(\n      width = 6,\n      \"Hello\"\n    ),\n    sk_col(\n      width = 6,\n      \"World\"\n    )\n  ),\n  sk_row(\n    sk_col(\n      width = 12,\n      plotOutput(\"plot1\")\n    )\n  )\n)\n\nserver <- function(input, output) {\n  output$plot1 <- renderPlot({\n    plot(mtcars)\n  })\n}\n\nshinyApp(ui, server)\n\n\nBuilt-in dashboard\n{skeleton} also comes with a built-it dashboard mechanism, that can be defined with:\nsk_nav(\n  sk_nav_item(\n    id = \"one\",\n    title = \"ONE\",\n    ui = sk_row(\n      width = sk_col(\n        6,\n        \"Hello plot1\"\n      ),\n      sk_col(\n        width = 6,\n        plotOutput(\"plot1\")\n      )\n    )\n  )\n)\nAnd for a full app:\nlibrary(shiny)\nlibrary(skeleton)\nui <- sk_page(\n  sk_row(\n    h2(\"A dead simple, responsive boilerplate.\"),\n  ),\n  sk_nav(\n    sk_nav_item(\n      id = \"one\",\n      title = \"ONE\",\n      ui = sk_row(\n        sk_col(\n          6,\n          \"Hello plot1\"\n        ),\n        sk_col(\n          6,\n          plotOutput(\"plot1\")\n        )\n      )\n    ),\n    sk_nav_item(\n      id = \"two\",\n      title = \"TWO\",\n      ui = sk_row(\n        sk_col(\n          6,\n          plotOutput(\"plot2\")\n        ),\n        sk_col(\n          6,\n          \"Hello plot2\"\n        ),\n      )\n    )\n  )\n)\nshinyApp(ui, function(input, output) {\n  output$plot1 <- renderPlot({\n    plot(mtcars)\n  })\n  output$plot2 <- renderPlot({\n    plot(airquality)\n  })\n})\nIf you want to see a real life example of a dashboard built with {skeleton}, feel free to browse the source code of the prenoms app at https://github.com/ThinkR-open/prenoms-app.\n\n\n{golem} hooks\nYou can get a boilerplate of a page or a dashboard when creating an app with {golem}, using the built-in {golem} hooks:\ngolem::create_golem(\n  \"skboilerplate\",\n  project_hook = skeleton::ghook_sk_boilerplate\n)\ngolem::create_golem(\n  \"skdashboard\",\n  project_hook = skeleton::skeleton::ghook_sk_boilerplate\n)"
+  },
+  {
+    "objectID": "news/skeleteon-css-in-shiny/index.html#contribution-and-feedback",
+    "href": "news/skeleteon-css-in-shiny/index.html#contribution-and-feedback",
+    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
+    "section": "Contribution and feedback",
+    "text": "Contribution and feedback\nIf you have any feedback, feel free to open an issue at https://github.com/ColinFay/skeleton!"
   },
   {
     "objectID": "resources/index.html",

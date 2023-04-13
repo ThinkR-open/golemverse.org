@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/news/index.html",
+      "/news/skeleteon-css-in-shiny/index.html",
       "/news/golem-0.4.0-release-on-cran/index.html",
       "/news/golem-0.3.2-release-on-cran/index.html",
       "/news/golem-hacktoberfest-2021/index.html",
@@ -31,6 +32,7 @@
   {
     "listing": "/news/index.html",
     "items": [
+      "/news/skeleteon-css-in-shiny/index.html",
       "/news/golem-0.4.0-release-on-cran/index.html",
       "/news/golem-0.3.2-release-on-cran/index.html",
       "/news/golem-hacktoberfest-2021/index.html",
