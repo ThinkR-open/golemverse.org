@@ -1,0 +1,156 @@
+---
+title: "Minimalist and Elegant {shiny} apps with {skeleton}"
+author: colin
+date: "2023-04-13"
+---
+
+A dead simple, responsive, minimalist CSS framework.
+
+![](featured.png)
+
+[Skeleton css](http://getskeleton.com/) is a "a dead simple, responsive" CSS framework focused on mobile-first design and a minimalistic approach.
+It comes with a set of pre-defined styles for basic HTML elements such as typography, forms, buttons, tables, and grids, which can be easily customized. It is built with a 12-column grid system, making it easy to create flexible and responsive layouts for different screen sizes and devices.
+
+## {skeleton}
+
+I'm very happy to announce that the `{shiny}` wrapper for this framework is now fully functional, and available to download with:
+
+```r
+pak::pak("ColinFay/skeleton")
+```
+
+For a demo of an app built with `{skeleton}`, you can browse <https://connect.thinkr.fr/prenoms/>.
+
+<a hreaf = "https://connect.thinkr.fr/prenoms/" target = "_blank"><img src = "prenomsapp.png" width = "100%"></a>
+
+## Building an app with {skeleton}
+
+### Basic apps
+
+Building an app with `{skeleton}` follows the same spirit as with `{shiny}` standard components: you start with a page, define a row, and this row can be split into 12 columns.
+
+``` r
+library(shiny)
+library(skeleton)
+
+ui <- sk_page(
+  h1("Hello world"),
+  sk_row(
+    sk_col(
+      width = 6,
+      "Hello"
+    ),
+    sk_col(
+      width = 6,
+      "World"
+    )
+  ),
+  sk_row(
+    sk_col(
+      width = 12,
+      plotOutput("plot1")
+    )
+  )
+)
+
+server <- function(input, output) {
+  output$plot1 <- renderPlot({
+    plot(mtcars)
+  })
+}
+
+shinyApp(ui, server)
+```
+
+### Built-in dashboard
+
+`{skeleton}` also comes with a built-it dashboard mechanism, that can be defined with:
+
+```r
+sk_nav(
+  sk_nav_item(
+    id = "one",
+    title = "ONE",
+    ui = sk_row(
+      width = sk_col(
+        6,
+        "Hello plot1"
+      ),
+      sk_col(
+        width = 6,
+        plotOutput("plot1")
+      )
+    )
+  )
+)
+```
+And for a full app:
+
+``` r
+library(shiny)
+library(skeleton)
+ui <- sk_page(
+  sk_row(
+    h2("A dead simple, responsive boilerplate."),
+  ),
+  sk_nav(
+    sk_nav_item(
+      id = "one",
+      title = "ONE",
+      ui = sk_row(
+        sk_col(
+          6,
+          "Hello plot1"
+        ),
+        sk_col(
+          6,
+          plotOutput("plot1")
+        )
+      )
+    ),
+    sk_nav_item(
+      id = "two",
+      title = "TWO",
+      ui = sk_row(
+        sk_col(
+          6,
+          plotOutput("plot2")
+        ),
+        sk_col(
+          6,
+          "Hello plot2"
+        ),
+      )
+    )
+  )
+)
+shinyApp(ui, function(input, output) {
+  output$plot1 <- renderPlot({
+    plot(mtcars)
+  })
+  output$plot2 <- renderPlot({
+    plot(airquality)
+  })
+})
+```
+
+If you want to see a real life example of a dashboard built with `{skeleton}`, feel free to browse the source code of the `prenoms` app at <https://github.com/ThinkR-open/prenoms-app>.
+
+### {golem} hooks
+
+You can get a boilerplate of a page or a dashboard when creating an app with `{golem}`, using the built-in `{golem}` hooks:
+
+``` r
+golem::create_golem(
+  "skboilerplate",
+  project_hook = skeleton::ghook_sk_boilerplate
+)
+golem::create_golem(
+  "skdashboard",
+  project_hook = skeleton::skeleton::ghook_sk_boilerplate
+)
+```
+
+## Contribution and feedback
+
+If you have any feedback, feel free to open an issue at <https://github.com/ColinFay/skeleton>!
