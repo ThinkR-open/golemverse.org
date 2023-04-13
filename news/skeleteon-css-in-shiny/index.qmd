@@ -21,7 +21,7 @@ pak::pak("ColinFay/skeleton")
 
 For a demo of an app built with `{skeleton}`, you can browse <https://connect.thinkr.fr/prenoms/>.
 
-<a hreaf = "https://connect.thinkr.fr/prenoms/" target = "_blank"><img src = "prenomsapp.png" width = "100%"></a>
+<a href = "https://connect.thinkr.fr/prenoms/" target = "_blank"><img src = "prenomsapp.png" width = "100%"></a>
 
 ## Building an app with {skeleton}
 
