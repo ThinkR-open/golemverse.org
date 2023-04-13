@@ -291,7 +291,7 @@
     "href": "news/skeleteon-css-in-shiny/index.html",
     "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
     "section": "",
-    "text": "A dead simple, responsive, minimalist CSS framework.\nSkeleton css is a “a dead simple, responsive” CSS framework focused on mobile-first design and a minimalistic approach. It comes with a set of pre-defined styles for basic HTML elements such as typography, forms, buttons, tables, and grids, which can be easily customized. It is built with a 12-column grid system, making it easy to create flexible and responsive layouts for different screen sizes and devices."
+    "text": "A dead simple, responsive, minimalist CSS framework.\nSkeleton css is a “a dead simple, responsive” CSS boilerplate focused on mobile-first design and a minimalistic approach. It comes with a set of pre-defined styles for basic HTML elements such as typography, forms, buttons, tables, and grids, which can be easily customized. It is built with a 12-column grid system, making it easy to create flexible and responsive layouts for different screen sizes and devices."
   },
   {
     "objectID": "news/skeleteon-css-in-shiny/index.html#skeleton",
