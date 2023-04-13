@@ -21,7 +21,6 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 
 + Bring these packages to the golemverse:
   - https://github.com/ColinFay/darkmode, 'darkmode.js' for 'Shiny'
-  - https://github.com/ColinFay/skeleton, Skeleton CSS for Shiny
 
 + Questionning: should the following repos/packages be included to the golemverse?
   - https://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny
