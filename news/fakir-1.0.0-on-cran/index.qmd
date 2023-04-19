@@ -1,0 +1,71 @@
+---
+title: "{fakir} 1.0.0 is now on CRAN"
+author: colin
+date: "2023-04-19"
+---
+
+I'm very happy to announce that `{fakir}` is now on CRAN.
+
+`{fakir}` stands for `FAK`e `I`n `R`. It's a package that generates fake datasets that can be used for prototyping `{shiny}` apps or for teaching.
+
+![](fakir-header.png)
+
+## Installation
+
+You can install the latest version from your favorite CRAN repository with:
+
+```r
+install.packages("fakir")
+```
+
+## Examples
+
+### Fake support tickets
+
+```{r}
+fakir::fake_ticket_client(vol = 10)
+```
+
+### Fake dataset of connected wearables
+
+```{r}
+fakir::fake_products(10)
+```
+
+### Fake website visits
+
+```{r}
+fakir::fake_visits(
+  from = "2017-01-01",
+  to = "2017-01-31"
+)
+```
+
+
+## Contribution & Feedback
+
+You can contribute to ``{fakir}`` in various ways:
+
+### Feedback
+
+If you discover any bug or have any feedback on the dataset generators, feel free to [open an issue](https://github.com/ThinkR-open/fakir/issues/new) on the repo.
+
+### Translate
+
+Some datasets are available in french and english:
+
+```{r}
+fakir::fake_visits(
+  from = "2017-01-01",
+  to = "2017-01-31",
+  local = "fr_FR"
+)
+```
+
+And we will be very happy to bring new languages in the package.
+
+### New dataset
+
+Feel free to create new datasets generators.
+
+> If you want to contribute a new language or a new dataset, please open an issue first so that we can discuss and keep track of it!
