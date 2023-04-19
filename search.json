@@ -39,14 +39,14 @@
     "href": "roadmap/index.html#short-term",
     "title": "golemverse’s roadmap",
     "section": "Short term",
-    "text": "Short term\n\n{golem} milestone 0.5.0 https://github.com/ThinkR-open/golem/milestone/1\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\n{shinidraw} : excalidraw in {shiny}\nMore hooks for {ghooks} https://github.com/ThinkR-open/ghooks\nRelease {fakir} on CRAN https://github.com/ThinkR-open/fakir/issues/6\nBring these packages to the golemverse:\n\nhttps://github.com/ColinFay/darkmode, ‘darkmode.js’ for ‘Shiny’\n\nQuestionning: should the following repos/packages be included to the golemverse?\n\nhttps://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny\nhttps://github.com/ColinFay/feathericons, Feather Icons for Shiny\nhttps://github.com/ColinFay/nessy, A ‘NES’ css for ‘Shiny’\nhttps://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny\nhttps://github.com/ColinFay/geoloc, Add geolocation inside your shiny app\nhttps://github.com/ColinFay/dockerstats, R Wrapper Around ‘docker stats’\nhttps://github.com/ColinFay/crrry, ‘crrri’ recipes for ‘shiny’\n\nWrite a blogpost about Prototyping (Excalidraw / shinipsum / fakir)"
+    "text": "Short term\n\n{golem} milestone 0.5.0 https://github.com/ThinkR-open/golem/milestone/1\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\n{shinidraw} : excalidraw in {shiny}\nMore hooks for {ghooks} https://github.com/ThinkR-open/ghooks\nBring these packages to the golemverse:\n\nhttps://github.com/ColinFay/darkmode, ‘darkmode.js’ for ‘Shiny’\n\nQuestionning: should the following repos/packages be included to the golemverse?\n\nhttps://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny\nhttps://github.com/ColinFay/feathericons, Feather Icons for Shiny\nhttps://github.com/ColinFay/nessy, A ‘NES’ css for ‘Shiny’\nhttps://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny\nhttps://github.com/ColinFay/geoloc, Add geolocation inside your shiny app\nhttps://github.com/ColinFay/dockerstats, R Wrapper Around ‘docker stats’\nhttps://github.com/ColinFay/crrry, ‘crrri’ recipes for ‘shiny’\n\nWrite a blogpost about {gargoyle}"
   },
   {
     "objectID": "roadmap/index.html#mid-term",
     "href": "roadmap/index.html#mid-term",
     "title": "golemverse’s roadmap",
     "section": "Mid term",
-    "text": "Mid term\n\nStable, production ready {brochure}\nDashboard template for {brochure}\nBlog post about :\n\n{gargoyle}\n{elvis}\n\nNew fake data in {fakir}\nNew ipsum in {shinipsum}\nRelease on CRAN :\n\n{bank}\n{elvis}"
+    "text": "Mid term\n\nStable, production ready {brochure}\nDashboard template for {brochure}\nBlog post about :\n\n{elvis}\n\nNew fake data in {fakir}\nNew ipsum in {shinipsum}\nRelease on CRAN :\n\n{bank}\n{elvis}"
   },
   {
     "objectID": "roadmap/index.html#long-term",
