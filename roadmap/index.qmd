@@ -11,27 +11,25 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 
 + `{golem}` milestone 0.5.0 <https://github.com/ThinkR-open/golem/milestone/1>
 
-+ Integrate a storage mechanism in `{gargoyle}`. I'm thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12
++ Integrate a storage mechanism in `{gargoyle}`. I'm thinking of a simple port of <https://github.com/ColinFay/odds>. <https://github.com/ColinFay/gargoyle/issues/12>
 
 + `{shinidraw}` : excalidraw in `{shiny}`
 
-+ More hooks for `{ghooks}` https://github.com/ThinkR-open/ghooks
-
-+ Release `{fakir}` on CRAN https://github.com/ThinkR-open/fakir/issues/6
++ More hooks for `{ghooks}` <https://github.com/ThinkR-open/ghooks>
 
 + Bring these packages to the golemverse:
-  - https://github.com/ColinFay/darkmode, 'darkmode.js' for 'Shiny'
+  - <https://github.com/ColinFay/darkmode>, 'darkmode.js' for 'Shiny'
 
 + Questionning: should the following repos/packages be included to the golemverse?
-  - https://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny
-  - https://github.com/ColinFay/feathericons, Feather Icons for Shiny
-  - https://github.com/ColinFay/nessy, A 'NES' css for 'Shiny'
-  - https://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny
-  - https://github.com/ColinFay/geoloc, Add geolocation inside your shiny app
-  - https://github.com/ColinFay/dockerstats, R Wrapper Around 'docker stats'
-  - https://github.com/ColinFay/crrry, 'crrri' recipes for 'shiny'
+  - <https://github.com/ColinFay/handydandy>, Easy CSS Styling for Shiny
+  - <https://github.com/ColinFay/feathericons>, Feather Icons for Shiny
+  - <https://github.com/ColinFay/nessy>, A 'NES' css for 'Shiny'
+  - <https://github.com/ColinFay/resume>, Bootstrap Resume Template for Shiny
+  - <https://github.com/ColinFay/geoloc>, Add geolocation inside your shiny app
+  - <https://github.com/ColinFay/dockerstats>, R Wrapper Around 'docker stats'
+  - <https://github.com/ColinFay/crrry>, 'crrri' recipes for 'shiny'
 
-+ Write a blogpost about Prototyping (Excalidraw / shinipsum / fakir)
++ Write a blogpost about `{gargoyle}`
 
 ## Mid term
 
@@ -40,7 +38,6 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 + Dashboard template for `{brochure}`
 
 + Blog post about :
-  - `{gargoyle}`
   - `{elvis}`
 
 + New fake data in `{fakir}`
