@@ -10,7 +10,150 @@
 <atom:link href="https://www.golemverse.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to the golemverse!</description>
 <generator>quarto-1.2.475</generator>
-<lastBuildDate>Thu, 13 Apr 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 19 Apr 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>{fakir} 1.0.0 is now on CRAN</title>
+  <dc:creator>colin</dc:creator>
+  <link>https://www.golemverse.org/news/fakir-1.0.0-on-cran/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I’m very happy to announce that <code>{fakir}</code> is now on CRAN.</p>
+<p><code>{fakir}</code> stands for <code>FAK</code>e <code>I</code>n <code>R</code>. It’s a package that generates fake datasets that can be used for prototyping <code>{shiny}</code> apps or for teaching.</p>
+<p><img src="https://www.golemverse.org/news/fakir-1.0.0-on-cran/fakir-header.png" class="img-fluid"></p>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<p>You can install the latest version from your favorite CRAN repository with:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">install.packages</span>(<span class="st" style="color: #20794D;">"fakir"</span>)</span></code></pre></div>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<section id="fake-support-tickets" class="level3">
+<h3 class="anchored" data-anchor-id="fake-support-tickets">Fake support tickets</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">fakir<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">fake_ticket_client</span>(<span class="at" style="color: #657422;">vol =</span> <span class="dv" style="color: #AD0000;">10</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 25
+   ref           num_client first    last  job     age region id_dpt departement
+   &lt;chr&gt;         &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;      
+ 1 DOSS-AMQN-002 79         Jovan    O'Ke… Gene…    22 Bourg… 58     Nièvre     
+ 2 DOSS-NCKJ-010 69         Miss     Lean… Emer…    68 &lt;NA&gt;   36     Indre      
+ 3 DOSS-GPBE-009 120        Odell    Stok… Engi…    24 Limou… 87     Haute-Vien…
+ 4 DOSS-GRLN-001 31         Loren    Lars… &lt;NA&gt;     NA Centre 36     Indre      
+ 5 DOSS-LEPJ-004 59         Maybelle Maye… Furt…    18 Champ… 08     Ardennes   
+ 6 DOSS-DUCL-005 118        Jamarion Ober… Engi…    18 Alsace 67     Bas-Rhin   
+ 7 DOSS-OCED-003 77         Lee      Scha… Admi…    NA Auver… 03     Allier     
+ 8 DOSS-KXSJ-007 65         Demetric Auer  Cont…    21 Centre 45     Loiret     
+ 9 DOSS-UITD-006 141        Wilfrid  Harv… Educ…    53 Aquit… 40     Landes     
+10 DOSS-SHKL-008 182        Addyson  Nien… Earl…    65 Prove… 84     Vaucluse   
+# ℹ 16 more variables: cb_provider &lt;chr&gt;, name &lt;chr&gt;, entry_date &lt;dttm&gt;,
+#   fidelity_points &lt;dbl&gt;, priority_encoded &lt;dbl&gt;, priority &lt;fct&gt;,
+#   timestamp &lt;date&gt;, year &lt;dbl&gt;, month &lt;dbl&gt;, day &lt;int&gt;, supported &lt;chr&gt;,
+#   supported_encoded &lt;int&gt;, type &lt;chr&gt;, type_encoded &lt;int&gt;, state &lt;fct&gt;,
+#   source_call &lt;fct&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="fake-dataset-of-connected-wearables" class="level3">
+<h3 class="anchored" data-anchor-id="fake-dataset-of-connected-wearables">Fake dataset of connected wearables</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">fakir<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">fake_products</span>(<span class="dv" style="color: #AD0000;">10</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 8
+   name                 brand color price body_location category sent_from    id
+   &lt;chr&gt;                &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;    &lt;chr&gt;     &lt;int&gt;
+ 1 Step and Distance P… Lark… Pink      3 Waist         Industr… Taiwan        1
+ 2 Biking Tracker U Pr… Lark… Oliv…     5 Waist         Pets an… United S…     2
+ 3 Wearable Transmitte… Moen… Beige     4 Feet          Lifesty… Netherla…     3
+ 4 Multifunction Track… Weim… Yell…     5 Head          Lifesty… China         4
+ 5 Action Camera Pro    Blan… Mocc…    10 Brain         Lifesty… Italy         5
+ 6 Strapless Heart Rat… Mann… Deep…     4 Head          Medical  Finland       6
+ 7 Action Camera RE Pr… Mann… Maro…     5 Feet          Enterta… Finland       7
+ 8 Microcontroller ES   Moen… Pink      3 Neck          Fitness  Finland       8
+ 9 Microcontroller OGB… Moen… Plum      5 Arms          Awesome  France        9
+10 Wearable AUSG with … Moen… Dark…     9 Torso         Medical  Italy        10</code></pre>
+</div>
+</div>
+</section>
+<section id="fake-website-visits" class="level3">
+<h3 class="anchored" data-anchor-id="fake-website-visits">Fake website visits</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">fakir<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">fake_visits</span>(</span>
+<span id="cb6-2">  <span class="at" style="color: #657422;">from =</span> <span class="st" style="color: #20794D;">"2017-01-01"</span>,</span>
+<span id="cb6-3">  <span class="at" style="color: #657422;">to =</span> <span class="st" style="color: #20794D;">"2017-01-31"</span></span>
+<span id="cb6-4">)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 31 × 8
+   timestamp   year month   day  home about  blog contact
+ * &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;
+ 1 2017-01-01  2017     1     1   369   220   404     210
+ 2 2017-01-02  2017     1     2   159   250   414     490
+ 3 2017-01-03  2017     1     3   436   170   498     456
+ 4 2017-01-04  2017     1     4    NA   258   526     392
+ 5 2017-01-05  2017     1     5   362    NA   407     291
+ 6 2017-01-06  2017     1     6   245   145   576      90
+ 7 2017-01-07  2017     1     7    NA    NA   484     167
+ 8 2017-01-08  2017     1     8   461   103   441      NA
+ 9 2017-01-09  2017     1     9   337   113   673     379
+10 2017-01-10  2017     1    10    NA   169   308     139
+# ℹ 21 more rows</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="contribution-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="contribution-feedback">Contribution &amp; Feedback</h2>
+<p>You can contribute to <code>{fakir}</code> in various ways:</p>
+<section id="feedback" class="level3">
+<h3 class="anchored" data-anchor-id="feedback">Feedback</h3>
+<p>If you discover any bug or have any feedback on the dataset generators, feel free to <a href="https://github.com/ThinkR-open/fakir/issues/new">open an issue</a> on the repo.</p>
+</section>
+<section id="translate" class="level3">
+<h3 class="anchored" data-anchor-id="translate">Translate</h3>
+<p>Some datasets are available in french and english:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">fakir<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">fake_visits</span>(</span>
+<span id="cb8-2">  <span class="at" style="color: #657422;">from =</span> <span class="st" style="color: #20794D;">"2017-01-01"</span>,</span>
+<span id="cb8-3">  <span class="at" style="color: #657422;">to =</span> <span class="st" style="color: #20794D;">"2017-01-31"</span>,</span>
+<span id="cb8-4">  <span class="at" style="color: #657422;">local =</span> <span class="st" style="color: #20794D;">"fr_FR"</span></span>
+<span id="cb8-5">)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 31 × 8
+   dates         an  mois  jour accueil a_propos  blog contact
+ * &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;   &lt;int&gt;    &lt;int&gt; &lt;int&gt;   &lt;int&gt;
+ 1 2017-01-01  2017     1     1     369      220   404     210
+ 2 2017-01-02  2017     1     2     159      250   414     490
+ 3 2017-01-03  2017     1     3     436      170   498     456
+ 4 2017-01-04  2017     1     4      NA      258   526     392
+ 5 2017-01-05  2017     1     5     362       NA   407     291
+ 6 2017-01-06  2017     1     6     245      145   576      90
+ 7 2017-01-07  2017     1     7      NA       NA   484     167
+ 8 2017-01-08  2017     1     8     461      103   441      NA
+ 9 2017-01-09  2017     1     9     337      113   673     379
+10 2017-01-10  2017     1    10      NA      169   308     139
+# ℹ 21 more rows</code></pre>
+</div>
+</div>
+<p>And we will be very happy to bring new languages in the package.</p>
+</section>
+<section id="new-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="new-dataset">New dataset</h3>
+<p>Feel free to create new datasets generators.</p>
+<blockquote class="blockquote">
+<p>If you want to contribute a new language or a new dataset, please open an issue first so that we can discuss and keep track of it!</p>
+</blockquote>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://www.golemverse.org/news/fakir-1.0.0-on-cran/index.html</guid>
+  <pubDate>Wed, 19 Apr 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://www.golemverse.org/news/fakir-1.0.0-on-cran/fakir-header.png" medium="image" type="image/png" height="72" width="144"/>
+</item>
 <item>
   <title>Minimalist and Elegant {shiny} apps with {skeleton}</title>
   <dc:creator>colin</dc:creator>
@@ -1139,7 +1282,35 @@ sample estimates:
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-sample-listings">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1681913135918" data-listing-reading-time-sort="3.47">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1681862400000" data-listing-file-modified-sort="1681933129667" data-listing-reading-time-sort="0.83">
+<div class="thumbnail">
+<p><a href="../news/fakir-1.0.0-on-cran/index.html"> <img src="https://www.golemverse.org/news/fakir-1.0.0-on-cran/fakir-header.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../news/fakir-1.0.0-on-cran/index.html">
+<h3 class="no-anchor listing-title">
+{fakir} 1.0.0 is now on CRAN
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<!-- desc(5A0113B34292)[max=175]:news/fakir-1.0.0-on-cran/index.html -->
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../news/fakir-1.0.0-on-cran/index.html">
+<div class="listing-date">
+Apr 19, 2023
+</div>
+<div class="listing-author">
+colin
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1681933129675" data-listing-reading-time-sort="3.47">
 <div class="thumbnail">
 <p><a href="../news/skeleteon-css-in-shiny/index.html"> <img src="https://www.golemverse.org/news/skeleteon-css-in-shiny/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1167,7 +1338,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1681913135918" data-listing-reading-time-sort="6.215">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1681933129671" data-listing-reading-time-sort="6.215">
 <div class="thumbnail">
 <p><a href="../news/golem-0.4.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.4.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1195,7 +1366,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1681913135914" data-listing-reading-time-sort="2.12">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1681933129667" data-listing-reading-time-sort="2.12">
 <div class="thumbnail">
 <p><a href="../news/golem-0.3.2-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.2-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1223,7 +1394,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1681913135918" data-listing-reading-time-sort="1.375">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1681933129675" data-listing-reading-time-sort="1.375">
 <div class="thumbnail">
 <p><a href="../news/golem-hacktoberfest-2021/index.html"> <img src="https://www.golemverse.org/news/golem-hacktoberfest-2021/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1251,7 +1422,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1681913135914" data-listing-reading-time-sort="8.04">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1681933129667" data-listing-reading-time-sort="8.04">
 <div class="thumbnail">
 <p><a href="../news/golem-0.3.1-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.1-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1279,7 +1450,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1681913135910" data-listing-reading-time-sort="1.42">
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1681933129667" data-listing-reading-time-sort="1.42">
 <div class="thumbnail">
 <p><a href="../news/2020-05-10_shinipsum-cran-realease/index.html"> <img src="https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1307,7 +1478,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1681913135914" data-listing-reading-time-sort="0.09">
+<div class="quarto-post image-right" data-index="7" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1681933129667" data-listing-reading-time-sort="0.09">
 <div class="thumbnail">
 <p><a href="../news/golem-0.1.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.1.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
 </div>
@@ -1341,7 +1512,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://www.golemverse.org/news/index.html</guid>
-  <pubDate>Wed, 19 Apr 2023 14:06:03 GMT</pubDate>
+  <pubDate>Wed, 19 Apr 2023 19:39:03 GMT</pubDate>
 </item>
 </channel>
 </rss>

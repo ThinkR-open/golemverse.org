@@ -18,7 +18,7 @@
     "href": "index.html#on-the-blog",
     "title": "R packages for building robust, production grade {shiny} apps.",
     "section": "On the blog ✍️",
-    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\nNo matching items"
+    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosts\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n{fakir} 1.0.0 is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#contact",
@@ -165,7 +165,7 @@
     "href": "news/index.html",
     "title": "Posts",
     "section": "",
-    "text": "Minimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\n\nNo matching items"
+    "text": "{fakir} 1.0.0 is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n  \n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "news/golem-0.3.2-release-on-cran/index.html",
@@ -285,6 +285,34 @@
     "title": "{golem} 0.4.0 is now available",
     "section": "Thanks",
     "text": "Thanks\nWe want to thank all the people who have contributed to this release since the v0.3.1, either by opening PR, feature requests, or bug report.\n@agronomofiorentini, @ajmoralesa, @ALanguillaume, @Andryas, @ArthurData, @asadow, @asbates, @asiripanich, @avsolovey, @Camil88, @campbead, @Cervangirard, @ColinFay, @connorcarolan, @D3SL, @DivadNojnarg, @dmenne, @Dobrokhotov1989, @earnaud, @em-dataIntegrityEnthusiast, @erikvona, @ethantenison, @etiennebacher, @fBedecarrats, @gabrielburcea, @ggpinto, @gioneves, @guivivi, @harell, @hedjour, @henrique1008, @ilyaZar, @isaactpetersen, @ivokwee, @jamieRowen, @jl5000, @JMPivette, @Jodavid, @JohnStaples, @Jopgood, @JulianoAtto, @KittJonathan, @KoderKow, @kyleweise, @leeroyaus, @lijian007, @MargotBr, @mark-druffel, @mcsiple, @mjbroerman, @nathansquan, @ncls33, @ncullen93, @novica, @pachadotdev, @psolymos, @pythiantech, @rezasz969, @seanhardison1, @shahreyar-abeer, @statnmap, @stheil15, @svenb78, @Swechhya, @Teebusch, @teofiln, @VincentGuyader, @waiteb5, @whipson, @wurli, @yogat3ch, and @YonghuiDong."
+  },
+  {
+    "objectID": "news/fakir-1.0.0-on-cran/index.html",
+    "href": "news/fakir-1.0.0-on-cran/index.html",
+    "title": "{fakir} 1.0.0 is now on CRAN",
+    "section": "",
+    "text": "I’m very happy to announce that {fakir} is now on CRAN.\n{fakir} stands for FAKe In R. It’s a package that generates fake datasets that can be used for prototyping {shiny} apps or for teaching."
+  },
+  {
+    "objectID": "news/fakir-1.0.0-on-cran/index.html#installation",
+    "href": "news/fakir-1.0.0-on-cran/index.html#installation",
+    "title": "{fakir} 1.0.0 is now on CRAN",
+    "section": "Installation",
+    "text": "Installation\nYou can install the latest version from your favorite CRAN repository with:\ninstall.packages(\"fakir\")"
+  },
+  {
+    "objectID": "news/fakir-1.0.0-on-cran/index.html#examples",
+    "href": "news/fakir-1.0.0-on-cran/index.html#examples",
+    "title": "{fakir} 1.0.0 is now on CRAN",
+    "section": "Examples",
+    "text": "Examples\n\nFake support tickets\n\nfakir::fake_ticket_client(vol = 10)\n\n# A tibble: 10 × 25\n   ref           num_client first    last  job     age region id_dpt departement\n   <chr>         <chr>      <chr>    <chr> <chr> <dbl> <chr>  <chr>  <chr>      \n 1 DOSS-AMQN-002 79         Jovan    O'Ke… Gene…    22 Bourg… 58     Nièvre     \n 2 DOSS-NCKJ-010 69         Miss     Lean… Emer…    68 <NA>   36     Indre      \n 3 DOSS-GPBE-009 120        Odell    Stok… Engi…    24 Limou… 87     Haute-Vien…\n 4 DOSS-GRLN-001 31         Loren    Lars… <NA>     NA Centre 36     Indre      \n 5 DOSS-LEPJ-004 59         Maybelle Maye… Furt…    18 Champ… 08     Ardennes   \n 6 DOSS-DUCL-005 118        Jamarion Ober… Engi…    18 Alsace 67     Bas-Rhin   \n 7 DOSS-OCED-003 77         Lee      Scha… Admi…    NA Auver… 03     Allier     \n 8 DOSS-KXSJ-007 65         Demetric Auer  Cont…    21 Centre 45     Loiret     \n 9 DOSS-UITD-006 141        Wilfrid  Harv… Educ…    53 Aquit… 40     Landes     \n10 DOSS-SHKL-008 182        Addyson  Nien… Earl…    65 Prove… 84     Vaucluse   \n# ℹ 16 more variables: cb_provider <chr>, name <chr>, entry_date <dttm>,\n#   fidelity_points <dbl>, priority_encoded <dbl>, priority <fct>,\n#   timestamp <date>, year <dbl>, month <dbl>, day <int>, supported <chr>,\n#   supported_encoded <int>, type <chr>, type_encoded <int>, state <fct>,\n#   source_call <fct>\n\n\n\n\nFake dataset of connected wearables\n\nfakir::fake_products(10)\n\n# A tibble: 10 × 8\n   name                 brand color price body_location category sent_from    id\n   <chr>                <chr> <chr> <int> <chr>         <chr>    <chr>     <int>\n 1 Step and Distance P… Lark… Pink      3 Waist         Industr… Taiwan        1\n 2 Biking Tracker U Pr… Lark… Oliv…     5 Waist         Pets an… United S…     2\n 3 Wearable Transmitte… Moen… Beige     4 Feet          Lifesty… Netherla…     3\n 4 Multifunction Track… Weim… Yell…     5 Head          Lifesty… China         4\n 5 Action Camera Pro    Blan… Mocc…    10 Brain         Lifesty… Italy         5\n 6 Strapless Heart Rat… Mann… Deep…     4 Head          Medical  Finland       6\n 7 Action Camera RE Pr… Mann… Maro…     5 Feet          Enterta… Finland       7\n 8 Microcontroller ES   Moen… Pink      3 Neck          Fitness  Finland       8\n 9 Microcontroller OGB… Moen… Plum      5 Arms          Awesome  France        9\n10 Wearable AUSG with … Moen… Dark…     9 Torso         Medical  Italy        10\n\n\n\n\nFake website visits\n\nfakir::fake_visits(\n  from = \"2017-01-01\",\n  to = \"2017-01-31\"\n)\n\n# A tibble: 31 × 8\n   timestamp   year month   day  home about  blog contact\n * <date>     <dbl> <dbl> <int> <int> <int> <int>   <int>\n 1 2017-01-01  2017     1     1   369   220   404     210\n 2 2017-01-02  2017     1     2   159   250   414     490\n 3 2017-01-03  2017     1     3   436   170   498     456\n 4 2017-01-04  2017     1     4    NA   258   526     392\n 5 2017-01-05  2017     1     5   362    NA   407     291\n 6 2017-01-06  2017     1     6   245   145   576      90\n 7 2017-01-07  2017     1     7    NA    NA   484     167\n 8 2017-01-08  2017     1     8   461   103   441      NA\n 9 2017-01-09  2017     1     9   337   113   673     379\n10 2017-01-10  2017     1    10    NA   169   308     139\n# ℹ 21 more rows"
+  },
+  {
+    "objectID": "news/fakir-1.0.0-on-cran/index.html#contribution-feedback",
+    "href": "news/fakir-1.0.0-on-cran/index.html#contribution-feedback",
+    "title": "{fakir} 1.0.0 is now on CRAN",
+    "section": "Contribution & Feedback",
+    "text": "Contribution & Feedback\nYou can contribute to {fakir} in various ways:\n\nFeedback\nIf you discover any bug or have any feedback on the dataset generators, feel free to open an issue on the repo.\n\n\nTranslate\nSome datasets are available in french and english:\n\nfakir::fake_visits(\n  from = \"2017-01-01\",\n  to = \"2017-01-31\",\n  local = \"fr_FR\"\n)\n\n# A tibble: 31 × 8\n   dates         an  mois  jour accueil a_propos  blog contact\n * <date>     <dbl> <dbl> <int>   <int>    <int> <int>   <int>\n 1 2017-01-01  2017     1     1     369      220   404     210\n 2 2017-01-02  2017     1     2     159      250   414     490\n 3 2017-01-03  2017     1     3     436      170   498     456\n 4 2017-01-04  2017     1     4      NA      258   526     392\n 5 2017-01-05  2017     1     5     362       NA   407     291\n 6 2017-01-06  2017     1     6     245      145   576      90\n 7 2017-01-07  2017     1     7      NA       NA   484     167\n 8 2017-01-08  2017     1     8     461      103   441      NA\n 9 2017-01-09  2017     1     9     337      113   673     379\n10 2017-01-10  2017     1    10      NA      169   308     139\n# ℹ 21 more rows\n\n\nAnd we will be very happy to bring new languages in the package.\n\n\nNew dataset\nFeel free to create new datasets generators.\n\nIf you want to contribute a new language or a new dataset, please open an issue first so that we can discuss and keep track of it!"
   },
   {
     "objectID": "news/skeleteon-css-in-shiny/index.html",
