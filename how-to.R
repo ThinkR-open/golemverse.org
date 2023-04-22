@@ -2,7 +2,7 @@
 
 ### Add an article
 
-article_slug <- "about-prototyping-shiny-apps"
+article_slug <- "skeleteon-css-in-shiny"
 dir.create(
   file.path("news", article_slug)
 )
@@ -12,7 +12,7 @@ file.create(
 write(
   sprintf(
    '---
-title: "About prototyping shiny apps"
+title: "Minimalist and Elegant {shiny} apps with {skeleton}"
 author: colin
 date: "%s"
 draft: true
@@ -20,7 +20,7 @@ draft: true
   ),
   file.path("news", article_slug, "index.qmd")
 )
-file.edit(file.path("news", article_slug, "index.qmd"))
+rstudioapi::navigateToFile(file.path("news", article_slug, "index.qmd"))
 ### Add a package
 
 #### Render all packages

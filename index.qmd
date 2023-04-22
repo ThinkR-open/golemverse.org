@@ -45,6 +45,8 @@ install.packages("golemverse")
 
 - `{skeleton}`, `r utils::packageDescription("skeleton")[["Title"]]`
 
+- `{shinidraw}`, `r utils::packageDescription("shinidraw")[["Title"]]`
+
 - `{shinipsum}`, `r utils::packageDescription("shinipsum")[["Title"]]`
 
 - `{w3css}`, `r utils::packageDescription("w3css")[["Title"]]`

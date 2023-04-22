@@ -59,3 +59,8 @@ package:
     description: "`{skeleton}` brings the [skeleton CSS](http://getskeleton.com/) to `{shiny}` for lightweight, minimal and elegant web apps ."
     repo: https://github.com/colinfay/skeleton
     lifecycle: experimental
+  shinidraw:
+    title: "Excalidraw in `{shiny}`."
+    description: "Bringing Excalidraw to your R console, with built-in project management."
+    repo: https://github.com/thinkr-open/shinidraw
+    lifecycle: experimental
