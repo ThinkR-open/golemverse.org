@@ -2,126 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.golemverse.org/index.html</loc>
-    <lastmod>2023-04-19T19:39:03.807Z</lastmod>
+    <lastmod>2023-04-22T06:53:42.307Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/roadmap/index.html</loc>
-    <lastmod>2023-04-19T19:39:04.471Z</lastmod>
+    <lastmod>2023-04-22T06:53:42.967Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/golem/index.html</loc>
-    <lastmod>2023-04-19T19:39:04.787Z</lastmod>
+    <lastmod>2023-04-22T06:53:43.275Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/index.html</loc>
-    <lastmod>2023-04-19T19:39:05.307Z</lastmod>
+    <lastmod>2023-04-22T06:53:43.811Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/gemstones/index.html</loc>
-    <lastmod>2023-04-19T19:39:05.603Z</lastmod>
+    <lastmod>2023-04-22T06:53:44.099Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/brochure/index.html</loc>
-    <lastmod>2023-04-19T19:39:05.895Z</lastmod>
+    <lastmod>2023-04-22T06:53:44.407Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/w3css/index.html</loc>
-    <lastmod>2023-04-19T19:39:06.215Z</lastmod>
+    <lastmod>2023-04-22T06:53:44.719Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/bank/index.html</loc>
-    <lastmod>2023-04-19T19:39:06.511Z</lastmod>
+    <lastmod>2023-04-22T06:53:45.023Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/skeleton/index.html</loc>
-    <lastmod>2023-04-19T19:39:06.827Z</lastmod>
+    <lastmod>2023-04-22T06:53:45.307Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.golemverse.org/packages/shinidraw/index.html</loc>
+    <lastmod>2023-04-22T06:53:45.595Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/dockerfiler/index.html</loc>
-    <lastmod>2023-04-19T19:39:07.139Z</lastmod>
+    <lastmod>2023-04-22T06:53:45.879Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/elvis/index.html</loc>
-    <lastmod>2023-04-19T19:39:07.435Z</lastmod>
+    <lastmod>2023-04-22T06:53:46.203Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/ghooks/index.html</loc>
-    <lastmod>2023-04-19T19:39:07.763Z</lastmod>
+    <lastmod>2023-04-22T06:53:46.515Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/fakir/index.html</loc>
-    <lastmod>2023-04-19T19:39:08.079Z</lastmod>
+    <lastmod>2023-04-22T06:53:46.811Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/shinipsum/index.html</loc>
-    <lastmod>2023-04-19T19:39:08.375Z</lastmod>
+    <lastmod>2023-04-22T06:53:47.095Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/gargoyle/index.html</loc>
-    <lastmod>2023-04-19T19:39:08.699Z</lastmod>
+    <lastmod>2023-04-22T06:53:47.407Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-0.1.0-release-on-cran/index.html</loc>
-    <lastmod>2023-04-19T19:39:09.027Z</lastmod>
+    <lastmod>2023-04-22T06:53:47.723Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/index.html</loc>
-    <lastmod>2023-04-19T19:39:09.423Z</lastmod>
+    <lastmod>2023-04-22T06:53:48.107Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-0.3.2-release-on-cran/index.html</loc>
-    <lastmod>2023-04-19T19:39:09.971Z</lastmod>
+    <lastmod>2023-04-22T06:53:48.635Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-hacktoberfest-2021/index.html</loc>
-    <lastmod>2023-04-19T19:39:10.291Z</lastmod>
+    <lastmod>2023-04-22T06:53:48.943Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-0.3.1-release-on-cran/index.html</loc>
-    <lastmod>2023-04-19T19:39:10.991Z</lastmod>
+    <lastmod>2023-04-22T06:53:49.619Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/index.html</loc>
-    <lastmod>2023-04-19T19:39:11.531Z</lastmod>
+    <lastmod>2023-04-22T06:53:50.139Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-0.4.0-release-on-cran/index.html</loc>
-    <lastmod>2023-04-19T19:39:12.803Z</lastmod>
+    <lastmod>2023-04-22T06:53:51.371Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/fakir-1.0.0-on-cran/index.html</loc>
-    <lastmod>2023-04-19T19:39:13.327Z</lastmod>
+    <lastmod>2023-04-22T06:53:51.879Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/skeleteon-css-in-shiny/index.html</loc>
-    <lastmod>2023-04-19T19:39:13.839Z</lastmod>
+    <lastmod>2023-04-22T06:53:52.387Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/resources/index.html</loc>
-    <lastmod>2023-04-19T19:39:14.191Z</lastmod>
+    <lastmod>2023-04-22T06:53:52.751Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/index.html</loc>
-    <lastmod>2023-04-19T19:39:14.879Z</lastmod>
+    <lastmod>2023-04-22T06:53:53.415Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/2020-01-13-twitch/index.html</loc>
-    <lastmod>2023-04-19T19:39:15.363Z</lastmod>
+    <lastmod>2023-04-22T06:53:53.891Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/2022-02-10-twitch/index.html</loc>
-    <lastmod>2023-04-19T19:39:15.839Z</lastmod>
+    <lastmod>2023-04-22T06:53:54.371Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/2020-01-23-twitch/index.html</loc>
-    <lastmod>2023-04-19T19:39:16.359Z</lastmod>
+    <lastmod>2023-04-22T06:53:54.851Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/2020-04-02-twitch/index.html</loc>
-    <lastmod>2023-04-19T19:39:16.863Z</lastmod>
+    <lastmod>2023-04-22T06:53:55.351Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/documentation/index.html</loc>
-    <lastmod>2023-04-19T19:39:17.167Z</lastmod>
+    <lastmod>2023-04-22T06:53:55.627Z</lastmod>
   </url>
 </urlset>

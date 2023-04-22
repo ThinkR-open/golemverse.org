@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "R packages for building robust, production grade {shiny} apps.",
     "section": "",
-    "text": "The golemverse is a collection of R packages for building {shiny} apps that need to be safely shipped to production.\n\n\n\n\n{bank}, Extra Cache\n{brochure}, Multipage ‘Shiny’ Apps\n{dockerfiler}, Easy Dockerfile Creation from R\n{elvis}, ‘Shiny’ renderers and observers made safer\n{fakir}, Create Fake Data in R for tutorials\n{gargoyle}, An Event-Based Mechanism for ‘Shiny’\n{gemstones}, Make Your ‘golem’ App Shine\n{golem}, Make Your ‘golem’ App Shine\n{ghooks}, ‘Golem’ Hooks for Standard ‘Shiny’ Apps\n{skeleton}, Skeleton CSS for Shiny\n{shinipsum}, Lorem-Ipsum Helper Function for ‘shiny’ Prototyping\n{w3css}, W3CSS for ‘shiny’"
+    "text": "The golemverse is a collection of R packages for building {shiny} apps that need to be safely shipped to production.\n\n\n\n\n{bank}, Extra Cache\n{brochure}, Multipage ‘Shiny’ Apps\n{dockerfiler}, Easy Dockerfile Creation from R\n{elvis}, ‘Shiny’ renderers and observers made safer\n{fakir}, Create Fake Data in R for tutorials\n{gargoyle}, An Event-Based Mechanism for ‘Shiny’\n{gemstones}, Make Your ‘golem’ App Shine\n{golem}, Make Your ‘golem’ App Shine\n{ghooks}, ‘Golem’ Hooks for Standard ‘Shiny’ Apps\n{skeleton}, Skeleton CSS for Shiny\n{shinidraw}, ‘Excalidraw’ in ‘Shiny’\n{shinipsum}, Lorem-Ipsum Helper Function for ‘shiny’ Prototyping\n{w3css}, W3CSS for ‘shiny’"
   },
   {
     "objectID": "index.html#read-the-book",
@@ -74,7 +74,7 @@
     "href": "packages/index.html#cran-status-monthly-download-and-other-stats",
     "title": "Packages",
     "section": "CRAN status, Monthly download, and other stats",
-    "text": "CRAN status, Monthly download, and other stats\n\n\n\n\n\n\n\n\n\n\n\n\nPackage\nLifecycle\nCRAN Version\nMonthly Downloads\nR-CMD-Check\nGitHub Stars\nGitHub Issues\n\n\n\n\ngolem\n\n \n \n \nStars\nIssues\n\n\nshinipsum\n\n \n \n \nStars\nIssues\n\n\nfakir\n\n \n \n \nStars\nIssues\n\n\ngargoyle\n\n \n \n \nStars\nIssues\n\n\ndockerfiler\n\n \n \n \nStars\nIssues\n\n\ngemstones\n\n \n \n \nStars\nIssues\n\n\nelvis\n\n \n \n \nStars\nIssues\n\n\nbank\n\n \n \n \nStars\nIssues\n\n\nw3css\n\n \n \n \nStars\nIssues\n\n\nbrochure\n\n \n \n \nStars\nIssues\n\n\nghooks\n\n \n \n \nStars\nIssues\n\n\nskeleton\n\n \n \n \nStars\nIssues\n\n\n\n\n\nNote that CRAN version & Monthly Downloads are shown only for packages on CRAN"
+    "text": "CRAN status, Monthly download, and other stats\n\n\n\n\n\n\n\n\n\n\n\n\nPackage\nLifecycle\nCRAN Version\nMonthly Downloads\nR-CMD-Check\nGitHub Stars\nGitHub Issues\n\n\n\n\ngolem\n\n \n \n \nStars\nIssues\n\n\nshinipsum\n\n \n \n \nStars\nIssues\n\n\nfakir\n\n \n \n \nStars\nIssues\n\n\ngargoyle\n\n \n \n \nStars\nIssues\n\n\ndockerfiler\n\n \n \n \nStars\nIssues\n\n\ngemstones\n\n \n \n \nStars\nIssues\n\n\nelvis\n\n \n \n \nStars\nIssues\n\n\nbank\n\n \n \n \nStars\nIssues\n\n\nw3css\n\n \n \n \nStars\nIssues\n\n\nbrochure\n\n \n \n \nStars\nIssues\n\n\nghooks\n\n \n \n \nStars\nIssues\n\n\nskeleton\n\n \n \n \nStars\nIssues\n\n\nshinidraw\n\n \n \n \nStars\nIssues\n\n\n\n\n\nNote that CRAN version & Monthly Downloads are shown only for packages on CRAN"
   },
   {
     "objectID": "packages/gemstones/index.html",
@@ -110,6 +110,13 @@
     "title": "skeleton",
     "section": "",
     "text": "Skeleton CSS in {shiny}.\n{skeleton} brings the skeleton CSS to {shiny} for lightweight, minimal and elegant web apps .\n\n\n  \n  \n  \nStars:\nIssues:"
+  },
+  {
+    "objectID": "packages/shinidraw/index.html",
+    "href": "packages/shinidraw/index.html",
+    "title": "shinidraw",
+    "section": "",
+    "text": "Excalidraw in {shiny}.\nBringing Excalidraw to your R console, with built-in project management.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
     "objectID": "packages/dockerfiler/index.html",
