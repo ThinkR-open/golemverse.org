@@ -25,31 +25,31 @@ install.packages("golemverse")
 
 ### Packages from the golemverse
 
-- `{bank}`, `r utils::packageDescription("bank")[["Title"]]`
+- `{bank}`, Extra Cache
 
-- `{brochure}`, `r utils::packageDescription("brochure")[["Title"]]`
+- `{brochure}`, Multipage 'Shiny' Apps
 
-- `{dockerfiler}`, `r utils::packageDescription("dockerfiler")[["Title"]]`
+- `{dockerfiler}`, Easy Dockerfile Creation from R
 
-- `{elvis}`, `r utils::packageDescription("elvis")[["Title"]]`
+- `{elvis}`, 'Shiny' renderers and observers made safer
 
-- `{fakir}`, `r utils::packageDescription("fakir")[["Title"]]`
+- `{fakir}`, Create Fake Data in R for tutorials
 
-- `{gargoyle}`, `r utils::packageDescription("gargoyle")[["Title"]]`
+- `{gargoyle}`, An Event-Based Mechanism for 'Shiny'
 
-- `{gemstones}`, `r utils::packageDescription("gemstones")[["Title"]]`
+- `{gemstones}`, Make Your 'golem' App Shine
 
-- `{golem}`, `r utils::packageDescription("gemstones")[["Title"]]`
+- `{golem}`, Make Your 'golem' App Shine
 
-- `{ghooks}`, `r utils::packageDescription("ghooks")[["Title"]]`
+- `{ghooks}`, 'Golem' Hooks for Standard 'Shiny' Apps
 
-- `{skeleton}`, `r utils::packageDescription("skeleton")[["Title"]]`
+- `{skeleton}`, Skeleton CSS for Shiny
 
-- `{shinidraw}`, `r utils::packageDescription("shinidraw")[["Title"]]`
+- `{shinidraw}`, 'Excalidraw' in 'Shiny'
 
-- `{shinipsum}`, `r utils::packageDescription("shinipsum")[["Title"]]`
+- `{shinipsum}`, Lorem-Ipsum Helper Function for 'shiny' Prototyping
 
-- `{w3css}`, `r utils::packageDescription("w3css")[["Title"]]`
+- `{w3css}`, W3CSS for 'shiny'
 
 
 :::
