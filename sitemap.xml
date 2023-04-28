@@ -2,130 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.golemverse.org/news/fakir-1.0.0-on-cran/index.html</loc>
-    <lastmod>2023-04-28T08:56:15.629Z</lastmod>
+    <lastmod>2023-04-28T19:38:43.642Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-0.3.2-release-on-cran/index.html</loc>
-    <lastmod>2023-04-28T08:56:16.481Z</lastmod>
+    <lastmod>2023-04-28T19:38:44.430Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-0.3.1-release-on-cran/index.html</loc>
-    <lastmod>2023-04-28T08:56:18.625Z</lastmod>
+    <lastmod>2023-04-28T19:38:46.366Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/skeleteon-css-in-shiny/index.html</loc>
-    <lastmod>2023-04-28T08:56:19.377Z</lastmod>
+    <lastmod>2023-04-28T19:38:47.082Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/index.html</loc>
-    <lastmod>2023-04-28T08:56:20.121Z</lastmod>
+    <lastmod>2023-04-28T19:38:47.846Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/index.html</loc>
-    <lastmod>2023-04-28T08:56:21.133Z</lastmod>
+    <lastmod>2023-04-28T19:38:48.750Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-0.1.0-release-on-cran/index.html</loc>
-    <lastmod>2023-04-28T08:56:21.589Z</lastmod>
+    <lastmod>2023-04-28T19:38:49.122Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-0.4.0-release-on-cran/index.html</loc>
-    <lastmod>2023-04-28T08:56:22.669Z</lastmod>
+    <lastmod>2023-04-28T19:38:50.150Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/news/golem-hacktoberfest-2021/index.html</loc>
-    <lastmod>2023-04-28T08:56:23.189Z</lastmod>
+    <lastmod>2023-04-28T19:38:50.586Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/2020-01-23-twitch/index.html</loc>
-    <lastmod>2023-04-28T08:56:23.965Z</lastmod>
+    <lastmod>2023-04-28T19:38:51.250Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/2022-02-10-twitch/index.html</loc>
-    <lastmod>2023-04-28T08:56:24.701Z</lastmod>
+    <lastmod>2023-04-28T19:38:51.910Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/index.html</loc>
-    <lastmod>2023-04-28T08:56:25.337Z</lastmod>
+    <lastmod>2023-04-28T19:38:52.486Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/2020-01-13-twitch/index.html</loc>
-    <lastmod>2023-04-28T08:56:26.045Z</lastmod>
+    <lastmod>2023-04-28T19:38:53.090Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/stream/2020-04-02-twitch/index.html</loc>
-    <lastmod>2023-04-28T08:56:26.805Z</lastmod>
+    <lastmod>2023-04-28T19:38:53.686Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/documentation/index.html</loc>
-    <lastmod>2023-04-28T08:56:27.201Z</lastmod>
+    <lastmod>2023-04-28T19:38:54.042Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/index.html</loc>
-    <lastmod>2023-04-28T08:56:28.025Z</lastmod>
+    <lastmod>2023-04-28T19:38:54.762Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/golem/index.html</loc>
-    <lastmod>2023-04-28T08:56:28.449Z</lastmod>
+    <lastmod>2023-04-28T19:38:55.142Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/gargoyle/index.html</loc>
-    <lastmod>2023-04-28T08:56:28.861Z</lastmod>
+    <lastmod>2023-04-28T19:38:55.514Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/shinidraw/index.html</loc>
-    <lastmod>2023-04-28T08:56:29.301Z</lastmod>
+    <lastmod>2023-04-28T19:38:55.926Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/ghooks/index.html</loc>
-    <lastmod>2023-04-28T08:56:29.693Z</lastmod>
+    <lastmod>2023-04-28T19:38:56.306Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/dockerfiler/index.html</loc>
-    <lastmod>2023-04-28T08:56:30.109Z</lastmod>
+    <lastmod>2023-04-28T19:38:56.686Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/brochure/index.html</loc>
-    <lastmod>2023-04-28T08:56:30.529Z</lastmod>
+    <lastmod>2023-04-28T19:38:57.050Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/skeleton/index.html</loc>
-    <lastmod>2023-04-28T08:56:30.929Z</lastmod>
+    <lastmod>2023-04-28T19:38:57.442Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/fakir/index.html</loc>
-    <lastmod>2023-04-28T08:56:31.337Z</lastmod>
+    <lastmod>2023-04-28T19:38:57.822Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/index.html</loc>
-    <lastmod>2023-04-28T08:56:32.793Z</lastmod>
+    <lastmod>2023-04-28T19:38:59.154Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/shinipsum/index.html</loc>
-    <lastmod>2023-04-28T08:56:33.253Z</lastmod>
+    <lastmod>2023-04-28T19:38:59.510Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/elvis/index.html</loc>
-    <lastmod>2023-04-28T08:56:33.653Z</lastmod>
+    <lastmod>2023-04-28T19:38:59.866Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/gemstones/index.html</loc>
-    <lastmod>2023-04-28T08:56:34.109Z</lastmod>
+    <lastmod>2023-04-28T19:39:00.262Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/w3css/index.html</loc>
-    <lastmod>2023-04-28T08:56:34.505Z</lastmod>
+    <lastmod>2023-04-28T19:39:00.614Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/packages/bank/index.html</loc>
-    <lastmod>2023-04-28T08:56:34.909Z</lastmod>
+    <lastmod>2023-04-28T19:39:00.970Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/resources/index.html</loc>
-    <lastmod>2023-04-28T08:56:35.481Z</lastmod>
+    <lastmod>2023-04-28T19:39:01.510Z</lastmod>
   </url>
   <url>
     <loc>https://www.golemverse.org/roadmap/index.html</loc>
-    <lastmod>2023-04-28T08:56:35.953Z</lastmod>
+    <lastmod>2023-04-28T19:39:01.930Z</lastmod>
   </url>
 </urlset>
