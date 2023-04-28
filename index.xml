@@ -9,11 +9,11 @@
 <link>https://www.golemverse.org/index.html</link>
 <atom:link href="https://www.golemverse.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to the golemverse!</description>
-<generator>quarto-1.2.475</generator>
+<generator>quarto-1.3.340</generator>
 <lastBuildDate>Wed, 19 Apr 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>{fakir} 1.0.0 is now on CRAN</title>
-  <dc:creator>colin</dc:creator>
+  <dc:creator>colin </dc:creator>
   <link>https://www.golemverse.org/news/fakir-1.0.0-on-cran/index.html</link>
   <description><![CDATA[ 
 
@@ -26,14 +26,26 @@
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>You can install the latest version from your favorite CRAN repository with:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">install.packages</span>(<span class="st" style="color: #20794D;">"fakir"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fakir"</span>)</span></code></pre></div>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <section id="fake-support-tickets" class="level3">
 <h3 class="anchored" data-anchor-id="fake-support-tickets">Fake support tickets</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">fakir<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">fake_ticket_client</span>(<span class="at" style="color: #657422;">vol =</span> <span class="dv" style="color: #AD0000;">10</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">fakir<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fake_ticket_client</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vol =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 25
    ref           num_client first    last  job     age region id_dpt departement
@@ -59,7 +71,13 @@
 <section id="fake-dataset-of-connected-wearables" class="level3">
 <h3 class="anchored" data-anchor-id="fake-dataset-of-connected-wearables">Fake dataset of connected wearables</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">fakir<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">fake_products</span>(<span class="dv" style="color: #AD0000;">10</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">fakir<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fake_products</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 8
    name                 brand color price body_location category sent_from    id
@@ -80,9 +98,21 @@
 <section id="fake-website-visits" class="level3">
 <h3 class="anchored" data-anchor-id="fake-website-visits">Fake website visits</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">fakir<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">fake_visits</span>(</span>
-<span id="cb6-2">  <span class="at" style="color: #657422;">from =</span> <span class="st" style="color: #20794D;">"2017-01-01"</span>,</span>
-<span id="cb6-3">  <span class="at" style="color: #657422;">to =</span> <span class="st" style="color: #20794D;">"2017-01-31"</span></span>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">fakir<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fake_visits</span>(</span>
+<span id="cb6-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">from =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2017-01-01"</span>,</span>
+<span id="cb6-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">to =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2017-01-31"</span></span>
 <span id="cb6-4">)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 31 × 8
@@ -114,10 +144,26 @@
 <h3 class="anchored" data-anchor-id="translate">Translate</h3>
 <p>Some datasets are available in french and english:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">fakir<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">fake_visits</span>(</span>
-<span id="cb8-2">  <span class="at" style="color: #657422;">from =</span> <span class="st" style="color: #20794D;">"2017-01-01"</span>,</span>
-<span id="cb8-3">  <span class="at" style="color: #657422;">to =</span> <span class="st" style="color: #20794D;">"2017-01-31"</span>,</span>
-<span id="cb8-4">  <span class="at" style="color: #657422;">local =</span> <span class="st" style="color: #20794D;">"fr_FR"</span></span>
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">fakir<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fake_visits</span>(</span>
+<span id="cb8-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">from =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2017-01-01"</span>,</span>
+<span id="cb8-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">to =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2017-01-31"</span>,</span>
+<span id="cb8-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">local =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fr_FR"</span></span>
 <span id="cb8-5">)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 31 × 8
@@ -152,11 +198,10 @@
  ]]></description>
   <guid>https://www.golemverse.org/news/fakir-1.0.0-on-cran/index.html</guid>
   <pubDate>Wed, 19 Apr 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://www.golemverse.org/news/fakir-1.0.0-on-cran/fakir-header.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>Minimalist and Elegant {shiny} apps with {skeleton}</title>
-  <dc:creator>colin</dc:creator>
+  <dc:creator>colin </dc:creator>
   <link>https://www.golemverse.org/news/skeleteon-css-in-shiny/index.html</link>
   <description><![CDATA[ 
 
@@ -169,7 +214,13 @@
 <section id="skeleton" class="level2">
 <h2 class="anchored" data-anchor-id="skeleton">{skeleton}</h2>
 <p>I’m very happy to announce that the <code>{shiny}</code> wrapper for this framework is now fully functional, and available to download with:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">pak</span>(<span class="st" style="color: #20794D;">"ColinFay/skeleton"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pak</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ColinFay/skeleton"</span>)</span></code></pre></div>
 <p>For a demo of an app built with <code>{skeleton}</code>, you can browse <a href="https://connect.thinkr.fr/prenoms/" class="uri">https://connect.thinkr.fr/prenoms/</a>.</p>
 <p><a href="https://connect.thinkr.fr/prenoms/" target="_blank"><img src="https://www.golemverse.org/news/skeleteon-css-in-shiny/prenomsapp.png" width="100%"></a></p>
 </section>
@@ -178,100 +229,282 @@
 <section id="basic-apps" class="level3">
 <h3 class="anchored" data-anchor-id="basic-apps">Basic apps</h3>
 <p>Building an app with <code>{skeleton}</code> follows the same spirit as with <code>{shiny}</code> standard components: you start with a page, define a row, and this row can be split into 12 columns.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;">library</span>(shiny)</span>
-<span id="cb2-2"><span class="fu" style="color: #4758AB;">library</span>(skeleton)</span>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(shiny)</span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(skeleton)</span>
 <span id="cb2-3"></span>
-<span id="cb2-4">ui <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">sk_page</span>(</span>
-<span id="cb2-5">  <span class="fu" style="color: #4758AB;">h1</span>(<span class="st" style="color: #20794D;">"Hello world"</span>),</span>
-<span id="cb2-6">  <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
-<span id="cb2-7">    <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
-<span id="cb2-8">      <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">6</span>,</span>
-<span id="cb2-9">      <span class="st" style="color: #20794D;">"Hello"</span></span>
+<span id="cb2-4">ui <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_page</span>(</span>
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h1</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hello world"</span>),</span>
+<span id="cb2-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_row</span>(</span>
+<span id="cb2-7">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_col</span>(</span>
+<span id="cb2-8">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,</span>
+<span id="cb2-9">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hello"</span></span>
 <span id="cb2-10">    ),</span>
-<span id="cb2-11">    <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
-<span id="cb2-12">      <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">6</span>,</span>
-<span id="cb2-13">      <span class="st" style="color: #20794D;">"World"</span></span>
+<span id="cb2-11">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_col</span>(</span>
+<span id="cb2-12">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,</span>
+<span id="cb2-13">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"World"</span></span>
 <span id="cb2-14">    )</span>
 <span id="cb2-15">  ),</span>
-<span id="cb2-16">  <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
-<span id="cb2-17">    <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
-<span id="cb2-18">      <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">12</span>,</span>
-<span id="cb2-19">      <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot1"</span>)</span>
+<span id="cb2-16">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_row</span>(</span>
+<span id="cb2-17">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_col</span>(</span>
+<span id="cb2-18">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>,</span>
+<span id="cb2-19">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plotOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot1"</span>)</span>
 <span id="cb2-20">    )</span>
 <span id="cb2-21">  )</span>
 <span id="cb2-22">)</span>
 <span id="cb2-23"></span>
-<span id="cb2-24">server <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(input, output) {</span>
-<span id="cb2-25">  output<span class="sc" style="color: #5E5E5E;">$</span>plot1 <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderPlot</span>({</span>
-<span id="cb2-26">    <span class="fu" style="color: #4758AB;">plot</span>(mtcars)</span>
+<span id="cb2-24">server <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(input, output) {</span>
+<span id="cb2-25">  output<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>plot1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">renderPlot</span>({</span>
+<span id="cb2-26">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(mtcars)</span>
 <span id="cb2-27">  })</span>
 <span id="cb2-28">}</span>
 <span id="cb2-29"></span>
-<span id="cb2-30"><span class="fu" style="color: #4758AB;">shinyApp</span>(ui, server)</span></code></pre></div>
+<span id="cb2-30"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">shinyApp</span>(ui, server)</span></code></pre></div>
 </section>
 <section id="built-in-dashboard" class="level3">
 <h3 class="anchored" data-anchor-id="built-in-dashboard">Built-in dashboard</h3>
 <p><code>{skeleton}</code> also comes with a built-it dashboard mechanism, that can be defined with:</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;">sk_nav</span>(</span>
-<span id="cb3-2">  <span class="fu" style="color: #4758AB;">sk_nav_item</span>(</span>
-<span id="cb3-3">    <span class="at" style="color: #657422;">id =</span> <span class="st" style="color: #20794D;">"one"</span>,</span>
-<span id="cb3-4">    <span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">"ONE"</span>,</span>
-<span id="cb3-5">    <span class="at" style="color: #657422;">ui =</span> <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
-<span id="cb3-6">      <span class="at" style="color: #657422;">width =</span> <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
-<span id="cb3-7">        <span class="dv" style="color: #AD0000;">6</span>,</span>
-<span id="cb3-8">        <span class="st" style="color: #20794D;">"Hello plot1"</span></span>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_nav</span>(</span>
+<span id="cb3-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_nav_item</span>(</span>
+<span id="cb3-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">id =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"one"</span>,</span>
+<span id="cb3-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ONE"</span>,</span>
+<span id="cb3-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_row</span>(</span>
+<span id="cb3-6">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_col</span>(</span>
+<span id="cb3-7">        <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,</span>
+<span id="cb3-8">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hello plot1"</span></span>
 <span id="cb3-9">      ),</span>
-<span id="cb3-10">      <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
-<span id="cb3-11">        <span class="at" style="color: #657422;">width =</span> <span class="dv" style="color: #AD0000;">6</span>,</span>
-<span id="cb3-12">        <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot1"</span>)</span>
+<span id="cb3-10">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_col</span>(</span>
+<span id="cb3-11">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,</span>
+<span id="cb3-12">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plotOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot1"</span>)</span>
 <span id="cb3-13">      )</span>
 <span id="cb3-14">    )</span>
 <span id="cb3-15">  )</span>
 <span id="cb3-16">)</span></code></pre></div>
 <p>And for a full app:</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;">library</span>(shiny)</span>
-<span id="cb4-2"><span class="fu" style="color: #4758AB;">library</span>(skeleton)</span>
-<span id="cb4-3">ui <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">sk_page</span>(</span>
-<span id="cb4-4">  <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
-<span id="cb4-5">    <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A dead simple, responsive boilerplate."</span>),</span>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(shiny)</span>
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(skeleton)</span>
+<span id="cb4-3">ui <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_page</span>(</span>
+<span id="cb4-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_row</span>(</span>
+<span id="cb4-5">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h2</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A dead simple, responsive boilerplate."</span>),</span>
 <span id="cb4-6">  ),</span>
-<span id="cb4-7">  <span class="fu" style="color: #4758AB;">sk_nav</span>(</span>
-<span id="cb4-8">    <span class="fu" style="color: #4758AB;">sk_nav_item</span>(</span>
-<span id="cb4-9">      <span class="at" style="color: #657422;">id =</span> <span class="st" style="color: #20794D;">"one"</span>,</span>
-<span id="cb4-10">      <span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">"ONE"</span>,</span>
-<span id="cb4-11">      <span class="at" style="color: #657422;">ui =</span> <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
-<span id="cb4-12">        <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
-<span id="cb4-13">          <span class="dv" style="color: #AD0000;">6</span>,</span>
-<span id="cb4-14">          <span class="st" style="color: #20794D;">"Hello plot1"</span></span>
+<span id="cb4-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_nav</span>(</span>
+<span id="cb4-8">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_nav_item</span>(</span>
+<span id="cb4-9">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">id =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"one"</span>,</span>
+<span id="cb4-10">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ONE"</span>,</span>
+<span id="cb4-11">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_row</span>(</span>
+<span id="cb4-12">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_col</span>(</span>
+<span id="cb4-13">          <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,</span>
+<span id="cb4-14">          <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hello plot1"</span></span>
 <span id="cb4-15">        ),</span>
-<span id="cb4-16">        <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
-<span id="cb4-17">          <span class="dv" style="color: #AD0000;">6</span>,</span>
-<span id="cb4-18">          <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot1"</span>)</span>
+<span id="cb4-16">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_col</span>(</span>
+<span id="cb4-17">          <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,</span>
+<span id="cb4-18">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plotOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot1"</span>)</span>
 <span id="cb4-19">        )</span>
 <span id="cb4-20">      )</span>
 <span id="cb4-21">    ),</span>
-<span id="cb4-22">    <span class="fu" style="color: #4758AB;">sk_nav_item</span>(</span>
-<span id="cb4-23">      <span class="at" style="color: #657422;">id =</span> <span class="st" style="color: #20794D;">"two"</span>,</span>
-<span id="cb4-24">      <span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">"TWO"</span>,</span>
-<span id="cb4-25">      <span class="at" style="color: #657422;">ui =</span> <span class="fu" style="color: #4758AB;">sk_row</span>(</span>
-<span id="cb4-26">        <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
-<span id="cb4-27">          <span class="dv" style="color: #AD0000;">6</span>,</span>
-<span id="cb4-28">          <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot2"</span>)</span>
+<span id="cb4-22">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_nav_item</span>(</span>
+<span id="cb4-23">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">id =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"two"</span>,</span>
+<span id="cb4-24">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"TWO"</span>,</span>
+<span id="cb4-25">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_row</span>(</span>
+<span id="cb4-26">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_col</span>(</span>
+<span id="cb4-27">          <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,</span>
+<span id="cb4-28">          <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plotOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot2"</span>)</span>
 <span id="cb4-29">        ),</span>
-<span id="cb4-30">        <span class="fu" style="color: #4758AB;">sk_col</span>(</span>
-<span id="cb4-31">          <span class="dv" style="color: #AD0000;">6</span>,</span>
-<span id="cb4-32">          <span class="st" style="color: #20794D;">"Hello plot2"</span></span>
+<span id="cb4-30">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sk_col</span>(</span>
+<span id="cb4-31">          <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>,</span>
+<span id="cb4-32">          <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hello plot2"</span></span>
 <span id="cb4-33">        ),</span>
 <span id="cb4-34">      )</span>
 <span id="cb4-35">    )</span>
 <span id="cb4-36">  )</span>
 <span id="cb4-37">)</span>
-<span id="cb4-38"><span class="fu" style="color: #4758AB;">shinyApp</span>(ui, <span class="cf" style="color: #003B4F;">function</span>(input, output) {</span>
-<span id="cb4-39">  output<span class="sc" style="color: #5E5E5E;">$</span>plot1 <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderPlot</span>({</span>
-<span id="cb4-40">    <span class="fu" style="color: #4758AB;">plot</span>(mtcars)</span>
+<span id="cb4-38"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">shinyApp</span>(ui, <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(input, output) {</span>
+<span id="cb4-39">  output<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>plot1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">renderPlot</span>({</span>
+<span id="cb4-40">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(mtcars)</span>
 <span id="cb4-41">  })</span>
-<span id="cb4-42">  output<span class="sc" style="color: #5E5E5E;">$</span>plot2 <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderPlot</span>({</span>
-<span id="cb4-43">    <span class="fu" style="color: #4758AB;">plot</span>(airquality)</span>
+<span id="cb4-42">  output<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>plot2 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">renderPlot</span>({</span>
+<span id="cb4-43">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(airquality)</span>
 <span id="cb4-44">  })</span>
 <span id="cb4-45">})</span></code></pre></div>
 <p>If you want to see a real life example of a dashboard built with <code>{skeleton}</code>, feel free to browse the source code of the <code>prenoms</code> app at <a href="https://github.com/ThinkR-open/prenoms-app" class="uri">https://github.com/ThinkR-open/prenoms-app</a>.</p>
@@ -279,13 +512,33 @@
 <section id="golem-hooks" class="level3">
 <h3 class="anchored" data-anchor-id="golem-hooks">{golem} hooks</h3>
 <p>You can get a boilerplate of a page or a dashboard when creating an app with <code>{golem}</code>, using the built-in <code>{golem}</code> hooks:</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">create_golem</span>(</span>
-<span id="cb5-2">  <span class="st" style="color: #20794D;">"skboilerplate"</span>,</span>
-<span id="cb5-3">  <span class="at" style="color: #657422;">project_hook =</span> skeleton<span class="sc" style="color: #5E5E5E;">::</span>ghook_sk_boilerplate</span>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_golem</span>(</span>
+<span id="cb5-2">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"skboilerplate"</span>,</span>
+<span id="cb5-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">project_hook =</span> skeleton<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span>ghook_sk_boilerplate</span>
 <span id="cb5-4">)</span>
-<span id="cb5-5">golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">create_golem</span>(</span>
-<span id="cb5-6">  <span class="st" style="color: #20794D;">"skdashboard"</span>,</span>
-<span id="cb5-7">  <span class="at" style="color: #657422;">project_hook =</span> skeleton<span class="sc" style="color: #5E5E5E;">::</span>ghook_sk_dashboard</span>
+<span id="cb5-5">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_golem</span>(</span>
+<span id="cb5-6">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"skdashboard"</span>,</span>
+<span id="cb5-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">project_hook =</span> skeleton<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span>ghook_sk_dashboard</span>
 <span id="cb5-8">)</span></code></pre></div>
 </section>
 </section>
@@ -299,11 +552,10 @@
  ]]></description>
   <guid>https://www.golemverse.org/news/skeleteon-css-in-shiny/index.html</guid>
   <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://www.golemverse.org/news/skeleteon-css-in-shiny/featured.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>{golem} 0.4.0 is now available</title>
-  <dc:creator>colin</dc:creator>
+  <dc:creator>colin </dc:creator>
   <link>https://www.golemverse.org/news/golem-0.4.0-release-on-cran/index.html</link>
   <description><![CDATA[ 
 
@@ -313,8 +565,14 @@
 <p><img src="https://www.golemverse.org/news/golem-0.4.0-release-on-cran/featured.png" class="img-fluid"></p>
 <p>The new version of <code>{golem}</code> is available!</p>
 <p>You can download it from your favorite CRAN repository, or by running the following command:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">pak</span>(</span>
-<span id="cb1-2">  <span class="st" style="color: #20794D;">"thinkr-open/golem@v0.4.0"</span></span>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pak</span>(</span>
+<span id="cb1-2">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"thinkr-open/golem@v0.4.0"</span></span>
 <span id="cb1-3">)</span></code></pre></div>
 <section id="whats-up-with-this-new-version" class="level2">
 <h2 class="anchored" data-anchor-id="whats-up-with-this-new-version">What’s up with this new version?</h2>
@@ -336,11 +594,23 @@
 Click to show <code>{shiny}</code> dependency tree
 </summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;">packageVersion</span>(<span class="st" style="color: #20794D;">"shiny"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">packageVersion</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"shiny"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] '1.7.4'</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">shiny <span class="ot" style="color: #003B4F;">&lt;-</span> pak<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">pkg_deps_tree</span>(<span class="st" style="color: #20794D;">"shiny"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">shiny <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> pak<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pkg_deps_tree</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"shiny"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>ℹ Loading metadata database
 ℹ Loading metadata database</code></pre>
@@ -437,7 +707,15 @@ Key:  ✨ new |  ⬇ download</code></pre>
 Click to show <code>{golem@v0.3.5}</code> dependency tree
 </summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">v035 <span class="ot" style="color: #003B4F;">&lt;-</span> pak<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">pkg_deps_tree</span>(<span class="st" style="color: #20794D;">"thinkr-open/golem@v0.3.5"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">v035 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> pak<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pkg_deps_tree</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"thinkr-open/golem@v0.3.5"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>thinkr-open/golem@v0.3.5 0.3.5 ✨👷🏽🔧 ⬇ (unknown size)
 ├─attempt 0.3.1 ✨ ⬇ (unknown size)
@@ -613,7 +891,9 @@ Click to show <code>{golem@v0.3.5}</code> dependency tree
 
 Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;">nrow</span>(v035)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nrow</span>(v035)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 65</code></pre>
 </div>
@@ -627,7 +907,15 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 Click to show <code>{golem@v0.4.0}</code> dependency tree
 </summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">v040 <span class="ot" style="color: #003B4F;">&lt;-</span> pak<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">pkg_deps_tree</span>(<span class="st" style="color: #20794D;">"thinkr-open/golem@v0.4.0"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">v040 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> pak<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pkg_deps_tree</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"thinkr-open/golem@v0.4.0"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>thinkr-open/golem@v0.4.0 0.4.0 ✨👷🏽🔧 ⬇ (unknown size)
 ├─attempt 0.3.1 ✨ ⬇ (unknown size)
@@ -704,7 +992,9 @@ Click to show <code>{golem@v0.4.0}</code> dependency tree
 
 Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;">nrow</span>(v040)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nrow</span>(v040)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 37</code></pre>
 </div>
@@ -716,9 +1006,15 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 <p>But that’s still 35 packages, right?</p>
 <p>Yes, but as I said before, every <code>{shiny}</code> app will depend on <code>{shiny}</code>. So how many packages does <code>{golem}</code> <strong>actually add to your dependency tree</strong>? In other words, how many packages does <code>{golem}</code> depend on that are not already a <code>{shiny}</code> dependency?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;">setdiff</span>(</span>
-<span id="cb17-2">  v040<span class="sc" style="color: #5E5E5E;">$</span>package,</span>
-<span id="cb17-3">  shiny<span class="sc" style="color: #5E5E5E;">$</span>package</span>
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">setdiff</span>(</span>
+<span id="cb17-2">  v040<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>package,</span>
+<span id="cb17-3">  shiny<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>package</span>
 <span id="cb17-4">)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "golem"     "attempt"   "config"    "here"      "rprojroot" "yaml"     </code></pre>
@@ -746,33 +1042,103 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 <p>Big Up to my dear colleague <a href="https://github.com/ArthurData">Arthur</a> for developing this feature!</p>
 </blockquote>
 <p>To visualize the maintenance page locally, you can run the following code:</p>
-<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1">withr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">with_envvar</span>(</span>
-<span id="cb19-2">  <span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"GOLEM_MAINTENANCE_ACTIVE"</span> <span class="ot" style="color: #003B4F;">=</span> <span class="cn" style="color: #8f5902;">TRUE</span>),</span>
+<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1">withr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with_envvar</span>(</span>
+<span id="cb19-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"GOLEM_MAINTENANCE_ACTIVE"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>),</span>
 <span id="cb19-3">  {</span>
-<span id="cb19-4">    golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">run_dev</span>()</span>
+<span id="cb19-4">    golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">run_dev</span>()</span>
 <span id="cb19-5">  }</span>
 <span id="cb19-6">)</span></code></pre></div>
 <p>Note that <code>{golem}</code> comes with a default maintenance page, and you can replace it with your own page by passing either an <code>html_document</code> or a <code>tagList</code> to the <code>with_golem_options</code> function in <code>run_app.R</code>:</p>
-<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1">run_app <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(</span>
-<span id="cb20-2">    <span class="at" style="color: #657422;">onStart =</span> <span class="cn" style="color: #8f5902;">NULL</span>,</span>
-<span id="cb20-3">    <span class="at" style="color: #657422;">options =</span> <span class="fu" style="color: #4758AB;">list</span>(),</span>
-<span id="cb20-4">    <span class="at" style="color: #657422;">enableBookmarking =</span> <span class="cn" style="color: #8f5902;">NULL</span>,</span>
-<span id="cb20-5">    <span class="at" style="color: #657422;">uiPattern =</span> <span class="st" style="color: #20794D;">"/"</span>,</span>
+<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1">run_app <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(</span>
+<span id="cb20-2">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">onStart =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>,</span>
+<span id="cb20-3">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">options =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(),</span>
+<span id="cb20-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">enableBookmarking =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>,</span>
+<span id="cb20-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">uiPattern =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/"</span>,</span>
 <span id="cb20-6">    ...</span>
 <span id="cb20-7">) {</span>
-<span id="cb20-8">  <span class="fu" style="color: #4758AB;">with_golem_options</span>(</span>
-<span id="cb20-9">    <span class="at" style="color: #657422;">app =</span> <span class="fu" style="color: #4758AB;">shinyApp</span>(</span>
-<span id="cb20-10">      <span class="at" style="color: #657422;">ui =</span> app_ui,</span>
-<span id="cb20-11">      <span class="at" style="color: #657422;">server =</span> app_server,</span>
-<span id="cb20-12">      <span class="at" style="color: #657422;">onStart =</span> onStart,</span>
-<span id="cb20-13">      <span class="at" style="color: #657422;">options =</span> options,</span>
-<span id="cb20-14">      <span class="at" style="color: #657422;">enableBookmarking =</span> enableBookmarking,</span>
-<span id="cb20-15">      <span class="at" style="color: #657422;">uiPattern =</span> uiPattern</span>
+<span id="cb20-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with_golem_options</span>(</span>
+<span id="cb20-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">app =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">shinyApp</span>(</span>
+<span id="cb20-10">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> app_ui,</span>
+<span id="cb20-11">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">server =</span> app_server,</span>
+<span id="cb20-12">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">onStart =</span> onStart,</span>
+<span id="cb20-13">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">options =</span> options,</span>
+<span id="cb20-14">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">enableBookmarking =</span> enableBookmarking,</span>
+<span id="cb20-15">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">uiPattern =</span> uiPattern</span>
 <span id="cb20-16">    ),</span>
-<span id="cb20-17">    <span class="at" style="color: #657422;">golem_opts =</span> <span class="fu" style="color: #4758AB;">list</span>(...),</span>
-<span id="cb20-18">    <span class="at" style="color: #657422;">maintenance_page =</span> shiny<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">htmlTemplate</span>(</span>
-<span id="cb20-19">      <span class="at" style="color: #657422;">filename =</span> <span class="fu" style="color: #4758AB;">app_sys</span>(</span>
-<span id="cb20-20">        <span class="st" style="color: #20794D;">"custom_maintenance_page.html"</span></span>
+<span id="cb20-17">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">golem_opts =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(...),</span>
+<span id="cb20-18">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">maintenance_page =</span> shiny<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">htmlTemplate</span>(</span>
+<span id="cb20-19">      <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">filename =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">app_sys</span>(</span>
+<span id="cb20-20">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"custom_maintenance_page.html"</span></span>
 <span id="cb20-21">      )</span>
 <span id="cb20-22">    )</span>
 <span id="cb20-23">  )</span>
@@ -794,11 +1160,10 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
  ]]></description>
   <guid>https://www.golemverse.org/news/golem-0.4.0-release-on-cran/index.html</guid>
   <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://www.golemverse.org/news/golem-0.4.0-release-on-cran/featured.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>{golem} 0.3.2 is now available</title>
-  <dc:creator>colin</dc:creator>
+  <dc:creator>colin </dc:creator>
   <link>https://www.golemverse.org/news/golem-0.3.2-release-on-cran/index.html</link>
   <description><![CDATA[ 
 
@@ -808,15 +1173,41 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 <p><img src="https://www.golemverse.org/news/golem-0.3.2-release-on-cran/featured.png" class="img-fluid"></p>
 <p>The new version of <code>{golem}</code> is now available!</p>
 <p>You can download it from your favorite CRAN repository, or by running the following command:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">remotes<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">install_github</span>(</span>
-<span id="cb1-2">  <span class="st" style="color: #20794D;">"thinkr-open/golem@v0.3.2"</span></span>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">remotes<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install_github</span>(</span>
+<span id="cb1-2">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"thinkr-open/golem@v0.3.2"</span></span>
 <span id="cb1-3">)</span></code></pre></div>
 <section id="whats-up-with-this-new-version" class="level2">
 <h2 class="anchored" data-anchor-id="whats-up-with-this-new-version">What’s up with this new version?</h2>
 <p>In this release, we have been focusing on a closer integration of tests inside the application building process, notably via <a href="https://shiny.rstudio.com/articles/server-function-testing.html">Server function testing with Shiny</a>, adding tests to <code>fct</code>, <code>utils</code>, and the ui &amp; server functions that comes with <code>{golem}</code>.</p>
 <p>Starting with this version of <code>{golem}</code>, the integration of tests is opt-in:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">add_module</span>(<span class="st" style="color: #20794D;">"plop"</span>, <span class="at" style="color: #657422;">with_test =</span> <span class="cn" style="color: #8f5902;">TRUE</span>)</span>
-<span id="cb2-2">golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">add_fct</span>(<span class="st" style="color: #20794D;">"helpers"</span>, <span class="at" style="color: #657422;">with_test =</span> <span class="cn" style="color: #8f5902;">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_module</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plop"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">with_test =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span>
+<span id="cb2-2">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_fct</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"helpers"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">with_test =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div>
 <p>Note that these will be opt-out in the next release — in other words they will be <code>TRUE</code> by default in the future.</p>
 <p>We also have squashed a bunch of issues, for example <code>amend_config()</code> now keeps <code>!expr</code> (this use to cause some errors when the project was shared across multiple computers), <code>expect_running()</code> now finds <code>R.exe</code>, some adjustments has been made to fit new version of packages (for example <code>testthat::expect_is</code> is no longer used, and we require the correct version of <code>{usethis}</code>).</p>
 <p>For a full list of changes, please refer to the <a href="https://github.com/ThinkR-open/golem/blob/master/NEWS.md">NEWS.md</a> file.</p>
@@ -840,11 +1231,10 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
  ]]></description>
   <guid>https://www.golemverse.org/news/golem-0.3.2-release-on-cran/index.html</guid>
   <pubDate>Fri, 11 Mar 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://www.golemverse.org/news/golem-0.3.2-release-on-cran/featured.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>Join HacktoberFest 2021 with {golem} (and more)!</title>
-  <dc:creator>colin</dc:creator>
+  <dc:creator>colin </dc:creator>
   <link>https://www.golemverse.org/news/golem-hacktoberfest-2021/index.html</link>
   <description><![CDATA[ 
 
@@ -874,11 +1264,10 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
  ]]></description>
   <guid>https://www.golemverse.org/news/golem-hacktoberfest-2021/index.html</guid>
   <pubDate>Thu, 30 Sep 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://www.golemverse.org/news/golem-hacktoberfest-2021/featured.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>About {golem} 0.3.1</title>
-  <dc:creator>colin</dc:creator>
+  <dc:creator>colin </dc:creator>
   <link>https://www.golemverse.org/news/golem-0.3.1-release-on-cran/index.html</link>
   <description><![CDATA[ 
 
@@ -926,29 +1315,97 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 <section id="project-hook-example" class="level4">
 <h4 class="anchored" data-anchor-id="project-hook-example">Project hook example</h4>
 <p>Removing the dev folder:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">no_dev <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(path, package_name, ...){</span>
-<span id="cb1-2">   fs<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">dir_delete</span>(<span class="st" style="color: #20794D;">"dev"</span>)</span>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">no_dev <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(path, package_name, ...){</span>
+<span id="cb1-2">   fs<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dir_delete</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"dev"</span>)</span>
 <span id="cb1-3">}</span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;">create_golem</span>(<span class="st" style="color: #20794D;">"ici"</span>, <span class="at" style="color: #657422;">project_hook =</span> no_dev)</span></code></pre></div>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_golem</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ici"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">project_hook =</span> no_dev)</span></code></pre></div>
 <p>Create a CSS:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">new_css <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(path, package_name, ...){</span>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">new_css <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(path, package_name, ...){</span>
 <span id="cb2-2"></span>
-<span id="cb2-3">  css_path <span class="ot" style="color: #003B4F;">&lt;-</span> fs<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">path_abs</span>(<span class="st" style="color: #20794D;">"inst/app/www/custom.css"</span>)</span>
+<span id="cb2-3">  css_path <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> fs<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">path_abs</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"inst/app/www/custom.css"</span>)</span>
 <span id="cb2-4"></span>
-<span id="cb2-5">  fs<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">file_create</span>(css_path)</span>
+<span id="cb2-5">  fs<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">file_create</span>(css_path)</span>
 <span id="cb2-6"></span>
-<span id="cb2-7">  write_there <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(...){</span>
-<span id="cb2-8">    <span class="fu" style="color: #4758AB;">write</span>(..., <span class="at" style="color: #657422;">file =</span> css_path, <span class="at" style="color: #657422;">append =</span> <span class="cn" style="color: #8f5902;">TRUE</span>)</span>
+<span id="cb2-7">  write_there <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(...){</span>
+<span id="cb2-8">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write</span>(..., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">file =</span> css_path, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">append =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span>
 <span id="cb2-9">  }</span>
 <span id="cb2-10"></span>
-<span id="cb2-11">  <span class="fu" style="color: #4758AB;">write_there</span>(<span class="st" style="color: #20794D;">"body {"</span>)</span>
-<span id="cb2-12">  <span class="fu" style="color: #4758AB;">write_there</span>(<span class="st" style="color: #20794D;">"    background-color:red;"</span>)</span>
-<span id="cb2-13">  <span class="fu" style="color: #4758AB;">write_there</span>(<span class="st" style="color: #20794D;">"}"</span>)</span>
+<span id="cb2-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write_there</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"body {"</span>)</span>
+<span id="cb2-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write_there</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"    background-color:red;"</span>)</span>
+<span id="cb2-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write_there</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"}"</span>)</span>
 <span id="cb2-14"></span>
-<span id="cb2-15">  cli<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">cat_bullet</span>(<span class="st" style="color: #20794D;">"CSS generated"</span>)</span>
+<span id="cb2-15">  cli<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat_bullet</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"CSS generated"</span>)</span>
 <span id="cb2-16"></span>
 <span id="cb2-17">}</span>
-<span id="cb2-18"><span class="fu" style="color: #4758AB;">create_golem</span>(<span class="st" style="color: #20794D;">"ici"</span>, <span class="at" style="color: #657422;">project_hook =</span> new_css)</span></code></pre></div>
+<span id="cb2-18"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_golem</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ici"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">project_hook =</span> new_css)</span></code></pre></div>
 </section>
 </section>
 <section id="module-templates" class="level3">
@@ -978,20 +1435,58 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 </section>
 <section id="module-template-examples" class="level4">
 <h4 class="anchored" data-anchor-id="module-template-examples">Module template examples</h4>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">my_tmpl <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(name, path, export, ...){</span>
-<span id="cb3-2">  <span class="co" style="color: #5E5E5E;"># Define a template that write to the</span></span>
-<span id="cb3-3">  <span class="co" style="color: #5E5E5E;"># module file</span></span>
-<span id="cb3-4">  <span class="fu" style="color: #4758AB;">write</span>(name, path)</span>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">my_tmpl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(name, path, export, ...){</span>
+<span id="cb3-2">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define a template that write to the</span></span>
+<span id="cb3-3">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># module file</span></span>
+<span id="cb3-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write</span>(name, path)</span>
 <span id="cb3-5">}</span>
 <span id="cb3-6"></span>
-<span id="cb3-7">golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">add_module</span>(<span class="at" style="color: #657422;">name =</span> <span class="st" style="color: #20794D;">"custom"</span>, <span class="at" style="color: #657422;">module_template =</span> my_tmpl)</span>
+<span id="cb3-7">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_module</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"custom"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">module_template =</span> my_tmpl)</span>
 <span id="cb3-8"></span>
-<span id="cb3-9">my_other_tmpl <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(name, path, export, ...){</span>
-<span id="cb3-10">  <span class="co" style="color: #5E5E5E;"># Copy and paste a file from somewhere</span></span>
-<span id="cb3-11">  <span class="fu" style="color: #4758AB;">file.copy</span>(..., path)</span>
+<span id="cb3-9">my_other_tmpl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(name, path, export, ...){</span>
+<span id="cb3-10">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Copy and paste a file from somewhere</span></span>
+<span id="cb3-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">file.copy</span>(..., path)</span>
 <span id="cb3-12">}</span>
 <span id="cb3-13"></span>
-<span id="cb3-14">golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">add_module</span>(<span class="at" style="color: #657422;">name =</span> <span class="st" style="color: #20794D;">"custom"</span>, <span class="at" style="color: #657422;">module_template =</span> my_other_tmpl)</span></code></pre></div>
+<span id="cb3-14">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_module</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"custom"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">module_template =</span> my_other_tmpl)</span></code></pre></div>
 </section>
 </section>
 <section id="js-css-templates" class="level3">
@@ -1018,18 +1513,60 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 </section>
 <section id="js-css-templates-examples" class="level4">
 <h4 class="anchored" data-anchor-id="js-css-templates-examples">JS &amp; CSS templates examples</h4>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">my_tmpl <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(path, ...){</span>
-<span id="cb4-2">   <span class="co" style="color: #5E5E5E;"># Define a template that only write the name of the</span></span>
-<span id="cb4-3">   <span class="co" style="color: #5E5E5E;"># module in the file</span></span>
-<span id="cb4-4">  write_there <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(...){</span>
-<span id="cb4-5">    <span class="fu" style="color: #4758AB;">write</span>(..., <span class="at" style="color: #657422;">file =</span> path, <span class="at" style="color: #657422;">append =</span> <span class="cn" style="color: #8f5902;">TRUE</span>)</span>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">my_tmpl <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(path, ...){</span>
+<span id="cb4-2">   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define a template that only write the name of the</span></span>
+<span id="cb4-3">   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># module in the file</span></span>
+<span id="cb4-4">  write_there <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(...){</span>
+<span id="cb4-5">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write</span>(..., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">file =</span> path, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">append =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span>
 <span id="cb4-6">  }</span>
 <span id="cb4-7"></span>
-<span id="cb4-8">  <span class="fu" style="color: #4758AB;">write_there</span>(<span class="st" style="color: #20794D;">"body {"</span>)</span>
-<span id="cb4-9">  <span class="fu" style="color: #4758AB;">write_there</span>(<span class="st" style="color: #20794D;">"    background-color:red;"</span>)</span>
-<span id="cb4-10">  <span class="fu" style="color: #4758AB;">write_there</span>(<span class="st" style="color: #20794D;">"}"</span>)</span>
+<span id="cb4-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write_there</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"body {"</span>)</span>
+<span id="cb4-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write_there</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"    background-color:red;"</span>)</span>
+<span id="cb4-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">write_there</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"}"</span>)</span>
 <span id="cb4-11">}</span>
-<span id="cb4-12">golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">add_css_file</span>(<span class="at" style="color: #657422;">name =</span> <span class="st" style="color: #20794D;">"custom"</span>, <span class="at" style="color: #657422;">template =</span> my_tmpl)</span></code></pre></div>
+<span id="cb4-12">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_css_file</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"custom"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">template =</span> my_tmpl)</span></code></pre></div>
 </section>
 </section>
 </section>
@@ -1038,41 +1575,103 @@ Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 <section id="new-module-skeleton" class="level3">
 <h3 class="anchored" data-anchor-id="new-module-skeleton">New module skeleton</h3>
 <p><code>{shiny}</code> 1.5.0, has introduced a new skeleton when it comes to modules. <code>{golem}</code> now supports this new skeleton:</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="sc" style="color: #5E5E5E;">&gt;</span> golem<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">add_module</span>(<span class="st" style="color: #20794D;">"plop"</span>)</span>
-<span id="cb5-2">✓ File created at R<span class="sc" style="color: #5E5E5E;">/</span>mod_plop.R</span></code></pre></div>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;">#' plop UI Function</span></span>
-<span id="cb6-2"><span class="co" style="color: #5E5E5E;">#'</span></span>
-<span id="cb6-3"><span class="co" style="color: #5E5E5E;">#' @description A shiny Module.</span></span>
-<span id="cb6-4"><span class="co" style="color: #5E5E5E;">#'</span></span>
-<span id="cb6-5"><span class="co" style="color: #5E5E5E;">#' @param id,input,output,session Internal parameters for {shiny}.</span></span>
-<span id="cb6-6"><span class="co" style="color: #5E5E5E;">#'</span></span>
-<span id="cb6-7"><span class="co" style="color: #5E5E5E;">#' @noRd</span></span>
-<span id="cb6-8"><span class="co" style="color: #5E5E5E;">#'</span></span>
-<span id="cb6-9"><span class="co" style="color: #5E5E5E;">#' @importFrom shiny NS tagList</span></span>
-<span id="cb6-10">mod_plop_ui <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(id){</span>
-<span id="cb6-11">  ns <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">NS</span>(id)</span>
-<span id="cb6-12">  <span class="fu" style="color: #4758AB;">tagList</span>(</span>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_module</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plop"</span>)</span>
+<span id="cb5-2">✓ File created at R<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>mod_plop.R</span></code></pre></div>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#' plop UI Function</span></span>
+<span id="cb6-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#'</span></span>
+<span id="cb6-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#' @description A shiny Module.</span></span>
+<span id="cb6-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#'</span></span>
+<span id="cb6-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#' @param id,input,output,session Internal parameters for {shiny}.</span></span>
+<span id="cb6-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#'</span></span>
+<span id="cb6-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#' @noRd</span></span>
+<span id="cb6-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#'</span></span>
+<span id="cb6-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#' @importFrom shiny NS tagList</span></span>
+<span id="cb6-10">mod_plop_ui <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(id){</span>
+<span id="cb6-11">  ns <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">NS</span>(id)</span>
+<span id="cb6-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tagList</span>(</span>
 <span id="cb6-13"></span>
 <span id="cb6-14">  )</span>
 <span id="cb6-15">}</span>
 <span id="cb6-16"></span>
-<span id="cb6-17"><span class="co" style="color: #5E5E5E;">#' plop Server Functions</span></span>
-<span id="cb6-18"><span class="co" style="color: #5E5E5E;">#'</span></span>
-<span id="cb6-19"><span class="co" style="color: #5E5E5E;">#' @noRd</span></span>
-<span id="cb6-20">mod_plop_server <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(id){</span>
-<span id="cb6-21">  <span class="fu" style="color: #4758AB;">moduleServer</span>( id, <span class="cf" style="color: #003B4F;">function</span>(input, output, session){</span>
-<span id="cb6-22">    ns <span class="ot" style="color: #003B4F;">&lt;-</span> session<span class="sc" style="color: #5E5E5E;">$</span>ns</span>
+<span id="cb6-17"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#' plop Server Functions</span></span>
+<span id="cb6-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#'</span></span>
+<span id="cb6-19"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#' @noRd</span></span>
+<span id="cb6-20">mod_plop_server <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(id){</span>
+<span id="cb6-21">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">moduleServer</span>( id, <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(input, output, session){</span>
+<span id="cb6-22">    ns <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> session<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>ns</span>
 <span id="cb6-23"></span>
 <span id="cb6-24">  })</span>
 <span id="cb6-25">}</span>
 <span id="cb6-26"></span>
 <span id="cb6-27"><span class="do" style="color: #5E5E5E;
+background-color: null;
 font-style: italic;">## To be copied in the UI</span></span>
-<span id="cb6-28"><span class="co" style="color: #5E5E5E;"># mod_plop_ui("plop_ui_1")</span></span>
+<span id="cb6-28"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># mod_plop_ui("plop_ui_1")</span></span>
 <span id="cb6-29"></span>
 <span id="cb6-30"><span class="do" style="color: #5E5E5E;
+background-color: null;
 font-style: italic;">## To be copied in the server</span></span>
-<span id="cb6-31"><span class="co" style="color: #5E5E5E;"># mod_plop_server("plop_ui_1")</span></span></code></pre></div>
+<span id="cb6-31"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># mod_plop_server("plop_ui_1")</span></span></code></pre></div>
 </section>
 <section id="disabling-auto-load" class="level3">
 <h3 class="anchored" data-anchor-id="disabling-auto-load">Disabling auto-load</h3>
@@ -1124,11 +1723,10 @@ font-style: italic;">## To be copied in the server</span></span>
  ]]></description>
   <guid>https://www.golemverse.org/news/golem-0.3.1-release-on-cran/index.html</guid>
   <pubDate>Fri, 28 May 2021 00:00:00 GMT</pubDate>
-  <media:content url="https://www.golemverse.org/news/golem-0.3.1-release-on-cran/featured.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>{shinipsum} is now on CRAN</title>
-  <dc:creator>colin</dc:creator>
+  <dc:creator>colin </dc:creator>
   <link>https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/index.html</link>
   <description><![CDATA[ 
 
@@ -1140,64 +1738,186 @@ font-style: italic;">## To be copied in the server</span></span>
 <p><code>{shinipsum}</code> is a package that can help you build <code>{shiny}</code> prototypes faster by providing a series of functions that can generate random elements to populate your UI. If you are familiar with “lorem ipsum”, the fake text generator that is used in software design as a placeholder for text, the idea is the same: generating placeholders for Shiny outputs.</p>
 <p><code>{shinipsum}</code> can be installed from CRAN with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">install.packages</span>(<span class="st" style="color: #20794D;">"shinipsum"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"shinipsum"</span>)</span></code></pre></div>
 </div>
 <p>You can install this package from GitHub with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">remotes<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">install_github</span>(<span class="st" style="color: #20794D;">"Thinkr-open/shinipsum"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">remotes<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install_github</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Thinkr-open/shinipsum"</span>)</span></code></pre></div>
 </div>
 <p>In this package, a series of functions that generates random placeholders. For example, <code>random_ggplot()</code> generates random <code>{ggplot2}</code> elements:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;">library</span>(shinipsum)</span>
-<span id="cb3-2"><span class="fu" style="color: #4758AB;">library</span>(ggplot2)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(shinipsum)</span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span></code></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;">random_ggplot</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
-<span id="cb4-2">  <span class="fu" style="color: #4758AB;">labs</span>(<span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">"Random plot"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">random_ggplot</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Random plot"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <p><img src="https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;">random_ggplot</span>() <span class="sc" style="color: #5E5E5E;">+</span></span>
-<span id="cb5-2">  <span class="fu" style="color: #4758AB;">labs</span>(<span class="at" style="color: #657422;">title =</span> <span class="st" style="color: #20794D;">"Random plot"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">random_ggplot</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb5-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Random plot"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <p><img src="https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Of course, the idea is to combine this with a Shiny interface, for example <code>random_ggplot()</code> will be used with a <code>renderPlot()</code> and <code>plotOutput()</code>. And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, <code>random_ggplot()</code> has a <code>type</code> parameter that can help you select a specific geom.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;">library</span>(shiny)</span>
-<span id="cb6-2"><span class="fu" style="color: #4758AB;">library</span>(shinipsum)</span>
-<span id="cb6-3"><span class="fu" style="color: #4758AB;">library</span>(DT)</span>
-<span id="cb6-4">ui <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">fluidPage</span>(</span>
-<span id="cb6-5">  <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A Random DT"</span>),</span>
-<span id="cb6-6">  <span class="fu" style="color: #4758AB;">DTOutput</span>(<span class="st" style="color: #20794D;">"data_table"</span>),</span>
-<span id="cb6-7">  <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A Random Plot"</span>),</span>
-<span id="cb6-8">  <span class="fu" style="color: #4758AB;">plotOutput</span>(<span class="st" style="color: #20794D;">"plot"</span>),</span>
-<span id="cb6-9">  <span class="fu" style="color: #4758AB;">h2</span>(<span class="st" style="color: #20794D;">"A Random Text"</span>),</span>
-<span id="cb6-10">  <span class="fu" style="color: #4758AB;">tableOutput</span>(<span class="st" style="color: #20794D;">"text"</span>)</span>
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(shiny)</span>
+<span id="cb6-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(shinipsum)</span>
+<span id="cb6-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(DT)</span>
+<span id="cb6-4">ui <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fluidPage</span>(</span>
+<span id="cb6-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h2</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A Random DT"</span>),</span>
+<span id="cb6-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">DTOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"data_table"</span>),</span>
+<span id="cb6-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h2</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A Random Plot"</span>),</span>
+<span id="cb6-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plotOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot"</span>),</span>
+<span id="cb6-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h2</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"A Random Text"</span>),</span>
+<span id="cb6-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tableOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"text"</span>)</span>
 <span id="cb6-11">)</span>
 <span id="cb6-12"></span>
-<span id="cb6-13">server <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="cf" style="color: #003B4F;">function</span>(input, output, session) {</span>
-<span id="cb6-14">  output<span class="sc" style="color: #5E5E5E;">$</span>data_table <span class="ot" style="color: #003B4F;">&lt;-</span> DT<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">renderDT</span>({</span>
-<span id="cb6-15">    <span class="fu" style="color: #4758AB;">random_DT</span>(<span class="dv" style="color: #AD0000;">5</span>, <span class="dv" style="color: #AD0000;">5</span>)</span>
+<span id="cb6-13">server <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(input, output, session) {</span>
+<span id="cb6-14">  output<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>data_table <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> DT<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">renderDT</span>({</span>
+<span id="cb6-15">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">random_DT</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
 <span id="cb6-16">  })</span>
-<span id="cb6-17">  output<span class="sc" style="color: #5E5E5E;">$</span>plot <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderPlot</span>({</span>
-<span id="cb6-18">    <span class="fu" style="color: #4758AB;">random_ggplot</span>(<span class="at" style="color: #657422;">type =</span> <span class="st" style="color: #20794D;">"point"</span>)</span>
+<span id="cb6-17">  output<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>plot <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">renderPlot</span>({</span>
+<span id="cb6-18">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">random_ggplot</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"point"</span>)</span>
 <span id="cb6-19">  })</span>
-<span id="cb6-20">  output<span class="sc" style="color: #5E5E5E;">$</span>text <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">renderText</span>({</span>
-<span id="cb6-21">    <span class="fu" style="color: #4758AB;">random_text</span>(<span class="at" style="color: #657422;">nwords =</span> <span class="dv" style="color: #AD0000;">50</span>)</span>
+<span id="cb6-20">  output<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>text <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">renderText</span>({</span>
+<span id="cb6-21">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">random_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nwords =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>)</span>
 <span id="cb6-22">  })</span>
 <span id="cb6-23">}</span>
-<span id="cb6-24"><span class="fu" style="color: #4758AB;">shinyApp</span>(ui, server)</span></code></pre></div>
+<span id="cb6-24"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">shinyApp</span>(ui, server)</span></code></pre></div>
 </div>
 <p>Other <code>{shinipsum}</code> functions include:</p>
 <ul>
 <li>tables:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;">random_table</span>(<span class="at" style="color: #657422;">nrow =</span> <span class="dv" style="color: #AD0000;">3</span>, <span class="at" style="color: #657422;">ncol =</span> <span class="dv" style="color: #AD0000;">10</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">random_table</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nrow =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ncol =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Plant   Type  Treatment conc uptake Plant.1 Type.1 Treatment.1 conc.1
 1   Qn1 Quebec nonchilled   95   16.0     Qn1 Quebec  nonchilled     95
@@ -1213,7 +1933,13 @@ font-style: italic;">## To be copied in the server</span></span>
 <li>print outputs:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;">random_print</span>(<span class="at" style="color: #657422;">type =</span> <span class="st" style="color: #20794D;">"model"</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">random_print</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"model"</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
@@ -1240,7 +1966,6 @@ sample estimates:
  ]]></description>
   <guid>https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/index.html</guid>
   <pubDate>Sun, 10 May 2020 00:00:00 GMT</pubDate>
-  <media:content url="https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/featured.png" medium="image" type="image/png" height="61" width="144"/>
 </item>
 <item>
   <title>{golem} 0.1.0 has been released on CRAN</title>
@@ -1266,7 +1991,6 @@ sample estimates:
   <category>release</category>
   <guid>https://www.golemverse.org/news/golem-0.1.0-release-on-cran/index.html</guid>
   <pubDate>Mon, 05 Aug 2019 00:00:00 GMT</pubDate>
-  <media:content url="https://www.golemverse.org/news/golem-0.1.0-release-on-cran/featured.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
   <title>Posts</title>
@@ -1282,9 +2006,9 @@ sample estimates:
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-sample-listings">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1681862400000" data-listing-file-modified-sort="1682146407051" data-listing-reading-time-sort="0.83">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1681862400000" data-listing-file-modified-sort="1682672154429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
-<p><a href="../news/fakir-1.0.0-on-cran/index.html"> <img src="https://www.golemverse.org/news/fakir-1.0.0-on-cran/fakir-header.png" class="thumnail-image"> </a></p>
+<p><a href="../news/fakir-1.0.0-on-cran/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:news/fakir-1.0.0-on-cran/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="../news/fakir-1.0.0-on-cran/index.html">
@@ -1310,9 +2034,9 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1682146407055" data-listing-reading-time-sort="3.47">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1682672154437" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
 <div class="thumbnail">
-<p><a href="../news/skeleteon-css-in-shiny/index.html"> <img src="https://www.golemverse.org/news/skeleteon-css-in-shiny/featured.png" class="thumnail-image"> </a></p>
+<p><a href="../news/skeleteon-css-in-shiny/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:news/skeleteon-css-in-shiny/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="../news/skeleteon-css-in-shiny/index.html">
@@ -1338,9 +2062,9 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1682146407055" data-listing-reading-time-sort="6.215">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1682672154433" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
 <div class="thumbnail">
-<p><a href="../news/golem-0.4.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.4.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
+<p><a href="../news/golem-0.4.0-release-on-cran/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:news/golem-0.4.0-release-on-cran/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="../news/golem-0.4.0-release-on-cran/index.html">
@@ -1366,9 +2090,9 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1682146407051" data-listing-reading-time-sort="2.12">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1682672154429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
-<p><a href="../news/golem-0.3.2-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.2-release-on-cran/featured.png" class="thumnail-image"> </a></p>
+<p><a href="../news/golem-0.3.2-release-on-cran/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:news/golem-0.3.2-release-on-cran/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="../news/golem-0.3.2-release-on-cran/index.html">
@@ -1394,9 +2118,9 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1682146407055" data-listing-reading-time-sort="1.375">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1632960000000" data-listing-file-modified-sort="1682672154433" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
-<p><a href="../news/golem-hacktoberfest-2021/index.html"> <img src="https://www.golemverse.org/news/golem-hacktoberfest-2021/featured.png" class="thumnail-image"> </a></p>
+<p><a href="../news/golem-hacktoberfest-2021/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:news/golem-hacktoberfest-2021/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="../news/golem-hacktoberfest-2021/index.html">
@@ -1422,9 +2146,9 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1682146407051" data-listing-reading-time-sort="8.04">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1622160000000" data-listing-file-modified-sort="1682672154429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
 <div class="thumbnail">
-<p><a href="../news/golem-0.3.1-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.3.1-release-on-cran/featured.png" class="thumnail-image"> </a></p>
+<p><a href="../news/golem-0.3.1-release-on-cran/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:news/golem-0.3.1-release-on-cran/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="../news/golem-0.3.1-release-on-cran/index.html">
@@ -1450,9 +2174,9 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1682146407047" data-listing-reading-time-sort="1.42">
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1589068800000" data-listing-file-modified-sort="1682672154425" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
-<p><a href="../news/2020-05-10_shinipsum-cran-realease/index.html"> <img src="https://www.golemverse.org/news/2020-05-10_shinipsum-cran-realease/featured.png" class="thumnail-image"> </a></p>
+<p><a href="../news/2020-05-10_shinipsum-cran-realease/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:news/2020-05-10_shinipsum-cran-realease/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="../news/2020-05-10_shinipsum-cran-realease/index.html">
@@ -1478,9 +2202,9 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1682146407051" data-listing-reading-time-sort="0.09">
+<div class="quarto-post image-right" data-index="7" data-categories="golem,release" data-listing-date-sort="1564963200000" data-listing-file-modified-sort="1682672154429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
-<p><a href="../news/golem-0.1.0-release-on-cran/index.html"> <img src="https://www.golemverse.org/news/golem-0.1.0-release-on-cran/featured.png" class="thumnail-image"> </a></p>
+<p><a href="../news/golem-0.1.0-release-on-cran/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:news/golem-0.1.0-release-on-cran/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="../news/golem-0.1.0-release-on-cran/index.html">
@@ -1512,7 +2236,7 @@ No matching items
 </div>
 </div> ]]></description>
   <guid>https://www.golemverse.org/news/index.html</guid>
-  <pubDate>Sat, 22 Apr 2023 06:53:42 GMT</pubDate>
+  <pubDate>Fri, 28 Apr 2023 08:56:27 GMT</pubDate>
 </item>
 </channel>
 </rss>

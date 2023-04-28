@@ -1,7 +1,0 @@
-<!doctype html>
-<html>
-    <head>
-	<meta http-equiv="refresh" content="0; url=/resources/">
-	<link rel="canonical" href="/resources/" />
-    </head>
-</html>
