@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,7 +57,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -89,19 +90,14 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MCXB7DZFKF"></script>
 
 <script type="text/javascript">
 
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-61204095-3', 'auto');
-
-ga('send', {
-  hitType: 'pageview',
-  'anonymizeIp': true,
-});
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -211,11 +207,12 @@ install.packages("golemverse")
 <li><p><code>{brochure}</code>, Multipage ‘Shiny’ Apps</p></li>
 <li><p><code>{dockerfiler}</code>, Easy Dockerfile Creation from R</p></li>
 <li><p><code>{elvis}</code>, ‘Shiny’ renderers and observers made safer</p></li>
-<li><p><code>{fakir}</code>, Create Fake Data in R for tutorials</p></li>
+<li><p><code>{fakir}</code>, Generate Fake Datasets for Prototyping and Teaching</p></li>
 <li><p><code>{gargoyle}</code>, An Event-Based Mechanism for ‘Shiny’</p></li>
 <li><p><code>{gemstones}</code>, Make Your ‘golem’ App Shine</p></li>
 <li><p><code>{golem}</code>, Make Your ‘golem’ App Shine</p></li>
 <li><p><code>{ghooks}</code>, ‘Golem’ Hooks for Standard ‘Shiny’ Apps</p></li>
+<li><p><code>{minifyr}</code>, Minify CSS, HTML and JavaScript Files</p></li>
 <li><p><code>{skeleton}</code>, Skeleton CSS for Shiny</p></li>
 <li><p><code>{shinidraw}</code>, ‘Excalidraw’ in ‘Shiny’</p></li>
 <li><p><code>{shinipsum}</code>, Lorem-Ipsum Helper Function for ‘shiny’ Prototyping</p></li>
@@ -243,7 +240,7 @@ install.packages("golemverse")
 <h2 data-anchor-id="on-the-blog">On the blog ✍️</h2>
 <div id="listing-blog-listings" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1682711156561" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1687187172773" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./news/index.html"> <p class="card-img-top"><img src="news/skeleteon-css-in-shiny/featured.png"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -264,7 +261,7 @@ Posts
 <a href="./news/index.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1681862400000" data-listing-file-modified-sort="1682711156553" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1681862400000" data-listing-file-modified-sort="1687187172769" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./news/fakir-1.0.0-on-cran/index.html"> <p class="card-img-top"><img src="news/fakir-1.0.0-on-cran/fakir-header.png"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -292,7 +289,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1682711156561" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1687187172773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
 <div class="thumbnail">
 <p><a href="./news/skeleteon-css-in-shiny/index.html"> <p class="card-img-top"><img src="news/skeleteon-css-in-shiny/featured.png"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -320,7 +317,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1682711156557" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1687187172773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
 <div class="thumbnail">
 <p><a href="./news/golem-0.4.0-release-on-cran/index.html"> <p class="card-img-top"><img src="news/golem-0.4.0-release-on-cran/featured.png"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
@@ -348,7 +345,7 @@ colin
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1682711156557" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1687187172769" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="./news/golem-0.3.2-release-on-cran/index.html"> <p class="card-img-top"><img src="news/golem-0.3.2-release-on-cran/featured.png"  class="thumbnail-image card-img"/></p> </a></p>
 </div>

@@ -13,12 +13,22 @@
     ]
   },
   {
-    "listing": "/stream/index.html",
+    "listing": "/packages/index.html",
     "items": [
-      "/stream/2022-02-10-twitch/index.html",
-      "/stream/2020-04-02-twitch/index.html",
-      "/stream/2020-01-23-twitch/index.html",
-      "/stream/2020-01-13-twitch/index.html"
+      "/packages/brochure/index.html",
+      "/packages/ghooks/index.html",
+      "/packages/shinidraw/index.html",
+      "/packages/elvis/index.html",
+      "/packages/gemstones/index.html",
+      "/packages/bank/index.html",
+      "/packages/golem/index.html",
+      "/packages/shinipsum/index.html",
+      "/packages/skeleton/index.html",
+      "/packages/minifyr/index.html",
+      "/packages/gargoyle/index.html",
+      "/packages/dockerfiler/index.html",
+      "/packages/w3css/index.html",
+      "/packages/fakir/index.html"
     ]
   },
   {
@@ -36,21 +46,12 @@
     ]
   },
   {
-    "listing": "/packages/index.html",
+    "listing": "/stream/index.html",
     "items": [
-      "/packages/golem/index.html",
-      "/packages/gargoyle/index.html",
-      "/packages/shinidraw/index.html",
-      "/packages/ghooks/index.html",
-      "/packages/dockerfiler/index.html",
-      "/packages/brochure/index.html",
-      "/packages/skeleton/index.html",
-      "/packages/fakir/index.html",
-      "/packages/shinipsum/index.html",
-      "/packages/elvis/index.html",
-      "/packages/gemstones/index.html",
-      "/packages/w3css/index.html",
-      "/packages/bank/index.html"
+      "/stream/2022-02-10-twitch/index.html",
+      "/stream/2020-04-02-twitch/index.html",
+      "/stream/2020-01-23-twitch/index.html",
+      "/stream/2020-01-13-twitch/index.html"
     ]
   }
 ]
