@@ -1,6 +1,6 @@
 package:
   golem:
-    title: "`{golem}` is an opiniated framework for building production-grade `{shiny}` applications."
+    title: "`{golem}` is an opinionated framework for building production-grade `{shiny}` applications."
     description: "It provides a set of tools to help you build a `{shiny}` application in a structured way automates routine tasks, facilitate deployment, and is extendable to feat your needs."
     repo: https://github.com/ThinkR-open/golem
     lifecycle: stable
@@ -63,4 +63,9 @@ package:
     title: "Excalidraw in `{shiny}`."
     description: "Bringing Excalidraw to your R console, with built-in project management."
     repo: https://github.com/thinkr-open/shinidraw
+    lifecycle: experimental
+  minifyr:
+    title: "Minify CSS, HTML and JavaScript Files."
+    description: "A wrapper around the node-minify NodeJS module that allows to minify CSS, HTML, and JavaScript files from the R console."
+    repo: https://github.com/colinfay/minifyr
     lifecycle: experimental

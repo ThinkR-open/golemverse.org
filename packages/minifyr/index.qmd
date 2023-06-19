@@ -1,0 +1,46 @@
+---
+title: "minifyr"
+image: "/img/minifyr.png"
+---
+
+::: {.grid}
+
+::: {.g-col-6}
+
+![](/img/minifyr.png)
+
+:::
+
+::: {.g-col-6}
+
+Minify CSS, HTML and JavaScript Files.
+
+A wrapper around the node-minify NodeJS module that allows to minify CSS, HTML, and JavaScript files from the R console.
+
+<div align = "center">
+
+<img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg">
+
+<a  target = "_blank" href="https://CRAN.R-project.org/package=minifyr">
+<img src = "https://www.r-pkg.org/badges/version/minifyr">
+</a>
+
+<a  target = "_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/minifyr">
+  <img src = "https://cranlogs.r-pkg.org/badges/minifyr">
+</a>
+
+<a  target = "_blank" href="https://github.com/colinfay/minifyr/actions">
+ <img src="https://github.com/colinfay/minifyr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
+</a>
+
+<a class="github-button"  target = "_blank" href="https://github.com/colinfay/minifyr" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a>
+
+<a class="github-button"  target = "_blank" href="https://github.com/colinfay/minifyr/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a>
+</div>
+
+:::
+
+:::
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>

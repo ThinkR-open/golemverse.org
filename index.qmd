@@ -33,7 +33,7 @@ install.packages("golemverse")
 
 - `{elvis}`, 'Shiny' renderers and observers made safer
 
-- `{fakir}`, Create Fake Data in R for tutorials
+- `{fakir}`, Generate Fake Datasets for Prototyping and Teaching
 
 - `{gargoyle}`, An Event-Based Mechanism for 'Shiny'
 
@@ -42,6 +42,8 @@ install.packages("golemverse")
 - `{golem}`, Make Your 'golem' App Shine
 
 - `{ghooks}`, 'Golem' Hooks for Standard 'Shiny' Apps
+
+- `{minifyr}`, Minify CSS, HTML and JavaScript Files
 
 - `{skeleton}`, Skeleton CSS for Shiny
 
