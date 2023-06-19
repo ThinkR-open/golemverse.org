@@ -1,0 +1,31 @@
+# Golemverse Game of Goose
+
+Welcome to the Golemverse Game of Goose!
+
+## Rules of the game
+
+- Start with the idea 💡
+
+- Role the dice 🎲
+
+- Move your pawn ♟️
+
+- If you end on a bridge: move to the next bridge 🌉
+
+- If you end on a dice: play again  🎲
+
+- If you end on the skull: start again 💀
+
+- If you end on the well: skip one turn ䷯
+
+- The game is finished when you reach the end user 👩‍💻
+
+## The boards
+
+### Poster
+
+![](/img/golemverse-game-of-goose-poster.png)
+
+### Cardboard
+
+![](/img/golemverse-game-of-goose-cardboard.png)
