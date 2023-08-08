@@ -19,7 +19,9 @@ You can also browse the ["golem" tag](https://rtask.thinkr.fr/golem/) on the RTa
 
 Have any resource to add here? [Feel free to open an issue!](https://github.com/ThinkR-open/golemverse.org/issues).
 
+## 2023
 
+- 2023-06-22 🎥 [🇫🇷 {golem} et {fusen}, construire des apps Shiny robustes et faciles à maintenir.](https://www.youtube.com/watch?v=diCG4t76k78) Online, by [Sébastien Rochette](https://github.com/statnmap)
 
 ## 2022
 
