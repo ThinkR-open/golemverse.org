@@ -11,6 +11,19 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 
 + `{golem}` milestone 0.5.0 <https://github.com/ThinkR-open/golem/milestone/1>
 
++ Update and rewrite the `{golem}` pkgdown
+  - Separate vignettes into "Getting started" & "Advanced"
+  - Change the theme to bslib5
+
++ Create a `{golem.lint}` package that will host:
+  - Check for missing ns() with roxygen tag
+  - Current sanity checks
+  - Styler `golem_style()`
+  - url checker ?
+  - precommit hook for `{precommit}`
+
++ `{golemverse}` à la `{tidyverse}`
+
 + Integrate a storage mechanism in `{gargoyle}`. I'm thinking of a simple port of <https://github.com/ColinFay/odds>. <https://github.com/ColinFay/gargoyle/issues/12>
 
 + `{shinidraw}` : excalidraw in `{shiny}`
