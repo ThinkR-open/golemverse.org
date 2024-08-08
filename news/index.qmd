@@ -1,5 +1,6 @@
 ---
 title: "Posts"
+id: news-index
 listing:
   contents: .
   sort: "date desc"

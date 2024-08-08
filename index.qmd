@@ -11,6 +11,8 @@ listing:
     max-items: 5
     sort: "date desc"
     feed: true
+    exclude:
+      id: news-index
 ---
 
 :::{#hero-heading}
@@ -82,6 +84,7 @@ You can grab a copy on [routledge.com](https://www.routledge.com/Engineering-Pro
 ## On the blog ✍️
 
 ::: {#blog-listings}
+
 :::
 
 ## Contact 📲
