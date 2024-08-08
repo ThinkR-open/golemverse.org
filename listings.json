@@ -1,25 +1,19 @@
 [
   {
-    "listing": "/packages/index.html",
+    "listing": "/news/index.html",
     "items": [
-      "/packages/brochure/index.html",
-      "/packages/gargoyle/index.html",
-      "/packages/skeleton/index.html",
-      "/packages/bank/index.html",
-      "/packages/golem/index.html",
-      "/packages/gemstones/index.html",
-      "/packages/ghooks/index.html",
-      "/packages/elvis/index.html",
-      "/packages/shinidraw/index.html",
-      "/packages/minifyr/index.html",
-      "/packages/w3css/index.html",
-      "/packages/shinipsum/index.html",
-      "/packages/dockerfiler/index.html",
-      "/packages/fakir/index.html"
+      "/news/fakir-1.0.0-on-cran/index.html",
+      "/news/skeleteon-css-in-shiny/index.html",
+      "/news/golem-0.4.0-release-on-cran/index.html",
+      "/news/golem-0.3.2-release-on-cran/index.html",
+      "/news/golem-hacktoberfest-2021/index.html",
+      "/news/golem-0.3.1-release-on-cran/index.html",
+      "/news/2020-05-10_shinipsum-cran-realease/index.html",
+      "/news/golem-0.1.0-release-on-cran/index.html"
     ]
   },
   {
-    "listing": "/news/index.html",
+    "listing": "/index.html",
     "items": [
       "/news/fakir-1.0.0-on-cran/index.html",
       "/news/skeleteon-css-in-shiny/index.html",
@@ -41,17 +35,22 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/packages/index.html",
     "items": [
-      "/news/index.html",
-      "/news/fakir-1.0.0-on-cran/index.html",
-      "/news/skeleteon-css-in-shiny/index.html",
-      "/news/golem-0.4.0-release-on-cran/index.html",
-      "/news/golem-0.3.2-release-on-cran/index.html",
-      "/news/golem-hacktoberfest-2021/index.html",
-      "/news/golem-0.3.1-release-on-cran/index.html",
-      "/news/2020-05-10_shinipsum-cran-realease/index.html",
-      "/news/golem-0.1.0-release-on-cran/index.html"
+      "/packages/skeleton/index.html",
+      "/packages/bank/index.html",
+      "/packages/fakir/index.html",
+      "/packages/elvis/index.html",
+      "/packages/gemstones/index.html",
+      "/packages/ghooks/index.html",
+      "/packages/golem/index.html",
+      "/packages/minifyr/index.html",
+      "/packages/shinidraw/index.html",
+      "/packages/w3css/index.html",
+      "/packages/dockerfiler/index.html",
+      "/packages/shinipsum/index.html",
+      "/packages/gargoyle/index.html",
+      "/packages/brochure/index.html"
     ]
   }
 ]
