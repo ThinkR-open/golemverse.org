@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="colin">
+<meta name="dcterms.date" content="2024-08-26">
 
-<title>R packages for building robust, production grade {shiny} apps. – golemverse</title>
+<title>{golem} 0.5.0 is now available – golemverse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href=".//img/favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,35 +102,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-listings .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-listings'] = new List('listing-blog-listings', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MCXB7DZFKF"></script>
 
 <script type="text/javascript">
@@ -106,50 +112,24 @@ gtag('js', new Date());
 gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="golemverse" href="index.xml" data-external="1"><meta name="twitter:title" content="R packages for building robust, production grade {shiny} apps. – golemverse">
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="{golem} 0.5.0 is now available – golemverse">
 <meta name="twitter:description" content="Welcome to the golemverse!">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.golemverse.org/news/golem-0.5.0-release-on-cran/featured.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1792">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">golemverse</span>
     </a>
   </div>
@@ -160,27 +140,27 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./resources/index.html"> 
+    <a class="nav-link" href="../../resources/index.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./packages/index.html"> 
+    <a class="nav-link" href="../../packages/index.html"> 
 <span class="menu-text">Packages</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./roadmap/index.html"> 
+    <a class="nav-link" href="../../roadmap/index.html"> 
 <span class="menu-text">Roadmap</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./news/index.html"> 
+    <a class="nav-link" href="../../news/index.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./stream/index.html"> 
+    <a class="nav-link" href="../../stream/index.html"> 
 <span class="menu-text">Stream</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html#contact"> 
+    <a class="nav-link" href="../../index.html#contact"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -196,7 +176,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -208,224 +188,116 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">{golem} 0.5.0 is now available</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>colin </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 26, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<div class="quarto-about-broadside column-page">
-  <div class="about-main">
-    <div class="about-entity" style="background-image: url('img/profile.png')"></div>
-    <div class="about-contents"><header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">R packages for building robust, production grade <code>{shiny}</code> apps.</h1>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="featured.png" class="img-fluid figure-img"></p>
+<figcaption>Image generated by ChatGPT</figcaption>
+</figure>
 </div>
-<div class="quarto-title-meta">
-  </div>
-</header><div id="hero-heading">
-<p>The golemverse is a collection of R packages for building <code>{shiny}</code> apps that need to be safely shipped to production.</p>
-<!-- Install them all with:
-```r
-install.packages("golemverse")
-``` -->
-<section id="packages-from-the-golemverse" class="level3">
-<h3 data-anchor-id="packages-from-the-golemverse">Packages from the golemverse</h3>
+<p>We are thrilled to announce the release of <code>{golem}</code> version 0.5.0! This update comes packed with new features, enhancements, and bug fixes that will streamline your Shiny app development process.</p>
+<p>You can download the latest version from your favorite CRAN repository, or by running the following command in R:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"thinkr-open/golem@v0.5.0"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="whats-new-in-this-version" class="level2">
+<h2 class="anchored" data-anchor-id="whats-new-in-this-version">What’s New in This Version?</h2>
+<p>The latest update of <code>{golem}</code> introduces several new functions and improvements, designed to enhance your experience when building and deploying Shiny applications.</p>
+<section id="major-highlights" class="level3">
+<h3 class="anchored" data-anchor-id="major-highlights">Major Highlights</h3>
+<section id="golemwelcome_page" class="level4">
+<h4 class="anchored" data-anchor-id="golemwelcome_page"><code>golem::welcome_page()</code></h4>
+<p>The <code>golem::welcome_page()</code> function now displays a welcome page in the default scaffold app, offering a smoother onboarding experience for new users.</p>
+<p><img src="golem-welcome-page.png" class="img-fluid"></p>
+</section>
+<section id="new-files-added" class="level4">
+<h4 class="anchored" data-anchor-id="new-files-added">New Files Added</h4>
 <ul>
-<li><p><code>{bank}</code>, Extra Cache</p></li>
-<li><p><code>{brochure}</code>, Multipage ‘Shiny’ Apps</p></li>
-<li><p><code>{dockerfiler}</code>, Easy Dockerfile Creation from R</p></li>
-<li><p><code>{elvis}</code>, ‘Shiny’ renderers and observers made safer</p></li>
-<li><p><code>{fakir}</code>, Generate Fake Datasets for Prototyping and Teaching</p></li>
-<li><p><code>{gargoyle}</code>, An Event-Based Mechanism for ‘Shiny’</p></li>
-<li><p><code>{gemstones}</code>, Make Your ‘golem’ App Shine</p></li>
-<li><p><code>{golem}</code>, A framework for production-grade <code>{shiny}</code> apps</p></li>
-<li><p><code>{ghooks}</code>, ‘Golem’ Hooks for Standard ‘Shiny’ Apps</p></li>
-<li><p><code>{minifyr}</code>, Minify CSS, HTML and JavaScript Files</p></li>
-<li><p><code>{skeleton}</code>, Skeleton CSS for Shiny</p></li>
-<li><p><code>{shinidraw}</code>, ‘Excalidraw’ in ‘Shiny’</p></li>
-<li><p><code>{shinipsum}</code>, Lorem-Ipsum Helper Function for ‘shiny’ Prototyping</p></li>
-<li><p><code>{w3css}</code>, W3CSS for ‘shiny’</p></li>
+<li><p><code>use_readme_rmd()</code>: This function adds a <code>{golem}</code>-specific <code>README.Rmd</code> to your project, making documentation easier and more consistent.</p></li>
+<li><p><code>add_empty_file()</code>: Creates an empty file in the <code>www</code> directory, allowing for better management of static assets.</p></li>
+<li><p><code>add_r6()</code>: Adds an empty R6 class template, facilitating object-oriented programming in your Shiny apps.</p></li>
+<li><p><code>add_fct()</code> now includes a function skeleton to guide users in creating consistent functions across their projects.</p></li>
 </ul>
 </section>
-</div></div>
-  </div>
-</div>
-
-<section id="read-the-book" class="level2">
-<h2 data-anchor-id="read-the-book">Read the book 📚</h2>
-<div class="grid">
-<div class="g-col-6">
-<p>Learn more about building <code>{shiny}</code> apps for production with the <em>Engineering Production-Grade Shiny Apps</em>.</p>
-<p>The online version of the book is free to read on <a href="https://engineering-shiny.org/" class="uri">https://engineering-shiny.org/</a>.</p>
-<p>This book is available in print, published in the R Series by Chapman and Hall/CRC. You can grab a copy on <a href="https://www.routledge.com/Engineering-Production-Grade-Shiny-Apps/Fay-Rochette-Guyader-Girard/p/book/9780367466022?utm_source=author&amp;utm_medium=shared_link&amp;utm_campaign=B043139_jm1_5ll_6rm_t081_1al_engineeringproduction-gradeshinyappsauthorshare">routledge.com</a>.</p>
-</div>
-<div class="g-col-6">
-<p><img src="img/engineering-shiny.jpg" class="img-fluid"></p>
-</div>
-</div>
 </section>
-<section id="on-the-blog" class="level2">
-<h2 data-anchor-id="on-the-blog">On the blog ✍️</h2>
-<div id="listing-blog-listings" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1724630400000" data-listing-file-modified-sort="1724675791693" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="458">
-<div class="thumbnail">
-<p><a href="./news/golem-0.5.0-release-on-cran/index.html" class="no-external"></a></p><a href="./news/golem-0.5.0-release-on-cran/index.html" class="no-external">
-<p class="card-img-top"><img src="news/golem-0.5.0-release-on-cran/featured.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./news/golem-0.5.0-release-on-cran/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./news/golem-0.5.0-release-on-cran/index.html" class="no-external">{golem} 0.5.0 is now available</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./news/golem-0.5.0-release-on-cran/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./news/golem-0.5.0-release-on-cran/index.html" class="no-external">We are thrilled to announce the release of <code>{golem}</code> version 0.5.0! This update comes packed with new features, enhancements, and bug fixes that will streamline your Shiny app…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./news/golem-0.5.0-release-on-cran/index.html" class="no-external">
-<div class="listing-date">
-Aug 26, 2024
-</div>
-<div class="listing-author">
-colin
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1681862400000" data-listing-file-modified-sort="1724675791685" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="166">
-<div class="thumbnail">
-<p><a href="./news/fakir-1.0.0-on-cran/index.html" class="no-external"></a></p><a href="./news/fakir-1.0.0-on-cran/index.html" class="no-external">
-<p class="card-img-top"><img src="news/fakir-1.0.0-on-cran/fakir-header.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./news/fakir-1.0.0-on-cran/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./news/fakir-1.0.0-on-cran/index.html" class="no-external">{fakir} 1.0.0 is now on CRAN</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./news/fakir-1.0.0-on-cran/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./news/fakir-1.0.0-on-cran/index.html" class="no-external">I’m very happy to announce that <code>{fakir}</code> is now on CRAN.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./news/fakir-1.0.0-on-cran/index.html" class="no-external">
-<div class="listing-date">
-Apr 19, 2023
-</div>
-<div class="listing-author">
-colin
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1724675791697" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="689">
-<div class="thumbnail">
-<p><a href="./news/skeleteon-css-in-shiny/index.html" class="no-external"></a></p><a href="./news/skeleteon-css-in-shiny/index.html" class="no-external">
-<p class="card-img-top"><img src="news/skeleteon-css-in-shiny/featured.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./news/skeleteon-css-in-shiny/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./news/skeleteon-css-in-shiny/index.html" class="no-external">Minimalist and Elegant {shiny} apps with {skeleton}</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./news/skeleteon-css-in-shiny/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./news/skeleteon-css-in-shiny/index.html" class="no-external">A dead simple, responsive, minimalist CSS framework.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./news/skeleteon-css-in-shiny/index.html" class="no-external">
-<div class="listing-date">
-Apr 13, 2023
-</div>
-<div class="listing-author">
-colin
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1678838400000" data-listing-file-modified-sort="1724675791689" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1243">
-<div class="thumbnail">
-<p><a href="./news/golem-0.4.0-release-on-cran/index.html" class="no-external"></a></p><a href="./news/golem-0.4.0-release-on-cran/index.html" class="no-external">
-<p class="card-img-top"><img src="news/golem-0.4.0-release-on-cran/featured.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./news/golem-0.4.0-release-on-cran/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./news/golem-0.4.0-release-on-cran/index.html" class="no-external">{golem} 0.4.0 is now available</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./news/golem-0.4.0-release-on-cran/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./news/golem-0.4.0-release-on-cran/index.html" class="no-external">The new version of <code>{golem}</code> is available!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./news/golem-0.4.0-release-on-cran/index.html" class="no-external">
-<div class="listing-date">
-Mar 15, 2023
-</div>
-<div class="listing-author">
-colin
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1724675791685" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="424">
-<div class="thumbnail">
-<p><a href="./news/golem-0.3.2-release-on-cran/index.html" class="no-external"></a></p><a href="./news/golem-0.3.2-release-on-cran/index.html" class="no-external">
-<p class="card-img-top"><img src="news/golem-0.3.2-release-on-cran/featured.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./news/golem-0.3.2-release-on-cran/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./news/golem-0.3.2-release-on-cran/index.html" class="no-external">{golem} 0.3.2 is now available</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./news/golem-0.3.2-release-on-cran/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./news/golem-0.3.2-release-on-cran/index.html" class="no-external">The new version of <code>{golem}</code> is now available!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./news/golem-0.3.2-release-on-cran/index.html" class="no-external">
-<div class="listing-date">
-Mar 11, 2022
-</div>
-<div class="listing-author">
-colin
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="new-features-and-enhancements" class="level3">
+<h3 class="anchored" data-anchor-id="new-features-and-enhancements">New Features and Enhancements</h3>
+<p>This release comes with a variety of new features and user-visible changes:</p>
+<ul>
+<li><p>The <code>is_golem()</code> function has been introduced to help determine if the current folder is a <code>{golem}</code>-based app. This function can be used especially useful for extending golem with project hooks.</p></li>
+<li><p>The <code>fill_desc()</code> function now automatically calls <code>set_options()</code> and uses a <code>person</code> vector for better project metadata management.</p></li>
+<li><p>The module skeleton has been updated to adhere to the tidyverse style.</p></li>
+</ul>
 </section>
-<section id="contact" class="level2">
-<h2 data-anchor-id="contact">Contact 📲</h2>
-<p>Contact us via the <a href="https://rtask.thinkr.fr/contact/">ThinkR website</a>!</p>
+<section id="deployment-improvements" class="level3">
+<h3 class="anchored" data-anchor-id="deployment-improvements">Deployment Improvements</h3>
+<ul>
+<li><p>A <code>.rscignore</code> file is now created in the golem directory whenever connect-related files are generated, simplifying deployment to RStudio Connect.</p></li>
+<li><p>The <code>writeManifest()</code> function has been added to <code>deploy.R</code>, improving deployment workflows by ensuring all necessary dependencies are captured.</p></li>
+</ul>
+</section>
+<section id="bug-fixes" class="level3">
+<h3 class="anchored" data-anchor-id="bug-fixes">Bug Fixes</h3>
+<p>We’ve addressed several issues in this release, including:</p>
+<ul>
+<li><code>use_{internal,external}_XXX_file()</code> now works correctly with the default missing <code>name</code> argument.</li>
+<li><code>run_dev()</code> now installs the necessary dependencies to source <code>dev/run_dev.R</code> if they are missing.</li>
+<li><code>use_readme_rmd()</code> no longer pops up when <code>open=FALSE</code> is set, providing a smoother setup process.</li>
+<li>Docker commands now include the <code>-it</code> flag, allowing processes to be interrupted with <code>^C</code>.</li>
+</ul>
+</section>
+<section id="internal-changes" class="level3">
+<h3 class="anchored" data-anchor-id="internal-changes">Internal Changes</h3>
+<p>This release also includes some internal improvements:</p>
+<ul>
+<li><p>We’ve added tests for previously untested files and functions, improving the overall code coverage of <code>{golem}</code>.</p></li>
+<li><p>The <code>guess_where_config()</code> function now locates user config YAML files based on changes made in <code>R/app_config.R</code>.</p></li>
+<li><p>The test suite has been refactored for faster execution and reduced verbosity.</p></li>
+</ul>
+<p>This release marks a significant step forward for the <code>{golem}</code> package, offering new tools and enhancements to make your Shiny app development smoother and more efficient. We hope you enjoy the new features and improvements!</p>
+<p>Happy coding! 🚀</p>
+<p>Thanks to everyone who contributed to this new version!</p>
 
 
-
-
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -449,6 +321,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -862,7 +741,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/ThinkR-open/golemverse.org/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ThinkR-open/golemverse.org/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/ThinkR-open/golemverse.org/edit/main/news/golem-0.5.0-release-on-cran/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ThinkR-open/golemverse.org/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
