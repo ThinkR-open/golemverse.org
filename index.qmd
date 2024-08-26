@@ -41,7 +41,7 @@ install.packages("golemverse")
 
 - `{gemstones}`, Make Your 'golem' App Shine
 
-- `{golem}`, Make Your 'golem' App Shine
+- `{golem}`, A framework for production-grade `{shiny}` apps
 
 - `{ghooks}`, 'Golem' Hooks for Standard 'Shiny' Apps
 
