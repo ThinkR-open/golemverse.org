@@ -2,6 +2,7 @@
 title: "Extending Your `{golem}` Projects with Custom Hooks, Templates, and Maintenance Modes"
 author: colin
 date: "2024-09-01"
+draft: true
 ---
 
 ## Enhancing Your `{golem}` Projects with Custom Hooks, Templates, and Maintenance Modes
