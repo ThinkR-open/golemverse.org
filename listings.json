@@ -2,7 +2,6 @@
   {
     "listing": "/news/index.html",
     "items": [
-      "/news/extending-golem/index.html",
       "/news/golem-0.5.1-release-on-cran/index.html",
       "/news/fakir-1.0.0-on-cran/index.html",
       "/news/skeleteon-css-in-shiny/index.html",
@@ -17,7 +16,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/news/extending-golem/index.html",
       "/news/golem-0.5.1-release-on-cran/index.html",
       "/news/fakir-1.0.0-on-cran/index.html",
       "/news/skeleteon-css-in-shiny/index.html",
