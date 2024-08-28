@@ -3,7 +3,7 @@ title: "{golem} 0.4.0 is now available"
 author: colin
 date: '2023-03-15'
 slug: golem-0.4.0-release-on-cran
-redirect: /post/golem-0.4.0-release-on-cran/
+aliases: /post/golem-0.4.0-release-on-cran/
 ---
 
 ```{r include = FALSE}

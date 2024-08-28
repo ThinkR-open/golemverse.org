@@ -8,5 +8,5 @@ listing:
   sort-ui: false
   filter-ui: false
   id: sample-listings
-redirect: /post/
+aliases: /post/
 ---

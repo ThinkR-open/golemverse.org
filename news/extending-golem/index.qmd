@@ -1,0 +1,114 @@
+---
+title: "Extending Your `{golem}` Projects with Custom Hooks, Templates, and Maintenance Modes"
+author: colin
+date: "2024-09-01"
+---
+
+## Enhancing Your `{golem}` Projects with Custom Hooks, Templates, and Maintenance Modes
+
+When building robust and scalable Shiny applications with `{golem}`, customization can take your projects to the next level. `{golem}` provides several powerful features that allow developers to tailor their applications to meet specific needs, including custom project hooks, module templates, and even maintenance modes. In this blog post, we'll explore how you can leverage these features to create more flexible and maintainable Shiny apps.
+
+### Custom Project Hooks: Automate and Extend `{golem}` Project Setup
+
+The `create_golem()` function is the starting point for any `{golem}`-based Shiny app. One of its standout features is the `project_hook` parameter. This parameter allows you to define a custom function that runs immediately after the creation of a `{golem}` project, giving you the ability to automate modifications to the project structure.
+
+#### What You Can Do with Project Hooks
+Project hooks are incredibly versatile. Some common use cases include:
+- **Adding a custom front-end template:** Modify the default UI by automatically adding a new template in `R/app_ui.R`.
+- **Changing configuration settings:** Update the `inst/golem-config.yml` file with custom configuration options.
+- **Copying external assets:** Automatically move external files into `inst/app/www` to be used by your application.
+- **Removing unnecessary files:** Clean up your project by deleting default files that you don't need.
+
+#### How Project Hooks Work
+The `project_hook` function is executed in the directory of the newly created `{golem}` project, right after the default project template has been set up. This sequence ensures that your customizations are applied without disrupting the initial setup process.
+
+Here’s a step-by-step breakdown:
+1. The package name and directory are generated.
+2. The default `{golem}` template is copied into the new directory.
+3. The `project_hook` function is called, making your custom changes.
+4. The project is finalized and opened in RStudio.
+
+#### Example: Removing the `dev/` Folder
+Let’s look at a simple example. Suppose you want to remove the `dev/` folder from the newly created project. You can achieve this by defining a hook function like this:
+
+```r
+no_dev <- function(path, package_name, ...) {
+  fs::dir_delete("dev")
+}
+create_golem("myapp", project_hook = no_dev)
+```
+
+This function will automatically delete the `dev/` folder right after the project is created.
+
+### Module Templates: Customizing Module Creation
+
+Modules are a key component of scalable Shiny apps, and `{golem}` allows you to create custom module templates to standardize your development process.
+
+#### How Module Templates Work
+When you use the `add_module()` function, `{golem}` can call a custom `module_template` function to generate the content of the module file. This function is only executed if the module file doesn’t already exist, ensuring that your existing files are not overwritten.
+
+#### Example: A Simple Module Template
+Here’s how you can define a module template that simply writes the name of the module to the file:
+
+```r
+my_tmpl <- function(name, path, export, ...) {
+  write(name, path)
+}
+golem::add_module(name = "custom", module_template = my_tmpl)
+```
+
+This template can be used to ensure that all modules start with a predefined structure or content, helping maintain consistency across your application.
+
+### JS, CSS, and SASS Templates: Customizing Front-End Assets
+
+Just like with modules, you can create custom templates for JavaScript, CSS, and SASS files. This allows you to define consistent styling and scripting across your application.
+
+#### Example: A Custom CSS Template
+Here’s an example of a custom CSS template that sets a red background for the body of the application:
+
+```r
+my_tmpl <- function(path, ...) {
+  write_there <- function(...) {
+    write(..., file = path, append = TRUE)
+  }
+  write_there("body {")
+  write_there("    background-color:red;")
+  write_there("}")
+}
+golem::add_css_file(name = "custom", template = my_tmpl)
+```
+
+### Maintenance Mode: Keep Your App Online While Making It Unavailable
+
+There are times when your application needs to be temporarily unavailable, such as during a database update or API maintenance. `{golem}` includes a maintenance mode feature that allows you to keep the application running but display a maintenance page to users.
+
+#### Activating Maintenance Mode
+Maintenance mode can be triggered by setting the `GOLEM_MAINTENANCE_ACTIVE` environment variable to `TRUE`. This can be done locally or on a server like Posit Connect.
+
+Here’s how you can activate it locally:
+
+```r
+Sys.setenv("GOLEM_MAINTENANCE_ACTIVE" = TRUE)
+golem::run_dev()
+```
+
+#### Customizing the Maintenance Page
+While `{golem}` provides a default maintenance page, you can customize it by passing a custom HTML document or Shiny UI elements to the `with_golem_options()` function in your `run_app.R` file.
+
+```r
+run_app <- function(...) {
+  with_golem_options(
+    app = shinyApp(ui = app_ui, server = app_server, ...),
+    maintenance_page = tagList(
+      fluidRow(
+        h1("Under maintenance"),
+        span("We’ll be back soon.")
+      )
+    )
+  )
+}
+```
+
+### Conclusion
+
+The flexibility provided by `{golem}` through project hooks, module templates, and maintenance modes makes it a powerful tool for building Shiny applications. These features allow you to automate and customize your development process, ensuring that your projects are not only efficient but also tailored to your specific needs. By leveraging these tools, you can enhance your app’s functionality, maintain consistency across your codebase, and provide a better experience for your users during maintenance periods.
