@@ -5,7 +5,8 @@ date: '2019-08-05'
 categories:
   - golem
   - release
-aliases: /post/golem-0.1.0-release-on-cran/
+aliases:
+  - /post/golem-0.1.0-release-on-cran/
 ---
 
 ![](featured.png)

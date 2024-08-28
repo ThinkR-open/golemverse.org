@@ -3,7 +3,8 @@ title: "{shinipsum} is now on CRAN"
 author: colin
 date: '2020-05-10'
 slug: 2020-05-10_shinipsum-cran-realease
-aliases: /post/2020-05-10_shinipsum-cran-realease/
+aliases:
+  - post/2020-05-10_shinipsum-cran-realease/
 ---
 
 ```{r include=FALSE}

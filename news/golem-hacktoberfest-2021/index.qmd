@@ -3,7 +3,8 @@ title: "Join HacktoberFest 2021 with {golem} (and more)!"
 author: colin
 date: '2021-09-30'
 slug: golem-hacktoberfest-2021
-aliases: /post/golem-hacktoberfest-2021/
+aliases:
+  - /post/golem-hacktoberfest-2021/
 ---
 
 ![](featured.png)

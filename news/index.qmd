@@ -8,5 +8,6 @@ listing:
   sort-ui: false
   filter-ui: false
   id: sample-listings
-aliases: /post/
+aliases:
+  - /post/
 ---
