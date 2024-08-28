@@ -9,7 +9,7 @@ If you feel like helping, feel free to open an issue / discussion / PR on one of
 
 ## Short term
 
-+ `{golem}` milestone 0.5.0 <https://github.com/ThinkR-open/golem/milestone/1>
++ `{golem}` milestone 0.6.0 <https://github.com/ThinkR-open/golem/milestone/2>
 
 + Update and rewrite the `{golem}` pkgdown
   - Separate vignettes into "Getting started" & "Advanced"
