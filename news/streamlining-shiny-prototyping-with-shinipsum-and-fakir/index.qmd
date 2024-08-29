@@ -1,0 +1,216 @@
+---
+title:"Streamlining Shiny App Prototyping with {shinipsum} and {fakir}"
+author: colin
+date: "2024-08-29"
+draft: true
+---
+
+### Streamlining Shiny App Prototyping with `{shinipsum}` and `{fakir}`
+
+When developing a Shiny app, balancing time between front-end design and back-end functionality can be challenging. To help developers rapidly prototype their Shiny applications, `{shinipsum}` and `{fakir}` offer powerful solutions for generating random Shiny elements and fake datasets, respectively. These tools enable developers to focus on the front-end experience and data visualization without being bogged down by the back-end data.
+
+#### What is `{shinipsum}`?
+
+`{shinipsum}` is designed to assist Shiny developers by providing random UI components such as DataTables, images, plots, and text. These elements can be quickly integrated into a Shiny app, allowing developers to visualize the layout and structure of their application before finalizing the data and logic behind it. The package is especially useful for creating placeholders during the early stages of app development.
+
+#### Getting Started with `{shinipsum}`
+
+To start using `{shinipsum}`, install it from GitHub:
+
+```r
+install.packages("shinipsum")
+```
+
+With `{shinipsum}`, you can prototype a complete Shiny app with minimal effort. Here’s an example:
+
+```r
+library(shiny)
+library(shinipsum)
+library(DT)
+
+ui <- fluidPage(
+  h2("A Random DT"),
+  DTOutput("data_table"),
+  h2("A Random Image"),
+  plotOutput("image", height = "300px"),
+  h2("A Random Plot"),
+  plotOutput("plot"),
+  h2("A Random Print"),
+  verbatimTextOutput("print"),
+  h2("A Random Table"),
+  tableOutput("table"),
+  h2("A Random Text"),
+  tableOutput("text")
+)
+
+server <- function(input, output, session) {
+  output$data_table <- DT::renderDT({
+    random_DT(10, 5)
+  })
+  output$image <- renderImage({
+    random_image()
+  })
+  output$plot <- renderPlot({
+    random_ggplot()
+  })
+  output$print <- renderPrint({
+    random_print("model")
+  })
+  output$table <- renderTable({
+    random_table(10, 5)
+  })
+  output$text <- renderText({
+    random_text(nwords = 50)
+  })
+}
+
+shinyApp(ui, server)
+```
+
+This code creates a Shiny app that displays a random DataTable, image, plot, printed output, table, and text. The random elements are placeholders, giving you a clear idea of what the final app might look like.
+
+#### Features of `{shinipsum}`
+
+Here’s a closer look at what `{shinipsum}` offers:
+
+- **DataTable**: Generate random data tables with customizable rows, columns, and data types.
+- **Image**: Insert random images as placeholders in your app.
+- **Plot**: Create random `ggplot` objects with various types of visualizations.
+- **Text**: Generate random "Lorem Ipsum" text with a specified number of characters or words.
+- **Model Output**: Simulate linear model outputs for prototyping statistical features.
+- **Dygraph**: Add random dygraphs to simulate time series data.
+
+Each element can be further customized with additional arguments, providing flexibility while maintaining ease of use.
+
+#### Enhancing Prototypes with `{fakir}`
+
+While `{shinipsum}` helps visualize UI components, `{fakir}` enhances prototypes by generating fake datasets for prototyping or teaching purposes. This allows developers to simulate realistic data-driven applications without the need for actual datasets.
+
+**Fake Client Database**
+
+`{fakir}` can generate a fake after-sale client database for a phone company, which includes:
+
+- A client database with all characteristics of the clients.
+- A ticket database containing all calls to the after-sale service of some clients having problems.
+- A ticket-centered dataset with already joined client characteristics.
+
+Example usage:
+
+```r
+fake_ticket_client(vol = 10)
+```
+
+**Separate Tickets and Client Databases**
+
+You can also split the generated data into separate tickets and client databases:
+
+```r
+tickets_db <- fake_ticket_client(vol = 100, split = TRUE)
+tickets_db
+```
+
+**Explore Datasets**
+
+The generated datasets can be visualized using `ggplot2`:
+
+```r
+ggplot(tickets_db$clients) +
+  aes(x = entry_date, y = fidelity_points) +
+  geom_point() +
+  geom_smooth()
+
+ggplot(tickets_db$tickets) +
+  aes(x = type) +
+  geom_bar()
+
+ggplot(tickets_db$tickets) +
+  aes(x = state) +
+  geom_bar()
+```
+
+**Spatial Data Integration**
+
+You can also join the generated data with an internal `{sf}` spatial dataset for more advanced visualizations:
+
+```r
+clients_map <- tickets_db$clients %>%
+  group_by(id_dpt) %>%
+  summarise(
+    number_of_clients = n(),
+    average_fidelity = mean(fidelity_points, na.rm = TRUE)
+  ) %>%
+  full_join(fra_sf, by = "id_dpt") %>%
+  st_sf()
+
+ggplot(clients_map) +
+  geom_sf(aes(fill = average_fidelity)) +
+  scale_fill_viridis_c() +
+  coord_sf(
+    crs = 2154,
+    datum = 4326
+  )
+```
+
+**Fake Products, Website Visits, and Surveys**
+
+Beyond client databases, `{fakir}` can generate fake datasets for various scenarios:
+
+- **Fake Products**: Create a dataset of connected wearables:
+
+  ```r
+  count(
+    fake_products(10),
+    category
+  )
+  ```
+
+- **Fake Website Visits**: Generate fake website visit data over a specific period:
+
+  ```r
+  fake_visits(
+    from = "2017-01-01",
+    to = "2017-01-31"
+  )
+  ```
+
+- **Fake Surveys**: Generate fake questionnaire responses on means of transport:
+
+  ```r
+  fake_survey_answers(n = 10)
+  ```
+
+  Or separate individuals and their answers:
+
+  ```r
+  fake_survey_answers(n = 10, split = TRUE)
+  ```
+
+- **Fake Transport Use**: Visualize transport use from survey data:
+
+  ```r
+  answers <- fake_survey_answers(n = 30)
+  answers
+
+  ggplot(answers) +
+    aes(age, log(distance_km), colour = type) +
+    geom_point() +
+    geom_smooth() +
+    facet_wrap(~type, scales = "free_y")
+  ```
+
+#### Why Use `{shinipsum}` and `{fakir}`?
+
+These packages shine in scenarios where you need to:
+
+1. **Rapidly prototype**: Visualize different components and data in your Shiny app without focusing on backend logic.
+2. **Iterate quickly**: Make swift changes to UI and data, and instantly see the effects on overall design.
+3. **Communicate ideas**: Share prototypes with stakeholders, including realistic data, to gather feedback early in the development process.
+
+With `{shinipsum}` providing UI components and `{fakir}` offering fake datasets, Shiny developers can streamline their prototyping process, allowing them to focus on perfecting the user experience.
+
+#### Conclusion
+
+`{shinipsum}` and `{fakir}` are powerful tools for Shiny developers who want to focus on the front-end design and data visualization of their applications. By providing random, yet customizable, UI components and datasets, these packages enable developers to quickly prototype and iterate on their app designs. Whether you're just starting with Shiny or looking to streamline your development process, `{shinipsum}` and `{fakir}` can help you bring your ideas to life faster and more efficiently.
+
+For more information and to explore the full documentation, visit the [pkgdown site](https://thinkr-open.github.io/shinipsum/) for `{shinipsum}` and the [fakir documentation](https://thinkr-open.github.io/fakir/) for `{fakir}`.
+
