@@ -1,5 +1,5 @@
 ---
-title:"Streamlining Shiny App Prototyping with {shinipsum} and {fakir}"
+title: "Streamlining Shiny App Prototyping with {shinipsum} and {fakir}"
 author: colin
 date: "2024-08-29"
 draft: true
