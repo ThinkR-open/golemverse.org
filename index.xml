@@ -9,7 +9,7 @@
 <link>https://www.golemverse.org/</link>
 <atom:link href="https://www.golemverse.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to the golemverse!</description>
-<generator>quarto-1.5.56</generator>
+<generator>quarto-1.5.57</generator>
 <lastBuildDate>Wed, 28 Aug 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>{golem} 0.5.1 is now available</title>
