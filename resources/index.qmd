@@ -7,7 +7,7 @@ page-layout: full
 
 ## Book 📚
 
-- ["Engineering Production-grade Shiny Apps"](//engineering-shiny.org/)
+- ["Engineering Production-grade Shiny Apps"](https://engineering-shiny.org/)
 
 ## Blog posts ✍️
 
