@@ -7,66 +7,38 @@ Here is a list of things the `golemverse` team plans on working on.
 
 If you feel like helping, feel free to open an issue / discussion / PR on one of the repository.
 
-## Short term
+Last edit: (2026-06-17)
 
-+ `{golem}` milestone 0.6.0 <https://github.com/ThinkR-open/golem/milestone/2>
+## Short term roadmap (3 to 6 months)
 
-+ Update and rewrite the `{golem}` pkgdown
-  - Separate vignettes into "Getting started" & "Advanced"
-  - Change the theme to bslib5
++ Stable, production ready version of `{brochure}`
 
-+ Create a `{golem.lint}` package that will host:
-  - Check for missing ns() with roxygen tag
-  - Current sanity checks
-  - Styler `golem_style()`
-  - url checker ?
-  - precommit hook for `{precommit}`
++ Rework of the golemverse website:
 
-+ `{golemverse}` à la `{tidyverse}`
+  - Auto generate website content from yaml
 
-+ Integrate a storage mechanism in `{gargoyle}`. I'm thinking of a simple port of <https://github.com/ColinFay/odds>. <https://github.com/ColinFay/gargoyle/issues/12>
+  - Repair badge in package table
 
-+ `{shinidraw}` : excalidraw in `{shiny}`
++ golemverse package triage:
 
-+ More hooks for `{ghooks}` <https://github.com/ThinkR-open/ghooks>
+  - Create a lifecycle policy (Core, experimental, Dormant, Abandoned)
 
-+ Bring these packages to the golemverse:
-  - <https://github.com/ColinFay/darkmode>, 'darkmode.js' for 'Shiny'
+  - Archive dormant/abandoned package
 
-+ Questionning: should the following repos/packages be included to the golemverse?
-  - <https://github.com/ColinFay/handydandy>, Easy CSS Styling for Shiny
-  - <https://github.com/ColinFay/feathericons>, Feather Icons for Shiny
-  - <https://github.com/ColinFay/nessy>, A 'NES' css for 'Shiny'
-  - <https://github.com/ColinFay/resume>, Bootstrap Resume Template for Shiny
-  - <https://github.com/ColinFay/geoloc>, Add geolocation inside your shiny app
-  - <https://github.com/ColinFay/dockerstats>, R Wrapper Around 'docker stats'
-  - <https://github.com/ColinFay/crrry>, 'crrri' recipes for 'shiny'
-
-+ Write a blogpost about `{gargoyle}`
-
-## Mid term
-
-+ Stable, production ready `{brochure}`
+  - Classify remaining packages
 
 + Dashboard template for `{brochure}`
 
-+ Blog post about :
-  - `{elvis}`
++ `{golemverse}` à la `{tidyverse}`
 
-+ New fake data in `{fakir}`
++ Clean `{shinypsum}` repository (CRAN sync, rebuild README)
 
-+ New ipsum in `{shinipsum}`
+## Mid term (6 to 12 months)
 
-+ Release on CRAN :
-  - `{bank}`
-  - `{elvis}`
++ Stable, CRAN version for `{bank}`
 
-## Long term
++ `{golemverse}` package à la `{tidyverse}` to simplify installation.
 
-+ Finish `{w3css}`
++ Integrate a storage mechanism in `{gargoyle}`. I'm thinking of a simple port of <https://github.com/ColinFay/odds>. <https://github.com/ColinFay/gargoyle/issues/12>
 
-+ More features in `{gemstones}`
-
-+ Prepare a talk about "Hidden gems of the golemverse"
-
-+ Short live streams presenting the packages (20 minutes + 10 min Q & A)
++ Write a blogpost about `{gargoyle}`
