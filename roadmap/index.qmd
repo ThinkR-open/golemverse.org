@@ -7,7 +7,7 @@ Here is a list of things the `golemverse` team plans on working on.
 
 If you feel like helping, feel free to open an issue / discussion / PR on one of the repository.
 
-Last edit: (2026-06-17)
+Last edit: (2026-07-10)
 
 ## Short term roadmap (3 to 6 months)
 
@@ -21,21 +21,47 @@ Last edit: (2026-06-17)
 
 + golemverse package triage:
 
-  - Create a lifecycle policy (Core, experimental, Dormant, Abandoned)
+  - Create a lifecycle policy (Core, experimental, Abandoned)
 
-  - Archive dormant/abandoned package
+  - Bring the following package to the golemverse:
 
-  - Classify remaining packages
+    - `{pw}`
+    - `{bootstrict}`
+    - `golem-agent-skills`
+
+  - Tag these as "Core":
+
+    - `{bootstrict}`
+    - `{brochure}`
+    - `{dockerfiler}`
+    - `{fakir}`
+    - `{gargoyle}`
+    - `{golem}`
+    - `{pw}`
+    - `{shinipsum}`
+
+  - Tag these as "Experimental":
+
+    - `{bank}`
+    - `{elvis}`
+    - `{ghooks}`
+    - `{shinidraw}`
+
+  - Tag these as "Abandoned":
+
+    - `{gemstones}`
+    - `{minifyr}`
+    - `{w3css}`
 
 + Dashboard template for `{brochure}`
 
-+ `{golemverse}` à la `{tidyverse}`
-
-+ Clean `{shinypsum}` repository (CRAN sync, rebuild README)
++ Clean `{shinipsum}` repository (CRAN sync, rebuild README)
 
 ## Mid term (6 to 12 months)
 
-+ Stable, CRAN version for `{bank}`
++ Stable, CRAN version for `{bootstrict}`
+
++ Stable, CRAN version for `{pw}`
 
 + `{golemverse}` package à la `{tidyverse}` to simplify installation.
 
