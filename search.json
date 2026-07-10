@@ -1,5 +1,61 @@
 [
   {
+    "objectID": "roadmap/index.html",
+    "href": "roadmap/index.html",
+    "title": "golemverse’s roadmap",
+    "section": "",
+    "text": "Here is a list of things the golemverse team plans on working on.\nIf you feel like helping, feel free to open an issue / discussion / PR on one of the repository.\nLast edit: (2026-07-10)"
+  },
+  {
+    "objectID": "roadmap/index.html#short-term-roadmap-3-to-6-months",
+    "href": "roadmap/index.html#short-term-roadmap-3-to-6-months",
+    "title": "golemverse’s roadmap",
+    "section": "Short term roadmap (3 to 6 months)",
+    "text": "Short term roadmap (3 to 6 months)\n\nStable, production ready version of {brochure}\nRework of the golemverse website:\n\nAuto generate website content from yaml\nRepair badge in package table\n\ngolemverse package triage:\n\nCreate a lifecycle policy (Core, experimental, Abandoned)\nBring the following package to the golemverse:\n\n{pw}\n{bootstrict}\ngolem-agent-skills\n\nTag these as “Core”:\n\n{bootstrict}\n{brochure}\n{dockerfiler}\n{fakir}\n{gargoyle}\n{golem}\n{pw}\n{shinipsum}\n\nTag these as “Experimental”:\n\n{bank}\n{elvis}\n{ghooks}\n{shinidraw}\n\nTag these as “Abandoned”:\n\n{gemstones}\n{minifyr}\n{w3css}\n\n\nDashboard template for {brochure}\nClean {shinipsum} repository (CRAN sync, rebuild README)"
+  },
+  {
+    "objectID": "roadmap/index.html#mid-term-6-to-12-months",
+    "href": "roadmap/index.html#mid-term-6-to-12-months",
+    "title": "golemverse’s roadmap",
+    "section": "Mid term (6 to 12 months)",
+    "text": "Mid term (6 to 12 months)\n\nStable, CRAN version for {bootstrict}\nStable, CRAN version for {pw}\n{golemverse} package à la {tidyverse} to simplify installation.\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\nWrite a blogpost about {gargoyle}"
+  },
+  {
+    "objectID": "news/index.html",
+    "href": "news/index.html",
+    "title": "Posts",
+    "section": "",
+    "text": "{golem} 1.0.0 is here\n\n\n\n\n\n\n\n\nJul 10, 2026\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.5.1 is now available\n\n\n\n\n\n\n\n\nAug 28, 2024\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{fakir} 1.0.0 is now on CRAN\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "news/golem-0.1.0-release-on-cran/index.html",
+    "href": "news/golem-0.1.0-release-on-cran/index.html",
+    "title": "{golem} 0.1.0 has been released on CRAN",
+    "section": "",
+    "text": "golem (v0.1) A Framework for Building Robust Shiny Apps:\n\n{golem} on CRAN\n{golem} on GitHub\npkgdown and vignettes"
+  },
+  {
+    "objectID": "news/golem-hacktoberfest-2021/index.html",
+    "href": "news/golem-hacktoberfest-2021/index.html",
+    "title": "Join HacktoberFest 2021 with {golem} (and more)!",
+    "section": "",
+    "text": "Join us for Hacktoberfest 2021 with {golem}!\nHacktoberfest is an online event, happening all over the world, where everyone is invited to open a pull request on a repo that has issues labelled hacktoberfest. The idea of this event is to gather developers (newbies or seasoned), and make them work together on open source projects.\nFor this second year, I’m happy to invite developers from the R community to take part to Hacktoberfest with {golem}. I’ve started to label some issues inside the repository with the hacktoberfest label, so that you can join the party, starting tomorrow!\nEvery time you’ll open an issue with this label, you’ll also find two other labels: the difficulty level (novice, intermediate, advanced), and a time estimate (low, medium, high). This will help you evaluate if you can try and tackle this issue or not.\nYou’ll find them all on the GitHub repository. Feel free to leave a comment on the issue you’d like to tackle, and of course to ask questions if the issue is not detailed enough.\nI’m planning on release a minor version of {golem} (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘\nYou don’t feel like working on {golem}? We have also labelled other repositories inside the ThinkR GitHub organisation with the hacktoberfest tag:\n\n{attachment}, a package for working with dependencies in your scripts, Rmds, and packages.\n{fusen}, a package to build a package from a Rmd.\n{shinipsum}, a lorem-ipsum generator for {shiny} elements.\n{fakir}, a fake data generator.\nCompanies, Officials and NGO Using R, our collaborative list of R in the real world.\nAnd more…\n\nSee you on GitHub!"
+  },
+  {
+    "objectID": "news/golem-0.5.1-release-on-cran/index.html",
+    "href": "news/golem-0.5.1-release-on-cran/index.html",
+    "title": "{golem} 0.5.1 is now available",
+    "section": "",
+    "text": "Image generated by ChatGPT\nWe are thrilled to announce the release of {golem} version 0.5.1! This update comes packed with new features, enhancements, and bug fixes that will streamline your Shiny app development process.\nYou can download the latest version from your favorite CRAN repository, or by running the following command in R:"
+  },
+  {
+    "objectID": "news/golem-0.5.1-release-on-cran/index.html#whats-new-in-this-version",
+    "href": "news/golem-0.5.1-release-on-cran/index.html#whats-new-in-this-version",
+    "title": "{golem} 0.5.1 is now available",
+    "section": "What’s New in This Version?",
+    "text": "What’s New in This Version?\nThe latest update of {golem} introduces several new functions and improvements, designed to enhance your experience when building and deploying Shiny applications.\n\nMajor Highlights\n\ngolem::welcome_page()\nThe golem::welcome_page() function now displays a welcome page in the default scaffold app, offering a smoother onboarding experience for new users.\n\n\n\nNew Files Added\n\nuse_readme_rmd(): This function adds a {golem}-specific README.Rmd to your project, making documentation easier and more consistent.\nadd_empty_file(): Creates an empty file in the www directory, allowing for better management of static assets.\nadd_r6(): Adds an empty R6 class template, facilitating object-oriented programming in your Shiny apps.\nadd_fct() now includes a function skeleton to guide users in creating consistent functions across their projects.\n\n\n\n\nNew Features and Enhancements\nThis release comes with a variety of new features and user-visible changes:\n\nThe is_golem() function has been introduced to help determine if the current folder is a {golem}-based app. This function can be used especially useful for extending golem with project hooks.\nThe fill_desc() function now automatically calls set_options() and uses a person vector for better project metadata management.\nThe module skeleton has been updated to adhere to the tidyverse style.\n\n\n\nDeployment Improvements\n\nA .rscignore file is now created in the golem directory whenever connect-related files are generated, simplifying deployment to RStudio Connect.\nThe writeManifest() function has been added to deploy.R, improving deployment workflows by ensuring all necessary dependencies are captured.\n\n\n\nBug Fixes\nWe’ve addressed several issues in this release, including:\n\nuse_{internal,external}_XXX_file() now works correctly with the default missing name argument.\nrun_dev() now installs the necessary dependencies to source dev/run_dev.R if they are missing.\nuse_readme_rmd() no longer pops up when open=FALSE is set, providing a smoother setup process.\nDocker commands now include the -it flag, allowing processes to be interrupted with ^C.\n\n\n\nInternal Changes\nThis release also includes some internal improvements:\n\nWe’ve added tests for previously untested files and functions, improving the overall code coverage of {golem}.\nThe guess_where_config() function now locates user config YAML files based on changes made in R/app_config.R.\nThe test suite has been refactored for faster execution and reduced verbosity.\n\nThis release marks a significant step forward for the {golem} package, offering new tools and enhancements to make your Shiny app development smoother and more efficient. We hope you enjoy the new features and improvements!\nHappy coding! 🚀\nThanks to everyone who contributed to this new version!"
+  },
+  {
     "objectID": "news/golem-0.4.0-release-on-cran/index.html",
     "href": "news/golem-0.4.0-release-on-cran/index.html",
     "title": "{golem} 0.4.0 is now available",
@@ -21,109 +77,11 @@
     "text": "Thanks\nWe want to thank all the people who have contributed to this release since the v0.3.1, either by opening PR, feature requests, or bug report.\n@agronomofiorentini, @ajmoralesa, @ALanguillaume, @Andryas, @ArthurData, @asadow, @asbates, @asiripanich, @avsolovey, @Camil88, @campbead, @Cervangirard, @ColinFay, @connorcarolan, @D3SL, @DivadNojnarg, @dmenne, @Dobrokhotov1989, @earnaud, @em-dataIntegrityEnthusiast, @erikvona, @ethantenison, @etiennebacher, @fBedecarrats, @gabrielburcea, @ggpinto, @gioneves, @guivivi, @harell, @hedjour, @henrique1008, @ilyaZar, @isaactpetersen, @ivokwee, @jamieRowen, @jl5000, @JMPivette, @Jodavid, @JohnStaples, @Jopgood, @JulianoAtto, @KittJonathan, @KoderKow, @kyleweise, @leeroyaus, @lijian007, @MargotBr, @mark-druffel, @mcsiple, @mjbroerman, @nathansquan, @ncls33, @ncullen93, @novica, @pachadotdev, @psolymos, @pythiantech, @rezasz969, @seanhardison1, @shahreyar-abeer, @statnmap, @stheil15, @svenb78, @Swechhya, @Teebusch, @teofiln, @VincentGuyader, @waiteb5, @whipson, @wurli, @yogat3ch, and @YonghuiDong."
   },
   {
-    "objectID": "news/index.html",
-    "href": "news/index.html",
-    "title": "Posts",
+    "objectID": "documentation/index.html",
+    "href": "documentation/index.html",
+    "title": "golemverse",
     "section": "",
-    "text": "{golem} 0.5.1 is now available\n\n\n\n\n\n\n\n\n\n\n\nAug 28, 2024\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{fakir} 1.0.0 is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "news/golem-0.3.1-release-on-cran/index.html",
-    "href": "news/golem-0.3.1-release-on-cran/index.html",
-    "title": "About {golem} 0.3.1",
-    "section": "",
-    "text": "The new version of {golem} (0.3.1) has been available on CRAN 🎉 for about a month now. This new version includes a lot of new things, but we notably focused on working on two important new features: allowing you to extend {golem} via templates, and supporting for the latest changes in {shiny}."
-  },
-  {
-    "objectID": "news/golem-0.3.1-release-on-cran/index.html#extending-golem",
-    "href": "news/golem-0.3.1-release-on-cran/index.html#extending-golem",
-    "title": "About {golem} 0.3.1",
-    "section": "Extending {golem}",
-    "text": "Extending {golem}\nOne of the challenges when it comes to building apps in a production context is that you might be repeating some patterns over and over again: adding the same CSS in every app, creating specific functions, setting a license, adding internal packages as dependencies, etc.\nThe key idea with {golem} is to lower the number of repetitive tasks you have to perform during the engineering of your app. We try to achieve that by providing tools that automate these common tasks. But before version 0.3, there was no way to optimize the “business specific”, internal tasks of adding files, functions, or templating modules. This is now possible with this new release of {golem}, which introduces the concept of “golem templates”: functions that can be used for project hooks, module templates, and JavaScript and CSS file creation.\n\nProject Hooks\n\nAbout project hooks\nA project hook is a functions called inside create_golem().\nIt allows you to define custom behaviors when creating {golem} based apps, and can be used for:\n\nAdding a different front-end template in R/app_ui.R\nChanging configuration options in inst/golem-config.yml\nCopying external files in inst/app/www\nRemoving a file from the default template\netc.\n\nThis function is called just after the default project has been created, and is executed in the directory of the created package. Here is a step by step of what happens when a project is created with {golem}:\n\nThe package name is generated\nThe directory that will receive the package is created\nDefault {golem} template is copied to this directory\nR moves to the newly created project, and runs the project_hook function\nR moves back to the previous directory\nIf in RStudio, the project is open\n\nThe project_hook function takes three mandatory parameters, which are passed from create_golem:\n\npath: the full path of the directory\npackage_name: the name of the package\n... : further arguments that can be passed from create_golem() when called from the command line\n\nThese parameters might not be used inside your own hook, but they need to be set in the hook function skeleton for compatibility reasons.\nThe best way to extend {golem} via a project hook is by defining a project_hook function in an external package. This will allow this function to be used inside the {golem} creation RStudio project creation widget:\n\n\n\nProject hook example\nRemoving the dev folder:\nno_dev &lt;- function(path, package_name, ...){\n   fs::dir_delete(\"dev\")\n}\ncreate_golem(\"ici\", project_hook = no_dev)\nCreate a CSS:\nnew_css &lt;- function(path, package_name, ...){\n\n  css_path &lt;- fs::path_abs(\"inst/app/www/custom.css\")\n\n  fs::file_create(css_path)\n\n  write_there &lt;- function(...){\n    write(..., file = css_path, append = TRUE)\n  }\n\n  write_there(\"body {\")\n  write_there(\"    background-color:red;\")\n  write_there(\"}\")\n\n  cli::cat_bullet(\"CSS generated\")\n\n}\ncreate_golem(\"ici\", project_hook = new_css)\n\n\n\nModule templates\n\nAbout module templates\nModule templates are called inside add_module.\nIt allows you to extend {golem} module template functionality by creating your own content inside the module file.\nThe function is called after the file(s) creation. Here is a step by step of what happens when the add_module function is called:\n\nThe module name is generated, and the R/ directory is created if needed\nThe fct_ and utils_ files are created if needed\nThe path to the module is generated\nIf the file already exists, it opens the file\nIf the file doesn’t exist, R creates the file and the module_template function is called\nFile is potentially open\n\n(Note that the template function is not called if the file already exists).\nModule template functions will receive, by default, the following parameters from add_modules().\n\nname: the name of the module\npath: the path to the file in R/\nexport: a TRUE/FALSE set by the export param of add_module()\n... further arguments\n\nThese parameters might not be used inside your own function, but they need to be set in the function skeleton, for compatibility reasons.\n\n\nModule template examples\nmy_tmpl &lt;- function(name, path, export, ...){\n  # Define a template that write to the\n  # module file\n  write(name, path)\n}\n\ngolem::add_module(name = \"custom\", module_template = my_tmpl)\n\nmy_other_tmpl &lt;- function(name, path, export, ...){\n  # Copy and paste a file from somewhere\n  file.copy(..., path)\n}\n\ngolem::add_module(name = \"custom\", module_template = my_other_tmpl)\n\n\n\nJS & CSS templates\n\nAbout JS & CSS templates\nJavaScript and CSS templates work the same way as the module templates, and are used during the creation of JavaScript files, JavaScript handlers and CSS files, i.e. inside add_js_file(), add_js_handler() and add_css_file().\nThe function is called after the file creation. Here is a step by step of what happens when these functions are called:\n\nName is created\nThe path is generated\nIf the file already exists, it opens the file\nIf the file doesn’t exist, R creates it and the template function is called\nFile is potentially open\n\n(Note that the template function is not called if the file already exists).\nYou can then define your own function inside your {golem} based application, but chances are you will be defining them into your own package.\nFile template functions will receive, by default, the following parameters from the add_*() function.\n\npath: the path to the file\n... further arguments\n\nThese parameters might not be used inside your own function, but they need to be set in the function skeleton, for compatibility reasons.\n\n\nJS & CSS templates examples\nmy_tmpl &lt;- function(path, ...){\n   # Define a template that only write the name of the\n   # module in the file\n  write_there &lt;- function(...){\n    write(..., file = path, append = TRUE)\n  }\n\n  write_there(\"body {\")\n  write_there(\"    background-color:red;\")\n  write_there(\"}\")\n}\ngolem::add_css_file(name = \"custom\", template = my_tmpl)"
-  },
-  {
-    "objectID": "news/golem-0.3.1-release-on-cran/index.html#support-for-the-latest-shiny-features",
-    "href": "news/golem-0.3.1-release-on-cran/index.html#support-for-the-latest-shiny-features",
-    "title": "About {golem} 0.3.1",
-    "section": "Support for the latest {shiny} features",
-    "text": "Support for the latest {shiny} features\n\nNew module skeleton\n{shiny} 1.5.0, has introduced a new skeleton when it comes to modules. {golem} now supports this new skeleton:\n&gt; golem::add_module(\"plop\")\n✓ File created at R/mod_plop.R\n#' plop UI Function\n#'\n#' @description A shiny Module.\n#'\n#' @param id,input,output,session Internal parameters for {shiny}.\n#'\n#' @noRd\n#'\n#' @importFrom shiny NS tagList\nmod_plop_ui &lt;- function(id){\n  ns &lt;- NS(id)\n  tagList(\n\n  )\n}\n\n#' plop Server Functions\n#'\n#' @noRd\nmod_plop_server &lt;- function(id){\n  moduleServer( id, function(input, output, session){\n    ns &lt;- session$ns\n\n  })\n}\n\n## To be copied in the UI\n# mod_plop_ui(\"plop_ui_1\")\n\n## To be copied in the server\n# mod_plop_server(\"plop_ui_1\")\n\n\nDisabling auto-load\nSince {shiny} 1.5.0, the R folder is automatically sourced, in alphabetical order, when the app is loaded via runApp()—this used to be opt-in but is now opt-out.\nThis can cause some troubles with {golem} package structure in some (rare) cases, and only when deploying to RStudio platform via golem::add_rstudioconnect_file() and friends—there is no issue with the package structure and the load whenever you load golem via the golem::run_dev() or via myapp::run_app().\nThis behavior can be opt-out via two mechanisms: options(shiny.autoload.r=FALSE), or via a file called _disable_autoload.R in the R/ folder. Reliably setting options in all projects can create some issues, so we have chosen to go for the _disable_autoload.R solution.\nThis file is now created whenever you called one of golem::add_rstudioconnect_file(), golem::add_shinyappsio_file() or golem::add_shinyserver_file(). You can also force its creation via golem::disable_autoload().\nImportant note. This will still print a warning to your console:\nWarning in loadSupport(appDir, renv = sharedEnv, globalrenv = NULL) :\n  Loading R/ subdirectory for Shiny application, but this directory appears to contain an R package. Sourcing files in R/ may cause unexpected behavior.\nThis is unfortunately because, at the time of writing these lines, {shiny} doesn’t remove this warning when the _disable_autoload.R file is there, so this warning will be printed to your logs. You can safely ignore it for now, as long as this behavior does not change (if it ever changes) in the {shiny} package. There is an issue open on the {shiny} repo right now, so feel free to watch the progress there!"
-  },
-  {
-    "objectID": "news/golem-0.3.1-release-on-cran/index.html#misc",
-    "href": "news/golem-0.3.1-release-on-cran/index.html#misc",
-    "title": "About {golem} 0.3.1",
-    "section": "Misc",
-    "text": "Misc\nHere are a selection of changes and new features in this new version:\n\nYou no longer need to source the dev/run_dev.R script and can call the golem::run_dev() function from your console.\nadd_html_template() creates an empty HTML template inside your app.\ngolem::add_js_binding and golem::add_js_output_binding create a skeleton for JavaScript bindings.\nuse_external_file, use_external_css_file, use_external_js_file, and use_external_html_template download external files from URL and add them to the www folder. They all have a use_internal_ counterpart that copies files from the local computer.\nThe sanity_check() function does a series of checks inside the current project."
-  },
-  {
-    "objectID": "news/golem-0.3.1-release-on-cran/index.html#soft-deprecation",
-    "href": "news/golem-0.3.1-release-on-cran/index.html#soft-deprecation",
-    "title": "About {golem} 0.3.1",
-    "section": "Soft deprecation",
-    "text": "Soft deprecation\nWe’re planning on deprecating the add_ui_server_files() function. Feel free to comment on ThinkR-open/golem/issues/445 if you’d like it to stay there."
-  },
-  {
-    "objectID": "news/golem-0.3.1-release-on-cran/index.html#updating-your-old-projects",
-    "href": "news/golem-0.3.1-release-on-cran/index.html#updating-your-old-projects",
-    "title": "About {golem} 0.3.1",
-    "section": "Updating your old projects",
-    "text": "Updating your old projects\nIf you’ve built a project with an older version of {golem}, there should be no re-engineering to do, everything should still be compatible.\nOne change though might be in the way you deploy your app on RStudio platforms, which is related to the way {shiny} now handles the package structure. Just run golem::disable_autoload() to add the support.\nIf ever you find any other issues with the new version of {golem}, please feel free to open an issue on the repository."
-  },
-  {
-    "objectID": "news/golem-0.3.1-release-on-cran/index.html#feedback-and-questions",
-    "href": "news/golem-0.3.1-release-on-cran/index.html#feedback-and-questions",
-    "title": "About {golem} 0.3.1",
-    "section": "Feedback and questions",
-    "text": "Feedback and questions\nWe’re always happy to get new ideas and question on {golem}!\nIf you have a feature idea, or find a bug, please open an issue.\nThe best places to ask question are either the GitHub “Discussions” panel, or StackOverflow, using the golem tag."
-  },
-  {
-    "objectID": "news/golem-0.3.1-release-on-cran/index.html#thanks",
-    "href": "news/golem-0.3.1-release-on-cran/index.html#thanks",
-    "title": "About {golem} 0.3.1",
-    "section": "Thanks",
-    "text": "Thanks\nWe want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.\n@abidawson, @abnercasallo, @aftonsteps, @AMillanFL, @antoine-sachet, @ArthurPERE, @artpulsion, @cderv, @chintanp, @ChrisBeeley, @CorradoLanera, @csgillespie, @daattali, @DivadNojnarg, @durandsinclair, @dwhdai, @dylanrussellmd, @earnaud, @fBedecarrats, @feddelegrand7, @fizic37, @fvitalini, @gacolitti, @genobobeno, @hadley, @HanjoStudy, @henrique1008, @jacksonschan, @jacobwindsor, @jaybee84, @jcrodriguez1989, @jennahamlin, @julianstanley, @KasperThystrup, @Kastakin, @KoderKow, @kprimice, @mahelious, @MayaGans, @mcsiple, @michaelhogersnplm, @moodymudskipper, @mraess, @novica, @nvelden, @quickbendelat, @rgaube, @riccardoporreca, @RichardPilbery, @robertoromor, @seanhardison1, @ShinyFabio, @sjspielman, @Swechhya, @TimotheeTournier, @VincentAlcazer, @Welsh44, @yogat3ch, @yonicd, @zchmielewska, and @ZimmermannYves."
-  },
-  {
-    "objectID": "news/golem-0.1.0-release-on-cran/index.html",
-    "href": "news/golem-0.1.0-release-on-cran/index.html",
-    "title": "{golem} 0.1.0 has been released on CRAN",
-    "section": "",
-    "text": "golem (v0.1) A Framework for Building Robust Shiny Apps:\n\n{golem} on CRAN\n{golem} on GitHub\npkgdown and vignettes"
-  },
-  {
-    "objectID": "news/skeleteon-css-in-shiny/index.html",
-    "href": "news/skeleteon-css-in-shiny/index.html",
-    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
-    "section": "",
-    "text": "A dead simple, responsive, minimalist CSS framework.\nSkeleton css is a “a dead simple, responsive” CSS boilerplate focused on mobile-first design and a minimalistic approach. It comes with a set of pre-defined styles for basic HTML elements such as typography, forms, buttons, tables, and grids, which can be easily customized. It is built with a 12-column grid system, making it easy to create flexible and responsive layouts for different screen sizes and devices."
-  },
-  {
-    "objectID": "news/skeleteon-css-in-shiny/index.html#skeleton",
-    "href": "news/skeleteon-css-in-shiny/index.html#skeleton",
-    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
-    "section": "{skeleton}",
-    "text": "{skeleton}\nI’m very happy to announce that the {shiny} wrapper for this framework is now fully functional, and available to download with:\npak::pak(\"ColinFay/skeleton\")\nFor a demo of an app built with {skeleton}, you can browse https://connect.thinkr.fr/prenoms/."
-  },
-  {
-    "objectID": "news/skeleteon-css-in-shiny/index.html#building-an-app-with-skeleton",
-    "href": "news/skeleteon-css-in-shiny/index.html#building-an-app-with-skeleton",
-    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
-    "section": "Building an app with {skeleton}",
-    "text": "Building an app with {skeleton}\n\nBasic apps\nBuilding an app with {skeleton} follows the same spirit as with {shiny} standard components: you start with a page, define a row, and this row can be split into 12 columns.\nlibrary(shiny)\nlibrary(skeleton)\n\nui &lt;- sk_page(\n  h1(\"Hello world\"),\n  sk_row(\n    sk_col(\n      width = 6,\n      \"Hello\"\n    ),\n    sk_col(\n      width = 6,\n      \"World\"\n    )\n  ),\n  sk_row(\n    sk_col(\n      width = 12,\n      plotOutput(\"plot1\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$plot1 &lt;- renderPlot({\n    plot(mtcars)\n  })\n}\n\nshinyApp(ui, server)\n\n\nBuilt-in dashboard\n{skeleton} also comes with a built-it dashboard mechanism, that can be defined with:\nsk_nav(\n  sk_nav_item(\n    id = \"one\",\n    title = \"ONE\",\n    ui = sk_row(\n      width = sk_col(\n        6,\n        \"Hello plot1\"\n      ),\n      sk_col(\n        width = 6,\n        plotOutput(\"plot1\")\n      )\n    )\n  )\n)\nAnd for a full app:\nlibrary(shiny)\nlibrary(skeleton)\nui &lt;- sk_page(\n  sk_row(\n    h2(\"A dead simple, responsive boilerplate.\"),\n  ),\n  sk_nav(\n    sk_nav_item(\n      id = \"one\",\n      title = \"ONE\",\n      ui = sk_row(\n        sk_col(\n          6,\n          \"Hello plot1\"\n        ),\n        sk_col(\n          6,\n          plotOutput(\"plot1\")\n        )\n      )\n    ),\n    sk_nav_item(\n      id = \"two\",\n      title = \"TWO\",\n      ui = sk_row(\n        sk_col(\n          6,\n          plotOutput(\"plot2\")\n        ),\n        sk_col(\n          6,\n          \"Hello plot2\"\n        ),\n      )\n    )\n  )\n)\nshinyApp(ui, function(input, output) {\n  output$plot1 &lt;- renderPlot({\n    plot(mtcars)\n  })\n  output$plot2 &lt;- renderPlot({\n    plot(airquality)\n  })\n})\nIf you want to see a real life example of a dashboard built with {skeleton}, feel free to browse the source code of the prenoms app at https://github.com/ThinkR-open/prenoms-app.\n\n\n{golem} hooks\nYou can get a boilerplate of a page or a dashboard when creating an app with {golem}, using the built-in {golem} hooks:\ngolem::create_golem(\n  \"skboilerplate\",\n  project_hook = skeleton::ghook_sk_boilerplate\n)\ngolem::create_golem(\n  \"skdashboard\",\n  project_hook = skeleton::ghook_sk_dashboard\n)"
-  },
-  {
-    "objectID": "news/skeleteon-css-in-shiny/index.html#contribution-and-feedback",
-    "href": "news/skeleteon-css-in-shiny/index.html#contribution-and-feedback",
-    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
-    "section": "Contribution and feedback",
-    "text": "Contribution and feedback\nIf you have any feedback, feel free to open an issue at https://github.com/ColinFay/skeleton!"
-  },
-  {
-    "objectID": "news/2020-05-10_shinipsum-cran-realease/index.html",
-    "href": "news/2020-05-10_shinipsum-cran-realease/index.html",
-    "title": "{shinipsum} is now on CRAN",
-    "section": "",
-    "text": "I’m very happy to announce that {shinipsum} is now on CRAN!\n{shinipsum} is a package that can help you build {shiny} prototypes faster by providing a series of functions that can generate random elements to populate your UI. If you are familiar with “lorem ipsum”, the fake text generator that is used in software design as a placeholder for text, the idea is the same: generating placeholders for Shiny outputs.\n{shinipsum} can be installed from CRAN with:\n\ninstall.packages(\"shinipsum\")\n\nYou can install this package from GitHub with:\n\nremotes::install_github(\"Thinkr-open/shinipsum\")\n\nIn this package, a series of functions that generates random placeholders. For example, random_ggplot() generates random {ggplot2} elements:\n\nlibrary(shinipsum)\nlibrary(ggplot2)\n\n\nrandom_ggplot() +\n  labs(title = \"Random plot\")\n\n\n\n\n\n\n\n\n\nrandom_ggplot() +\n  labs(title = \"Random plot\")\n\n\n\n\n\n\n\n\nOf course, the idea is to combine this with a Shiny interface, for example random_ggplot() will be used with a renderPlot() and plotOutput(). And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, random_ggplot() has a type parameter that can help you select a specific geom.\n\nlibrary(shiny)\nlibrary(shinipsum)\nlibrary(DT)\nui &lt;- fluidPage(\n  h2(\"A Random DT\"),\n  DTOutput(\"data_table\"),\n  h2(\"A Random Plot\"),\n  plotOutput(\"plot\"),\n  h2(\"A Random Text\"),\n  tableOutput(\"text\")\n)\n\nserver &lt;- function(input, output, session) {\n  output$data_table &lt;- DT::renderDT({\n    random_DT(5, 5)\n  })\n  output$plot &lt;- renderPlot({\n    random_ggplot(type = \"point\")\n  })\n  output$text &lt;- renderText({\n    random_text(nwords = 50)\n  })\n}\nshinyApp(ui, server)\n\nOther {shinipsum} functions include:\n\ntables:\n\n\nrandom_table(nrow = 3, ncol = 10)\n\n  Plant   Type  Treatment conc uptake Plant.1 Type.1 Treatment.1 conc.1\n1   Qn1 Quebec nonchilled   95   16.0     Qn1 Quebec  nonchilled     95\n2   Qn1 Quebec nonchilled  175   30.4     Qn1 Quebec  nonchilled    175\n3   Qn1 Quebec nonchilled  250   34.8     Qn1 Quebec  nonchilled    250\n  uptake.1\n1     16.0\n2     30.4\n3     34.8\n\n\n\nprint outputs:\n\n\nrandom_print(type = \"model\")\n\n\n    Pearson's product-moment correlation\n\ndata:  datasets::mtcars$mpg and datasets::mtcars$cyl\nt = -8.9197, df = 30, p-value = 6.113e-10\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n -0.9257694 -0.7163171\nsample estimates:\n      cor \n-0.852162 \n\n\n… and text, image, ggplotly, dygraph, and DT.\nLearn more about {shinipsum}:\n\n{shinipsum} website\nChapter 10 Building an “ipsum-app” - Engineering Production-Grade Shiny Apps"
+    "text": "&lt;!doctype html&gt;"
   },
   {
     "objectID": "gameofgoose/index.html",
@@ -140,34 +98,6 @@
     "text": "Start with the idea 💡\nRole the dice 🎲\nMove your pawn ♟️\nIf you end on a bridge: move to the next bridge 🌉\nIf you end on a dice: play again 🎲\nIf you end on the skull: start again 💀\nIf you end on the well: skip one turn ䷯\nThe game is finished when you reach the end user 👩‍💻"
   },
   {
-    "objectID": "packages/index.html",
-    "href": "packages/index.html",
-    "title": "Packages",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "packages/index.html#package-details",
-    "href": "packages/index.html#package-details",
-    "title": "Packages",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "packages/index.html#cran-status-monthly-download-and-other-stats",
-    "href": "packages/index.html#cran-status-monthly-download-and-other-stats",
-    "title": "Packages",
-    "section": "CRAN status, Monthly download, and other stats",
-    "text": "CRAN status, Monthly download, and other stats\n\n\n\n\n\n\n\n\n\n\n\n\nPackage\nLifecycle\nCRAN Version\nMonthly Downloads\nR-CMD-Check\nGitHub Stars\nGitHub Issues\n\n\n\n\ngolem\n\n \n \n \nStars\nIssues\n\n\nshinipsum\n\n \n \n \nStars\nIssues\n\n\nfakir\n\n \n \n \nStars\nIssues\n\n\ngargoyle\n\n \n \n \nStars\nIssues\n\n\ndockerfiler\n\n \n \n \nStars\nIssues\n\n\ngemstones\n\n \n \n \nStars\nIssues\n\n\nelvis\n\n \n \n \nStars\nIssues\n\n\nbank\n\n \n \n \nStars\nIssues\n\n\nw3css\n\n \n \n \nStars\nIssues\n\n\nbrochure\n\n \n \n \nStars\nIssues\n\n\nghooks\n\n \n \n \nStars\nIssues\n\n\nskeleton\n\n \n \n \nStars\nIssues\n\n\nshinidraw\n\n \n \n \nStars\nIssues\n\n\n\n\n\nNote that CRAN version & Monthly Downloads are shown only for packages on CRAN"
-  },
-  {
-    "objectID": "packages/shinipsum/index.html",
-    "href": "packages/shinipsum/index.html",
-    "title": "shinipsum",
-    "section": "",
-    "text": "{shinipsum} provides a set of functions to generate dummy widgets and content for {shiny} applications.\nThis R package is a simple package designed to generate placeholder elements for {shiny} applications. It provides a set of functions that can be used to generate ‘lorem ipsum’ style elements that can be used as filler in Shiny applications while prototyping.\n\n\n  \n  \n  \nStars:\nIssues:"
-  },
-  {
     "objectID": "packages/w3css/index.html",
     "href": "packages/w3css/index.html",
     "title": "w3css",
@@ -175,25 +105,11 @@
     "text": "W3 CSS in {shiny}.\nAn implementation of W3 CSS https://www.w3schools.com/w3css/ for `{shiny}``.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
-    "objectID": "packages/minifyr/index.html",
-    "href": "packages/minifyr/index.html",
-    "title": "minifyr",
+    "objectID": "packages/shinidraw/index.html",
+    "href": "packages/shinidraw/index.html",
+    "title": "shinidraw",
     "section": "",
-    "text": "Minify CSS, HTML and JavaScript Files.\nA wrapper around the node-minify NodeJS module that allows to minify CSS, HTML, and JavaScript files from the R console.\n\n\n  \n  \n  \nStars:\nIssues:"
-  },
-  {
-    "objectID": "packages/ghooks/index.html",
-    "href": "packages/ghooks/index.html",
-    "title": "ghooks",
-    "section": "",
-    "text": "{golem} hooks.\nThe goal of {ghooks} is to provide {golem} hooks for standard {shiny} apps.\n\n\n  \n  \n  \nStars:\nIssues:"
-  },
-  {
-    "objectID": "packages/elvis/index.html",
-    "href": "packages/elvis/index.html",
-    "title": "elvis",
-    "section": "",
-    "text": "‘Shiny’ renderers and observers made safer.\nThe goal of {elvis} is to provide safer render* and observe* in {shiny} by providing a native tryCatch() mechanism.\n\n\n  \n  \n  \nStars:\nIssues:"
+    "text": "Excalidraw in {shiny}.\nBringing Excalidraw to your R console, with built-in project management.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
     "objectID": "packages/bank/index.html",
@@ -203,32 +119,32 @@
     "text": "Alternative caching backends for {memoise} & {shiny}.\nAlternative backend for caching {shiny}: MongoDB, Redis, Postgre.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
-    "objectID": "roadmap/index.html",
-    "href": "roadmap/index.html",
-    "title": "golemverse’s roadmap",
+    "objectID": "packages/minifyr/index.html",
+    "href": "packages/minifyr/index.html",
+    "title": "minifyr",
     "section": "",
-    "text": "Here is a list of things the golemverse team plans on working on.\nIf you feel like helping, feel free to open an issue / discussion / PR on one of the repository."
+    "text": "Minify CSS, HTML and JavaScript Files.\nA wrapper around the node-minify NodeJS module that allows to minify CSS, HTML, and JavaScript files from the R console.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
-    "objectID": "roadmap/index.html#short-term",
-    "href": "roadmap/index.html#short-term",
-    "title": "golemverse’s roadmap",
-    "section": "Short term",
-    "text": "Short term\n\n{golem} milestone 0.6.0 https://github.com/ThinkR-open/golem/milestone/2\nUpdate and rewrite the {golem} pkgdown\n\nSeparate vignettes into “Getting started” & “Advanced”\nChange the theme to bslib5\n\nCreate a {golem.lint} package that will host:\n\nCheck for missing ns() with roxygen tag\nCurrent sanity checks\nStyler golem_style()\nurl checker ?\nprecommit hook for {precommit}\n\n{golemverse} à la {tidyverse}\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\n{shinidraw} : excalidraw in {shiny}\nMore hooks for {ghooks} https://github.com/ThinkR-open/ghooks\nBring these packages to the golemverse:\n\nhttps://github.com/ColinFay/darkmode, ‘darkmode.js’ for ‘Shiny’\n\nQuestionning: should the following repos/packages be included to the golemverse?\n\nhttps://github.com/ColinFay/handydandy, Easy CSS Styling for Shiny\nhttps://github.com/ColinFay/feathericons, Feather Icons for Shiny\nhttps://github.com/ColinFay/nessy, A ‘NES’ css for ‘Shiny’\nhttps://github.com/ColinFay/resume, Bootstrap Resume Template for Shiny\nhttps://github.com/ColinFay/geoloc, Add geolocation inside your shiny app\nhttps://github.com/ColinFay/dockerstats, R Wrapper Around ‘docker stats’\nhttps://github.com/ColinFay/crrry, ‘crrri’ recipes for ‘shiny’\n\nWrite a blogpost about {gargoyle}"
+    "objectID": "packages/skeleton/index.html",
+    "href": "packages/skeleton/index.html",
+    "title": "skeleton",
+    "section": "",
+    "text": "Skeleton CSS in {shiny}.\n{skeleton} brings the skeleton CSS to {shiny} for lightweight, minimal and elegant web apps .\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
-    "objectID": "roadmap/index.html#mid-term",
-    "href": "roadmap/index.html#mid-term",
-    "title": "golemverse’s roadmap",
-    "section": "Mid term",
-    "text": "Mid term\n\nStable, production ready {brochure}\nDashboard template for {brochure}\nBlog post about :\n\n{elvis}\n\nNew fake data in {fakir}\nNew ipsum in {shinipsum}\nRelease on CRAN :\n\n{bank}\n{elvis}"
+    "objectID": "packages/gargoyle/index.html",
+    "href": "packages/gargoyle/index.html",
+    "title": "gargoyle",
+    "section": "",
+    "text": "{gargoyle} is an alternative way to manage reactivity in {shiny}.\n{gargoyle} is a package that provides wrappers around {shiny} to turn your app into and event-based application instead of a full reactive app. The framework is centered around a listen & trigger mechanism. It works with classical UI, and just needs tweaking the server side of your app.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
-    "objectID": "roadmap/index.html#long-term",
-    "href": "roadmap/index.html#long-term",
-    "title": "golemverse’s roadmap",
-    "section": "Long term",
-    "text": "Long term\n\nFinish {w3css}\nMore features in {gemstones}\nPrepare a talk about “Hidden gems of the golemverse”\nShort live streams presenting the packages (20 minutes + 10 min Q & A)"
+    "objectID": "packages/shinipsum/index.html",
+    "href": "packages/shinipsum/index.html",
+    "title": "shinipsum",
+    "section": "",
+    "text": "{shinipsum} provides a set of functions to generate dummy widgets and content for {shiny} applications.\nThis R package is a simple package designed to generate placeholder elements for {shiny} applications. It provides a set of functions that can be used to generate ‘lorem ipsum’ style elements that can be used as filler in Shiny applications while prototyping.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
     "objectID": "stream/2020-04-02-twitch/index.html",
@@ -238,11 +154,18 @@
     "text": "Colin will be live talking about the internals of {hexmake}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-04-02 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-04-02 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-04-02 19:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-04-02 15:00:00 EDT\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-04-02 12:00:00 PDT\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-04-03 06:00:00 AEDT\""
   },
   {
-    "objectID": "stream/2022-02-10-twitch/index.html",
-    "href": "stream/2022-02-10-twitch/index.html",
-    "title": "Let’s build a new app!",
+    "objectID": "stream/2020-01-13-twitch/index.html",
+    "href": "stream/2020-01-13-twitch/index.html",
+    "title": "First live stream 🎂",
     "section": "",
-    "text": "Let’s start building a new app with {golem} and {brochure}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2022-02-10 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2022-02-10 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2022-02-10 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2022-02-10 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2022-02-10 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2022-02-11 07:00:00 AEDT\""
+    "text": "Colin will live stream on Twitch how to build a Shiny application with {golem}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-01-13 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-01-13 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-01-13 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-01-13 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-01-13 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-01-14 07:00:00 AEDT\""
+  },
+  {
+    "objectID": "stream/2020-01-23-twitch/index.html",
+    "href": "stream/2020-01-23-twitch/index.html",
+    "title": "Second live stream",
+    "section": "",
+    "text": "Colin will live stream on Twitch how to build a Shiny application with {golem}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-01-23 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-01-23 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-01-23 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-01-23 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-01-23 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-01-24 07:00:00 AEDT\""
   },
   {
     "objectID": "resources/index.html",
@@ -308,53 +231,18 @@
     "text": "Cheatsheet 📑\n\n{golem} cheatsheet"
   },
   {
-    "objectID": "documentation/index.html",
-    "href": "documentation/index.html",
-    "title": "golemverse",
+    "objectID": "stream/2022-02-10-twitch/index.html",
+    "href": "stream/2022-02-10-twitch/index.html",
+    "title": "Let’s build a new app!",
     "section": "",
-    "text": "&lt;!doctype html&gt;"
-  },
-  {
-    "objectID": "stream/2020-01-23-twitch/index.html",
-    "href": "stream/2020-01-23-twitch/index.html",
-    "title": "Second live stream",
-    "section": "",
-    "text": "Colin will live stream on Twitch how to build a Shiny application with {golem}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-01-23 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-01-23 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-01-23 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-01-23 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-01-23 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-01-24 07:00:00 AEDT\""
-  },
-  {
-    "objectID": "stream/2020-01-13-twitch/index.html",
-    "href": "stream/2020-01-13-twitch/index.html",
-    "title": "First live stream 🎂",
-    "section": "",
-    "text": "Colin will live stream on Twitch how to build a Shiny application with {golem}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-01-13 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-01-13 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-01-13 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-01-13 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-01-13 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-01-14 07:00:00 AEDT\""
+    "text": "Let’s start building a new app with {golem} and {brochure}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2022-02-10 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2022-02-10 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2022-02-10 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2022-02-10 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2022-02-10 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2022-02-11 07:00:00 AEDT\""
   },
   {
     "objectID": "stream/index.html",
     "href": "stream/index.html",
     "title": "Streams",
     "section": "",
-    "text": "Let’s build a new app!\n\n\n\n\n\n\n\n\n\n\n\nFeb 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nOverview of {hexmake}\n\n\n\n\n\n\n\n\n\n\n\nApr 2, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nSecond live stream\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nFirst live stream 🎂\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2020\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "packages/skeleton/index.html",
-    "href": "packages/skeleton/index.html",
-    "title": "skeleton",
-    "section": "",
-    "text": "Skeleton CSS in {shiny}.\n{skeleton} brings the skeleton CSS to {shiny} for lightweight, minimal and elegant web apps .\n\n\n  \n  \n  \nStars:\nIssues:"
-  },
-  {
-    "objectID": "packages/fakir/index.html",
-    "href": "packages/fakir/index.html",
-    "title": "fakir",
-    "section": "",
-    "text": "{fakir} provides a set of functions to generate random data that can be used for prototyping.\n{fakir} contains a set of functions for creating synthetic datasets that mimic real-world data, allowing users to test their code under a variety of different scenarios.\n\n\n  \n  \n  \nStars:\nIssues:"
-  },
-  {
-    "objectID": "packages/gemstones/index.html",
-    "href": "packages/gemstones/index.html",
-    "title": "gemstones",
-    "section": "",
-    "text": "Extend your {golem} application with external JS libraries.\nThe goal of {gemstones} is to allow you to add some JavaScript libraries to your {golem} based app. {gemstones} will automate the download and the linking of some JS libraries, but it’s important to understand that {gemstones} is not providing a full wrapper or widget for these libraries. You’ll still have to code some elements to make it work.\n\n\n  \n  \n  \nStars:\nIssues:"
+    "text": "Let’s build a new app!\n\n\n\n\n\n\n\n\nFeb 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nOverview of {hexmake}\n\n\n\n\n\n\n\n\nApr 2, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nSecond live stream\n\n\n\n\n\n\n\n\nJan 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nFirst live stream 🎂\n\n\n\n\n\n\n\n\nJan 13, 2020\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "packages/golem/index.html",
@@ -364,11 +252,53 @@
     "text": "{golem} is an opinionated framework for building production-grade {shiny} applications.\nIt provides a set of tools to help you build a {shiny} application in a structured way automates routine tasks, facilitate deployment, and is extendable to feat your needs.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
-    "objectID": "packages/shinidraw/index.html",
-    "href": "packages/shinidraw/index.html",
-    "title": "shinidraw",
+    "objectID": "packages/brochure/index.html",
+    "href": "packages/brochure/index.html",
+    "title": "brochure",
     "section": "",
-    "text": "Excalidraw in {shiny}.\nBringing Excalidraw to your R console, with built-in project management.\n\n\n  \n  \n  \nStars:\nIssues:"
+    "text": "Natively multipage {shiny} apps.\nThe goal of {brochure} is to provide a mechanism for creating natively multi-page {shiny}applications, i.e that can serve content on multiple endpoints.\n\n\n  \n  \n  \nStars:\nIssues:"
+  },
+  {
+    "objectID": "packages/fakir/index.html",
+    "href": "packages/fakir/index.html",
+    "title": "fakir",
+    "section": "",
+    "text": "{fakir} provides a set of functions to generate random data that can be used for prototyping.\n{fakir} contains a set of functions for creating synthetic datasets that mimic real-world data, allowing users to test their code under a variety of different scenarios.\n\n\n  \n  \n  \nStars:\nIssues:"
+  },
+  {
+    "objectID": "packages/elvis/index.html",
+    "href": "packages/elvis/index.html",
+    "title": "elvis",
+    "section": "",
+    "text": "‘Shiny’ renderers and observers made safer.\nThe goal of {elvis} is to provide safer render* and observe* in {shiny} by providing a native tryCatch() mechanism.\n\n\n  \n  \n  \nStars:\nIssues:"
+  },
+  {
+    "objectID": "packages/ghooks/index.html",
+    "href": "packages/ghooks/index.html",
+    "title": "ghooks",
+    "section": "",
+    "text": "{golem} hooks.\nThe goal of {ghooks} is to provide {golem} hooks for standard {shiny} apps.\n\n\n  \n  \n  \nStars:\nIssues:"
+  },
+  {
+    "objectID": "packages/index.html",
+    "href": "packages/index.html",
+    "title": "Packages",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "packages/index.html#package-details",
+    "href": "packages/index.html#package-details",
+    "title": "Packages",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "packages/index.html#cran-status-monthly-download-and-other-stats",
+    "href": "packages/index.html#cran-status-monthly-download-and-other-stats",
+    "title": "Packages",
+    "section": "CRAN status, Monthly download, and other stats",
+    "text": "CRAN status, Monthly download, and other stats\n\n\n\n\n\n\n\n\n\n\n\n\nPackage\nLifecycle\nCRAN Version\nMonthly Downloads\nR-CMD-Check\nGitHub Stars\nGitHub Issues\n\n\n\n\ngolem\n\n \n \n \nStars\nIssues\n\n\nshinipsum\n\n \n \n \nStars\nIssues\n\n\nfakir\n\n \n \n \nStars\nIssues\n\n\ngargoyle\n\n \n \n \nStars\nIssues\n\n\ndockerfiler\n\n \n \n \nStars\nIssues\n\n\ngemstones\n\n \n \n \nStars\nIssues\n\n\nelvis\n\n \n \n \nStars\nIssues\n\n\nbank\n\n \n \n \nStars\nIssues\n\n\nw3css\n\n \n \n \nStars\nIssues\n\n\nbrochure\n\n \n \n \nStars\nIssues\n\n\nghooks\n\n \n \n \nStars\nIssues\n\n\nskeleton\n\n \n \n \nStars\nIssues\n\n\nshinidraw\n\n \n \n \nStars\nIssues\n\n\n\n\n\nNote that CRAN version & Monthly Downloads are shown only for packages on CRAN"
   },
   {
     "objectID": "packages/dockerfiler/index.html",
@@ -378,88 +308,151 @@
     "text": "Build dockerfile straight from R.\nThe goal of {dockerfiler} is to provide an easy way to create Dockerfiles from R. You can use {dockerfiler} to programatically create a Dockerfile.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
-    "objectID": "packages/gargoyle/index.html",
-    "href": "packages/gargoyle/index.html",
-    "title": "gargoyle",
+    "objectID": "packages/gemstones/index.html",
+    "href": "packages/gemstones/index.html",
+    "title": "gemstones",
     "section": "",
-    "text": "{gargoyle} is an alternative way to manage reactivity in {shiny}.\n{gargoyle} is a package that provides wrappers around {shiny} to turn your app into and event-based application instead of a full reactive app. The framework is centered around a listen & trigger mechanism. It works with classical UI, and just needs tweaking the server side of your app.\n\n\n  \n  \n  \nStars:\nIssues:"
+    "text": "Extend your {golem} application with external JS libraries.\nThe goal of {gemstones} is to allow you to add some JavaScript libraries to your {golem} based app. {gemstones} will automate the download and the linking of some JS libraries, but it’s important to understand that {gemstones} is not providing a full wrapper or widget for these libraries. You’ll still have to code some elements to make it work.\n\n\n  \n  \n  \nStars:\nIssues:"
   },
   {
-    "objectID": "packages/brochure/index.html",
-    "href": "packages/brochure/index.html",
-    "title": "brochure",
+    "objectID": "news/golem-0.3.1-release-on-cran/index.html",
+    "href": "news/golem-0.3.1-release-on-cran/index.html",
+    "title": "About {golem} 0.3.1",
     "section": "",
-    "text": "Natively multipage {shiny} apps.\nThe goal of {brochure} is to provide a mechanism for creating natively multi-page {shiny}applications, i.e that can serve content on multiple endpoints.\n\n\n  \n  \n  \nStars:\nIssues:"
+    "text": "The new version of {golem} (0.3.1) has been available on CRAN 🎉 for about a month now. This new version includes a lot of new things, but we notably focused on working on two important new features: allowing you to extend {golem} via templates, and supporting for the latest changes in {shiny}."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "R packages for building robust, production grade {shiny} apps.",
-    "section": "",
-    "text": "The golemverse is a collection of R packages for building {shiny} apps that need to be safely shipped to production.\n\n\n\n\n{bank}, Extra Cache\n{brochure}, Multipage ‘Shiny’ Apps\n{dockerfiler}, Easy Dockerfile Creation from R\n{elvis}, ‘Shiny’ renderers and observers made safer\n{fakir}, Generate Fake Datasets for Prototyping and Teaching\n{gargoyle}, An Event-Based Mechanism for ‘Shiny’\n{gemstones}, Make Your ‘golem’ App Shine\n{golem}, A framework for production-grade {shiny} apps\n{ghooks}, ‘Golem’ Hooks for Standard ‘Shiny’ Apps\n{minifyr}, Minify CSS, HTML and JavaScript Files\n{skeleton}, Skeleton CSS for Shiny\n{shinidraw}, ‘Excalidraw’ in ‘Shiny’\n{shinipsum}, Lorem-Ipsum Helper Function for ‘shiny’ Prototyping\n{w3css}, W3CSS for ‘shiny’"
+    "objectID": "news/golem-0.3.1-release-on-cran/index.html#extending-golem",
+    "href": "news/golem-0.3.1-release-on-cran/index.html#extending-golem",
+    "title": "About {golem} 0.3.1",
+    "section": "Extending {golem}",
+    "text": "Extending {golem}\nOne of the challenges when it comes to building apps in a production context is that you might be repeating some patterns over and over again: adding the same CSS in every app, creating specific functions, setting a license, adding internal packages as dependencies, etc.\nThe key idea with {golem} is to lower the number of repetitive tasks you have to perform during the engineering of your app. We try to achieve that by providing tools that automate these common tasks. But before version 0.3, there was no way to optimize the “business specific”, internal tasks of adding files, functions, or templating modules. This is now possible with this new release of {golem}, which introduces the concept of “golem templates”: functions that can be used for project hooks, module templates, and JavaScript and CSS file creation.\n\nProject Hooks\n\nAbout project hooks\nA project hook is a functions called inside create_golem().\nIt allows you to define custom behaviors when creating {golem} based apps, and can be used for:\n\nAdding a different front-end template in R/app_ui.R\nChanging configuration options in inst/golem-config.yml\nCopying external files in inst/app/www\nRemoving a file from the default template\netc.\n\nThis function is called just after the default project has been created, and is executed in the directory of the created package. Here is a step by step of what happens when a project is created with {golem}:\n\nThe package name is generated\nThe directory that will receive the package is created\nDefault {golem} template is copied to this directory\nR moves to the newly created project, and runs the project_hook function\nR moves back to the previous directory\nIf in RStudio, the project is open\n\nThe project_hook function takes three mandatory parameters, which are passed from create_golem:\n\npath: the full path of the directory\npackage_name: the name of the package\n... : further arguments that can be passed from create_golem() when called from the command line\n\nThese parameters might not be used inside your own hook, but they need to be set in the hook function skeleton for compatibility reasons.\nThe best way to extend {golem} via a project hook is by defining a project_hook function in an external package. This will allow this function to be used inside the {golem} creation RStudio project creation widget:\n\n\n\nProject hook example\nRemoving the dev folder:\nno_dev &lt;- function(path, package_name, ...){\n   fs::dir_delete(\"dev\")\n}\ncreate_golem(\"ici\", project_hook = no_dev)\nCreate a CSS:\nnew_css &lt;- function(path, package_name, ...){\n\n  css_path &lt;- fs::path_abs(\"inst/app/www/custom.css\")\n\n  fs::file_create(css_path)\n\n  write_there &lt;- function(...){\n    write(..., file = css_path, append = TRUE)\n  }\n\n  write_there(\"body {\")\n  write_there(\"    background-color:red;\")\n  write_there(\"}\")\n\n  cli::cat_bullet(\"CSS generated\")\n\n}\ncreate_golem(\"ici\", project_hook = new_css)\n\n\n\nModule templates\n\nAbout module templates\nModule templates are called inside add_module.\nIt allows you to extend {golem} module template functionality by creating your own content inside the module file.\nThe function is called after the file(s) creation. Here is a step by step of what happens when the add_module function is called:\n\nThe module name is generated, and the R/ directory is created if needed\nThe fct_ and utils_ files are created if needed\nThe path to the module is generated\nIf the file already exists, it opens the file\nIf the file doesn’t exist, R creates the file and the module_template function is called\nFile is potentially open\n\n(Note that the template function is not called if the file already exists).\nModule template functions will receive, by default, the following parameters from add_modules().\n\nname: the name of the module\npath: the path to the file in R/\nexport: a TRUE/FALSE set by the export param of add_module()\n... further arguments\n\nThese parameters might not be used inside your own function, but they need to be set in the function skeleton, for compatibility reasons.\n\n\nModule template examples\nmy_tmpl &lt;- function(name, path, export, ...){\n  # Define a template that write to the\n  # module file\n  write(name, path)\n}\n\ngolem::add_module(name = \"custom\", module_template = my_tmpl)\n\nmy_other_tmpl &lt;- function(name, path, export, ...){\n  # Copy and paste a file from somewhere\n  file.copy(..., path)\n}\n\ngolem::add_module(name = \"custom\", module_template = my_other_tmpl)\n\n\n\nJS & CSS templates\n\nAbout JS & CSS templates\nJavaScript and CSS templates work the same way as the module templates, and are used during the creation of JavaScript files, JavaScript handlers and CSS files, i.e. inside add_js_file(), add_js_handler() and add_css_file().\nThe function is called after the file creation. Here is a step by step of what happens when these functions are called:\n\nName is created\nThe path is generated\nIf the file already exists, it opens the file\nIf the file doesn’t exist, R creates it and the template function is called\nFile is potentially open\n\n(Note that the template function is not called if the file already exists).\nYou can then define your own function inside your {golem} based application, but chances are you will be defining them into your own package.\nFile template functions will receive, by default, the following parameters from the add_*() function.\n\npath: the path to the file\n... further arguments\n\nThese parameters might not be used inside your own function, but they need to be set in the function skeleton, for compatibility reasons.\n\n\nJS & CSS templates examples\nmy_tmpl &lt;- function(path, ...){\n   # Define a template that only write the name of the\n   # module in the file\n  write_there &lt;- function(...){\n    write(..., file = path, append = TRUE)\n  }\n\n  write_there(\"body {\")\n  write_there(\"    background-color:red;\")\n  write_there(\"}\")\n}\ngolem::add_css_file(name = \"custom\", template = my_tmpl)"
   },
   {
-    "objectID": "index.html#read-the-book",
-    "href": "index.html#read-the-book",
-    "title": "R packages for building robust, production grade {shiny} apps.",
-    "section": "Read the book 📚",
-    "text": "Read the book 📚\n\n\nLearn more about building {shiny} apps for production with the Engineering Production-Grade Shiny Apps.\nThe online version of the book is free to read on https://engineering-shiny.org/.\nThis book is available in print, published in the R Series by Chapman and Hall/CRC. You can grab a copy on routledge.com."
+    "objectID": "news/golem-0.3.1-release-on-cran/index.html#support-for-the-latest-shiny-features",
+    "href": "news/golem-0.3.1-release-on-cran/index.html#support-for-the-latest-shiny-features",
+    "title": "About {golem} 0.3.1",
+    "section": "Support for the latest {shiny} features",
+    "text": "Support for the latest {shiny} features\n\nNew module skeleton\n{shiny} 1.5.0, has introduced a new skeleton when it comes to modules. {golem} now supports this new skeleton:\n&gt; golem::add_module(\"plop\")\n✓ File created at R/mod_plop.R\n#' plop UI Function\n#'\n#' @description A shiny Module.\n#'\n#' @param id,input,output,session Internal parameters for {shiny}.\n#'\n#' @noRd\n#'\n#' @importFrom shiny NS tagList\nmod_plop_ui &lt;- function(id){\n  ns &lt;- NS(id)\n  tagList(\n\n  )\n}\n\n#' plop Server Functions\n#'\n#' @noRd\nmod_plop_server &lt;- function(id){\n  moduleServer( id, function(input, output, session){\n    ns &lt;- session$ns\n\n  })\n}\n\n## To be copied in the UI\n# mod_plop_ui(\"plop_ui_1\")\n\n## To be copied in the server\n# mod_plop_server(\"plop_ui_1\")\n\n\nDisabling auto-load\nSince {shiny} 1.5.0, the R folder is automatically sourced, in alphabetical order, when the app is loaded via runApp()—this used to be opt-in but is now opt-out.\nThis can cause some troubles with {golem} package structure in some (rare) cases, and only when deploying to RStudio platform via golem::add_rstudioconnect_file() and friends—there is no issue with the package structure and the load whenever you load golem via the golem::run_dev() or via myapp::run_app().\nThis behavior can be opt-out via two mechanisms: options(shiny.autoload.r=FALSE), or via a file called _disable_autoload.R in the R/ folder. Reliably setting options in all projects can create some issues, so we have chosen to go for the _disable_autoload.R solution.\nThis file is now created whenever you called one of golem::add_rstudioconnect_file(), golem::add_shinyappsio_file() or golem::add_shinyserver_file(). You can also force its creation via golem::disable_autoload().\nImportant note. This will still print a warning to your console:\nWarning in loadSupport(appDir, renv = sharedEnv, globalrenv = NULL) :\n  Loading R/ subdirectory for Shiny application, but this directory appears to contain an R package. Sourcing files in R/ may cause unexpected behavior.\nThis is unfortunately because, at the time of writing these lines, {shiny} doesn’t remove this warning when the _disable_autoload.R file is there, so this warning will be printed to your logs. You can safely ignore it for now, as long as this behavior does not change (if it ever changes) in the {shiny} package. There is an issue open on the {shiny} repo right now, so feel free to watch the progress there!"
   },
   {
-    "objectID": "index.html#on-the-blog",
-    "href": "index.html#on-the-blog",
-    "title": "R packages for building robust, production grade {shiny} apps.",
-    "section": "On the blog ✍️",
-    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n{golem} 0.5.1 is now available\n\n\n\n\n\n\n\n\n\n\n\nAug 28, 2024\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{fakir} 1.0.0 is now on CRAN\n\n\n\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\nNo matching items"
+    "objectID": "news/golem-0.3.1-release-on-cran/index.html#misc",
+    "href": "news/golem-0.3.1-release-on-cran/index.html#misc",
+    "title": "About {golem} 0.3.1",
+    "section": "Misc",
+    "text": "Misc\nHere are a selection of changes and new features in this new version:\n\nYou no longer need to source the dev/run_dev.R script and can call the golem::run_dev() function from your console.\nadd_html_template() creates an empty HTML template inside your app.\ngolem::add_js_binding and golem::add_js_output_binding create a skeleton for JavaScript bindings.\nuse_external_file, use_external_css_file, use_external_js_file, and use_external_html_template download external files from URL and add them to the www folder. They all have a use_internal_ counterpart that copies files from the local computer.\nThe sanity_check() function does a series of checks inside the current project."
   },
   {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "R packages for building robust, production grade {shiny} apps.",
-    "section": "Contact 📲",
-    "text": "Contact 📲\nContact us via the ThinkR website!"
+    "objectID": "news/golem-0.3.1-release-on-cran/index.html#soft-deprecation",
+    "href": "news/golem-0.3.1-release-on-cran/index.html#soft-deprecation",
+    "title": "About {golem} 0.3.1",
+    "section": "Soft deprecation",
+    "text": "Soft deprecation\nWe’re planning on deprecating the add_ui_server_files() function. Feel free to comment on ThinkR-open/golem/issues/445 if you’d like it to stay there."
   },
   {
-    "objectID": "news/golem-0.3.2-release-on-cran/index.html",
-    "href": "news/golem-0.3.2-release-on-cran/index.html",
-    "title": "{golem} 0.3.2 is now available",
-    "section": "",
-    "text": "The new version of {golem} is now available!\nYou can download it from your favorite CRAN repository, or by running the following command:"
+    "objectID": "news/golem-0.3.1-release-on-cran/index.html#updating-your-old-projects",
+    "href": "news/golem-0.3.1-release-on-cran/index.html#updating-your-old-projects",
+    "title": "About {golem} 0.3.1",
+    "section": "Updating your old projects",
+    "text": "Updating your old projects\nIf you’ve built a project with an older version of {golem}, there should be no re-engineering to do, everything should still be compatible.\nOne change though might be in the way you deploy your app on RStudio platforms, which is related to the way {shiny} now handles the package structure. Just run golem::disable_autoload() to add the support.\nIf ever you find any other issues with the new version of {golem}, please feel free to open an issue on the repository."
   },
   {
-    "objectID": "news/golem-0.3.2-release-on-cran/index.html#whats-up-with-this-new-version",
-    "href": "news/golem-0.3.2-release-on-cran/index.html#whats-up-with-this-new-version",
-    "title": "{golem} 0.3.2 is now available",
-    "section": "What’s up with this new version?",
-    "text": "What’s up with this new version?\nIn this release, we have been focusing on a closer integration of tests inside the application building process, notably via Server function testing with Shiny, adding tests to fct, utils, and the ui & server functions that comes with {golem}.\nStarting with this version of {golem}, the integration of tests is opt-in:\ngolem::add_module(\"plop\", with_test = TRUE)\ngolem::add_fct(\"helpers\", with_test = TRUE)\nNote that these will be opt-out in the next release — in other words they will be TRUE by default in the future.\nWe also have squashed a bunch of issues, for example amend_config() now keeps !expr (this use to cause some errors when the project was shared across multiple computers), expect_running() now finds R.exe, some adjustments has been made to fit new version of packages (for example testthat::expect_is is no longer used, and we require the correct version of {usethis}).\nFor a full list of changes, please refer to the NEWS.md file."
+    "objectID": "news/golem-0.3.1-release-on-cran/index.html#feedback-and-questions",
+    "href": "news/golem-0.3.1-release-on-cran/index.html#feedback-and-questions",
+    "title": "About {golem} 0.3.1",
+    "section": "Feedback and questions",
+    "text": "Feedback and questions\nWe’re always happy to get new ideas and question on {golem}!\nIf you have a feature idea, or find a bug, please open an issue.\nThe best places to ask question are either the GitHub “Discussions” panel, or StackOverflow, using the golem tag."
   },
   {
-    "objectID": "news/golem-0.3.2-release-on-cran/index.html#whats-next",
-    "href": "news/golem-0.3.2-release-on-cran/index.html#whats-next",
-    "title": "{golem} 0.3.2 is now available",
-    "section": "What’s next",
-    "text": "What’s next\nNow that this version is stable, we can start working on the next version, which will be 0.4.0.\nOne of the thing that has been an issue with the way {golem} works is that it is used in two contexts: for dev, and for deployment.\nThe issue with that approach is that when deloying a golem-based app, you will have to install packages that are only used for dev, for exemple {usethis}, while they are not required to run the app.\nThis next version will focus on removing these packages from hard dependencies and move them to suggest, so that you can install them while developing but not when deploying, making the deployment process way easier and lighter. Note that the current version of {golem} (0.3.2) has already made a move in this direction by moving {dockerfiler} to Suggest, and making it only required when building the containers.\nFollow the Version 0.4.0 board for more!"
-  },
-  {
-    "objectID": "news/golem-0.3.2-release-on-cran/index.html#thanks",
-    "href": "news/golem-0.3.2-release-on-cran/index.html#thanks",
-    "title": "{golem} 0.3.2 is now available",
+    "objectID": "news/golem-0.3.1-release-on-cran/index.html#thanks",
+    "href": "news/golem-0.3.1-release-on-cran/index.html#thanks",
+    "title": "About {golem} 0.3.1",
     "section": "Thanks",
     "text": "Thanks\nWe want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.\n@abidawson, @abnercasallo, @aftonsteps, @AMillanFL, @antoine-sachet, @ArthurPERE, @artpulsion, @cderv, @chintanp, @ChrisBeeley, @CorradoLanera, @csgillespie, @daattali, @DivadNojnarg, @durandsinclair, @dwhdai, @dylanrussellmd, @earnaud, @fBedecarrats, @feddelegrand7, @fizic37, @fvitalini, @gacolitti, @genobobeno, @hadley, @HanjoStudy, @henrique1008, @jacksonschan, @jacobwindsor, @jaybee84, @jcrodriguez1989, @jennahamlin, @julianstanley, @KasperThystrup, @Kastakin, @KoderKow, @kprimice, @mahelious, @MayaGans, @mcsiple, @michaelhogersnplm, @moodymudskipper, @mraess, @novica, @nvelden, @quickbendelat, @rgaube, @riccardoporreca, @RichardPilbery, @robertoromor, @seanhardison1, @ShinyFabio, @sjspielman, @Swechhya, @TimotheeTournier, @VincentAlcazer, @Welsh44, @yogat3ch, @yonicd, @zchmielewska, and @ZimmermannYves."
   },
   {
-    "objectID": "news/golem-0.5.1-release-on-cran/index.html",
-    "href": "news/golem-0.5.1-release-on-cran/index.html",
-    "title": "{golem} 0.5.1 is now available",
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html",
+    "href": "news/golem-1.0.0-release-on-cran/index.html",
+    "title": "{golem} 1.0.0 is here",
     "section": "",
-    "text": "Image generated by ChatGPT\nWe are thrilled to announce the release of {golem} version 0.5.1! This update comes packed with new features, enhancements, and bug fixes that will streamline your Shiny app development process.\nYou can download the latest version from your favorite CRAN repository, or by running the following command in R:"
+    "text": "We’re thrilled to announce that after years of powering Shiny applications in production, {golem} has finally reached a symbolic milestone: version 1.0.0. This is more than a version bump. This release brings a brand-new tooling story for coding agents, a fully reworked Docker/{renv} deployment workflow, modernized console output powered by {cli} — all of it alongside a set of breaking changes you should read before upgrading an existing project.\nHere’s a quick tour."
   },
   {
-    "objectID": "news/golem-0.5.1-release-on-cran/index.html#whats-new-in-this-version",
-    "href": "news/golem-0.5.1-release-on-cran/index.html#whats-new-in-this-version",
-    "title": "{golem} 0.5.1 is now available",
-    "section": "What’s New in This Version?",
-    "text": "What’s New in This Version?\nThe latest update of {golem} introduces several new functions and improvements, designed to enhance your experience when building and deploying Shiny applications.\n\nMajor Highlights\n\ngolem::welcome_page()\nThe golem::welcome_page() function now displays a welcome page in the default scaffold app, offering a smoother onboarding experience for new users.\n\n\n\nNew Files Added\n\nuse_readme_rmd(): This function adds a {golem}-specific README.Rmd to your project, making documentation easier and more consistent.\nadd_empty_file(): Creates an empty file in the www directory, allowing for better management of static assets.\nadd_r6(): Adds an empty R6 class template, facilitating object-oriented programming in your Shiny apps.\nadd_fct() now includes a function skeleton to guide users in creating consistent functions across their projects.\n\n\n\n\nNew Features and Enhancements\nThis release comes with a variety of new features and user-visible changes:\n\nThe is_golem() function has been introduced to help determine if the current folder is a {golem}-based app. This function can be used especially useful for extending golem with project hooks.\nThe fill_desc() function now automatically calls set_options() and uses a person vector for better project metadata management.\nThe module skeleton has been updated to adhere to the tidyverse style.\n\n\n\nDeployment Improvements\n\nA .rscignore file is now created in the golem directory whenever connect-related files are generated, simplifying deployment to RStudio Connect.\nThe writeManifest() function has been added to deploy.R, improving deployment workflows by ensuring all necessary dependencies are captured.\n\n\n\nBug Fixes\nWe’ve addressed several issues in this release, including:\n\nuse_{internal,external}_XXX_file() now works correctly with the default missing name argument.\nrun_dev() now installs the necessary dependencies to source dev/run_dev.R if they are missing.\nuse_readme_rmd() no longer pops up when open=FALSE is set, providing a smoother setup process.\nDocker commands now include the -it flag, allowing processes to be interrupted with ^C.\n\n\n\nInternal Changes\nThis release also includes some internal improvements:\n\nWe’ve added tests for previously untested files and functions, improving the overall code coverage of {golem}.\nThe guess_where_config() function now locates user config YAML files based on changes made in R/app_config.R.\nThe test suite has been refactored for faster execution and reduced verbosity.\n\nThis release marks a significant step forward for the {golem} package, offering new tools and enhancements to make your Shiny app development smoother and more efficient. We hope you enjoy the new features and improvements!\nHappy coding! 🚀\nThanks to everyone who contributed to this new version!"
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#why-1.0.0",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#why-1.0.0",
+    "title": "{golem} 1.0.0 is here",
+    "section": "Why 1.0.0?",
+    "text": "Why 1.0.0?\n{golem} is an opinionated framework for building production-grade Shiny applications, as R packages. Since its very first release, the goal hasn’t changed: give your applications a robust, testable, deployable structure. Moving to 1.0.0 acknowledges that the API is mature and stable — and it’s also the right moment to clean up a few legacy behaviors that deserved to be clarified."
+  },
+  {
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#the-headline-feature-agent-skills",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#the-headline-feature-agent-skills",
+    "title": "{golem} 1.0.0 is here",
+    "section": "The headline feature: agent skills",
+    "text": "The headline feature: agent skills\nThis is the flagship addition in this version. {golem} now ships tooling to install agent skills (in the Claude Code / AGENTS.md layout) directly into your project.\nConcretely, a new family of functions makes its appearance:\n# Install skills into an existing golem project\ngolem::use_skills()\ngolem::use_agent_skills()\ngolem::use_claude_skills()\ngolem::use_skill()\nThese helpers install skills — either the ones bundled inside the package, or those from the upstream ThinkR-open/golem-agent-skills repository. The idea: give your coding assistant native knowledge of golem conventions (adding a module, a function, running a check, fixing missing ns() calls…).\nAnd to start on the right foot, create_golem() gains two arguments, with_agents and with_agents_options, to install these skills right at project creation. The RStudio “New Project” wizard exposes a matching set of options too.\nA detail that matters for R CMD check purists: installing skills automatically appends the corresponding entries (^\\.claude$, ^CLAUDE\\.md$, ^\\.agents$, ^AGENTS\\.md$) to .Rbuildignore, so the check doesn’t flag them as non-standard top-level files."
+  },
+  {
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#a-reworked-dockerrenv-deployment-story",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#a-reworked-dockerrenv-deployment-story",
+    "title": "{golem} 1.0.0 is here",
+    "section": "A reworked Docker/{renv} deployment story",
+    "text": "A reworked Docker/{renv} deployment story\nDockerfile generation has been seriously modernized. The add_dockerfile_with_renv*() functions now produce:\n\na multi-stage Dockerfile by default (pass single_file = FALSE to keep the previous two-file behavior);\na Dockerfile that sets golem.app.prod = TRUE by default (disable it with set_golem.app.prod = FALSE).\n\nIn parallel, two new helpers generate minimal deployment CI for freshly created apps:\ngolem::add_github_action()\ngolem::add_gitlab_ci()\nThese CI helpers restore renv.lock when it’s present, fall back to DESCRIPTION when it isn’t, and declare {pkgload} for the generated Posit Connect entrypoint.\nThe logical consequence: the older add_dockerfile(), add_dockerfile_shinyproxy() and add_dockerfile_heroku() functions are now explicitly soft-deprecated. Use their add_dockerfile_with_renv_*() counterparts."
+  },
+  {
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#console-output-powered-by-cli",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#console-output-powered-by-cli",
+    "title": "{golem} 1.0.0 is here",
+    "section": "Console output powered by {cli}",
+    "text": "Console output powered by {cli}\nEvery function that prints to the console has been reworked and standardized using the {cli} package. Messages, progress bars, unzip feedback… the whole thing is more consistent and easier on the eyes. Worth noting along the way: run_dev() now prints a single message."
+  },
+  {
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#javascript-bindings-rework",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#javascript-bindings-rework",
+    "title": "{golem} 1.0.0 is here",
+    "section": "JavaScript bindings rework",
+    "text": "JavaScript bindings rework\nIf you’ve ever used add_js_input_binding() or add_js_output_binding(), you know the skeleton needed quite a bit of manual completion. Not anymore: these functions now generate a functional binding out of the box.\nThe JS file contains working implementations of find, getValue/renderValue, setValue, receiveMessage and subscribe. An R companion file (fct_&lt;name&gt;_input_binding.R / fct_&lt;name&gt;_output_binding.R) is created alongside it, with a ready-to-use UI constructor, update, and render functions.\nTwo things to be aware of (these are breaking changes, see below): the file naming scheme changes (&lt;name&gt;-input.js), and the default events argument was adjusted to produce a binding that works right away."
+  },
+  {
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#other-useful-additions",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#other-useful-additions",
+    "title": "{golem} 1.0.0 is here",
+    "section": "Other useful additions",
+    "text": "Other useful additions\n\nadd_fct() gains a template argument to customize the content of the generated file; the default template is now exposed via the fct_template() function, mirroring the module_template() / add_module() pattern.\nThe use_external_*() family and use_bundled_html() gain a replace argument: with TRUE, an existing file (or bundle directory) is overwritten instead of aborting.\nuse_bundled_html() downloads HTML templates as zip archives, can extract them into inst/app/www, and remove the raw zip afterwards.\nScaffolding helpers (use_*, add_*, set_golem_*) now emit a warning when called while {golem} is in production mode (options('golem.app.prod' = TRUE)) — handy for catching an accidental call from a deployed app."
+  },
+  {
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#breaking-changes-to-read-before-upgrading",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#breaking-changes-to-read-before-upgrading",
+    "title": "{golem} 1.0.0 is here",
+    "section": "⚠️ Breaking changes to read before upgrading",
+    "text": "⚠️ Breaking changes to read before upgrading\nThis is a major release, and it intentionally breaks a few behaviors. The main ones:\n\nUnified path arguments. The wd, path and pkg arguments are standardized into a single golem_wd. The legacy names remain as deprecated aliases (with a warning), but any value passed to an alias is silently ignored: the function reads golem_wd instead. If you relied on a non-default path, switch to golem_wd.\nget_current_config() reworked. It now reads either the GOLEM_CONFIG_PATH environment variable or the default path (inst/golem-config.yml) — no more guessing exotic paths — and hard-fails if the file doesn’t exist. It no longer copies missing config files from the skeleton.\nRemoved functions. get_sysreqs() (use dockerfiler::get_sysreqs()), use_recommended_deps(), and add_rstudioconnect_file() (use add_positconnect_file()).\nStricter add_*/use_*. These functions now fail if the target directory doesn’t exist (creating the directory isn’t their job) or if the file already exists.\ncreate_golem(overwrite = TRUE) now deletes the old folder and replaces it with the golem skeleton.\nLighter creation. Creating a golem no longer calls set_here() nor usethis::create_project(). The package finds its way via DESCRIPTION, which avoids interfering with how here() resolves.\nJS bindings: new naming scheme (&lt;name&gt;-input.js / &lt;name&gt;-output.js instead of input-&lt;name&gt;.js), and a new default events. Remember to rename or delete your old binding files."
+  },
+  {
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#under-the-hood",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#under-the-hood",
+    "title": "{golem} 1.0.0 is here",
+    "section": "Under the hood",
+    "text": "Under the hood\nA few internal changes that pay off over time:\n\nThe package now uses the air formatter (with a pre-commit hook), replacing grkstyle.\nFull refactoring of the add_*_files and use_*_files functions, which now all share the same behavior.\n{golem} now ships a CLAUDE.md file and a series of skills."
+  },
+  {
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#how-to-upgrade",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#how-to-upgrade",
+    "title": "{golem} 1.0.0 is here",
+    "section": "How to upgrade?",
+    "text": "How to upgrade?\ninstall.packages(\"golem\")\nFor an existing project, read the breaking changes section above (and the NEWS.md) first, then update your code. If you’re starting a new app, consider enabling agent skills right from creation:\ngolem::create_golem(\"myapp\", with_agents = TRUE)"
+  },
+  {
+    "objectID": "news/golem-1.0.0-release-on-cran/index.html#thanks",
+    "href": "news/golem-1.0.0-release-on-cran/index.html#thanks",
+    "title": "{golem} 1.0.0 is here",
+    "section": "Thanks",
+    "text": "Thanks\nThis release is the result of many contributors’ work — a special thank you to Ilya Zarubin (@ilyaZar) for his massive involvement, and to everyone who opened issues, submitted PRs, and tested the development versions.\nHappy coding 🚀\n\nReport any issue on the issue tracker. Full documentation is available at thinkr-open.github.io/golem."
+  },
+  {
+    "objectID": "news/2020-05-10_shinipsum-cran-realease/index.html",
+    "href": "news/2020-05-10_shinipsum-cran-realease/index.html",
+    "title": "{shinipsum} is now on CRAN",
+    "section": "",
+    "text": "I’m very happy to announce that {shinipsum} is now on CRAN!\n{shinipsum} is a package that can help you build {shiny} prototypes faster by providing a series of functions that can generate random elements to populate your UI. If you are familiar with “lorem ipsum”, the fake text generator that is used in software design as a placeholder for text, the idea is the same: generating placeholders for Shiny outputs.\n{shinipsum} can be installed from CRAN with:\n\ninstall.packages(\"shinipsum\")\n\nYou can install this package from GitHub with:\n\nremotes::install_github(\"Thinkr-open/shinipsum\")\n\nIn this package, a series of functions that generates random placeholders. For example, random_ggplot() generates random {ggplot2} elements:\n\nlibrary(shinipsum)\nlibrary(ggplot2)\n\n\nrandom_ggplot() +\n  labs(title = \"Random plot\")\n\n\n\n\n\n\n\n\n\nrandom_ggplot() +\n  labs(title = \"Random plot\")\n\n\n\n\n\n\n\n\nOf course, the idea is to combine this with a Shiny interface, for example random_ggplot() will be used with a renderPlot() and plotOutput(). And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, random_ggplot() has a type parameter that can help you select a specific geom.\n\nlibrary(shiny)\nlibrary(shinipsum)\nlibrary(DT)\nui &lt;- fluidPage(\n  h2(\"A Random DT\"),\n  DTOutput(\"data_table\"),\n  h2(\"A Random Plot\"),\n  plotOutput(\"plot\"),\n  h2(\"A Random Text\"),\n  tableOutput(\"text\")\n)\n\nserver &lt;- function(input, output, session) {\n  output$data_table &lt;- DT::renderDT({\n    random_DT(5, 5)\n  })\n  output$plot &lt;- renderPlot({\n    random_ggplot(type = \"point\")\n  })\n  output$text &lt;- renderText({\n    random_text(nwords = 50)\n  })\n}\nshinyApp(ui, server)\n\nOther {shinipsum} functions include:\n\ntables:\n\n\nrandom_table(nrow = 3, ncol = 10)\n\n  Plant   Type  Treatment conc uptake Plant.1 Type.1 Treatment.1 conc.1\n1   Qn1 Quebec nonchilled   95   16.0     Qn1 Quebec  nonchilled     95\n2   Qn1 Quebec nonchilled  175   30.4     Qn1 Quebec  nonchilled    175\n3   Qn1 Quebec nonchilled  250   34.8     Qn1 Quebec  nonchilled    250\n  uptake.1\n1     16.0\n2     30.4\n3     34.8\n\n\n\nprint outputs:\n\n\nrandom_print(type = \"model\")\n\n\n    Pearson's product-moment correlation\n\ndata:  datasets::mtcars$mpg and datasets::mtcars$cyl\nt = -8.9197, df = 30, p-value = 6.113e-10\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n -0.9257694 -0.7163171\nsample estimates:\n      cor \n-0.852162 \n\n\n… and text, image, ggplotly, dygraph, and DT.\nLearn more about {shinipsum}:\n\n{shinipsum} website\nChapter 10 Building an “ipsum-app” - Engineering Production-Grade Shiny Apps"
   },
   {
     "objectID": "news/fakir-1.0.0-on-cran/index.html",
@@ -490,10 +483,87 @@
     "text": "Contribution & Feedback\nYou can contribute to {fakir} in various ways:\n\nFeedback\nIf you discover any bug or have any feedback on the dataset generators, feel free to open an issue on the repo.\n\n\nTranslate\nSome datasets are available in french and english:\n\nfakir::fake_visits(\n  from = \"2017-01-01\",\n  to = \"2017-01-31\",\n  local = \"fr_FR\"\n)\n\n# A tibble: 31 × 8\n   dates         an  mois  jour accueil a_propos  blog contact\n * &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;   &lt;int&gt;    &lt;int&gt; &lt;int&gt;   &lt;int&gt;\n 1 2017-01-01  2017     1     1     369      220   404     210\n 2 2017-01-02  2017     1     2     159      250   414     490\n 3 2017-01-03  2017     1     3     436      170   498     456\n 4 2017-01-04  2017     1     4      NA      258   526     392\n 5 2017-01-05  2017     1     5     362       NA   407     291\n 6 2017-01-06  2017     1     6     245      145   576      90\n 7 2017-01-07  2017     1     7      NA       NA   484     167\n 8 2017-01-08  2017     1     8     461      103   441      NA\n 9 2017-01-09  2017     1     9     337      113   673     379\n10 2017-01-10  2017     1    10      NA      169   308     139\n# ℹ 21 more rows\n\n\nAnd we will be very happy to bring new languages in the package.\n\n\nNew dataset\nFeel free to create new datasets generators.\n\nIf you want to contribute a new language or a new dataset, please open an issue first so that we can discuss and keep track of it!"
   },
   {
-    "objectID": "news/golem-hacktoberfest-2021/index.html",
-    "href": "news/golem-hacktoberfest-2021/index.html",
-    "title": "Join HacktoberFest 2021 with {golem} (and more)!",
+    "objectID": "news/skeleteon-css-in-shiny/index.html",
+    "href": "news/skeleteon-css-in-shiny/index.html",
+    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
     "section": "",
-    "text": "Join us for Hacktoberfest 2021 with {golem}!\nHacktoberfest is an online event, happening all over the world, where everyone is invited to open a pull request on a repo that has issues labelled hacktoberfest. The idea of this event is to gather developers (newbies or seasoned), and make them work together on open source projects.\nFor this second year, I’m happy to invite developers from the R community to take part to Hacktoberfest with {golem}. I’ve started to label some issues inside the repository with the hacktoberfest label, so that you can join the party, starting tomorrow!\nEvery time you’ll open an issue with this label, you’ll also find two other labels: the difficulty level (novice, intermediate, advanced), and a time estimate (low, medium, high). This will help you evaluate if you can try and tackle this issue or not.\nYou’ll find them all on the GitHub repository. Feel free to leave a comment on the issue you’d like to tackle, and of course to ask questions if the issue is not detailed enough.\nI’m planning on release a minor version of {golem} (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘\nYou don’t feel like working on {golem}? We have also labelled other repositories inside the ThinkR GitHub organisation with the hacktoberfest tag:\n\n{attachment}, a package for working with dependencies in your scripts, Rmds, and packages.\n{fusen}, a package to build a package from a Rmd.\n{shinipsum}, a lorem-ipsum generator for {shiny} elements.\n{fakir}, a fake data generator.\nCompanies, Officials and NGO Using R, our collaborative list of R in the real world.\nAnd more…\n\nSee you on GitHub!"
+    "text": "A dead simple, responsive, minimalist CSS framework.\nSkeleton css is a “a dead simple, responsive” CSS boilerplate focused on mobile-first design and a minimalistic approach. It comes with a set of pre-defined styles for basic HTML elements such as typography, forms, buttons, tables, and grids, which can be easily customized. It is built with a 12-column grid system, making it easy to create flexible and responsive layouts for different screen sizes and devices."
+  },
+  {
+    "objectID": "news/skeleteon-css-in-shiny/index.html#skeleton",
+    "href": "news/skeleteon-css-in-shiny/index.html#skeleton",
+    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
+    "section": "{skeleton}",
+    "text": "{skeleton}\nI’m very happy to announce that the {shiny} wrapper for this framework is now fully functional, and available to download with:\npak::pak(\"ColinFay/skeleton\")\nFor a demo of an app built with {skeleton}, you can browse https://connect.thinkr.fr/prenoms/."
+  },
+  {
+    "objectID": "news/skeleteon-css-in-shiny/index.html#building-an-app-with-skeleton",
+    "href": "news/skeleteon-css-in-shiny/index.html#building-an-app-with-skeleton",
+    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
+    "section": "Building an app with {skeleton}",
+    "text": "Building an app with {skeleton}\n\nBasic apps\nBuilding an app with {skeleton} follows the same spirit as with {shiny} standard components: you start with a page, define a row, and this row can be split into 12 columns.\nlibrary(shiny)\nlibrary(skeleton)\n\nui &lt;- sk_page(\n  h1(\"Hello world\"),\n  sk_row(\n    sk_col(\n      width = 6,\n      \"Hello\"\n    ),\n    sk_col(\n      width = 6,\n      \"World\"\n    )\n  ),\n  sk_row(\n    sk_col(\n      width = 12,\n      plotOutput(\"plot1\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$plot1 &lt;- renderPlot({\n    plot(mtcars)\n  })\n}\n\nshinyApp(ui, server)\n\n\nBuilt-in dashboard\n{skeleton} also comes with a built-it dashboard mechanism, that can be defined with:\nsk_nav(\n  sk_nav_item(\n    id = \"one\",\n    title = \"ONE\",\n    ui = sk_row(\n      width = sk_col(\n        6,\n        \"Hello plot1\"\n      ),\n      sk_col(\n        width = 6,\n        plotOutput(\"plot1\")\n      )\n    )\n  )\n)\nAnd for a full app:\nlibrary(shiny)\nlibrary(skeleton)\nui &lt;- sk_page(\n  sk_row(\n    h2(\"A dead simple, responsive boilerplate.\"),\n  ),\n  sk_nav(\n    sk_nav_item(\n      id = \"one\",\n      title = \"ONE\",\n      ui = sk_row(\n        sk_col(\n          6,\n          \"Hello plot1\"\n        ),\n        sk_col(\n          6,\n          plotOutput(\"plot1\")\n        )\n      )\n    ),\n    sk_nav_item(\n      id = \"two\",\n      title = \"TWO\",\n      ui = sk_row(\n        sk_col(\n          6,\n          plotOutput(\"plot2\")\n        ),\n        sk_col(\n          6,\n          \"Hello plot2\"\n        ),\n      )\n    )\n  )\n)\nshinyApp(ui, function(input, output) {\n  output$plot1 &lt;- renderPlot({\n    plot(mtcars)\n  })\n  output$plot2 &lt;- renderPlot({\n    plot(airquality)\n  })\n})\nIf you want to see a real life example of a dashboard built with {skeleton}, feel free to browse the source code of the prenoms app at https://github.com/ThinkR-open/prenoms-app.\n\n\n{golem} hooks\nYou can get a boilerplate of a page or a dashboard when creating an app with {golem}, using the built-in {golem} hooks:\ngolem::create_golem(\n  \"skboilerplate\",\n  project_hook = skeleton::ghook_sk_boilerplate\n)\ngolem::create_golem(\n  \"skdashboard\",\n  project_hook = skeleton::ghook_sk_dashboard\n)"
+  },
+  {
+    "objectID": "news/skeleteon-css-in-shiny/index.html#contribution-and-feedback",
+    "href": "news/skeleteon-css-in-shiny/index.html#contribution-and-feedback",
+    "title": "Minimalist and Elegant {shiny} apps with {skeleton}",
+    "section": "Contribution and feedback",
+    "text": "Contribution and feedback\nIf you have any feedback, feel free to open an issue at https://github.com/ColinFay/skeleton!"
+  },
+  {
+    "objectID": "news/golem-0.3.2-release-on-cran/index.html",
+    "href": "news/golem-0.3.2-release-on-cran/index.html",
+    "title": "{golem} 0.3.2 is now available",
+    "section": "",
+    "text": "The new version of {golem} is now available!\nYou can download it from your favorite CRAN repository, or by running the following command:"
+  },
+  {
+    "objectID": "news/golem-0.3.2-release-on-cran/index.html#whats-up-with-this-new-version",
+    "href": "news/golem-0.3.2-release-on-cran/index.html#whats-up-with-this-new-version",
+    "title": "{golem} 0.3.2 is now available",
+    "section": "What’s up with this new version?",
+    "text": "What’s up with this new version?\nIn this release, we have been focusing on a closer integration of tests inside the application building process, notably via Server function testing with Shiny, adding tests to fct, utils, and the ui & server functions that comes with {golem}.\nStarting with this version of {golem}, the integration of tests is opt-in:\ngolem::add_module(\"plop\", with_test = TRUE)\ngolem::add_fct(\"helpers\", with_test = TRUE)\nNote that these will be opt-out in the next release — in other words they will be TRUE by default in the future.\nWe also have squashed a bunch of issues, for example amend_config() now keeps !expr (this use to cause some errors when the project was shared across multiple computers), expect_running() now finds R.exe, some adjustments has been made to fit new version of packages (for example testthat::expect_is is no longer used, and we require the correct version of {usethis}).\nFor a full list of changes, please refer to the NEWS.md file."
+  },
+  {
+    "objectID": "news/golem-0.3.2-release-on-cran/index.html#whats-next",
+    "href": "news/golem-0.3.2-release-on-cran/index.html#whats-next",
+    "title": "{golem} 0.3.2 is now available",
+    "section": "What’s next",
+    "text": "What’s next\nNow that this version is stable, we can start working on the next version, which will be 0.4.0.\nOne of the thing that has been an issue with the way {golem} works is that it is used in two contexts: for dev, and for deployment.\nThe issue with that approach is that when deloying a golem-based app, you will have to install packages that are only used for dev, for exemple {usethis}, while they are not required to run the app.\nThis next version will focus on removing these packages from hard dependencies and move them to suggest, so that you can install them while developing but not when deploying, making the deployment process way easier and lighter. Note that the current version of {golem} (0.3.2) has already made a move in this direction by moving {dockerfiler} to Suggest, and making it only required when building the containers.\nFollow the Version 0.4.0 board for more!"
+  },
+  {
+    "objectID": "news/golem-0.3.2-release-on-cran/index.html#thanks",
+    "href": "news/golem-0.3.2-release-on-cran/index.html#thanks",
+    "title": "{golem} 0.3.2 is now available",
+    "section": "Thanks",
+    "text": "Thanks\nWe want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.\n@abidawson, @abnercasallo, @aftonsteps, @AMillanFL, @antoine-sachet, @ArthurPERE, @artpulsion, @cderv, @chintanp, @ChrisBeeley, @CorradoLanera, @csgillespie, @daattali, @DivadNojnarg, @durandsinclair, @dwhdai, @dylanrussellmd, @earnaud, @fBedecarrats, @feddelegrand7, @fizic37, @fvitalini, @gacolitti, @genobobeno, @hadley, @HanjoStudy, @henrique1008, @jacksonschan, @jacobwindsor, @jaybee84, @jcrodriguez1989, @jennahamlin, @julianstanley, @KasperThystrup, @Kastakin, @KoderKow, @kprimice, @mahelious, @MayaGans, @mcsiple, @michaelhogersnplm, @moodymudskipper, @mraess, @novica, @nvelden, @quickbendelat, @rgaube, @riccardoporreca, @RichardPilbery, @robertoromor, @seanhardison1, @ShinyFabio, @sjspielman, @Swechhya, @TimotheeTournier, @VincentAlcazer, @Welsh44, @yogat3ch, @yonicd, @zchmielewska, and @ZimmermannYves."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R packages for building robust, production grade {shiny} apps.",
+    "section": "",
+    "text": "The golemverse is a collection of R packages for building {shiny} apps that need to be safely shipped to production.\n\n\n\n\n{bank}, Extra Cache\n{brochure}, Multipage ‘Shiny’ Apps\n{dockerfiler}, Easy Dockerfile Creation from R\n{elvis}, ‘Shiny’ renderers and observers made safer\n{fakir}, Generate Fake Datasets for Prototyping and Teaching\n{gargoyle}, An Event-Based Mechanism for ‘Shiny’\n{gemstones}, Make Your ‘golem’ App Shine\n{golem}, A framework for production-grade {shiny} apps\n{ghooks}, ‘Golem’ Hooks for Standard ‘Shiny’ Apps\n{minifyr}, Minify CSS, HTML and JavaScript Files\n{skeleton}, Skeleton CSS for Shiny\n{shinidraw}, ‘Excalidraw’ in ‘Shiny’\n{shinipsum}, Lorem-Ipsum Helper Function for ‘shiny’ Prototyping\n{w3css}, W3CSS for ‘shiny’"
+  },
+  {
+    "objectID": "index.html#read-the-book",
+    "href": "index.html#read-the-book",
+    "title": "R packages for building robust, production grade {shiny} apps.",
+    "section": "Read the book 📚",
+    "text": "Read the book 📚\n\n\nLearn more about building {shiny} apps for production with the Engineering Production-Grade Shiny Apps.\nThe online version of the book is free to read on https://engineering-shiny.org/.\nThis book is available in print, published in the R Series by Chapman and Hall/CRC. You can grab a copy on routledge.com."
+  },
+  {
+    "objectID": "index.html#on-the-blog",
+    "href": "index.html#on-the-blog",
+    "title": "R packages for building robust, production grade {shiny} apps.",
+    "section": "On the blog ✍️",
+    "text": "On the blog ✍️\n\n\n\n\n\n\n\n\n\n\n{golem} 1.0.0 is here\n\n\n\n\n\n\n\n\nJul 10, 2026\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.5.1 is now available\n\n\n\n\n\n\n\n\nAug 28, 2024\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{fakir} 1.0.0 is now on CRAN\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "R packages for building robust, production grade {shiny} apps.",
+    "section": "Contact 📲",
+    "text": "Contact 📲\nContact us via the ThinkR website!"
   }
 ]

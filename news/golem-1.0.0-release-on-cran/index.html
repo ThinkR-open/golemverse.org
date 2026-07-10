@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2020-04-02">
+<meta name="author" content="colin">
+<meta name="dcterms.date" content="2026-07-10">
 
-<title>Overview of {hexmake} – golemverse</title>
+<title>{golem} 1.0.0 is here – golemverse</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -118,9 +119,11 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="Overview of {hexmake} – golemverse">
+<meta name="twitter:title" content="{golem} 1.0.0 is here – golemverse">
 <meta name="twitter:description" content="Welcome to the golemverse!">
-<meta name="twitter:image" content="https://www.golemverse.org/img/twitch.jpeg">
+<meta name="twitter:image" content="https://www.golemverse.org/news/golem-1.0.0-release-on-cran/featured.png">
+<meta name="twitter:image-height" content="512">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -193,18 +196,24 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Overview of {hexmake}</h1>
+      <h1 class="title">{golem} 1.0.0 is here</h1>
                       </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>colin </p>
+            </div>
+    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 2, 2020</p>
+        <p class="date">July 10, 2026</p>
       </div>
     </div>
     
@@ -223,47 +232,98 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 
 
 
-<p><img src="../../img/twitch.jpeg" class="img-fluid"></p>
-<p>Colin will be live talking about the internals of {hexmake}.</p>
+<p><img src="featured.png" class="img-fluid"></p>
+<p>We’re thrilled to announce that after years of powering Shiny applications in production, <code>{golem}</code> has finally reached a symbolic milestone: version <strong>1.0.0</strong>. This is more than a version bump. This release brings a brand-new tooling story for coding agents, a fully reworked Docker/<code>{renv}</code> deployment workflow, modernized console output powered by <code>{cli}</code> — all of it alongside a set of <strong>breaking changes</strong> you should read before upgrading an existing project.</p>
+<blockquote class="blockquote">
+<p><strong>Side note — install 1.0.1, not 1.0.0.</strong> Shortly after the 1.0.0 release, we caught a bug in the <code>favicon()</code> function that made it fail when <code>{fs}</code> wasn’t installed. This is fixed in <strong>1.0.1</strong> (the href is now built with base R, so the deployed app carries no <code>{fs}</code> dependency). Just run <code>install.packages("golem")</code> to get it.</p>
+</blockquote>
+<p>Here’s a quick tour.</p>
+<section id="why-1.0.0" class="level2">
+<h2 class="anchored" data-anchor-id="why-1.0.0">Why 1.0.0?</h2>
+<p><code>{golem}</code> is an opinionated framework for building production-grade Shiny applications, as R packages. Since its very first release, the goal hasn’t changed: give your applications a robust, testable, deployable structure. Moving to 1.0.0 acknowledges that the API is mature and stable — and it’s also the right moment to clean up a few legacy behaviors that deserved to be clarified.</p>
+</section>
+<section id="the-headline-feature-agent-skills" class="level2">
+<h2 class="anchored" data-anchor-id="the-headline-feature-agent-skills">The headline feature: agent skills</h2>
+<p>This is <em>the</em> flagship addition in this version. <code>{golem}</code> now ships tooling to install <strong>agent skills</strong> (in the Claude Code / <code>AGENTS.md</code> layout) directly into your project.</p>
+<p>Concretely, a new family of functions makes its appearance:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install skills into an existing golem project</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">use_skills</span>()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">use_agent_skills</span>()</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">use_claude_skills</span>()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">use_skill</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>These helpers install skills — either the ones bundled inside the package, or those from the upstream <a href="https://github.com/ThinkR-open/golem-agent-skills"><code>ThinkR-open/golem-agent-skills</code></a> repository. The idea: give your coding assistant native knowledge of golem conventions (adding a module, a function, running a check, fixing missing <code>ns()</code> calls…).</p>
+<p>And to start on the right foot, <code>create_golem()</code> gains two arguments, <code>with_agents</code> and <code>with_agents_options</code>, to install these skills right at project creation. The RStudio “New Project” wizard exposes a matching set of options too.</p>
+<p>A detail that matters for <code>R CMD check</code> purists: installing skills automatically appends the corresponding entries (<code>^\.claude$</code>, <code>^CLAUDE\.md$</code>, <code>^\.agents$</code>, <code>^AGENTS\.md$</code>) to <code>.Rbuildignore</code>, so the check doesn’t flag them as non-standard top-level files.</p>
+</section>
+<section id="a-reworked-dockerrenv-deployment-story" class="level2">
+<h2 class="anchored" data-anchor-id="a-reworked-dockerrenv-deployment-story">A reworked Docker/<code>{renv}</code> deployment story</h2>
+<p>Dockerfile generation has been seriously modernized. The <code>add_dockerfile_with_renv*()</code> functions now produce:</p>
+<ul>
+<li>a <strong>multi-stage Dockerfile by default</strong> (pass <code>single_file = FALSE</code> to keep the previous two-file behavior);</li>
+<li>a Dockerfile that sets <code>golem.app.prod = TRUE</code> by default (disable it with <code>set_golem.app.prod = FALSE</code>).</li>
+</ul>
+<p>In parallel, two new helpers generate minimal deployment CI for freshly created apps:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">add_github_action</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">add_gitlab_ci</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>These CI helpers restore <code>renv.lock</code> when it’s present, fall back to <code>DESCRIPTION</code> when it isn’t, and declare <code>{pkgload}</code> for the generated Posit Connect entrypoint.</p>
+<p>The logical consequence: the older <code>add_dockerfile()</code>, <code>add_dockerfile_shinyproxy()</code> and <code>add_dockerfile_heroku()</code> functions are now explicitly <strong>soft-deprecated</strong>. Use their <code>add_dockerfile_with_renv_*()</code> counterparts.</p>
+</section>
+<section id="console-output-powered-by-cli" class="level2">
+<h2 class="anchored" data-anchor-id="console-output-powered-by-cli">Console output powered by <code>{cli}</code></h2>
+<p>Every function that prints to the console has been reworked and standardized using the <code>{cli}</code> package. Messages, progress bars, unzip feedback… the whole thing is more consistent and easier on the eyes. Worth noting along the way: <code>run_dev()</code> now prints a single message.</p>
+</section>
+<section id="javascript-bindings-rework" class="level2">
+<h2 class="anchored" data-anchor-id="javascript-bindings-rework">JavaScript bindings rework</h2>
+<p>If you’ve ever used <code>add_js_input_binding()</code> or <code>add_js_output_binding()</code>, you know the skeleton needed quite a bit of manual completion. Not anymore: these functions now generate a <strong>functional binding out of the box</strong>.</p>
+<p>The JS file contains working implementations of <code>find</code>, <code>getValue</code>/<code>renderValue</code>, <code>setValue</code>, <code>receiveMessage</code> and <code>subscribe</code>. An R companion file (<code>fct_&lt;name&gt;_input_binding.R</code> / <code>fct_&lt;name&gt;_output_binding.R</code>) is created alongside it, with a ready-to-use UI constructor, update, and render functions.</p>
+<p>Two things to be aware of (these are breaking changes, see below): the file naming scheme changes (<code>&lt;name&gt;-input.js</code>), and the default <code>events</code> argument was adjusted to produce a binding that works right away.</p>
+</section>
+<section id="other-useful-additions" class="level2">
+<h2 class="anchored" data-anchor-id="other-useful-additions">Other useful additions</h2>
+<ul>
+<li><code>add_fct()</code> gains a <code>template</code> argument to customize the content of the generated file; the default template is now exposed via the <code>fct_template()</code> function, mirroring the <code>module_template()</code> / <code>add_module()</code> pattern.</li>
+<li>The <code>use_external_*()</code> family and <code>use_bundled_html()</code> gain a <code>replace</code> argument: with <code>TRUE</code>, an existing file (or bundle directory) is overwritten instead of aborting.</li>
+<li><code>use_bundled_html()</code> downloads HTML templates as zip archives, can extract them into <code>inst/app/www</code>, and remove the raw zip afterwards.</li>
+<li>Scaffolding helpers (<code>use_*</code>, <code>add_*</code>, <code>set_golem_*</code>) now emit a warning when called while <code>{golem}</code> is in production mode (<code>options('golem.app.prod' = TRUE)</code>) — handy for catching an accidental call from a deployed app.</li>
+</ul>
+</section>
+<section id="breaking-changes-to-read-before-upgrading" class="level2">
+<h2 class="anchored" data-anchor-id="breaking-changes-to-read-before-upgrading">⚠️ Breaking changes to read before upgrading</h2>
+<p>This is a major release, and it intentionally breaks a few behaviors. The main ones:</p>
+<ul>
+<li><strong>Unified path arguments.</strong> The <code>wd</code>, <code>path</code> and <code>pkg</code> arguments are standardized into a single <code>golem_wd</code>. The legacy names remain as deprecated aliases (with a warning), <strong>but any value passed to an alias is silently ignored</strong>: the function reads <code>golem_wd</code> instead. If you relied on a non-default path, switch to <code>golem_wd</code>.</li>
+<li><strong><code>get_current_config()</code> reworked.</strong> It now reads either the <code>GOLEM_CONFIG_PATH</code> environment variable or the default path (<code>inst/golem-config.yml</code>) — no more guessing exotic paths — and hard-fails if the file doesn’t exist. It no longer copies missing config files from the skeleton.</li>
+<li><strong>Removed functions.</strong> <code>get_sysreqs()</code> (use <code>dockerfiler::get_sysreqs()</code>), <code>use_recommended_deps()</code>, and <code>add_rstudioconnect_file()</code> (use <code>add_positconnect_file()</code>).</li>
+<li><strong>Stricter <code>add_*</code>/<code>use_*</code>.</strong> These functions now fail if the target directory doesn’t exist (creating the directory isn’t their job) or if the file already exists.</li>
+<li><strong><code>create_golem(overwrite = TRUE)</code></strong> now deletes the old folder and replaces it with the golem skeleton.</li>
+<li><strong>Lighter creation.</strong> Creating a golem no longer calls <code>set_here()</code> nor <code>usethis::create_project()</code>. The package finds its way via <code>DESCRIPTION</code>, which avoids interfering with how <code>here()</code> resolves.</li>
+<li><strong>JS bindings</strong>: new naming scheme (<code>&lt;name&gt;-input.js</code> / <code>&lt;name&gt;-output.js</code> instead of <code>input-&lt;name&gt;.js</code>), and a new default <code>events</code>. Remember to rename or delete your old binding files.</li>
+</ul>
+</section>
+<section id="under-the-hood" class="level2">
+<h2 class="anchored" data-anchor-id="under-the-hood">Under the hood</h2>
+<p>A few internal changes that pay off over time:</p>
+<ul>
+<li>The package now uses the <a href="https://posit-dev.github.io/air/">air</a> formatter (with a pre-commit hook), replacing grkstyle.</li>
+<li>Full refactoring of the <code>add_*_files</code> and <code>use_*_files</code> functions, which now all share the same behavior.</li>
+<li><code>{golem}</code> now ships a <code>CLAUDE.md</code> file and a series of skills.</li>
+</ul>
+</section>
+<section id="how-to-upgrade" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-upgrade">How to upgrade?</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"golem"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For an existing project, read the breaking changes section above (and the <code>NEWS.md</code>) first, then update your code. If you’re starting a new app, consider enabling agent skills right from creation:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>golem<span class="sc">::</span><span class="fu">create_golem</span>(<span class="st">"myapp"</span>, <span class="at">with_agents =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="thanks" class="level2">
+<h2 class="anchored" data-anchor-id="thanks">Thanks</h2>
+<p>This release is the result of many contributors’ work — a special thank you to <strong>Ilya Zarubin (<span class="citation" data-cites="ilyaZar">@ilyaZar</span>)</strong> for his massive involvement, and to everyone who opened issues, submitted PRs, and tested the development versions.</p>
+<p>Happy coding 🚀</p>
 <hr>
-<li>
-👨‍💻 Colin Fay, <a href="https://twitter.com/_ColinFay"><span class="citation" data-cites="_ColinFay">@_ColinFay</span></a>
-</li>
-<li>
-🔗 https://www.twitch.tv/thinkr_fr
-</li>
-<li>
-⏳ <strong>2020-04-02 21:00:00 Paris Time</strong>.
-</li>
-<hr>
-<details closed="">
-<summary>
-<span title="Click to Expand"> See Event in Other Timezones </span>
-</summary>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>date <span class="ot">&lt;-</span> lubridate<span class="sc">::</span><span class="fu">ymd_hms</span>(<span class="st">"2020-04-02 21:00:00"</span>, <span class="at">tz =</span> <span class="st">"Europe/Paris"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">with_tz</span>(date, <span class="st">"UTC"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2020-04-02 19:00:00 UTC"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">with_tz</span>(date, <span class="st">"America/New_York"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2020-04-02 15:00:00 EDT"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">with_tz</span>(date, <span class="st">"America/Los_Angeles"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2020-04-02 12:00:00 PDT"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">with_tz</span>(date, <span class="st">"Australia/Sydney"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2020-04-03 06:00:00 AEDT"</code></pre>
-</div>
-</div>
-</details>
-<p><br></p>
+<p><em>Report any issue on the <a href="https://github.com/ThinkR-open/golem/issues">issue tracker</a>. Full documentation is available at <a href="https://thinkr-open.github.io/golem/">thinkr-open.github.io/golem</a>.</em></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -686,7 +746,7 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/ThinkR-open/golemverse.org/edit/main/stream/2020-04-02-twitch/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ThinkR-open/golemverse.org/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/ThinkR-open/golemverse.org/edit/main/news/golem-1.0.0-release-on-cran/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ThinkR-open/golemverse.org/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

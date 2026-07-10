@@ -9,8 +9,155 @@
 <link>https://www.golemverse.org/</link>
 <atom:link href="https://www.golemverse.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to the golemverse!</description>
-<generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 28 Aug 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Fri, 10 Jul 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>{golem} 1.0.0 is here</title>
+  <dc:creator>colin </dc:creator>
+  <link>https://www.golemverse.org/news/golem-1.0.0-release-on-cran/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><img src="https://www.golemverse.org/news/golem-1.0.0-release-on-cran/featured.png" class="img-fluid"></p>
+<p>We’re thrilled to announce that after years of powering Shiny applications in production, <code>{golem}</code> has finally reached a symbolic milestone: version <strong>1.0.0</strong>. This is more than a version bump. This release brings a brand-new tooling story for coding agents, a fully reworked Docker/<code>{renv}</code> deployment workflow, modernized console output powered by <code>{cli}</code> — all of it alongside a set of <strong>breaking changes</strong> you should read before upgrading an existing project.</p>
+<blockquote class="blockquote">
+<p><strong>Side note — install 1.0.1, not 1.0.0.</strong> Shortly after the 1.0.0 release, we caught a bug in the <code>favicon()</code> function that made it fail when <code>{fs}</code> wasn’t installed. This is fixed in <strong>1.0.1</strong> (the href is now built with base R, so the deployed app carries no <code>{fs}</code> dependency). Just run <code>install.packages("golem")</code> to get it.</p>
+</blockquote>
+<p>Here’s a quick tour.</p>
+<section id="why-1.0.0" class="level2">
+<h2 class="anchored" data-anchor-id="why-1.0.0">Why 1.0.0?</h2>
+<p><code>{golem}</code> is an opinionated framework for building production-grade Shiny applications, as R packages. Since its very first release, the goal hasn’t changed: give your applications a robust, testable, deployable structure. Moving to 1.0.0 acknowledges that the API is mature and stable — and it’s also the right moment to clean up a few legacy behaviors that deserved to be clarified.</p>
+</section>
+<section id="the-headline-feature-agent-skills" class="level2">
+<h2 class="anchored" data-anchor-id="the-headline-feature-agent-skills">The headline feature: agent skills</h2>
+<p>This is <em>the</em> flagship addition in this version. <code>{golem}</code> now ships tooling to install <strong>agent skills</strong> (in the Claude Code / <code>AGENTS.md</code> layout) directly into your project.</p>
+<p>Concretely, a new family of functions makes its appearance:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Install skills into an existing golem project</span></span>
+<span id="cb1-2">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">use_skills</span>()</span>
+<span id="cb1-3">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">use_agent_skills</span>()</span>
+<span id="cb1-4">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">use_claude_skills</span>()</span>
+<span id="cb1-5">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">use_skill</span>()</span></code></pre></div></div>
+<p>These helpers install skills — either the ones bundled inside the package, or those from the upstream <a href="https://github.com/ThinkR-open/golem-agent-skills"><code>ThinkR-open/golem-agent-skills</code></a> repository. The idea: give your coding assistant native knowledge of golem conventions (adding a module, a function, running a check, fixing missing <code>ns()</code> calls…).</p>
+<p>And to start on the right foot, <code>create_golem()</code> gains two arguments, <code>with_agents</code> and <code>with_agents_options</code>, to install these skills right at project creation. The RStudio “New Project” wizard exposes a matching set of options too.</p>
+<p>A detail that matters for <code>R CMD check</code> purists: installing skills automatically appends the corresponding entries (<code>^\.claude$</code>, <code>^CLAUDE\.md$</code>, <code>^\.agents$</code>, <code>^AGENTS\.md$</code>) to <code>.Rbuildignore</code>, so the check doesn’t flag them as non-standard top-level files.</p>
+</section>
+<section id="a-reworked-dockerrenv-deployment-story" class="level2">
+<h2 class="anchored" data-anchor-id="a-reworked-dockerrenv-deployment-story">A reworked Docker/<code>{renv}</code> deployment story</h2>
+<p>Dockerfile generation has been seriously modernized. The <code>add_dockerfile_with_renv*()</code> functions now produce:</p>
+<ul>
+<li>a <strong>multi-stage Dockerfile by default</strong> (pass <code>single_file = FALSE</code> to keep the previous two-file behavior);</li>
+<li>a Dockerfile that sets <code>golem.app.prod = TRUE</code> by default (disable it with <code>set_golem.app.prod = FALSE</code>).</li>
+</ul>
+<p>In parallel, two new helpers generate minimal deployment CI for freshly created apps:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_github_action</span>()</span>
+<span id="cb2-2">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add_gitlab_ci</span>()</span></code></pre></div></div>
+<p>These CI helpers restore <code>renv.lock</code> when it’s present, fall back to <code>DESCRIPTION</code> when it isn’t, and declare <code>{pkgload}</code> for the generated Posit Connect entrypoint.</p>
+<p>The logical consequence: the older <code>add_dockerfile()</code>, <code>add_dockerfile_shinyproxy()</code> and <code>add_dockerfile_heroku()</code> functions are now explicitly <strong>soft-deprecated</strong>. Use their <code>add_dockerfile_with_renv_*()</code> counterparts.</p>
+</section>
+<section id="console-output-powered-by-cli" class="level2">
+<h2 class="anchored" data-anchor-id="console-output-powered-by-cli">Console output powered by <code>{cli}</code></h2>
+<p>Every function that prints to the console has been reworked and standardized using the <code>{cli}</code> package. Messages, progress bars, unzip feedback… the whole thing is more consistent and easier on the eyes. Worth noting along the way: <code>run_dev()</code> now prints a single message.</p>
+</section>
+<section id="javascript-bindings-rework" class="level2">
+<h2 class="anchored" data-anchor-id="javascript-bindings-rework">JavaScript bindings rework</h2>
+<p>If you’ve ever used <code>add_js_input_binding()</code> or <code>add_js_output_binding()</code>, you know the skeleton needed quite a bit of manual completion. Not anymore: these functions now generate a <strong>functional binding out of the box</strong>.</p>
+<p>The JS file contains working implementations of <code>find</code>, <code>getValue</code>/<code>renderValue</code>, <code>setValue</code>, <code>receiveMessage</code> and <code>subscribe</code>. An R companion file (<code>fct_&lt;name&gt;_input_binding.R</code> / <code>fct_&lt;name&gt;_output_binding.R</code>) is created alongside it, with a ready-to-use UI constructor, update, and render functions.</p>
+<p>Two things to be aware of (these are breaking changes, see below): the file naming scheme changes (<code>&lt;name&gt;-input.js</code>), and the default <code>events</code> argument was adjusted to produce a binding that works right away.</p>
+</section>
+<section id="other-useful-additions" class="level2">
+<h2 class="anchored" data-anchor-id="other-useful-additions">Other useful additions</h2>
+<ul>
+<li><code>add_fct()</code> gains a <code>template</code> argument to customize the content of the generated file; the default template is now exposed via the <code>fct_template()</code> function, mirroring the <code>module_template()</code> / <code>add_module()</code> pattern.</li>
+<li>The <code>use_external_*()</code> family and <code>use_bundled_html()</code> gain a <code>replace</code> argument: with <code>TRUE</code>, an existing file (or bundle directory) is overwritten instead of aborting.</li>
+<li><code>use_bundled_html()</code> downloads HTML templates as zip archives, can extract them into <code>inst/app/www</code>, and remove the raw zip afterwards.</li>
+<li>Scaffolding helpers (<code>use_*</code>, <code>add_*</code>, <code>set_golem_*</code>) now emit a warning when called while <code>{golem}</code> is in production mode (<code>options('golem.app.prod' = TRUE)</code>) — handy for catching an accidental call from a deployed app.</li>
+</ul>
+</section>
+<section id="breaking-changes-to-read-before-upgrading" class="level2">
+<h2 class="anchored" data-anchor-id="breaking-changes-to-read-before-upgrading">⚠️ Breaking changes to read before upgrading</h2>
+<p>This is a major release, and it intentionally breaks a few behaviors. The main ones:</p>
+<ul>
+<li><strong>Unified path arguments.</strong> The <code>wd</code>, <code>path</code> and <code>pkg</code> arguments are standardized into a single <code>golem_wd</code>. The legacy names remain as deprecated aliases (with a warning), <strong>but any value passed to an alias is silently ignored</strong>: the function reads <code>golem_wd</code> instead. If you relied on a non-default path, switch to <code>golem_wd</code>.</li>
+<li><strong><code>get_current_config()</code> reworked.</strong> It now reads either the <code>GOLEM_CONFIG_PATH</code> environment variable or the default path (<code>inst/golem-config.yml</code>) — no more guessing exotic paths — and hard-fails if the file doesn’t exist. It no longer copies missing config files from the skeleton.</li>
+<li><strong>Removed functions.</strong> <code>get_sysreqs()</code> (use <code>dockerfiler::get_sysreqs()</code>), <code>use_recommended_deps()</code>, and <code>add_rstudioconnect_file()</code> (use <code>add_positconnect_file()</code>).</li>
+<li><strong>Stricter <code>add_*</code>/<code>use_*</code>.</strong> These functions now fail if the target directory doesn’t exist (creating the directory isn’t their job) or if the file already exists.</li>
+<li><strong><code>create_golem(overwrite = TRUE)</code></strong> now deletes the old folder and replaces it with the golem skeleton.</li>
+<li><strong>Lighter creation.</strong> Creating a golem no longer calls <code>set_here()</code> nor <code>usethis::create_project()</code>. The package finds its way via <code>DESCRIPTION</code>, which avoids interfering with how <code>here()</code> resolves.</li>
+<li><strong>JS bindings</strong>: new naming scheme (<code>&lt;name&gt;-input.js</code> / <code>&lt;name&gt;-output.js</code> instead of <code>input-&lt;name&gt;.js</code>), and a new default <code>events</code>. Remember to rename or delete your old binding files.</li>
+</ul>
+</section>
+<section id="under-the-hood" class="level2">
+<h2 class="anchored" data-anchor-id="under-the-hood">Under the hood</h2>
+<p>A few internal changes that pay off over time:</p>
+<ul>
+<li>The package now uses the <a href="https://posit-dev.github.io/air/">air</a> formatter (with a pre-commit hook), replacing grkstyle.</li>
+<li>Full refactoring of the <code>add_*_files</code> and <code>use_*_files</code> functions, which now all share the same behavior.</li>
+<li><code>{golem}</code> now ships a <code>CLAUDE.md</code> file and a series of skills.</li>
+</ul>
+</section>
+<section id="how-to-upgrade" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-upgrade">How to upgrade?</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"golem"</span>)</span></code></pre></div></div>
+<p>For an existing project, read the breaking changes section above (and the <code>NEWS.md</code>) first, then update your code. If you’re starting a new app, consider enabling agent skills right from creation:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">golem<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create_golem</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"myapp"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">with_agents =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div></div>
+</section>
+<section id="thanks" class="level2">
+<h2 class="anchored" data-anchor-id="thanks">Thanks</h2>
+<p>This release is the result of many contributors’ work — a special thank you to <strong>Ilya Zarubin (<span class="citation" data-cites="ilyaZar">@ilyaZar</span>)</strong> for his massive involvement, and to everyone who opened issues, submitted PRs, and tested the development versions.</p>
+<p>Happy coding 🚀</p>
+<hr>
+<p><em>Report any issue on the <a href="https://github.com/ThinkR-open/golem/issues">issue tracker</a>. Full documentation is available at <a href="https://thinkr-open.github.io/golem/">thinkr-open.github.io/golem</a>.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.golemverse.org/news/golem-1.0.0-release-on-cran/</guid>
+  <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>{golem} 0.5.1 is now available</title>
   <dc:creator>colin </dc:creator>
@@ -32,7 +179,7 @@
 </blockquote>
 <p>We are thrilled to announce the release of <code>{golem}</code> version 0.5.1! This update comes packed with new features, enhancements, and bug fixes that will streamline your Shiny app development process.</p>
 <p>You can download the latest version from your favorite CRAN repository, or by running the following command in R:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -40,7 +187,7 @@ font-style: inherit;">pak</span>(</span>
 <span id="cb1-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"thinkr-open/golem@v0.5.1"</span></span>
-<span id="cb1-3">)</span></code></pre></div>
+<span id="cb1-3">)</span></code></pre></div></div>
 <section id="whats-new-in-this-version" class="level2">
 <h2 class="anchored" data-anchor-id="whats-new-in-this-version">What’s New in This Version?</h2>
 <p>The latest update of <code>{golem}</code> introduces several new functions and improvements, designed to enhance your experience when building and deploying Shiny applications.</p>
@@ -123,18 +270,18 @@ font-style: inherit;">"thinkr-open/golem@v0.5.1"</span></span>
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>You can install the latest version from your favorite CRAN repository with:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"fakir"</span>)</span></code></pre></div>
+font-style: inherit;">"fakir"</span>)</span></code></pre></div></div>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <section id="fake-support-tickets" class="level3">
 <h3 class="anchored" data-anchor-id="fake-support-tickets">Fake support tickets</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">fakir<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">fakir<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -142,7 +289,7 @@ font-style: inherit;">fake_ticket_client</span>(<span class="at" style="color: #
 background-color: null;
 font-style: inherit;">vol =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">10</span>)</span></code></pre></div>
+font-style: inherit;">10</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 25
    ref           num_client first    last  job     age region id_dpt departement
@@ -168,13 +315,13 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 <section id="fake-dataset-of-connected-wearables" class="level3">
 <h3 class="anchored" data-anchor-id="fake-dataset-of-connected-wearables">Fake dataset of connected wearables</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">fakir<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">fakir<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">fake_products</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">10</span>)</span></code></pre></div>
+font-style: inherit;">10</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 8
    name                 brand color price body_location category sent_from    id
@@ -195,7 +342,7 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 <section id="fake-website-visits" class="level3">
 <h3 class="anchored" data-anchor-id="fake-website-visits">Fake website visits</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">fakir<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">fakir<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -210,7 +357,7 @@ background-color: null;
 font-style: inherit;">to =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"2017-01-31"</span></span>
-<span id="cb6-4">)</span></code></pre></div>
+<span id="cb6-4">)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 31 × 8
    timestamp   year month   day  home about  blog contact
@@ -241,7 +388,7 @@ font-style: inherit;">"2017-01-31"</span></span>
 <h3 class="anchored" data-anchor-id="translate">Translate</h3>
 <p>Some datasets are available in french and english:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">fakir<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">fakir<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -261,7 +408,7 @@ background-color: null;
 font-style: inherit;">local =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"fr_FR"</span></span>
-<span id="cb8-5">)</span></code></pre></div>
+<span id="cb8-5">)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 31 × 8
    dates         an  mois  jour accueil a_propos  blog contact
@@ -312,13 +459,13 @@ font-style: inherit;">"fr_FR"</span></span>
 <section id="skeleton" class="level2">
 <h2 class="anchored" data-anchor-id="skeleton">{skeleton}</h2>
 <p>I’m very happy to announce that the <code>{shiny}</code> wrapper for this framework is now fully functional, and available to download with:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pak</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ColinFay/skeleton"</span>)</span></code></pre></div>
+font-style: inherit;">"ColinFay/skeleton"</span>)</span></code></pre></div></div>
 <p>For a demo of an app built with <code>{skeleton}</code>, you can browse <a href="https://connect.thinkr.fr/prenoms/" class="uri">https://connect.thinkr.fr/prenoms/</a>.</p>
 <p><a href="https://connect.thinkr.fr/prenoms/" target="_blank"><img src="https://www.golemverse.org/news/skeleteon-css-in-shiny/prenomsapp.png" width="100%"></a></p>
 </section>
@@ -327,7 +474,7 @@ font-style: inherit;">"ColinFay/skeleton"</span>)</span></code></pre></div>
 <section id="basic-apps" class="level3">
 <h3 class="anchored" data-anchor-id="basic-apps">Basic apps</h3>
 <p>Building an app with <code>{skeleton}</code> follows the same spirit as with <code>{shiny}</code> standard components: you start with a page, define a row, and this row can be split into 12 columns.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(shiny)</span>
 <span id="cb2-2"><span class="fu" style="color: #4758AB;
@@ -413,12 +560,12 @@ font-style: inherit;">plot</span>(mtcars)</span>
 <span id="cb2-29"></span>
 <span id="cb2-30"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">shinyApp</span>(ui, server)</span></code></pre></div>
+font-style: inherit;">shinyApp</span>(ui, server)</span></code></pre></div></div>
 </section>
 <section id="built-in-dashboard" class="level3">
 <h3 class="anchored" data-anchor-id="built-in-dashboard">Built-in dashboard</h3>
 <p><code>{skeleton}</code> also comes with a built-it dashboard mechanism, that can be defined with:</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sk_nav</span>(</span>
 <span id="cb3-2">  <span class="fu" style="color: #4758AB;
@@ -467,9 +614,9 @@ font-style: inherit;">"plot1"</span>)</span>
 <span id="cb3-13">      )</span>
 <span id="cb3-14">    )</span>
 <span id="cb3-15">  )</span>
-<span id="cb3-16">)</span></code></pre></div>
+<span id="cb3-16">)</span></code></pre></div></div>
 <p>And for a full app:</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(shiny)</span>
 <span id="cb4-2"><span class="fu" style="color: #4758AB;
@@ -606,13 +753,13 @@ font-style: inherit;">renderPlot</span>({</span>
 background-color: null;
 font-style: inherit;">plot</span>(airquality)</span>
 <span id="cb4-44">  })</span>
-<span id="cb4-45">})</span></code></pre></div>
+<span id="cb4-45">})</span></code></pre></div></div>
 <p>If you want to see a real life example of a dashboard built with <code>{skeleton}</code>, feel free to browse the source code of the <code>prenoms</code> app at <a href="https://github.com/ThinkR-open/prenoms-app" class="uri">https://github.com/ThinkR-open/prenoms-app</a>.</p>
 </section>
 <section id="golem-hooks" class="level3">
 <h3 class="anchored" data-anchor-id="golem-hooks">{golem} hooks</h3>
 <p>You can get a boilerplate of a page or a dashboard when creating an app with <code>{golem}</code>, using the built-in <code>{golem}</code> hooks:</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">golem<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">golem<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -639,7 +786,7 @@ background-color: null;
 font-style: inherit;">project_hook =</span> skeleton<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span>ghook_sk_dashboard</span>
-<span id="cb5-8">)</span></code></pre></div>
+<span id="cb5-8">)</span></code></pre></div></div>
 </section>
 </section>
 <section id="contribution-and-feedback" class="level2">
@@ -666,7 +813,7 @@ font-style: inherit;">::</span>ghook_sk_dashboard</span>
 <p><img src="https://www.golemverse.org/news/golem-0.4.0-release-on-cran/featured.png" class="img-fluid"></p>
 <p>The new version of <code>{golem}</code> is available!</p>
 <p>You can download it from your favorite CRAN repository, or by running the following command:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">pak<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -674,7 +821,7 @@ font-style: inherit;">pak</span>(</span>
 <span id="cb1-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"thinkr-open/golem@v0.4.0"</span></span>
-<span id="cb1-3">)</span></code></pre></div>
+<span id="cb1-3">)</span></code></pre></div></div>
 <section id="whats-up-with-this-new-version" class="level2">
 <h2 class="anchored" data-anchor-id="whats-up-with-this-new-version">What’s up with this new version?</h2>
 <section id="lighter-dependency-tree" class="level3">
@@ -695,15 +842,15 @@ font-style: inherit;">"thinkr-open/golem@v0.4.0"</span></span>
 Click to show <code>{shiny}</code> dependency tree
 </summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">packageVersion</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"shiny"</span>)</span></code></pre></div>
+font-style: inherit;">"shiny"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] '1.7.4'</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">shiny <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">shiny <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> pak<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -711,7 +858,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pkg_deps_tree</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"shiny"</span>)</span></code></pre></div>
+font-style: inherit;">"shiny"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>ℹ Loading metadata database
 ℹ Loading metadata database</code></pre>
@@ -808,7 +955,7 @@ Key:  ✨ new |  ⬇ download</code></pre>
 Click to show <code>{golem@v0.3.5}</code> dependency tree
 </summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">v035 <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">v035 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> pak<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -816,7 +963,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pkg_deps_tree</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"thinkr-open/golem@v0.3.5"</span>)</span></code></pre></div>
+font-style: inherit;">"thinkr-open/golem@v0.3.5"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>thinkr-open/golem@v0.3.5 0.3.5 ✨👷🏽🔧 ⬇ (unknown size)
 ├─attempt 0.3.1 ✨ ⬇ (unknown size)
@@ -992,9 +1139,9 @@ font-style: inherit;">"thinkr-open/golem@v0.3.5"</span>)</span></code></pre></di
 
 Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">nrow</span>(v035)</span></code></pre></div>
+font-style: inherit;">nrow</span>(v035)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 65</code></pre>
 </div>
@@ -1008,7 +1155,7 @@ font-style: inherit;">nrow</span>(v035)</span></code></pre></div>
 Click to show <code>{golem@v0.4.0}</code> dependency tree
 </summary>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">v040 <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1">v040 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> pak<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1016,7 +1163,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pkg_deps_tree</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"thinkr-open/golem@v0.4.0"</span>)</span></code></pre></div>
+font-style: inherit;">"thinkr-open/golem@v0.4.0"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>thinkr-open/golem@v0.4.0 0.4.0 ✨👷🏽🔧 ⬇ (unknown size)
 ├─attempt 0.3.1 ✨ ⬇ (unknown size)
@@ -1093,9 +1240,9 @@ font-style: inherit;">"thinkr-open/golem@v0.4.0"</span>)</span></code></pre></di
 
 Key:  ✨ new |  ⬇ download | 👷🏽 build | 🔧 compile</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">nrow</span>(v040)</span></code></pre></div>
+font-style: inherit;">nrow</span>(v040)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 37</code></pre>
 </div>
@@ -1107,7 +1254,7 @@ font-style: inherit;">nrow</span>(v040)</span></code></pre></div>
 <p>But that’s still 35 packages, right?</p>
 <p>Yes, but as I said before, every <code>{shiny}</code> app will depend on <code>{shiny}</code>. So how many packages does <code>{golem}</code> <strong>actually add to your dependency tree</strong>? In other words, how many packages does <code>{golem}</code> depend on that are not already a <code>{shiny}</code> dependency?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">setdiff</span>(</span>
 <span id="cb17-2">  v040<span class="sc" style="color: #5E5E5E;
@@ -1116,7 +1263,7 @@ font-style: inherit;">$</span>package,</span>
 <span id="cb17-3">  shiny<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>package</span>
-<span id="cb17-4">)</span></code></pre></div>
+<span id="cb17-4">)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "golem"     "attempt"   "config"    "here"      "rprojroot" "yaml"     </code></pre>
 </div>
@@ -1143,7 +1290,7 @@ font-style: inherit;">$</span>package</span>
 <p>Big Up to my dear colleague <a href="https://github.com/ArthurData">Arthur</a> for developing this feature!</p>
 </blockquote>
 <p>To visualize the maintenance page locally, you can run the following code:</p>
-<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1">withr<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1">withr<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1164,9 +1311,9 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">run_dev</span>()</span>
 <span id="cb19-5">  }</span>
-<span id="cb19-6">)</span></code></pre></div>
+<span id="cb19-6">)</span></code></pre></div></div>
 <p>Note that <code>{golem}</code> comes with a default maintenance page, and you can replace it with your own page by passing either an <code>html_document</code> or a <code>tagList</code> to the <code>with_golem_options</code> function in <code>run_app.R</code>:</p>
-<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1">run_app <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1">run_app <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -1244,7 +1391,7 @@ font-style: inherit;">"custom_maintenance_page.html"</span></span>
 <span id="cb20-21">      )</span>
 <span id="cb20-22">    )</span>
 <span id="cb20-23">  )</span>
-<span id="cb20-24">}</span></code></pre></div>
+<span id="cb20-24">}</span></code></pre></div></div>
 </section>
 <section id="other-changes" class="level3">
 <h3 class="anchored" data-anchor-id="other-changes">Other changes</h3>
@@ -1276,7 +1423,7 @@ font-style: inherit;">"custom_maintenance_page.html"</span></span>
 <p><img src="https://www.golemverse.org/news/golem-0.3.2-release-on-cran/featured.png" class="img-fluid"></p>
 <p>The new version of <code>{golem}</code> is now available!</p>
 <p>You can download it from your favorite CRAN repository, or by running the following command:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">remotes<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">remotes<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1284,12 +1431,12 @@ font-style: inherit;">install_github</span>(</span>
 <span id="cb1-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"thinkr-open/golem@v0.3.2"</span></span>
-<span id="cb1-3">)</span></code></pre></div>
+<span id="cb1-3">)</span></code></pre></div></div>
 <section id="whats-up-with-this-new-version" class="level2">
 <h2 class="anchored" data-anchor-id="whats-up-with-this-new-version">What’s up with this new version?</h2>
 <p>In this release, we have been focusing on a closer integration of tests inside the application building process, notably via <a href="https://shiny.rstudio.com/articles/server-function-testing.html">Server function testing with Shiny</a>, adding tests to <code>fct</code>, <code>utils</code>, and the ui &amp; server functions that comes with <code>{golem}</code>.</p>
 <p>Starting with this version of <code>{golem}</code>, the integration of tests is opt-in:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">golem<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">golem<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1310,7 +1457,7 @@ font-style: inherit;">"helpers"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">with_test =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">TRUE</span>)</span></code></pre></div>
+font-style: inherit;">TRUE</span>)</span></code></pre></div></div>
 <p>Note that these will be opt-out in the next release — in other words they will be <code>TRUE</code> by default in the future.</p>
 <p>We also have squashed a bunch of issues, for example <code>amend_config()</code> now keeps <code>!expr</code> (this use to cause some errors when the project was shared across multiple computers), <code>expect_running()</code> now finds <code>R.exe</code>, some adjustments has been made to fit new version of packages (for example <code>testthat::expect_is</code> is no longer used, and we require the correct version of <code>{usethis}</code>).</p>
 <p>For a full list of changes, please refer to the <a href="https://github.com/ThinkR-open/golem/blob/master/NEWS.md">NEWS.md</a> file.</p>
@@ -1420,7 +1567,7 @@ font-style: inherit;">TRUE</span>)</span></code></pre></div>
 <section id="project-hook-example" class="level4">
 <h4 class="anchored" data-anchor-id="project-hook-example">Project hook example</h4>
 <p>Removing the dev folder:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">no_dev <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">no_dev <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -1440,9 +1587,9 @@ font-style: inherit;">create_golem</span>(<span class="st" style="color: #20794D
 background-color: null;
 font-style: inherit;">"ici"</span>, <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">project_hook =</span> no_dev)</span></code></pre></div>
+font-style: inherit;">project_hook =</span> no_dev)</span></code></pre></div></div>
 <p>Create a CSS:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">new_css <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">new_css <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -1513,7 +1660,7 @@ font-style: inherit;">create_golem</span>(<span class="st" style="color: #20794D
 background-color: null;
 font-style: inherit;">"ici"</span>, <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">project_hook =</span> new_css)</span></code></pre></div>
+font-style: inherit;">project_hook =</span> new_css)</span></code></pre></div></div>
 </section>
 </section>
 <section id="module-templates" class="level3">
@@ -1543,7 +1690,7 @@ font-style: inherit;">project_hook =</span> new_css)</span></code></pre></div>
 </section>
 <section id="module-template-examples" class="level4">
 <h4 class="anchored" data-anchor-id="module-template-examples">Module template examples</h4>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">my_tmpl <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">my_tmpl <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -1596,7 +1743,7 @@ font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"custom"</span>, <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">module_template =</span> my_other_tmpl)</span></code></pre></div>
+font-style: inherit;">module_template =</span> my_other_tmpl)</span></code></pre></div></div>
 </section>
 </section>
 <section id="js-css-templates" class="level3">
@@ -1623,7 +1770,7 @@ font-style: inherit;">module_template =</span> my_other_tmpl)</span></code></pre
 </section>
 <section id="js-css-templates-examples" class="level4">
 <h4 class="anchored" data-anchor-id="js-css-templates-examples">JS &amp; CSS templates examples</h4>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">my_tmpl <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">my_tmpl <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -1678,7 +1825,7 @@ font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"custom"</span>, <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">template =</span> my_tmpl)</span></code></pre></div>
+font-style: inherit;">template =</span> my_tmpl)</span></code></pre></div></div>
 </section>
 </section>
 </section>
@@ -1687,7 +1834,7 @@ font-style: inherit;">template =</span> my_tmpl)</span></code></pre></div>
 <section id="new-module-skeleton" class="level3">
 <h3 class="anchored" data-anchor-id="new-module-skeleton">New module skeleton</h3>
 <p><code>{shiny}</code> 1.5.0, has introduced a new skeleton when it comes to modules. <code>{golem}</code> now supports this new skeleton:</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> golem<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1698,8 +1845,8 @@ background-color: null;
 font-style: inherit;">"plop"</span>)</span>
 <span id="cb5-2">✓ File created at R<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/</span>mod_plop.R</span></code></pre></div>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">/</span>mod_plop.R</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#' plop UI Function</span></span>
 <span id="cb6-2"><span class="co" style="color: #5E5E5E;
@@ -1786,7 +1933,7 @@ background-color: null;
 font-style: italic;">## To be copied in the server</span></span>
 <span id="cb6-31"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># mod_plop_server("plop_ui_1")</span></span></code></pre></div>
+font-style: inherit;"># mod_plop_server("plop_ui_1")</span></span></code></pre></div></div>
 </section>
 <section id="disabling-auto-load" class="level3">
 <h3 class="anchored" data-anchor-id="disabling-auto-load">Disabling auto-load</h3>
@@ -1854,33 +2001,33 @@ font-style: inherit;"># mod_plop_server("plop_ui_1")</span></span></code></pre><
 <p><code>{shinipsum}</code> is a package that can help you build <code>{shiny}</code> prototypes faster by providing a series of functions that can generate random elements to populate your UI. If you are familiar with “lorem ipsum”, the fake text generator that is used in software design as a placeholder for text, the idea is the same: generating placeholders for Shiny outputs.</p>
 <p><code>{shinipsum}</code> can be installed from CRAN with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"shinipsum"</span>)</span></code></pre></div>
+font-style: inherit;">"shinipsum"</span>)</span></code></pre></div></div>
 </div>
 <p>You can install this package from GitHub with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">remotes<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">remotes<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">install_github</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Thinkr-open/shinipsum"</span>)</span></code></pre></div>
+font-style: inherit;">"Thinkr-open/shinipsum"</span>)</span></code></pre></div></div>
 </div>
 <p>In this package, a series of functions that generates random placeholders. For example, <code>random_ggplot()</code> generates random <code>{ggplot2}</code> elements:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(shinipsum)</span>
 <span id="cb3-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(ggplot2)</span></code></pre></div>
+font-style: inherit;">library</span>(ggplot2)</span></code></pre></div></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">random_ggplot</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1891,7 +2038,7 @@ font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Random plot"</span>)</span></code></pre></div>
+font-style: inherit;">"Random plot"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1901,7 +2048,7 @@ font-style: inherit;">"Random plot"</span>)</span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">random_ggplot</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1912,7 +2059,7 @@ font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Random plot"</span>)</span></code></pre></div>
+font-style: inherit;">"Random plot"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1923,7 +2070,7 @@ font-style: inherit;">"Random plot"</span>)</span></code></pre></div>
 </div>
 <p>Of course, the idea is to combine this with a Shiny interface, for example <code>random_ggplot()</code> will be used with a <code>renderPlot()</code> and <code>plotOutput()</code>. And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, <code>random_ggplot()</code> has a <code>type</code> parameter that can help you select a specific geom.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(shiny)</span>
 <span id="cb6-2"><span class="fu" style="color: #4758AB;
@@ -2025,14 +2172,14 @@ font-style: inherit;">50</span>)</span>
 <span id="cb6-23">}</span>
 <span id="cb6-24"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">shinyApp</span>(ui, server)</span></code></pre></div>
+font-style: inherit;">shinyApp</span>(ui, server)</span></code></pre></div></div>
 </div>
 <p>Other <code>{shinipsum}</code> functions include:</p>
 <ul>
 <li>tables:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">random_table</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2042,7 +2189,7 @@ font-style: inherit;">3</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">ncol =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">10</span>)</span></code></pre></div>
+font-style: inherit;">10</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Plant   Type  Treatment conc uptake Plant.1 Type.1 Treatment.1 conc.1
 1   Qn1 Quebec nonchilled   95   16.0     Qn1 Quebec  nonchilled     95
@@ -2058,13 +2205,13 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 <li>print outputs:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">random_print</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"model"</span>)</span></code></pre></div>
+font-style: inherit;">"model"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
