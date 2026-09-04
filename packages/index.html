@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,10 +45,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-44c26d94c645141caa34d9aa5a30e1b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9b9b18ed5201e9255722a896464fd84c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-826b79a2f3a1a5987b344173e57cc938.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,20 +78,76 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-package-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing-core .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-engines','listing-language','listing-title','listing-image','listing-description','listing-categories','listing-tier','listing-lifecycle','listing-cran','listing-order','listing-page-layout','listing-title-block-style','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-order-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-engines","listing-language","listing-title","listing-image","listing-description","listing-categories","listing-tier","listing-lifecycle","listing-cran","listing-order","listing-page-layout","listing-title-block-style","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-package-listing'] = new List('listing-package-listing', options);
+    window['quarto-listings']['listing-listing-core'] = new List('listing-listing-core', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing-experimental .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-engines','listing-language','listing-title','listing-image','listing-description','listing-categories','listing-tier','listing-lifecycle','listing-cran','listing-order','listing-page-layout','listing-title-block-style','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-order-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-engines","listing-language","listing-title","listing-image","listing-description","listing-categories","listing-tier","listing-lifecycle","listing-cran","listing-order","listing-page-layout","listing-title-block-style","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing-experimental'] = new List('listing-listing-experimental', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing-abandoned .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-engines','listing-language','listing-title','listing-image','listing-description','listing-categories','listing-tier','listing-lifecycle','listing-cran','listing-order','listing-page-layout','listing-title-block-style','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-order-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-engines","listing-language","listing-title","listing-image","listing-description","listing-categories","listing-tier","listing-lifecycle","listing-cran","listing-order","listing-page-layout","listing-title-block-style","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing-abandoned'] = new List('listing-listing-abandoned', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -112,7 +171,7 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -143,7 +202,9 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../styles.css">
 <meta name="twitter:title" content="Packages – golemverse">
+<meta name="twitter:description" content="Welcome to the golemverse!">
 <meta name="twitter:image" content="https://www.golemverse.org/img/golem.png">
+<meta name="twitter:image:alt" content="">
 <meta name="twitter:image-height" content="1385">
 <meta name="twitter:image-width" content="1200">
 <meta name="twitter:card" content="summary_large_image">
@@ -156,6 +217,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/golem.png" alt="golem hex sticker" class="navbar-logo light-content">
+    <img src="../img/golem.png" alt="golem hex sticker" class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">golemverse</span>
     </a>
@@ -167,12 +232,12 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../resources/index.html"> 
-<span class="menu-text">Resources</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="../packages/index.html" aria-current="page"> 
 <span class="menu-text">Packages</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../roadmap/index.html"> 
@@ -181,10 +246,6 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="../news/index.html"> 
 <span class="menu-text">News</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../stream/index.html"> 
-<span class="menu-text">Stream</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../index.html#contact"> 
@@ -241,459 +302,685 @@ window.Quarto = {
 </header>
 
 
-<section id="package-details" class="level2">
-<h2 class="anchored" data-anchor-id="package-details">Package details</h2>
-<div id="listing-package-listing" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
-<a href="../packages/golem/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/golem.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-golem
-</h5>
-<div class="card-text listing-description delink">
-<code>{golem}</code> is an opinionated framework for building production-grade <code>{shiny}</code> applications.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
-<a href="../packages/shinipsum/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/shinipsum.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-shinipsum
-</h5>
-<div class="card-text listing-description delink">
-<code>{shinipsum}</code> provides a set of functions to generate dummy widgets and content for <code>{shiny}</code> applications.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="89">
-<a href="../packages/brochure/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/brochure.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-brochure
-</h5>
-<div class="card-text listing-description delink">
-Natively multipage <code>{shiny}</code> apps.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="121">
-<a href="../packages/gargoyle/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/gargoyle.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-gargoyle
-</h5>
-<div class="card-text listing-description delink">
-<code>{gargoyle}</code> is an alternative way to manage reactivity in <code>{shiny}</code>.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
-<a href="../packages/fakir/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/fakir.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-fakir
-</h5>
-<div class="card-text listing-description delink">
-<code>{fakir}</code> provides a set of functions to generate random data that can be used for prototyping.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
-<a href="../packages/skeleton/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/skeleton.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-skeleton
-</h5>
-<div class="card-text listing-description delink">
-Skeleton CSS in <code>{shiny}</code>.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="88">
-<a href="../packages/elvis/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/elvis.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-elvis
-</h5>
-<div class="card-text listing-description delink">
-‘Shiny’ renderers and observers made safer.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="89">
-<a href="../packages/minifyr/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/minifyr.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-minifyr
-</h5>
-<div class="card-text listing-description delink">
-Minify CSS, HTML and JavaScript Files.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="78">
-<a href="../packages/ghooks/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/ghooks.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-ghooks
-</h5>
-<div class="card-text listing-description delink">
-{golem} hooks.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="78">
-<a href="../packages/bank/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/bank.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-bank
-</h5>
-<div class="card-text listing-description delink">
-Alternative caching backends for <code>{memoise}</code> &amp; <code>{shiny}</code>.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
-<a href="../packages/shinidraw/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/shinidraw.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-shinidraw
-</h5>
-<div class="card-text listing-description delink">
-Excalidraw in <code>{shiny}</code>.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="92">
-<a href="../packages/dockerfiler/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/dockerfiler.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-dockerfiler
-</h5>
-<div class="card-text listing-description delink">
-Build dockerfile straight from R.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="12" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
-<a href="../packages/w3css/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/w3css.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-w3css
-</h5>
-<div class="card-text listing-description delink">
-W3 CSS in <code>{shiny}</code>.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="13" data-listing-file-modified-sort="1783685513054" data-listing-reading-time-sort="1" data-listing-word-count-sort="130">
-<a href="../packages/gemstones/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../img/gemstones.png" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-gemstones
-</h5>
-<div class="card-text listing-description delink">
-Extend your <code>{golem}</code> application with external JS libraries.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
+<p><span class="gv-lede">17 packages in three tiers. Core packages are maintained and safe to build on. Experimental ones move fast. Abandoned ones stay online for reference.</span></p>
+<div class="gv-tier-head">
+<h2 class="anchored">
+Core
+</h2>
+<span>Maintained by ThinkR, safe to build on</span>
+</div>
+<div id="listing-listing-core" class="quarto-listing quarto-listing-container-custom">
+<div class="gv-cards">
+<div class="gv-card">
+<img src="../img/golem.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/golem/index.html">golem</a><span class="gv-card-desc">{golem} is an opinionated framework for building production-grade {shiny} applications.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-chip">CRAN</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/shinipsum.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/shinipsum/index.html">shinipsum</a><span class="gv-card-desc">{shinipsum} provides a set of functions to generate dummy widgets and content for {shiny} applications.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-chip">CRAN</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/fakir.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/fakir/index.html">fakir</a><span class="gv-card-desc">{fakir} provides a set of functions to generate random data that can be used for prototyping.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-chip">CRAN</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/gargoyle.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/gargoyle/index.html">gargoyle</a><span class="gv-card-desc">{gargoyle} is an alternative way to manage reactivity in {shiny}.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-chip">CRAN</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/dockerfiler.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/dockerfiler/index.html">dockerfiler</a><span class="gv-card-desc">Build dockerfile straight from R.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-chip">CRAN</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/pw.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/pw/index.html">pw</a><span class="gv-card-desc">{pw} lets you test your {golem} and {shiny} applications with Playwright.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/bootstrict.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/bootstrict/index.html">bootstrict</a><span class="gv-card-desc">{bootstrict} provides strict, faithful Bootstrap 5 widgets for {shiny}.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/golem-agent-skills.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/golem-agent-skills/index.html">golem-agent-skills</a><span class="gv-card-desc">golem-agent-skills brings agentic coding to {golem}.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/brochure.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/brochure/index.html">brochure</a><span class="gv-card-desc">Natively multipage {shiny} apps.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-</section>
-<section id="cran-status-monthly-download-and-other-stats" class="level2">
-<h2 class="anchored" data-anchor-id="cran-status-monthly-download-and-other-stats">CRAN status, Monthly download, and other stats</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
+<div class="gv-tier-head">
+<h2 class="anchored">
+Experimental
+</h2>
+<span>Moving fast, expect rough edges</span>
+</div>
+<div id="listing-listing-experimental" class="quarto-listing quarto-listing-container-custom">
+<div class="gv-cards">
+<div class="gv-card">
+<img src="../img/bank.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/bank/index.html">bank</a><span class="gv-card-desc">Alternative caching backends for {memoise} &amp; {shiny}.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-experimental">Experimental</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/elvis.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/elvis/index.html">elvis</a><span class="gv-card-desc">‘Shiny’ renderers and observers made safer.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-experimental">Experimental</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/ghooks.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/ghooks/index.html">ghooks</a><span class="gv-card-desc">{golem} hooks.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-experimental">Experimental</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/shinidraw.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/shinidraw/index.html">shinidraw</a><span class="gv-card-desc">Excalidraw in {shiny}.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-experimental">Experimental</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="gv-tier-head">
+<h2 class="anchored">
+Abandoned
+</h2>
+<span>No longer maintained, kept for reference</span>
+</div>
+<div id="listing-listing-abandoned" class="quarto-listing quarto-listing-container-custom">
+<div class="gv-cards">
+<div class="gv-card">
+<img src="../img/gemstones.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/gemstones/index.html">gemstones</a><span class="gv-card-desc">Extend your {golem} application with external JS libraries.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-abandoned">Abandoned</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/w3css.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/w3css/index.html">w3css</a><span class="gv-card-desc">W3 CSS in {shiny}.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-abandoned">Abandoned</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/skeleton.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/skeleton/index.html">skeleton</a><span class="gv-card-desc">Skeleton CSS in {shiny}.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-abandoned">Abandoned</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+<div class="gv-card">
+<img src="../img/minifyr.png" alt="">
+<div class="gv-card-body">
+<a class="gv-card-name" href="../packages/minifyr/index.html">minifyr</a><span class="gv-card-desc">Minify CSS, HTML and JavaScript Files.</span>
+<div class="gv-chips">
+<span class="gv-pill gv-pill-abandoned">Abandoned</span><span class="gv-chip">GitHub only</span>
+</div>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="gv-section-head">
+<div>
+<h2 class="anchored">
+Health at a glance
+</h2>
+<p>
+Live numbers from CRAN and GitHub.
+</p>
+</div>
+</div>
+<div class="gv-table-wrap">
+<table class="gv-table">
 <thead>
-<tr class="header">
-<th>Package</th>
-<th>Lifecycle</th>
-<th>CRAN Version</th>
-<th>Monthly Downloads</th>
-<th>R-CMD-Check</th>
-<th>GitHub Stars</th>
-<th>GitHub Issues</th>
+<tr>
+<th>
+Package
+</th>
+<th>
+Tier
+</th>
+<th>
+Lifecycle
+</th>
+<th>
+CRAN
+</th>
+<th class="gv-num">
+Downloads / month
+</th>
+<th class="gv-num">
+Stars
+</th>
+<th class="gv-num">
+Open issues
+</th>
+<th>
+Last commit
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>golem</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=golem"> <img src="https://www.r-pkg.org/badges/version/golem"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/golem"> <img src="https://cranlogs.r-pkg.org/badges/golem"></a></td>
-<td><a target="_blank" href="https://github.com/ThinkR-open/golem/actions"> <img src="https://github.com/ThinkR-open/golem/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/ThinkR-open/golem" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/ThinkR-open/golem/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="ThinkR-open/golem" data-gv-cran="golem">
+<td>
+<a class="gv-pkg" href="golem/"><img src="../img/golem.png" alt="">golem</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-core">Core</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-stable"></span>stable
+</td>
+<td>
+<span class="gv-chip" data-gv="version">—</span>
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="even">
-<td>shinipsum</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=shinipsum"> <img src="https://www.r-pkg.org/badges/version/shinipsum"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/shinipsum"> <img src="https://cranlogs.r-pkg.org/badges/shinipsum"></a></td>
-<td><a target="_blank" href="https://github.com/ThinkR-open/shinipsum/actions"> <img src="https://github.com/ThinkR-open/shinipsum/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/ThinkR-open/shinipsum" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/ThinkR-open/shinipsum/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="ThinkR-open/shinipsum" data-gv-cran="shinipsum">
+<td>
+<a class="gv-pkg" href="shinipsum/"><img src="../img/shinipsum.png" alt="">shinipsum</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-core">Core</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-stable"></span>stable
+</td>
+<td>
+<span class="gv-chip" data-gv="version">—</span>
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="odd">
-<td>fakir</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=fakir"> <img src="https://www.r-pkg.org/badges/version/fakir"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/fakir"> <img src="https://cranlogs.r-pkg.org/badges/fakir"></a></td>
-<td><a target="_blank" href="https://github.com/ThinkR-open/fakir/actions"> <img src="https://github.com/ThinkR-open/fakir/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/ThinkR-open/fakir" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/ThinkR-open/fakir/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="ThinkR-open/fakir" data-gv-cran="fakir">
+<td>
+<a class="gv-pkg" href="fakir/"><img src="../img/fakir.png" alt="">fakir</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-core">Core</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-stable"></span>stable
+</td>
+<td>
+<span class="gv-chip" data-gv="version">—</span>
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="even">
-<td>gargoyle</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=gargoyle"> <img src="https://www.r-pkg.org/badges/version/gargoyle"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/gargoyle"> <img src="https://cranlogs.r-pkg.org/badges/gargoyle"></a></td>
-<td><a target="_blank" href="https://github.com/colinfay/gargoyle/actions"> <img src="https://github.com/colinfay/gargoyle/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/colinfay/gargoyle" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/colinfay/gargoyle/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="colinfay/gargoyle" data-gv-cran="gargoyle">
+<td>
+<a class="gv-pkg" href="gargoyle/"><img src="../img/gargoyle.png" alt="">gargoyle</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-core">Core</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+<span class="gv-chip" data-gv="version">—</span>
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="odd">
-<td>dockerfiler</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=dockerfiler"> <img src="https://www.r-pkg.org/badges/version/dockerfiler"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/dockerfiler"> <img src="https://cranlogs.r-pkg.org/badges/dockerfiler"></a></td>
-<td><a target="_blank" href="https://github.com/thinkr-open/dockerfiler/actions"> <img src="https://github.com/thinkr-open/dockerfiler/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/thinkr-open/dockerfiler" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/thinkr-open/dockerfiler/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="thinkr-open/dockerfiler" data-gv-cran="dockerfiler">
+<td>
+<a class="gv-pkg" href="dockerfiler/"><img src="../img/dockerfiler.png" alt="">dockerfiler</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-core">Core</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-stable"></span>stable
+</td>
+<td>
+<span class="gv-chip" data-gv="version">—</span>
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="even">
-<td>gemstones</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=gemstones"> <img src="https://www.r-pkg.org/badges/version/gemstones"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/gemstones"> <img src="https://cranlogs.r-pkg.org/badges/gemstones"></a></td>
-<td><a target="_blank" href="https://github.com/thinkr-open/gemstones/actions"> <img src="https://github.com/thinkr-open/gemstones/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/thinkr-open/gemstones" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/thinkr-open/gemstones/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="ThinkR-open/pw">
+<td>
+<a class="gv-pkg" href="pw/"><img src="../img/pw.png" alt="">pw</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-core">Core</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-experimental"></span>experimental
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="odd">
-<td>elvis</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=elvis"> <img src="https://www.r-pkg.org/badges/version/elvis"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/elvis"> <img src="https://cranlogs.r-pkg.org/badges/elvis"></a></td>
-<td><a target="_blank" href="https://github.com/thinkr-open/elvis/actions"> <img src="https://github.com/thinkr-open/elvis/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/thinkr-open/elvis" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/thinkr-open/elvis/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="ThinkR-open/bootstrict">
+<td>
+<a class="gv-pkg" href="bootstrict/"><img src="../img/bootstrict.png" alt="">bootstrict</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-core">Core</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-experimental"></span>experimental
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="even">
-<td>bank</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=bank"> <img src="https://www.r-pkg.org/badges/version/bank"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/bank"> <img src="https://cranlogs.r-pkg.org/badges/bank"></a></td>
-<td><a target="_blank" href="https://github.com/thinkr-open/bank/actions"> <img src="https://github.com/thinkr-open/bank/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/thinkr-open/bank" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/thinkr-open/bank/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="ThinkR-open/golem-agent-skills">
+<td>
+<a class="gv-pkg" href="golem-agent-skills/"><img src="../img/golem-agent-skills.png" alt="">golem-agent-skills</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-core">Core</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-experimental"></span>experimental
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="odd">
-<td>w3css</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=w3css"> <img src="https://www.r-pkg.org/badges/version/w3css"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/w3css"> <img src="https://cranlogs.r-pkg.org/badges/w3css"></a></td>
-<td><a target="_blank" href="https://github.com/thinkr-open/w3css/actions"> <img src="https://github.com/thinkr-open/w3css/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/thinkr-open/w3css" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/thinkr-open/w3css/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="colinfay/brochure">
+<td>
+<a class="gv-pkg" href="brochure/"><img src="../img/brochure.png" alt="">brochure</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-core">Core</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="even">
-<td>brochure</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=brochure"> <img src="https://www.r-pkg.org/badges/version/brochure"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/brochure"> <img src="https://cranlogs.r-pkg.org/badges/brochure"></a></td>
-<td><a target="_blank" href="https://github.com/colinfay/brochure/actions"> <img src="https://github.com/colinfay/brochure/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/colinfay/brochure" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/colinfay/brochure/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="thinkr-open/bank">
+<td>
+<a class="gv-pkg" href="bank/"><img src="../img/bank.png" alt="">bank</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-experimental">Experimental</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="odd">
-<td>ghooks</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=ghooks"> <img src="https://www.r-pkg.org/badges/version/ghooks"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/ghooks"> <img src="https://cranlogs.r-pkg.org/badges/ghooks"></a></td>
-<td><a target="_blank" href="https://github.com/thinkr-open/ghooks/actions"> <img src="https://github.com/thinkr-open/ghooks/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/thinkr-open/ghooks" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/thinkr-open/ghooks/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="thinkr-open/elvis">
+<td>
+<a class="gv-pkg" href="elvis/"><img src="../img/elvis.png" alt="">elvis</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-experimental">Experimental</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="even">
-<td>skeleton</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=skeleton"> <img src="https://www.r-pkg.org/badges/version/skeleton"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/skeleton"> <img src="https://cranlogs.r-pkg.org/badges/skeleton"></a></td>
-<td><a target="_blank" href="https://github.com/colinfay/skeleton/actions"> <img src="https://github.com/colinfay/skeleton/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/colinfay/skeleton" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/colinfay/skeleton/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="thinkr-open/ghooks">
+<td>
+<a class="gv-pkg" href="ghooks/"><img src="../img/ghooks.png" alt="">ghooks</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-experimental">Experimental</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
-<tr class="odd">
-<td>shinidraw</td>
-<td><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg"></td>
-<td><a href="https://CRAN.R-project.org/package=shinidraw"> <img src="https://www.r-pkg.org/badges/version/shinidraw"></a></td>
-<td><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/shinidraw"> <img src="https://cranlogs.r-pkg.org/badges/shinidraw"></a></td>
-<td><a target="_blank" href="https://github.com/thinkr-open/shinidraw/actions"> <img src="https://github.com/thinkr-open/shinidraw/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></td>
-<td><a class="github-button" target="_blank" href="https://github.com/thinkr-open/shinidraw" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a></td>
-<td><a class="github-button" href="https://github.com/thinkr-open/shinidraw/issues" target="_blank" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a></td>
+<tr data-gv-repo="thinkr-open/shinidraw">
+<td>
+<a class="gv-pkg" href="shinidraw/"><img src="../img/shinidraw.png" alt="">shinidraw</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-experimental">Experimental</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
+</tr>
+<tr data-gv-repo="thinkr-open/gemstones">
+<td>
+<a class="gv-pkg" href="gemstones/"><img src="../img/gemstones.png" alt="">gemstones</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-abandoned">Abandoned</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
+</tr>
+<tr data-gv-repo="thinkr-open/w3css">
+<td>
+<a class="gv-pkg" href="w3css/"><img src="../img/w3css.png" alt="">w3css</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-abandoned">Abandoned</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
+</tr>
+<tr data-gv-repo="colinfay/skeleton">
+<td>
+<a class="gv-pkg" href="skeleton/"><img src="../img/skeleton.png" alt="">skeleton</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-abandoned">Abandoned</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
+</tr>
+<tr data-gv-repo="colinfay/minifyr">
+<td>
+<a class="gv-pkg" href="minifyr/"><img src="../img/minifyr.png" alt="">minifyr</a>
+</td>
+<td>
+<span class="gv-pill gv-pill-abandoned">Abandoned</span>
+</td>
+<td>
+<span class="gv-dot gv-dot-dormant"></span>dormant
+</td>
+<td>
+—
+</td>
+<td class="gv-num" data-gv="downloads">
+—
+</td>
+<td class="gv-num" data-gv="stars">
+—
+</td>
+<td class="gv-num" data-gv="issues">
+—
+</td>
+<td data-gv="pushed">
+—
+</td>
 </tr>
 </tbody>
 </table>
-<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
-<blockquote class="blockquote">
-<p>Note that CRAN version &amp; Monthly Downloads are shown only for packages on CRAN</p>
-</blockquote>
+</div>
+<p class="gv-table-note">
+Downloads are the last 30 days on CRAN, from cranlogs via r-universe; they are shown only for packages on CRAN. Stars and issues come from the GitHub API.
+</p>
 
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1135,6 +1422,7 @@ Extend your <code>{golem}</code> application with external JS libraries.
     </div>
   </div>
 </footer>
+<script src="../gv-stats.js"></script>
 
 
 

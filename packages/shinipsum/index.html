@@ -2,26 +2,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="{shinipsum} provides a set of functions to generate dummy widgets and content for {shiny} applications.">
 
 <title>shinipsum – golemverse</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -40,10 +79,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-44c26d94c645141caa34d9aa5a30e1b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9b9b18ed5201e9255722a896464fd84c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-b8890a537f51d0e3fda464169edb410a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,19 +122,24 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="shinipsum – golemverse">
+<meta name="twitter:description" content="{shinipsum} provides a set of functions to generate dummy widgets and content for {shiny} applications.">
 <meta name="twitter:image" content="https://www.golemverse.org/img/shinipsum.png">
 <meta name="twitter:image-height" content="1155">
 <meta name="twitter:image-width" content="1000">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/golem.png" alt="golem hex sticker" class="navbar-logo light-content">
+    <img src="../../img/golem.png" alt="golem hex sticker" class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">golemverse</span>
     </a>
@@ -107,12 +151,12 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../resources/index.html"> 
-<span class="menu-text">Resources</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../packages/index.html"> 
 <span class="menu-text">Packages</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources/index.html"> 
+<span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../roadmap/index.html"> 
@@ -121,10 +165,6 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
   <li class="nav-item">
     <a class="nav-link" href="../../news/index.html"> 
 <span class="menu-text">News</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../stream/index.html"> 
-<span class="menu-text">Stream</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../index.html#contact"> 
@@ -155,50 +195,65 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">shinipsum</h1></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">shinipsum</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
+<header id="title-block-header">
 
 
 </header>
 
 
-<div class="grid">
-<div class="g-col-6">
+<div class="gv-pkg-head">
 <p><img src="../../img/shinipsum.png" class="img-fluid"></p>
+<div class="gv-pkg-body">
+<div class="gv-chips">
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-pill gv-pill-stable">stable</span><span class="gv-chip" data-gv-cran="shinipsum">CRAN <span data-gv="version">…</span></span>
 </div>
-<div class="g-col-6">
-<p><code>{shinipsum}</code> provides a set of functions to generate dummy widgets and content for <code>{shiny}</code> applications.</p>
+<h1>
+shinipsum
+</h1>
+<p><span class="gv-pkg-tagline"><code>{shinipsum}</code> provides a set of functions to generate dummy widgets and content for <code>{shiny}</code> applications.</span></p>
 <p>This R package is a simple package designed to generate placeholder elements for <code>{shiny}</code> applications. It provides a set of functions that can be used to generate ‘lorem ipsum’ style elements that can be used as filler in Shiny applications while prototyping.</p>
-<div data-align="center">
-<p><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg"></p>
-<p><a target="_blank" href="https://CRAN.R-project.org/package=shinipsum"> <img src="https://www.r-pkg.org/badges/version/shinipsum"> </a></p>
-<p><a target="_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/shinipsum"> <img src="https://cranlogs.r-pkg.org/badges/shinipsum"> </a></p>
-<p><a target="_blank" href="https://github.com/ThinkR-open/shinipsum/actions"> <img src="https://github.com/ThinkR-open/shinipsum/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"> </a></p>
-<p><a class="github-button" target="_blank" href="https://github.com/ThinkR-open/shinipsum" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a></p>
-<p><a class="github-button" target="_blank" href="https://github.com/ThinkR-open/shinipsum/issues" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a></p>
+<div class="gv-actions" data-gv-cran="shinipsum">
+<a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/ThinkR-open/shinipsum" hidden="">Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/shinipsum">GitHub</a><a class="gv-btn" href="https://CRAN.R-project.org/package=shinipsum">CRAN</a>
 </div>
 </div>
 </div>
-<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+<div class="gv-tiles" data-gv-repo="ThinkR-open/shinipsum" data-gv-cran="shinipsum">
+<div class="gv-tile">
+<span class="gv-tile-value" data-gv="downloads">—</span><span class="gv-tile-label">downloads last month</span>
+</div>
+<div class="gv-tile">
+<span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span>
+</div>
+<div class="gv-tile">
+<span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span>
+</div>
+<div class="gv-tile">
+<span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span>
+</div>
+</div>
+<div class="gv-pkg-cols">
+<section id="install" class="level2 gv-col">
+<h2 class="anchored" data-anchor-id="install">Install</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From CRAN</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"shinipsum"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Development version</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"ThinkR-open/shinipsum"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="links" class="level2 gv-col">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<div class="gv-links" data-gv-cran="shinipsum">
+<p><a data-gv="pkgdown" href="https://github.com/ThinkR-open/shinipsum" hidden="">Reference and vignettes <small>pkgdown</small></a> <a href="https://github.com/ThinkR-open/shinipsum">Source <small>ThinkR-open/shinipsum</small></a> <a href="https://github.com/ThinkR-open/shinipsum/issues">Report an issue <small>issues</small></a> <a href="https://github.com/ThinkR-open/shinipsum/actions">CI status <small>R-CMD-check</small></a> <a href="https://CRAN.R-project.org/package=shinipsum">CRAN page <small>cran.r-project.org</small></a></p>
+</div>
+</section>
+</div>
 
 
 
@@ -642,6 +697,7 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
     </div>
   </div>
 </footer>
+<script src="../../gv-stats.js"></script>
 
 
 

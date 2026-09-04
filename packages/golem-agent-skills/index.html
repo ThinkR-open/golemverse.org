@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="{gargoyle} is an alternative way to manage reactivity in {shiny}.">
+<meta name="description" content="golem-agent-skills brings agentic coding to {golem}.">
 
-<title>gargoyle – golemverse</title>
+<title>golem-agent-skills – golemverse</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -121,11 +121,11 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="gargoyle – golemverse">
-<meta name="twitter:description" content="{gargoyle} is an alternative way to manage reactivity in {shiny}.">
-<meta name="twitter:image" content="https://www.golemverse.org/img/gargoyle.png">
-<meta name="twitter:image-height" content="1200">
-<meta name="twitter:image-width" content="1037">
+<meta name="twitter:title" content="golem-agent-skills – golemverse">
+<meta name="twitter:description" content="golem-agent-skills brings agentic coding to {golem}.">
+<meta name="twitter:image" content="https://www.golemverse.org/img/golem-agent-skills.png">
+<meta name="twitter:image-height" content="1254">
+<meta name="twitter:image-width" content="1254">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -200,7 +200,7 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">gargoyle</h1></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">golem-agent-skills</h1></header>
 
 <header id="title-block-header">
 
@@ -209,25 +209,22 @@ gtag('config', 'G-MCXB7DZFKF', { 'anonymize_ip': true});
 
 
 <div class="gv-pkg-head">
-<p><img src="../../img/gargoyle.png" class="img-fluid"></p>
+<p><img src="../../img/golem-agent-skills.png" class="img-fluid"></p>
 <div class="gv-pkg-body">
 <div class="gv-chips">
-<span class="gv-pill gv-pill-core">Core</span><span class="gv-pill gv-pill-dormant">dormant</span><span class="gv-chip" data-gv-cran="gargoyle">CRAN <span data-gv="version">…</span></span>
+<span class="gv-pill gv-pill-core">Core</span><span class="gv-pill gv-pill-experimental">experimental</span>
 </div>
 <h1>
-gargoyle
+golem-agent-skills
 </h1>
-<p><span class="gv-pkg-tagline"><code>{gargoyle}</code> is an alternative way to manage reactivity in <code>{shiny}</code>.</span></p>
-<p>{gargoyle} is a package that provides wrappers around {shiny} to turn your app into and event-based application instead of a full reactive app. The framework is centered around a listen &amp; trigger mechanism. It works with classical UI, and just needs tweaking the server side of your app.</p>
-<div class="gv-actions" data-gv-cran="gargoyle">
-<a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/colinfay/gargoyle" hidden="">Documentation</a><a class="gv-btn" href="https://github.com/colinfay/gargoyle">GitHub</a><a class="gv-btn" href="https://CRAN.R-project.org/package=gargoyle">CRAN</a>
+<p><span class="gv-pkg-tagline"><code>golem-agent-skills</code> brings agentic coding to <code>{golem}</code>.</span></p>
+<p>A collection of agent skills for agentic coding with <code>{golem}</code>, helping AI coding assistants build production-grade <code>{shiny}</code> applications the golem way.</p>
+<div class="gv-actions" data-gv-cran="golem-agent-skills">
+<a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/ThinkR-open/golem-agent-skills" hidden="">Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/golem-agent-skills">GitHub</a>
 </div>
 </div>
 </div>
-<div class="gv-tiles" data-gv-repo="colinfay/gargoyle" data-gv-cran="gargoyle">
-<div class="gv-tile">
-<span class="gv-tile-value" data-gv="downloads">—</span><span class="gv-tile-label">downloads last month</span>
-</div>
+<div class="gv-tiles" data-gv-repo="ThinkR-open/golem-agent-skills" data-gv-cran="golem-agent-skills">
 <div class="gv-tile">
 <span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span>
 </div>
@@ -241,16 +238,13 @@ gargoyle
 <div class="gv-pkg-cols">
 <section id="install" class="level2 gv-col">
 <h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From CRAN</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gargoyle"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Development version</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"colinfay/gargoyle"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Development version</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"ThinkR-open/golem-agent-skills"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="links" class="level2 gv-col">
 <h2 class="anchored" data-anchor-id="links">Links</h2>
-<div class="gv-links" data-gv-cran="gargoyle">
-<p><a data-gv="pkgdown" href="https://github.com/colinfay/gargoyle" hidden="">Reference and vignettes <small>pkgdown</small></a> <a href="https://github.com/colinfay/gargoyle">Source <small>colinfay/gargoyle</small></a> <a href="https://github.com/colinfay/gargoyle/issues">Report an issue <small>issues</small></a> <a href="https://github.com/colinfay/gargoyle/actions">CI status <small>R-CMD-check</small></a> <a href="https://CRAN.R-project.org/package=gargoyle">CRAN page <small>cran.r-project.org</small></a></p>
+<div class="gv-links" data-gv-cran="golem-agent-skills">
+<p><a data-gv="pkgdown" href="https://github.com/ThinkR-open/golem-agent-skills" hidden="">Reference and vignettes <small>pkgdown</small></a> <a href="https://github.com/ThinkR-open/golem-agent-skills">Source <small>ThinkR-open/golem-agent-skills</small></a> <a href="https://github.com/ThinkR-open/golem-agent-skills/issues">Report an issue <small>issues</small></a></p>
 </div>
 </section>
 </div>
@@ -678,7 +672,7 @@ gargoyle
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/ThinkR-open/golemverse.org/edit/main/packages/gargoyle/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ThinkR-open/golemverse.org/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/ThinkR-open/golemverse.org/edit/main/packages/golem-agent-skills/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ThinkR-open/golemverse.org/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
