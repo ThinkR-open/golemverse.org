@@ -1,46 +1,56 @@
 ---
 title: "minifyr"
 image: "/img/minifyr.png"
+description: "Minify CSS, HTML and JavaScript Files."
+categories: [Abandoned]
+tier: Abandoned
+lifecycle: dormant
+cran: FALSE
+order: 17
+page-layout: full
+title-block-style: none
 ---
 
-::: {.grid}
-
-::: {.g-col-6}
-
+::: {.gv-pkg-head}
 ![](/img/minifyr.png)
 
-:::
+::: {.gv-pkg-body}
+<div class="gv-chips"><span class="gv-pill gv-pill-abandoned">Abandoned</span><span class="gv-pill gv-pill-dormant">dormant</span></div>
 
-::: {.g-col-6}
+<h1>minifyr</h1>
 
-Minify CSS, HTML and JavaScript Files.
+[Minify CSS, HTML and JavaScript Files.]{.gv-pkg-tagline}
 
 A wrapper around the node-minify NodeJS module that allows to minify CSS, HTML, and JavaScript files from the R console.
 
-<div align = "center">
+<div class="gv-actions" data-gv-cran="minifyr"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/colinfay/minifyr" hidden>Documentation</a><a class="gv-btn" href="https://github.com/colinfay/minifyr">GitHub</a></div>
+:::
+:::
 
-<img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg">
-
-<a  target = "_blank" href="https://CRAN.R-project.org/package=minifyr">
-<img src = "https://www.r-pkg.org/badges/version/minifyr">
-</a>
-
-<a  target = "_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/minifyr">
-  <img src = "https://cranlogs.r-pkg.org/badges/minifyr">
-</a>
-
-<a  target = "_blank" href="https://github.com/colinfay/minifyr/actions">
- <img src="https://github.com/colinfay/minifyr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
-</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/colinfay/minifyr" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/colinfay/minifyr/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a>
+<div class="gv-tiles" data-gv-repo="colinfay/minifyr" data-gv-cran="minifyr">
+<div class="gv-tile"><span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span></div>
 </div>
 
+::: {.gv-pkg-cols}
+::: {.gv-col}
+## Install
+
+```r
+# Development version
+pak::pak("colinfay/minifyr")
+```
 :::
 
+::: {.gv-col}
+## Links
+
+<div class="gv-links" data-gv-cran="minifyr">
+<a data-gv="pkgdown" href="https://github.com/colinfay/minifyr" hidden>Reference and vignettes <small>pkgdown</small></a>
+<a href="https://github.com/colinfay/minifyr">Source <small>colinfay/minifyr</small></a>
+<a href="https://github.com/colinfay/minifyr/issues">Report an issue <small>issues</small></a>
+<a href="https://github.com/colinfay/minifyr/actions">CI status <small>R-CMD-check</small></a>
+</div>
 :::
-
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+:::

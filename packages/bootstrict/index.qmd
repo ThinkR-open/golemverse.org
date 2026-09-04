@@ -1,0 +1,56 @@
+---
+title: "bootstrict"
+image: "/img/bootstrict.png"
+description: "{bootstrict} provides strict, faithful Bootstrap 5 widgets for {shiny}."
+categories: [Core]
+tier: Core
+lifecycle: experimental
+cran: FALSE
+order: 7
+page-layout: full
+title-block-style: none
+---
+
+::: {.gv-pkg-head}
+![](/img/bootstrict.png)
+
+::: {.gv-pkg-body}
+<div class="gv-chips"><span class="gv-pill gv-pill-core">Core</span><span class="gv-pill gv-pill-experimental">experimental</span></div>
+
+<h1>bootstrict</h1>
+
+[`{bootstrict}` provides strict, faithful Bootstrap 5 widgets for `{shiny}`.]{.gv-pkg-tagline}
+
+The goal of `{bootstrict}` is to provide strict, faithful Bootstrap 5.2 widgets for `{shiny}` — with minimum deviation from `{shiny}` itself.
+
+<div class="gv-actions" data-gv-cran="bootstrict"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/ThinkR-open/bootstrict" hidden>Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/bootstrict">GitHub</a></div>
+:::
+:::
+
+<div class="gv-tiles" data-gv-repo="ThinkR-open/bootstrict" data-gv-cran="bootstrict">
+<div class="gv-tile"><span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span></div>
+</div>
+
+::: {.gv-pkg-cols}
+::: {.gv-col}
+## Install
+
+```r
+# Development version
+pak::pak("ThinkR-open/bootstrict")
+```
+:::
+
+::: {.gv-col}
+## Links
+
+<div class="gv-links" data-gv-cran="bootstrict">
+<a data-gv="pkgdown" href="https://github.com/ThinkR-open/bootstrict" hidden>Reference and vignettes <small>pkgdown</small></a>
+<a href="https://github.com/ThinkR-open/bootstrict">Source <small>ThinkR-open/bootstrict</small></a>
+<a href="https://github.com/ThinkR-open/bootstrict/issues">Report an issue <small>issues</small></a>
+<a href="https://github.com/ThinkR-open/bootstrict/actions">CI status <small>R-CMD-check</small></a>
+</div>
+:::
+:::

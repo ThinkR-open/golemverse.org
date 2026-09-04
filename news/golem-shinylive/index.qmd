@@ -1,0 +1,13 @@
+---
+title: "Serve your {golem} app to {shinylive}"
+author: colin
+date: "2025-01-08"
+slug: golem-shinylive
+aliases:
+  - /post/golem-shinylive/
+  - /news/golem-shinylive/
+---
+
+## Pouet
+
+<iframe src = "https://thinkr-open.github.io/golem-shinylive" width = "100%" height = "600px" style = "border:none;"></iframe>

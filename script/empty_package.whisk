@@ -1,46 +1,69 @@
 ---
 title: "{{pkg}}"
 image: "/img/{{pkg}}.png"
+description: "{{{tagline}}}"
+categories: [{{category}}]
+tier: {{category}}
+lifecycle: {{lifecycle}}
+cran: {{cran}}
+order: {{order}}
+page-layout: full
+title-block-style: none
 ---
 
-::: {.grid}
-
-::: {.g-col-6}
-
+::: {.gv-pkg-head}
 ![](/img/{{pkg}}.png)
 
+::: {.gv-pkg-body}
+<div class="gv-chips"><span class="gv-pill gv-pill-{{category_lc}}">{{category}}</span><span class="gv-pill gv-pill-{{lifecycle}}">{{lifecycle}}</span>{{#cran}}<span class="gv-chip" data-gv-cran="{{pkg}}">CRAN <span data-gv="version">…</span></span>{{/cran}}</div>
+
+<h1>{{pkg}}</h1>
+
+[{{{title}}}]{.gv-pkg-tagline}
+
+{{{description}}}
+
+<div class="gv-actions" data-gv-cran="{{pkg}}"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="{{github}}" hidden>Documentation</a><a class="gv-btn" href="{{github}}">GitHub</a>{{#cran}}<a class="gv-btn" href="https://CRAN.R-project.org/package={{pkg}}">CRAN</a>{{/cran}}</div>
+:::
 :::
 
-::: {.g-col-6}
-
-{{title}}
-
-{{description}}
-
-<div align = "center">
-
-<img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-{{lifecycle}}.svg">
-
-<a  target = "_blank" href="https://CRAN.R-project.org/package={{pkg}}">
-<img src = "https://www.r-pkg.org/badges/version/{{pkg}}">
-</a>
-
-<a  target = "_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/{{pkg}}">
-  <img src = "https://cranlogs.r-pkg.org/badges/{{pkg}}">
-</a>
-
-<a  target = "_blank" href="{{github}}/actions">
- <img src="{{github}}/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
-</a>
-
-<a class="github-button"  target = "_blank" href="{{github}}" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a>
-
-<a class="github-button"  target = "_blank" href="{{github}}/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a>
+<div class="gv-tiles" data-gv-repo="{{repo_short}}" data-gv-cran="{{pkg}}">
+{{#cran}}
+<div class="gv-tile"><span class="gv-tile-value" data-gv="downloads">—</span><span class="gv-tile-label">downloads last month</span></div>
+{{/cran}}
+<div class="gv-tile"><span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span></div>
 </div>
 
+::: {.gv-pkg-cols}
+::: {.gv-col}
+## Install
+
+```r
+{{#cran}}
+# From CRAN
+install.packages("{{pkg}}")
+
+{{/cran}}
+# Development version
+pak::pak("{{repo_short}}")
+```
 :::
 
+::: {.gv-col}
+## Links
+
+<div class="gv-links" data-gv-cran="{{pkg}}">
+<a data-gv="pkgdown" href="{{github}}" hidden>Reference and vignettes <small>pkgdown</small></a>
+<a href="{{github}}">Source <small>{{repo_short}}</small></a>
+<a href="{{github}}/issues">Report an issue <small>issues</small></a>
+{{#check}}
+<a href="{{github}}/actions">CI status <small>R-CMD-check</small></a>
+{{/check}}
+{{#cran}}
+<a href="https://CRAN.R-project.org/package={{pkg}}">CRAN page <small>cran.r-project.org</small></a>
+{{/cran}}
+</div>
 :::
-
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+:::

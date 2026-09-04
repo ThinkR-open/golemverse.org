@@ -1,46 +1,56 @@
 ---
 title: "gemstones"
 image: "/img/gemstones.png"
+description: "Extend your {golem} application with external JS libraries."
+categories: [Abandoned]
+tier: Abandoned
+lifecycle: dormant
+cran: FALSE
+order: 14
+page-layout: full
+title-block-style: none
 ---
 
-::: {.grid}
-
-::: {.g-col-6}
-
+::: {.gv-pkg-head}
 ![](/img/gemstones.png)
 
-:::
+::: {.gv-pkg-body}
+<div class="gv-chips"><span class="gv-pill gv-pill-abandoned">Abandoned</span><span class="gv-pill gv-pill-dormant">dormant</span></div>
 
-::: {.g-col-6}
+<h1>gemstones</h1>
 
-Extend your `{golem}` application with external JS libraries.
+[Extend your `{golem}` application with external JS libraries.]{.gv-pkg-tagline}
 
 The goal of `{gemstones}` is to allow you to add some JavaScript libraries to your {golem} based app. `{gemstones}` will automate the download and the linking of some JS libraries, but it’s important to understand that `{gemstones}` is not providing a full wrapper or widget for these libraries. You’ll still have to code some elements to make it work.
 
-<div align = "center">
+<div class="gv-actions" data-gv-cran="gemstones"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/thinkr-open/gemstones" hidden>Documentation</a><a class="gv-btn" href="https://github.com/thinkr-open/gemstones">GitHub</a></div>
+:::
+:::
 
-<img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg">
-
-<a  target = "_blank" href="https://CRAN.R-project.org/package=gemstones">
-<img src = "https://www.r-pkg.org/badges/version/gemstones">
-</a>
-
-<a  target = "_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/gemstones">
-  <img src = "https://cranlogs.r-pkg.org/badges/gemstones">
-</a>
-
-<a  target = "_blank" href="https://github.com/thinkr-open/gemstones/actions">
- <img src="https://github.com/thinkr-open/gemstones/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
-</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/gemstones" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/gemstones/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a>
+<div class="gv-tiles" data-gv-repo="thinkr-open/gemstones" data-gv-cran="gemstones">
+<div class="gv-tile"><span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span></div>
 </div>
 
+::: {.gv-pkg-cols}
+::: {.gv-col}
+## Install
+
+```r
+# Development version
+pak::pak("thinkr-open/gemstones")
+```
 :::
 
+::: {.gv-col}
+## Links
+
+<div class="gv-links" data-gv-cran="gemstones">
+<a data-gv="pkgdown" href="https://github.com/thinkr-open/gemstones" hidden>Reference and vignettes <small>pkgdown</small></a>
+<a href="https://github.com/thinkr-open/gemstones">Source <small>thinkr-open/gemstones</small></a>
+<a href="https://github.com/thinkr-open/gemstones/issues">Report an issue <small>issues</small></a>
+<a href="https://github.com/thinkr-open/gemstones/actions">CI status <small>R-CMD-check</small></a>
+</div>
 :::
-
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+:::

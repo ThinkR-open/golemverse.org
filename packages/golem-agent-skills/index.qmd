@@ -1,0 +1,55 @@
+---
+title: "golem-agent-skills"
+image: "/img/golem-agent-skills.png"
+description: "golem-agent-skills brings agentic coding to {golem}."
+categories: [Core]
+tier: Core
+lifecycle: experimental
+cran: FALSE
+order: 8
+page-layout: full
+title-block-style: none
+---
+
+::: {.gv-pkg-head}
+![](/img/golem-agent-skills.png)
+
+::: {.gv-pkg-body}
+<div class="gv-chips"><span class="gv-pill gv-pill-core">Core</span><span class="gv-pill gv-pill-experimental">experimental</span></div>
+
+<h1>golem-agent-skills</h1>
+
+[`golem-agent-skills` brings agentic coding to `{golem}`.]{.gv-pkg-tagline}
+
+A collection of agent skills for agentic coding with `{golem}`, helping AI coding assistants build production-grade `{shiny}` applications the golem way.
+
+<div class="gv-actions" data-gv-cran="golem-agent-skills"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/ThinkR-open/golem-agent-skills" hidden>Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/golem-agent-skills">GitHub</a></div>
+:::
+:::
+
+<div class="gv-tiles" data-gv-repo="ThinkR-open/golem-agent-skills" data-gv-cran="golem-agent-skills">
+<div class="gv-tile"><span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span></div>
+</div>
+
+::: {.gv-pkg-cols}
+::: {.gv-col}
+## Install
+
+```r
+# Development version
+pak::pak("ThinkR-open/golem-agent-skills")
+```
+:::
+
+::: {.gv-col}
+## Links
+
+<div class="gv-links" data-gv-cran="golem-agent-skills">
+<a data-gv="pkgdown" href="https://github.com/ThinkR-open/golem-agent-skills" hidden>Reference and vignettes <small>pkgdown</small></a>
+<a href="https://github.com/ThinkR-open/golem-agent-skills">Source <small>ThinkR-open/golem-agent-skills</small></a>
+<a href="https://github.com/ThinkR-open/golem-agent-skills/issues">Report an issue <small>issues</small></a>
+</div>
+:::
+:::

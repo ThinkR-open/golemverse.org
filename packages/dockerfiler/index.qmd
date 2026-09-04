@@ -1,46 +1,61 @@
 ---
 title: "dockerfiler"
 image: "/img/dockerfiler.png"
+description: "Build dockerfile straight from R."
+categories: [Core]
+tier: Core
+lifecycle: stable
+cran: TRUE
+order: 5
+page-layout: full
+title-block-style: none
 ---
 
-::: {.grid}
-
-::: {.g-col-6}
-
+::: {.gv-pkg-head}
 ![](/img/dockerfiler.png)
 
-:::
+::: {.gv-pkg-body}
+<div class="gv-chips"><span class="gv-pill gv-pill-core">Core</span><span class="gv-pill gv-pill-stable">stable</span><span class="gv-chip" data-gv-cran="dockerfiler">CRAN <span data-gv="version">…</span></span></div>
 
-::: {.g-col-6}
+<h1>dockerfiler</h1>
 
-Build dockerfile straight from R.
+[Build dockerfile straight from R.]{.gv-pkg-tagline}
 
 The goal of `{dockerfiler}` is to provide an easy way to create Dockerfiles from R. You can use `{dockerfiler}` to programatically create a Dockerfile.
 
-<div align = "center">
+<div class="gv-actions" data-gv-cran="dockerfiler"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/thinkr-open/dockerfiler" hidden>Documentation</a><a class="gv-btn" href="https://github.com/thinkr-open/dockerfiler">GitHub</a><a class="gv-btn" href="https://CRAN.R-project.org/package=dockerfiler">CRAN</a></div>
+:::
+:::
 
-<img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg">
-
-<a  target = "_blank" href="https://CRAN.R-project.org/package=dockerfiler">
-<img src = "https://www.r-pkg.org/badges/version/dockerfiler">
-</a>
-
-<a  target = "_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/dockerfiler">
-  <img src = "https://cranlogs.r-pkg.org/badges/dockerfiler">
-</a>
-
-<a  target = "_blank" href="https://github.com/thinkr-open/dockerfiler/actions">
- <img src="https://github.com/thinkr-open/dockerfiler/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
-</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/dockerfiler" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/dockerfiler/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a>
+<div class="gv-tiles" data-gv-repo="thinkr-open/dockerfiler" data-gv-cran="dockerfiler">
+<div class="gv-tile"><span class="gv-tile-value" data-gv="downloads">—</span><span class="gv-tile-label">downloads last month</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span></div>
 </div>
 
+::: {.gv-pkg-cols}
+::: {.gv-col}
+## Install
+
+```r
+# From CRAN
+install.packages("dockerfiler")
+
+# Development version
+pak::pak("thinkr-open/dockerfiler")
+```
 :::
 
+::: {.gv-col}
+## Links
+
+<div class="gv-links" data-gv-cran="dockerfiler">
+<a data-gv="pkgdown" href="https://github.com/thinkr-open/dockerfiler" hidden>Reference and vignettes <small>pkgdown</small></a>
+<a href="https://github.com/thinkr-open/dockerfiler">Source <small>thinkr-open/dockerfiler</small></a>
+<a href="https://github.com/thinkr-open/dockerfiler/issues">Report an issue <small>issues</small></a>
+<a href="https://github.com/thinkr-open/dockerfiler/actions">CI status <small>R-CMD-check</small></a>
+<a href="https://CRAN.R-project.org/package=dockerfiler">CRAN page <small>cran.r-project.org</small></a>
+</div>
 :::
-
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+:::

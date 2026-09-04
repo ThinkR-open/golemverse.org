@@ -1,93 +1,82 @@
 ---
-title: "R packages for building robust, production grade `{shiny}` apps."
-about:
-  id: hero-heading
-  template: broadside
-  image: img/profile.png
+pagetitle: "golemverse"
+page-layout: full
 listing:
+  - id: core-packages
+    contents: packages/*/index.qmd
+    include:
+      tier: Core
+    sort: "order"
+    field-types:
+      order: number
+    type: custom
+    template: packages/package-card.ejs
   - contents: news
-    type: default
+    type: grid
+    grid-columns: 3
+    fields: [date, title]
     id: blog-listings
-    max-items: 5
+    max-items: 3
     sort: "date desc"
     feed: true
     exclude:
       id: news-index
 ---
 
-:::{#hero-heading}
+::: {.gv-hero}
+::: {.gv-hero-copy}
+<a class="gv-eyebrow" href="news/golem-1.0.0-release-on-cran/"><span class="gv-pill">New</span>{golem} 1.0 is out: agent skills, Docker + renv, cli output</a>
 
-The golemverse is a collection of R packages for building `{shiny}` apps that need to be safely shipped to production.
+<h1>Shiny apps, engineered for production.</h1>
 
-<!-- Install them all with:
+[The golemverse is a family of R packages for building, testing and shipping robust `{shiny}` applications, from the first prototype to the Dockerfile.]{.gv-lede}
+
+<div class="gv-actions"><a class="gv-btn gv-btn-primary" href="packages/golem/">Get started with {golem}</a><a class="gv-btn" href="https://engineering-shiny.org/">Read the book</a></div>
 
 ```r
-install.packages("golemverse")
-``` -->
-
-### Packages from the golemverse
-
-- `{bank}`, Extra Cache
-
-- `{brochure}`, Multipage 'Shiny' Apps
-
-- `{dockerfiler}`, Easy Dockerfile Creation from R
-
-- `{elvis}`, 'Shiny' renderers and observers made safer
-
-- `{fakir}`, Generate Fake Datasets for Prototyping and Teaching
-
-- `{gargoyle}`, An Event-Based Mechanism for 'Shiny'
-
-- `{gemstones}`, Make Your 'golem' App Shine
-
-- `{golem}`, A framework for production-grade `{shiny}` apps
-
-- `{ghooks}`, 'Golem' Hooks for Standard 'Shiny' Apps
-
-- `{minifyr}`, Minify CSS, HTML and JavaScript Files
-
-- `{skeleton}`, Skeleton CSS for Shiny
-
-- `{shinidraw}`, 'Excalidraw' in 'Shiny'
-
-- `{shinipsum}`, Lorem-Ipsum Helper Function for 'shiny' Prototyping
-
-- `{w3css}`, W3CSS for 'shiny'
-
-
+# From CRAN
+install.packages("golem")
+golem::create_golem("myapp", with_agents = TRUE)
+```
 :::
 
-## Read the book 📚
-
-::: {.grid}
-
-::: {.g-col-6}
-
-Learn more about building `{shiny}` apps for production with the _Engineering Production-Grade Shiny Apps_.
-
-The online version of the book is free to read on <https://engineering-shiny.org/>.
-
-This book is available in print, published in the R Series by Chapman and Hall/CRC.
-You can grab a copy on [routledge.com](https://www.routledge.com/Engineering-Production-Grade-Shiny-Apps/Fay-Rochette-Guyader-Girard/p/book/9780367466022?utm_source=author&utm_medium=shared_link&utm_campaign=B043139_jm1_5ll_6rm_t081_1al_engineeringproduction-gradeshinyappsauthorshare).
-
+<div class="gv-hive"><img class="gv-hive-1" src="img/golem.png" alt="golem"><img class="gv-hive-2" src="img/brochure.png" alt="brochure"><img class="gv-hive-3" src="img/bootstrict.png" alt="bootstrict"><img class="gv-hive-4" src="img/dockerfiler.png" alt="dockerfiler"></div>
 :::
 
-::: {.g-col-6}
+<div class="gv-stats" data-gv-cran="golem" data-gv-repo="ThinkR-open/golem">
+<div class="gv-stat"><span class="gv-stat-value" data-gv="downloads">—</span><span class="gv-stat-label">downloads of {golem} last month</span></div>
+<div class="gv-stat"><span class="gv-stat-value" data-gv="stars">—</span><span class="gv-stat-label">stars on GitHub</span></div>
+<div class="gv-stat"><span class="gv-stat-value" data-gv="version">—</span><span class="gv-stat-label">current CRAN release</span></div>
+</div>
 
-![](img/engineering-shiny.jpg)
+<div class="gv-section-head"><div><h2>Core packages</h2><p>The maintained heart of the golemverse. Start with {golem}, add the others as your app grows.</p></div><a href="packages/">All packages →</a></div>
 
+::: {#core-packages}
 :::
 
-:::
+<div class="gv-section-head"><div><h2>One family, a clear lifecycle</h2><p>Every package is tagged so you know what you can rely on.</p></div></div>
 
-## On the blog ✍️
+<div class="gv-tiers">
+<div class="gv-tier"><div><span class="gv-pill gv-pill-core">Core</span></div><p>Maintained by ThinkR. Safe to build on, with CRAN releases when the API is stable.</p></div>
+<div class="gv-tier"><div><span class="gv-pill gv-pill-experimental">Experimental</span></div><p>Young or moving fast. Try them, expect rough edges, and tell us what breaks.</p></div>
+<div class="gv-tier"><div><span class="gv-pill gv-pill-abandoned">Abandoned</span></div><p>No longer maintained. Kept online for reference, not for new projects.</p></div>
+</div>
+
+<div class="gv-book">
+<img src="img/engineering-shiny.jpg" alt="Engineering Production-Grade Shiny Apps, book cover">
+<div>
+<span class="gv-kicker">The book</span>
+<h2>Engineering Production-Grade Shiny Apps</h2>
+<p>The method behind the golemverse: design, build, test, deploy. Free to read online, and in print in the R Series by Chapman and Hall/CRC.</p>
+<div class="gv-actions"><a class="gv-btn gv-btn-primary" href="https://engineering-shiny.org/">Read it online, free</a><a class="gv-btn" href="https://www.routledge.com/Engineering-Production-Grade-Shiny-Apps/Fay-Rochette-Guyader-Girard/p/book/9780367466022?utm_source=author&utm_medium=shared_link&utm_campaign=B043139_jm1_5ll_6rm_t081_1al_engineeringproduction-gradeshinyappsauthorshare">Get the print edition</a></div>
+</div>
+</div>
+
+<div class="gv-section-head"><div><h2>From the blog</h2></div><a href="news/">All posts →</a></div>
 
 ::: {#blog-listings}
-
 :::
 
-## Contact 📲
+## Contact
 
-Contact us via the <a href = "https://rtask.thinkr.fr/contact/">ThinkR website</a>!
-
+Contact us via the [ThinkR website](https://rtask.thinkr.fr/contact/).

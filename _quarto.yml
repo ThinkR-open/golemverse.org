@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - gv-stats.js
 
 execute:
   freeze: auto
@@ -17,17 +19,19 @@ website:
   repo-actions: [edit, issue]
   twitter-card: true
   navbar:
+    logo: /img/golem.png
+    logo-alt: "golem hex sticker"
     left:
-      - text: "Resources"
-        file: resources/index.qmd
       - text: "Packages"
         file: packages/index.qmd
+      - text: "Resources"
+        file: resources/index.qmd
       - text: "Roadmap"
         file: roadmap/index.qmd
       - text: "News"
         file: news/index.qmd
-      - text: "Stream"
-        file: stream/index.qmd
+      # - text: "Stream"
+      #   file: stream/index.qmd
       - text: "Contact"
         file: index.qmd#contact
     right:
@@ -52,8 +56,12 @@ website:
 
 format:
   html:
-    theme: simplex
+    theme: custom.scss
     css: styles.css
+    highlight-style: nord
+    include-after-body:
+      text: |
+        <script src="/gv-stats.js"></script>
 
 
 

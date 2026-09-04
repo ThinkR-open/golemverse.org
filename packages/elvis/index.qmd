@@ -1,46 +1,56 @@
 ---
 title: "elvis"
 image: "/img/elvis.png"
+description: "'Shiny' renderers and observers made safer."
+categories: [Experimental]
+tier: Experimental
+lifecycle: dormant
+cran: FALSE
+order: 11
+page-layout: full
+title-block-style: none
 ---
 
-::: {.grid}
-
-::: {.g-col-6}
-
+::: {.gv-pkg-head}
 ![](/img/elvis.png)
 
-:::
+::: {.gv-pkg-body}
+<div class="gv-chips"><span class="gv-pill gv-pill-experimental">Experimental</span><span class="gv-pill gv-pill-dormant">dormant</span></div>
 
-::: {.g-col-6}
+<h1>elvis</h1>
 
-'Shiny' renderers and observers made safer.
+['Shiny' renderers and observers made safer.]{.gv-pkg-tagline}
 
 The goal of `{elvis}` is to provide safer render* and observe* in `{shiny}` by providing a native tryCatch() mechanism.
 
-<div align = "center">
+<div class="gv-actions" data-gv-cran="elvis"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/thinkr-open/elvis" hidden>Documentation</a><a class="gv-btn" href="https://github.com/thinkr-open/elvis">GitHub</a></div>
+:::
+:::
 
-<img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg">
-
-<a  target = "_blank" href="https://CRAN.R-project.org/package=elvis">
-<img src = "https://www.r-pkg.org/badges/version/elvis">
-</a>
-
-<a  target = "_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/elvis">
-  <img src = "https://cranlogs.r-pkg.org/badges/elvis">
-</a>
-
-<a  target = "_blank" href="https://github.com/thinkr-open/elvis/actions">
- <img src="https://github.com/thinkr-open/elvis/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
-</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/elvis" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/elvis/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a>
+<div class="gv-tiles" data-gv-repo="thinkr-open/elvis" data-gv-cran="elvis">
+<div class="gv-tile"><span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span></div>
 </div>
 
+::: {.gv-pkg-cols}
+::: {.gv-col}
+## Install
+
+```r
+# Development version
+pak::pak("thinkr-open/elvis")
+```
 :::
 
+::: {.gv-col}
+## Links
+
+<div class="gv-links" data-gv-cran="elvis">
+<a data-gv="pkgdown" href="https://github.com/thinkr-open/elvis" hidden>Reference and vignettes <small>pkgdown</small></a>
+<a href="https://github.com/thinkr-open/elvis">Source <small>thinkr-open/elvis</small></a>
+<a href="https://github.com/thinkr-open/elvis/issues">Report an issue <small>issues</small></a>
+<a href="https://github.com/thinkr-open/elvis/actions">CI status <small>R-CMD-check</small></a>
+</div>
 :::
-
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+:::

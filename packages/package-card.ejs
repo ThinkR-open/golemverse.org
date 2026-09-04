@@ -1,0 +1,5 @@
+<div class="gv-cards<%= (typeof size !== 'undefined' && size === 'sm') ? ' gv-cards-sm' : '' %>">
+<% for (const item of items) { %>
+<div class="gv-card"><img src="<%- item.image %>" alt=""><div class="gv-card-body"><a class="gv-card-name" href="<%- item.path %>"><%= item.title %></a><span class="gv-card-desc"><%= item.description %></span><div class="gv-chips"><span class="gv-pill gv-pill-<%= String(item.tier || '').toLowerCase() %>"><%= item.tier %></span><% if (item.cran) { %><span class="gv-chip">CRAN</span><% } else { %><span class="gv-chip">GitHub only</span><% } %></div></div></div>
+<% } %>
+</div>

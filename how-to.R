@@ -2,7 +2,7 @@
 
 ### Add an article
 
-article_slug <- "skeleteon-css-in-shiny"
+article_slug <- "golem-playwright"
 dir.create(
   file.path("news", article_slug)
 )
@@ -12,7 +12,7 @@ file.create(
 write(
   sprintf(
    '---
-title: "Minimalist and Elegant {shiny} apps with {skeleton}"
+title: "Serve your {golem} app to {shinylive}"
 author: colin
 date: "%s"
 draft: true
@@ -27,8 +27,9 @@ rstudioapi::navigateToFile(file.path("news", article_slug, "index.qmd"))
 
 pkgs <- yaml::read_yaml("packages/packages.yaml")
 
-
-for (pak in names(pkgs$package)) {
+for (i in seq_along(pkgs$package)) {
+  pak <- names(pkgs$package)[i]
+  p <- pkgs$package[[pak]]
   if (!file.exists(sprintf("packages/%s/", pak))){
     dir.create(
       sprintf("packages/%s/", pak)
@@ -38,10 +39,20 @@ for (pak in names(pkgs$package)) {
     template = readLines("script/empty_package.whisk"),
     data = list(
       pkg = pak,
-      title = pkgs$package[[pak]]$title,
-      github = pkgs$package[[pak]]$repo,
-      description = pkgs$package[[pak]]$description,
-      lifecycle = pkgs$package[[pak]]$lifecycle
+      order = i,
+      title = p$title,
+      # Plain-text one-liner for cards and <meta description>
+      tagline = gsub('["`]', "", p$title),
+      github = p$repo,
+      repo_short = sub("https://github.com/", "", p$repo),
+      description = p$description,
+      lifecycle = p$lifecycle,
+      cran = isTRUE(p$cran),
+      # check defaults to TRUE; set `check: false` in packages.yaml for
+      # non-R-package entries that have no R-CMD-check workflow.
+      check = !isFALSE(p$check),
+      category = p$category,
+      category_lc = tolower(p$category)
     )
   ) |> write(
     sprintf("packages/%s/index.qmd", pak)
@@ -50,55 +61,28 @@ for (pak in names(pkgs$package)) {
 
 #### Render the package index page
 
+# The cards are Quarto listings filtered on the `tier` front matter; only the
+# health table rows are generated here. Numbers are filled in the browser by
+# gv-stats.js from the data-gv-* attributes.
 whisker::whisker.render(
   template = readLines("script/empty_package_index.whisk"),
   data = list(
-    content ={
-     names(pkgs$package) |>
-       purrr::map(
-        ~ sprintf(
-          "|%s|%s|%s|%s|%s|%s|%s|",
-          .x,
-          htmltools::tags$img(
-            src =  sprintf('https://lifecycle.r-lib.org/articles/figures/lifecycle-%s.svg', pkgs$package[[.x]]$lifecycle)
-          ) |> as.character(),
-          htmltools::tags$a(
-            href = sprintf("https://CRAN.R-project.org/package=%s", .x),
-            htmltools::tags$img(
-              src = sprintf("https://www.r-pkg.org/badges/version/%s", .x)
-            )
-          ) |> as.character() |> gsub("\n", "", x = _),
-          htmltools::tags$a(
-            target = "_blank",
-            href = sprintf("https://cranlogs.r-pkg.org/downloads/total/last-month/%s", .x),
-            htmltools::tags$img(
-              src = sprintf("https://cranlogs.r-pkg.org/badges/%s", .x)
-            )
-          ) |> as.character() |> gsub("\n", "", x = _),
-          htmltools::tags$a(
-            target = "_blank",
-            href = sprintf("%s/actions", pkgs$package[[.x]]$repo),
-            htmltools::tags$img(
-              src = sprintf("%s/workflows/R-CMD-check/badge.svg", pkgs$package[[.x]]$repo),
-              alt = "R-CMD-check"
-            )
-          ) |>
-            as.character() |>
-            gsub("\n", "", x = _),
-            sprintf(
-              '<a class="github-button" target = "_blank" href="%s" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars</a>',
-              pkgs$package[[.x]]$repo
-            ) |> as.character(),
-            sprintf(
-              '<a class="github-button" href="%s/issues" target = "_blank" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues</a>',
-              pkgs$package[[.x]]$repo
-            ) |> as.character()
+    n_packages = length(pkgs$package),
+    content = names(pkgs$package) |>
+      purrr::map_chr(function(pak) {
+        p <- pkgs$package[[pak]]
+        cran <- isTRUE(p$cran)
+        sprintf(
+          '<tr data-gv-repo="%s"%s><td><a class="gv-pkg" href="%s/"><img src="/img/%s.png" alt="">%s</a></td><td><span class="gv-pill gv-pill-%s">%s</span></td><td><span class="gv-dot gv-dot-%s"></span>%s</td><td>%s</td><td class="gv-num" data-gv="downloads">—</td><td class="gv-num" data-gv="stars">—</td><td class="gv-num" data-gv="issues">—</td><td data-gv="pushed">—</td></tr>',
+          sub("https://github.com/", "", p$repo),
+          if (cran) sprintf(' data-gv-cran="%s"', pak) else "",
+          pak, pak, pak,
+          tolower(p$category), p$category,
+          p$lifecycle, p$lifecycle,
+          if (cran) '<span class="gv-chip" data-gv="version">—</span>' else "—"
         )
-
-       ) |>
-       paste(collapse = "\n") |>
-       as.character()
-    }
+      }) |>
+      paste(collapse = "\n")
   )
 ) |> write(
   sprintf("packages/index.qmd")

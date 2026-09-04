@@ -1,34 +1,66 @@
 ---
 title: "Packages"
 page-layout: full
-title-block-banner: false
 listing:
-  contents: .
-  id: package-listing
-  sort: "date desc"
-  type: grid
-  image-height: 100%
-  grid-columns: 4
-  sort-ui: false
-  filter-ui: false
+  - id: listing-core
+    contents: "*/index.qmd"
+    include:
+      tier: Core
+    sort: "order"
+    field-types:
+      order: number
+    type: custom
+    template: package-card.ejs
+  - id: listing-experimental
+    contents: "*/index.qmd"
+    include:
+      tier: Experimental
+    sort: "order"
+    field-types:
+      order: number
+    type: custom
+    template: package-card.ejs
+    template-params:
+      size: sm
+  - id: listing-abandoned
+    contents: "*/index.qmd"
+    include:
+      tier: Abandoned
+    sort: "order"
+    field-types:
+      order: number
+    type: custom
+    template: package-card.ejs
+    template-params:
+      size: sm
 ---
 
-## Package details
+[{{n_packages}} packages in three tiers. Core packages are maintained and safe to build on. Experimental ones move fast. Abandoned ones stay online for reference.]{.gv-lede}
 
-::: {#package-listing}
+<div class="gv-tier-head"><h2>Core</h2><span>Maintained by ThinkR, safe to build on</span></div>
+
+::: {#listing-core}
 :::
 
+<div class="gv-tier-head"><h2>Experimental</h2><span>Moving fast, expect rough edges</span></div>
 
+::: {#listing-experimental}
+:::
 
-## CRAN status, Monthly download, and other stats
+<div class="gv-tier-head"><h2>Abandoned</h2><span>No longer maintained, kept for reference</span></div>
 
-|Package|Lifecycle|CRAN Version|Monthly Downloads| R-CMD-Check|GitHub Stars|GitHub Issues|
-|---|---|---|---|---|---|---|
+::: {#listing-abandoned}
+:::
+
+<div class="gv-section-head"><div><h2>Health at a glance</h2><p>Live numbers from CRAN and GitHub.</p></div></div>
+
+<div class="gv-table-wrap">
+<table class="gv-table">
+<thead><tr><th>Package</th><th>Tier</th><th>Lifecycle</th><th>CRAN</th><th class="gv-num">Downloads / month</th><th class="gv-num">Stars</th><th class="gv-num">Open issues</th><th>Last commit</th></tr></thead>
+<tbody>
 {{{content}}}
+</tbody>
+</table>
+</div>
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-
-
-> Note that CRAN version & Monthly Downloads are shown only for packages on CRAN
-
+<p class="gv-table-note">Downloads are the last 30 days on CRAN, from cranlogs via r-universe; they are shown only for packages on CRAN. Stars and issues come from the GitHub API.</p>

@@ -1,0 +1,56 @@
+---
+title: "pw"
+image: "/img/pw.png"
+description: "{pw} lets you test your {golem} and {shiny} applications with Playwright."
+categories: [Core]
+tier: Core
+lifecycle: experimental
+cran: FALSE
+order: 6
+page-layout: full
+title-block-style: none
+---
+
+::: {.gv-pkg-head}
+![](/img/pw.png)
+
+::: {.gv-pkg-body}
+<div class="gv-chips"><span class="gv-pill gv-pill-core">Core</span><span class="gv-pill gv-pill-experimental">experimental</span></div>
+
+<h1>pw</h1>
+
+[`{pw}` lets you test your `{golem}` and `{shiny}` applications with Playwright.]{.gv-pkg-tagline}
+
+The goal of `{pw}` is to bring end-to-end browser testing to your `{shiny}` applications by providing a set of tools to test your `{golem}` apps with Playwright.
+
+<div class="gv-actions" data-gv-cran="pw"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/ThinkR-open/pw" hidden>Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/pw">GitHub</a></div>
+:::
+:::
+
+<div class="gv-tiles" data-gv-repo="ThinkR-open/pw" data-gv-cran="pw">
+<div class="gv-tile"><span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span></div>
+</div>
+
+::: {.gv-pkg-cols}
+::: {.gv-col}
+## Install
+
+```r
+# Development version
+pak::pak("ThinkR-open/pw")
+```
+:::
+
+::: {.gv-col}
+## Links
+
+<div class="gv-links" data-gv-cran="pw">
+<a data-gv="pkgdown" href="https://github.com/ThinkR-open/pw" hidden>Reference and vignettes <small>pkgdown</small></a>
+<a href="https://github.com/ThinkR-open/pw">Source <small>ThinkR-open/pw</small></a>
+<a href="https://github.com/ThinkR-open/pw/issues">Report an issue <small>issues</small></a>
+<a href="https://github.com/ThinkR-open/pw/actions">CI status <small>R-CMD-check</small></a>
+</div>
+:::
+:::

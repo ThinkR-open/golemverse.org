@@ -1,46 +1,56 @@
 ---
 title: "w3css"
 image: "/img/w3css.png"
+description: "W3 CSS in {shiny}."
+categories: [Abandoned]
+tier: Abandoned
+lifecycle: dormant
+cran: FALSE
+order: 15
+page-layout: full
+title-block-style: none
 ---
 
-::: {.grid}
-
-::: {.g-col-6}
-
+::: {.gv-pkg-head}
 ![](/img/w3css.png)
 
-:::
+::: {.gv-pkg-body}
+<div class="gv-chips"><span class="gv-pill gv-pill-abandoned">Abandoned</span><span class="gv-pill gv-pill-dormant">dormant</span></div>
 
-::: {.g-col-6}
+<h1>w3css</h1>
 
-W3 CSS in `{shiny}`.
+[W3 CSS in `{shiny}`.]{.gv-pkg-tagline}
 
 An implementation of W3 CSS https://www.w3schools.com/w3css/ for `{shiny}``.
 
-<div align = "center">
+<div class="gv-actions" data-gv-cran="w3css"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/thinkr-open/w3css" hidden>Documentation</a><a class="gv-btn" href="https://github.com/thinkr-open/w3css">GitHub</a></div>
+:::
+:::
 
-<img src = "https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg">
-
-<a  target = "_blank" href="https://CRAN.R-project.org/package=w3css">
-<img src = "https://www.r-pkg.org/badges/version/w3css">
-</a>
-
-<a  target = "_blank" href="https://cranlogs.r-pkg.org/downloads/total/last-month/w3css">
-  <img src = "https://cranlogs.r-pkg.org/badges/w3css">
-</a>
-
-<a  target = "_blank" href="https://github.com/thinkr-open/w3css/actions">
- <img src="https://github.com/thinkr-open/w3css/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"/>
-</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/w3css" data-icon="octicon-star" data-show-count="true" aria-label="Star this on GitHub">Stars:</a>
-
-<a class="github-button"  target = "_blank" href="https://github.com/thinkr-open/w3css/issues" data-icon="octicon-issue-opened"  data-show-count="true" aria-label="Issue buttons/github-buttons on GitHub">Issues: </a>
+<div class="gv-tiles" data-gv-repo="thinkr-open/w3css" data-gv-cran="w3css">
+<div class="gv-tile"><span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span></div>
+<div class="gv-tile"><span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span></div>
 </div>
 
+::: {.gv-pkg-cols}
+::: {.gv-col}
+## Install
+
+```r
+# Development version
+pak::pak("thinkr-open/w3css")
+```
 :::
 
+::: {.gv-col}
+## Links
+
+<div class="gv-links" data-gv-cran="w3css">
+<a data-gv="pkgdown" href="https://github.com/thinkr-open/w3css" hidden>Reference and vignettes <small>pkgdown</small></a>
+<a href="https://github.com/thinkr-open/w3css">Source <small>thinkr-open/w3css</small></a>
+<a href="https://github.com/thinkr-open/w3css/issues">Report an issue <small>issues</small></a>
+<a href="https://github.com/thinkr-open/w3css/actions">CI status <small>R-CMD-check</small></a>
+</div>
 :::
-
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+:::
