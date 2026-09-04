@@ -529,7 +529,7 @@
     "href": "index.html",
     "title": "\nShiny apps, engineered for production.\n",
     "section": "",
-    "text": "New{golem} 1.0 is out: agent skills, Docker + renv, cli output\n\nThe golemverse is a family of R packages for building, testing and shipping robust {shiny} applications, from the first prototype to the Dockerfile.\n\nGet started with {golem}Read the book\n\n# From CRAN\ninstall.packages(\"golem\")\ngolem::create_golem(\"myapp\", with_agents = TRUE)"
+    "text": "New{golem} 1.0 is out: agent skills, Docker + renv, cli output\n\nThe golemverse is a family of R packages for building, testing and shipping robust {shiny} applications, from the first prototype to the Dockerfile.\n\nGet started with {golem}Read the book\n\n# From CRAN\ninstall.packages(\"golem\")\ngolem::create_golem(\"myapp\", with_agents = TRUE)\n\n\n\n\n\n\n\n\n      \n\n+ 16 more"
   },
   {
     "objectID": "index.html#contact",
