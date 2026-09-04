@@ -72,20 +72,42 @@ div.sourceCode code, div.sourceCode pre { color: #E8EAED; font-size: 0.9rem; lin
 .gv-section-head a:hover { color: $gv-orange-dark; }
 
 // ---- home: hero ----
-.gv-hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 3rem; align-items: center; padding: 4.5rem 0 3.5rem; }
+.gv-hero { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 3rem; align-items: center; padding: 4.5rem 0 3.5rem; }
 .gv-hero h1 { font-size: 4.1rem; font-weight: 800; line-height: 1.02; letter-spacing: -0.03em; margin: 1.5rem 0; text-wrap: balance; }
 .gv-eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 6px 12px 6px 6px; border-radius: 999px; border: 1px solid $gv-line; background: $gv-surface; color: $gv-slate; font-size: 0.85rem; font-weight: 500; text-decoration: none; }
 .gv-eyebrow:hover { color: $gv-ink; border-color: $gv-slate; }
 .gv-eyebrow .gv-pill { background: $gv-orange; color: #fff; }
 .gv-lede { font-size: 1.25rem; line-height: 1.5; color: $gv-muted; max-width: 560px; }
 .gv-hero .gv-actions { margin-bottom: 1.5rem; }
-.gv-hero div.sourceCode { max-width: 520px; margin: 0; }
-.gv-hive { position: relative; height: 480px; }
-.gv-hive img { position: absolute; margin: 0; }
-.gv-hive-1 { left: 110px; top: 0; width: 250px; }
-.gv-hive-2 { left: 0; top: 210px; width: 150px; }
-.gv-hive-3 { left: 160px; top: 305px; width: 150px; }
-.gv-hive-4 { left: 320px; top: 210px; width: 150px; }
+.gv-hero div.sourceCode { max-width: 470px; margin: 0; }
+.gv-hive { position: relative; left: 50%; width: 600px; height: 520px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; }
+.gv-hive-grid {
+  position: absolute; top: 0; bottom: 0; left: 50%; width: 600px; transform: translateX(-50%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='104' viewBox='0 0 120 104'%3E%3Cg fill='none' stroke='%23E7E3DD' stroke-width='1.5'%3E%3Cpath d='M30 1 59 18v34L30 69 1 52V18L30 1Z'/%3E%3Cpath d='M90 1 119 18v34L90 69 61 52V18L90 1Z'/%3E%3Cpath d='m60 53 29 17v34L60 121 31 104V70l29-17Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 120px 104px;
+  opacity: 0.72;
+  mask-image: radial-gradient(ellipse at center, black 42%, transparent 76%);
+}
+.gv-hive-golem { position: relative; width: 300px; margin: 0; filter: drop-shadow(0 26px 40px rgba(30, 37, 44, 0.22)); }
+.gv-hive-chips { position: relative; width: 504px; box-sizing: border-box; display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 28px; background: $gv-surface; border: 1px solid $gv-line; box-shadow: 0 18px 36px rgba(30, 37, 44, 0.08); }
+.gv-hive-chip-row { display: flex; align-items: center; gap: 4px; flex-wrap: nowrap; flex-shrink: 0; }
+.gv-hive-chip-row p, .gv-hive-chips > p { display: flex; align-items: center; gap: 4px; margin: 0; line-height: 1; }
+.gv-hive-chip {
+  position: relative;
+  width: 52px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+  text-decoration: none;
+}
+.gv-hive-chip img { width: 100%; height: 100%; object-fit: contain; margin: 0; display: block; }
+.gv-hive-chip:hover { transform: translateY(-1px); }
+.gv-hive-more { font-size: 0.9rem; font-weight: 700; color: $gv-slate; white-space: nowrap; padding: 0 2px; }
 
 // ---- home: stats, tiers, book ----
 .gv-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; padding: 1.75rem 0; border-top: 1px solid $gv-line; border-bottom: 1px solid $gv-line; }
@@ -165,7 +187,10 @@ div.sourceCode code, div.sourceCode pre { color: #E8EAED; font-size: 0.9rem; lin
 @media (max-width: 991.98px) {
   .gv-hero, .gv-stats, .gv-tiers, .gv-cards, .gv-cards-sm, .gv-book, .gv-pkg-head, .gv-pkg-cols { grid-template-columns: minmax(0, 1fr); }
   .gv-hero h1 { font-size: 2.75rem; }
-  .gv-hive { display: none; }
+  .gv-hive { left: auto; width: 100%; transform: none; }
+  .gv-hive-grid { width: 100%; }
+  .gv-hive-golem { width: min(300px, 78vw); }
+  .gv-hive-chips { width: min(504px, 100%); }
   .gv-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gv-pkg-head h1 { font-size: 2.75rem; }
   .gv-book { padding: 2rem; }

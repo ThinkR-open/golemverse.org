@@ -40,7 +40,22 @@ golem::create_golem("myapp", with_agents = TRUE)
 ```
 :::
 
-<div class="gv-hive"><img class="gv-hive-1" src="img/golem.png" alt="golem"><img class="gv-hive-2" src="img/brochure.png" alt="brochure"><img class="gv-hive-3" src="img/bootstrict.png" alt="bootstrict"><img class="gv-hive-4" src="img/dockerfiler.png" alt="dockerfiler"></div>
+<div class="gv-hive">
+<div class="gv-hive-grid" aria-hidden="true"></div>
+<img class="gv-hive-golem" src="img/golem.png" alt="golem">
+<div class="gv-hive-chips" aria-label="Some golemverse packages">
+<div class="gv-hive-chip-row">
+<a class="gv-hive-chip" href="packages/dockerfiler/" aria-label="dockerfiler"><img src="img/dockerfiler.png" alt="" aria-hidden="true"></a>
+<a class="gv-hive-chip" href="packages/fakir/" aria-label="fakir"><img src="img/fakir.png" alt="" aria-hidden="true"></a>
+<a class="gv-hive-chip" href="packages/shinipsum/" aria-label="shinipsum"><img src="img/shinipsum.png" alt="" aria-hidden="true"></a>
+<a class="gv-hive-chip" href="packages/brochure/" aria-label="brochure"><img src="img/brochure.png" alt="" aria-hidden="true"></a>
+<a class="gv-hive-chip" href="packages/gargoyle/" aria-label="gargoyle"><img src="img/gargoyle.png" alt="" aria-hidden="true"></a>
+<a class="gv-hive-chip" href="packages/bootstrict/" aria-label="bootstrict"><img src="img/bootstrict.png" alt="" aria-hidden="true"></a>
+<a class="gv-hive-chip" href="packages/pw/" aria-label="pw"><img src="img/pw.png" alt="" aria-hidden="true"></a>
+</div>
+<span class="gv-hive-more">+ 16 more</span>
+</div>
+</div>
 :::
 
 <div class="gv-stats" data-gv-cran="golem" data-gv-repo="ThinkR-open/golem">
