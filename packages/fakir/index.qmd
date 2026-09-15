@@ -23,7 +23,7 @@ title-block-style: none
 
 `{fakir}` contains a set of functions for creating synthetic datasets that mimic real-world data, allowing users to test their code under a variety of different scenarios.
 
-<div class="gv-actions" data-gv-cran="fakir"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/ThinkR-open/fakir" hidden>Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/fakir">GitHub</a><a class="gv-btn" href="https://CRAN.R-project.org/package=fakir">CRAN</a></div>
+<div class="gv-actions" data-gv-cran="fakir"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://thinkr-open.github.io/fakir/">Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/fakir">GitHub</a><a class="gv-btn" href="https://CRAN.R-project.org/package=fakir">CRAN</a></div>
 :::
 :::
 

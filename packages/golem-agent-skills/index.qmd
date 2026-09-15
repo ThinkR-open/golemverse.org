@@ -23,7 +23,7 @@ title-block-style: none
 
 A collection of agent skills for agentic coding with `{golem}`, helping AI coding assistants build production-grade `{shiny}` applications the golem way.
 
-<div class="gv-actions" data-gv-cran="golem-agent-skills"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/ThinkR-open/golem-agent-skills" hidden>Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/golem-agent-skills">GitHub</a></div>
+<div class="gv-actions" data-gv-cran="golem-agent-skills"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://thinkr-open.github.io/golem-agent-skills/">Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/golem-agent-skills">GitHub</a></div>
 :::
 :::
 

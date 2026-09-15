@@ -23,7 +23,7 @@ title-block-style: none
 
 The goal of `{brochure}` is to provide a mechanism for creating natively multi-page `{shiny}`applications, i.e that can serve content on multiple endpoints.
 
-<div class="gv-actions" data-gv-cran="brochure"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/colinfay/brochure" hidden>Documentation</a><a class="gv-btn" href="https://github.com/colinfay/brochure">GitHub</a></div>
+<div class="gv-actions" data-gv-cran="brochure"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://colinfay.me/brochure/">Documentation</a><a class="gv-btn" href="https://github.com/colinfay/brochure">GitHub</a></div>
 :::
 :::
 

@@ -23,7 +23,7 @@ title-block-style: none
 
 {gargoyle} is a package that provides wrappers around {shiny} to turn your app into and event-based application instead of a full reactive app. The framework is centered around a listen & trigger mechanism. It works with classical UI, and just needs tweaking the server side of your app.
 
-<div class="gv-actions" data-gv-cran="gargoyle"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/colinfay/gargoyle" hidden>Documentation</a><a class="gv-btn" href="https://github.com/colinfay/gargoyle">GitHub</a><a class="gv-btn" href="https://CRAN.R-project.org/package=gargoyle">CRAN</a></div>
+<div class="gv-actions" data-gv-cran="gargoyle"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://colinfay.me/gargoyle/">Documentation</a><a class="gv-btn" href="https://github.com/colinfay/gargoyle">GitHub</a><a class="gv-btn" href="https://CRAN.R-project.org/package=gargoyle">CRAN</a></div>
 :::
 :::
 

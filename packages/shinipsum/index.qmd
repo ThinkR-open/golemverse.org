@@ -23,7 +23,7 @@ title-block-style: none
 
 This R package is a simple package designed to generate placeholder elements for `{shiny}` applications. It provides a set of functions that can be used to generate 'lorem ipsum' style elements that can be used as filler in Shiny applications while prototyping.
 
-<div class="gv-actions" data-gv-cran="shinipsum"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://github.com/ThinkR-open/shinipsum" hidden>Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/shinipsum">GitHub</a><a class="gv-btn" href="https://CRAN.R-project.org/package=shinipsum">CRAN</a></div>
+<div class="gv-actions" data-gv-cran="shinipsum"><a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://thinkr-open.github.io/shinipsum/">Documentation</a><a class="gv-btn" href="https://github.com/ThinkR-open/shinipsum">GitHub</a><a class="gv-btn" href="https://CRAN.R-project.org/package=shinipsum">CRAN</a></div>
 :::
 :::
 
