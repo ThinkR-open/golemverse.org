@@ -3,11 +3,28 @@ title: "Documentation and resources"
 page-layout: full
 ---
 
-> Notes: The golemverse is constantly evolving. We gather here resources back from 2019, so some of the resources below might be outdated.
+[Books, documentation, tutorials and talks about the golemverse, gathered since 2019. The ecosystem keeps moving, so some of the oldest entries below may be out of date.]{.gv-lede}
 
-## Book 📚
+## Books 📚
 
-- ["Engineering Production-grade Shiny Apps"](https://engineering-shiny.org/)
+- ["Engineering Production-grade Shiny Apps"](https://engineering-shiny.org/) — the book behind the golemverse, by Colin Fay, Sébastien Rochette, Vincent Guyader and Cervan Girard. Free to read online, and in print in the R Series by Chapman and Hall/CRC.
+- ["Shiny App-Packages"](https://mjfrigaard.github.io/shiny-app-pkgs/golem.html) — a whole chapter builds the same app with `{golem}`, by Martin Frigaard.
+- ["Shiny Frameworks"](https://mjfrigaard.github.io/sfw/golem.html) — `{golem}`, `{leprechaun}` and `{rhino}` side by side, by Martin Frigaard.
+- 🇧🇷 ["Programando em Shiny"](https://curso-r.github.io/programando-em-shiny/golem.html) — chapter 11 covers `{golem}` in Portuguese, by Curso-R.
+
+## Documentation 📖
+
+- [Getting started](https://thinkr-open.github.io/golem/articles/a-getting-started.html) — from `create_golem()` to a first working app.
+- [Day to day development](https://thinkr-open.github.io/golem/articles/b-develop.html) — modules, functions, tests, the `dev/` scripts.
+- [Deploy your app](https://thinkr-open.github.io/golem/articles/c-deploy.html) — Docker, `{renv}`, Posit Connect, shinyapps.io, ShinyProxy.
+- [JavaScript](https://thinkr-open.github.io/golem/articles/d-js.html) and [configuration](https://thinkr-open.github.io/golem/articles/e-config.html).
+- [Extending `{golem}`](https://thinkr-open.github.io/golem/articles/f-extending_golem.html) — write your own templates and hooks.
+- [Test your app with Playwright](https://thinkr-open.github.io/pw/) — the `{pw}` package documentation.
+- [golem agent skills](https://github.com/ThinkR-open/golem-agent-skills) — teach your coding assistant the golem conventions.
+
+## Cheatsheet 📑
+
+- [`{golem}` cheatsheet](https://rstudio.github.io/cheatsheets/golem.pdf), also in the [Posit cheatsheet gallery](https://posit.co/resources/cheatsheets/).
 
 ## Blog posts ✍️
 
@@ -15,16 +32,39 @@ For the latest news, read the [golemverse blog](/news/).
 
 You can also browse the ["golem" tag](https://rtask.thinkr.fr/golem/) on the RTask website.
 
+Written elsewhere in the community:
+
+- ["{rhino} vs {golem} vs {leprechaun}: Which R/Shiny Library is Right for You?"](https://www.appsilon.com/post/rhino-vs-golem-vs-leprechaun) — Gift Kenneth, Appsilon, 2023.
+- ["Navigating the Shiny Universe with Golem"](https://prof-thiagooliveira.netlify.app/post/golem-package/) — Thiago de Paula Oliveira, 2023.
+- ["Deploying a Golem Shiny App to ShinyApps.io"](https://pacha.dev/blog/2025/08/24/golem/) — Mauricio Vargas Sepúlveda, 2025.
+- [golemWebR](https://github.com/DivadNojnarg/golemWebR) — a worked example of a `{golem}` app served with webR, by David Granjon.
+
 ## Conferences, videos, podcasts 🤩
 
 Have any resource to add here? [Feel free to open an issue!](https://github.com/ThinkR-open/golemverse.org/issues).
 
 
 
+## 2025
+
+
+- 2025-10-08  [Workshop - Production-Proof Shiny: end-to-end testing with Playwright and {golem}](https://www.jumpingrivers.com/blog/shiny-in-production-2025-workshop-announcement/) Shiny in Production, Newcastle, by [Colin Fay](https://colinfay.me/)
+- 2025-07-20 🎥 [Golem is a Must-Know Framework For R-Shiny (and here's how to use it)](https://www.youtube.com/watch?v=FEWJsoDewgk) Online, by [Albert Rapp](https://albert-rapp.de/)
+
+
+## 2023
+
+
+- 2023-06-29 🎥 [Building a basic Shiny app with {golem} - Part II](https://www.youtube.com/watch?v=uQFZVVZponc) Online, by [Mauricio Vargas Sepulveda](https://pacha.dev/)
+- 2023-04-15 🎥 [Building a basic Shiny app with {golem} - Part I](https://www.youtube.com/watch?v=6EB-dXBJFDE) Online, by [Mauricio Vargas Sepulveda](https://pacha.dev/)
+- 2023-03-16 🎥 [Keynote - Production is like ultra running: brutal, ungrateful, but worth every step](https://www.youtube.com/watch?v=wMbhxTJNrmw) ShinyConf 2023, by [Colin Fay](https://colinfay.me/)
+
+
 ## 2022
 
 
 - 2022-11-23 🎥 [Building Production-Quality Shiny Applications](https://www.youtube.com/watch?v=_zm2GuSrZ14) R/Pharma, by [Eric Nantz](https://twitter.com/theRcast)
+- 2022-10-07 🎥 [DESTROY ALL WIDGETS!](https://www.youtube.com/watch?v=8_k-iPwcleU) Shiny in Production, Newcastle, by [Colin Fay](https://colinfay.me/)
 - 2022-07-27 🎥 [🇫🇷 Déploiement d'une application {shiny} dans docker avec {renv} et {golem}.](https://www.youtube.com/watch?v=diCG4t76k78) Online, by [Vincent Guyader](https://github.com/VincentGuyader)
 - 2022-02-24 🎥 [🇫🇷 De la Création au Déploiement d’Applications {shiny} avec {golem}](https://www.youtube.com/watch?v=nfP-mGIsqVs) Meetup R Lille et Tunis R User Group, by [Margot Brard](https://github.com/MargotBr)
 - 2022-02-16 🎥 [Building Multiple Page Shiny Apps with {brochure}](https://www.youtube.com/watch?v=8UiCqSKlfew) NHSR, by [Colin Fay](https://colinfay.me/)
@@ -33,7 +73,7 @@ Have any resource to add here? [Feel free to open an issue!](https://github.com/
 ## 2021
 
 
-- 2021-12-13 🎥 [Shiny Dev Series - Colin Fay is back](https://speakerdeck.com/colinfay/workshop-good-practices-for-shiny-development-with-golem) Shiny Dev Series, by [Colin Fay](https://colinfay.me/)
+- 2021-12-13 🎥 [Shiny Dev Series - Colin Fay is back](https://www.youtube.com/watch?v=agwgiLpiBFo) Shiny Dev Series, by [Colin Fay](https://colinfay.me/)
 - 2021-10-15  [Workshop - Good Practices for {shiny} development with {golem}](https://speakerdeck.com/colinfay/workshop-good-practices-for-shiny-development-with-golem) EARL, by [Colin Fay](https://colinfay.me/)
 - 2021-07-12 🎥 [🇫🇷 Conception d'applications Shiny avec {golem}](https://www.youtube.com/watch?v=0f5Me1PFGDs) Online, by [Vincent Guyader](https://github.com/VincentGuyader)
 - 2021-05-18 🎥 [Mastering Shiny Book Club the golem package](https://www.youtube.com/watch?v=Vq2GKCbfpTI) Online, by [Colin Fay](https://colinfay.me/)
@@ -51,7 +91,7 @@ Have any resource to add here? [Feel free to open an issue!](https://github.com/
 - 2020-04-27 🎥 [Engineering Shiny Apps with {golem}](https://youtu.be/aY5ekC4-WQs?t=1784) BristolR Online Meetup, by [Colin Fay](https://colinfay.me/)
 - 2020-03-26 🎥 [Create meaningful fake tidy datasets in R using fakir](https://www.youtube.com/watch?v=EhhljL5zaWs) Online, by [Abdul Majed](https://twitter.com/1littlecoder)
 - 2020-03-06  [Workshop - Building Successful Shiny Apps with {golem}](https://speakerdeck.com/colinfay/workshop-building-successful-shiny-apps-with-golem) satRday Johannesburg, by [Colin Fay](https://colinfay.me/)
-- 2020-01-30 🎥 [Production-grade Shiny Apps with golem](https://resources.rstudio.com/rstudio-conf-2020/production-grade-shiny-apps-with-golem-colin-fay) rstudio::conf(2020L), by [Colin Fay / Vincent Guyader](https://thinkr.fr/)
+- 2020-01-30 🎥 [Production-grade Shiny Apps with golem](https://posit.co/resources/videos/production-grade-shiny-apps-with-golem) rstudio::conf(2020L), by [Colin Fay / Vincent Guyader](https://thinkr.fr/)
 
 
 ## 2019
@@ -60,12 +100,12 @@ Have any resource to add here? [Feel free to open an issue!](https://github.com/
 - 2019-12-03  [{golem} - Engineering Production-Grade Shiny Apps](https://speakerdeck.com/colinfay/engineering-production-grade-shiny-apps-with-golem) Barcelona R Meetup, by [Colin Fay](https://colinfay.me/)
 - 2019-11-20 🇫🇷 [Introduction à {golem} en français](https://youtu.be/6qI4NzxlAFU) Online, by [Cervan Girard](https://github.com/Cervangirard)
 - 2019-08-22  [Creating (and Reviving) Shiny apps with {golem}!](https://rpodcast.gitlab.io/golem_rpharma2019/) R Pharma 2019, by [Eric Nantz](https://twitter.com/theRcast)
+- 2019-07-17 🎥 [🇧🇷 Usando o pacote {golem} para criar Shiny Apps com o R](https://www.youtube.com/watch?v=CRYxSBMxaSI) Online, by [Curso-R](https://www.youtube.com/@CursoR6)
 - 2019-07-10 🎥 [A Framework for Building Robust &amp; Production Ready Shiny Apps](https://youtu.be/tCAan6smrjs) useR\! 2019, by [Vincent Guyader](https://github.com/VincentGuyader)
 - 2019-06-19 🎥 [Hands-on demonstration of {golem}](https://www.youtube.com/watch?v=3-p9XLvoJV0) Shiny Dev Series, by [Colin Fay](https://colinfay.me/)
-- 2019-06-19 🎥 [golem} and Effective Shiny Development Methods](https://www.youtube.com/watch?v=OU1-CkSVdTI) Shiny Dev Series, by [Colin Fay](https://colinfay.me/)
+- 2019-06-19 🎥 [{golem} and Effective Shiny Development Methods](https://www.youtube.com/watch?v=OU1-CkSVdTI) Shiny Dev Series, by [Colin Fay](https://colinfay.me/)
 - 2019-05-24  [Production-grade Shiny Apps with {golem}](https://speakerdeck.com/colinfay/production-grade-shiny-apps-with-golem) Paris, by [Colin Fay](https://colinfay.me/)
 
-## Cheatsheet 📑
+## Apps built with `{golem}` 🚀
 
-- [{golem} cheatsheet](https://thinkr.fr/golem_cheatsheet_v0.1.pdf)
-
+A list of open-source applications built with `{golem}`, from research tools to NHS dashboards, is kept in the [package documentation](https://thinkr-open.github.io/golem/articles/h-resources.html).

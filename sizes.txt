@@ -1,0 +1,6 @@
+Main 891 748.12
+Alternates 776 703.84
+Shinipsum 420 484.75
+Fakir 420 484.75
+Gargoyle 420 484.75
+Pw 420 484.75

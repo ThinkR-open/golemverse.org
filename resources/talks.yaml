@@ -16,7 +16,7 @@ talks:
       lieu: Shiny Dev Series
     - date: 2019-06-19
       emoji: 🎥
-      title: golem} and Effective Shiny Development Methods
+      title: "{golem} and Effective Shiny Development Methods"
       link: https://www.youtube.com/watch?v=OU1-CkSVdTI
       author: Colin Fay
       author_link: https://colinfay.me/
@@ -49,11 +49,18 @@ talks:
       lieu: Barcelona R Meetup
       author: Colin Fay
       author_link: https://colinfay.me/
+    - date: 2019-07-17
+      emoji: 🎥
+      title: 🇧🇷 Usando o pacote {golem} para criar Shiny Apps com o R
+      link: https://www.youtube.com/watch?v=CRYxSBMxaSI
+      author: Curso-R
+      author_link: https://www.youtube.com/@CursoR6
+      lieu: Online
   2020:
     - date: 2020-01-30
       emoji: 🎥
       title: Production-grade Shiny Apps with golem
-      link: https://resources.rstudio.com/rstudio-conf-2020/production-grade-shiny-apps-with-golem-colin-fay
+      link: https://posit.co/resources/videos/production-grade-shiny-apps-with-golem
       lieu: rstudio::conf(2020L)
       author: Colin Fay / Vincent Guyader
       author_link: https://thinkr.fr/
@@ -145,7 +152,7 @@ talks:
     - date: 2021-12-13
       emoji: 🎥
       title: Shiny Dev Series - Colin Fay is back
-      link: https://speakerdeck.com/colinfay/workshop-good-practices-for-shiny-development-with-golem
+      link: https://www.youtube.com/watch?v=agwgiLpiBFo
       author: Colin Fay
       author_link: https://colinfay.me/
       lieu: Shiny Dev Series
@@ -178,3 +185,47 @@ talks:
       author: Eric Nantz
       author_link: https://twitter.com/theRcast
       lieu: R/Pharma
+    - date: 2022-10-07
+      emoji: 🎥
+      title: DESTROY ALL WIDGETS!
+      link: https://www.youtube.com/watch?v=8_k-iPwcleU
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: Shiny in Production, Newcastle
+  2023:
+    - date: 2023-03-16
+      emoji: 🎥
+      title: "Keynote - Production is like ultra running: brutal, ungrateful, but worth every step"
+      link: https://www.youtube.com/watch?v=wMbhxTJNrmw
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: ShinyConf 2023
+    - date: 2023-04-15
+      emoji: 🎥
+      title: Building a basic Shiny app with {golem} - Part I
+      link: https://www.youtube.com/watch?v=6EB-dXBJFDE
+      author: Mauricio Vargas Sepulveda
+      author_link: https://pacha.dev/
+      lieu: Online
+    - date: 2023-06-29
+      emoji: 🎥
+      title: Building a basic Shiny app with {golem} - Part II
+      link: https://www.youtube.com/watch?v=uQFZVVZponc
+      author: Mauricio Vargas Sepulveda
+      author_link: https://pacha.dev/
+      lieu: Online
+  2025:
+    - date: 2025-07-20
+      emoji: 🎥
+      title: Golem is a Must-Know Framework For R-Shiny (and here's how to use it)
+      link: https://www.youtube.com/watch?v=FEWJsoDewgk
+      author: Albert Rapp
+      author_link: https://albert-rapp.de/
+      lieu: Online
+    - date: 2025-10-08
+      emoji: ""
+      title: "Workshop - Production-Proof Shiny: end-to-end testing with Playwright and {golem}"
+      link: https://www.jumpingrivers.com/blog/shiny-in-production-2025-workshop-announcement/
+      author: Colin Fay
+      author_link: https://colinfay.me/
+      lieu: Shiny in Production, Newcastle

@@ -185,6 +185,7 @@ div.sourceCode code, div.sourceCode pre { color: #E8EAED; font-size: 0.9rem; lin
 #blog-listings .quarto-grid-item .listing-date { font-family: $font-family-monospace; font-size: 0.8rem; color: $gv-muted; }
 
 @media (max-width: 991.98px) {
+  #quarto-search { display: none; }
   .gv-hero, .gv-stats, .gv-tiers, .gv-cards, .gv-cards-sm, .gv-book, .gv-pkg-head, .gv-pkg-cols { grid-template-columns: minmax(0, 1fr); }
   .gv-hero h1 { font-size: 2.75rem; }
   .gv-hive { left: auto; width: 100%; transform: none; }

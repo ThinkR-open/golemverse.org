@@ -3,11 +3,28 @@ title: "Documentation and resources"
 page-layout: full
 ---
 
-> Notes: The golemverse is constantly evolving. We gather here resources back from 2019, so some of the resources below might be outdated.
+[Books, documentation, tutorials and talks about the golemverse, gathered since 2019. The ecosystem keeps moving, so some of the oldest entries below may be out of date.]{.gv-lede}
 
-## Book 📚
+## Books 📚
 
-- ["Engineering Production-grade Shiny Apps"](//engineering-shiny.org/)
+- ["Engineering Production-grade Shiny Apps"](https://engineering-shiny.org/) — the book behind the golemverse, by Colin Fay, Sébastien Rochette, Vincent Guyader and Cervan Girard. Free to read online, and in print in the R Series by Chapman and Hall/CRC.
+- ["Shiny App-Packages"](https://mjfrigaard.github.io/shiny-app-pkgs/golem.html) — a whole chapter builds the same app with `{golem}`, by Martin Frigaard.
+- ["Shiny Frameworks"](https://mjfrigaard.github.io/sfw/golem.html) — `{golem}`, `{leprechaun}` and `{rhino}` side by side, by Martin Frigaard.
+- 🇧🇷 ["Programando em Shiny"](https://curso-r.github.io/programando-em-shiny/golem.html) — chapter 11 covers `{golem}` in Portuguese, by Curso-R.
+
+## Documentation 📖
+
+- [Getting started](https://thinkr-open.github.io/golem/articles/a-getting-started.html) — from `create_golem()` to a first working app.
+- [Day to day development](https://thinkr-open.github.io/golem/articles/b-develop.html) — modules, functions, tests, the `dev/` scripts.
+- [Deploy your app](https://thinkr-open.github.io/golem/articles/c-deploy.html) — Docker, `{renv}`, Posit Connect, shinyapps.io, ShinyProxy.
+- [JavaScript](https://thinkr-open.github.io/golem/articles/d-js.html) and [configuration](https://thinkr-open.github.io/golem/articles/e-config.html).
+- [Extending `{golem}`](https://thinkr-open.github.io/golem/articles/f-extending_golem.html) — write your own templates and hooks.
+- [Test your app with Playwright](https://thinkr-open.github.io/pw/) — the `{pw}` package documentation.
+- [golem agent skills](https://github.com/ThinkR-open/golem-agent-skills) — teach your coding assistant the golem conventions.
+
+## Cheatsheet 📑
+
+- [`{golem}` cheatsheet](https://rstudio.github.io/cheatsheets/golem.pdf), also in the [Posit cheatsheet gallery](https://posit.co/resources/cheatsheets/).
 
 ## Blog posts ✍️
 
@@ -15,13 +32,19 @@ For the latest news, read the [golemverse blog](/news/).
 
 You can also browse the ["golem" tag](https://rtask.thinkr.fr/golem/) on the RTask website.
 
+Written elsewhere in the community:
+
+- ["{rhino} vs {golem} vs {leprechaun}: Which R/Shiny Library is Right for You?"](https://www.appsilon.com/post/rhino-vs-golem-vs-leprechaun) — Gift Kenneth, Appsilon, 2023.
+- ["Navigating the Shiny Universe with Golem"](https://prof-thiagooliveira.netlify.app/post/golem-package/) — Thiago de Paula Oliveira, 2023.
+- ["Deploying a Golem Shiny App to ShinyApps.io"](https://pacha.dev/blog/2025/08/24/golem/) — Mauricio Vargas Sepúlveda, 2025.
+- [golemWebR](https://github.com/DivadNojnarg/golemWebR) — a worked example of a `{golem}` app served with webR, by David Granjon.
+
 ## Conferences, videos, podcasts 🤩
 
 Have any resource to add here? [Feel free to open an issue!](https://github.com/ThinkR-open/golemverse.org/issues).
 
 {{confs}}
 
-## Cheatsheet 📑
+## Apps built with `{golem}` 🚀
 
-- [{golem} cheatsheet](https://thinkr.fr/golem_cheatsheet_v0.1.pdf)
-
+A list of open-source applications built with `{golem}`, from research tools to NHS dashboards, is kept in the [package documentation](https://thinkr-open.github.io/golem/articles/h-resources.html).
