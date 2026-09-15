@@ -25,21 +25,35 @@
     "href": "resources/index.html",
     "title": "Documentation and resources",
     "section": "",
-    "text": "Notes: The golemverse is constantly evolving. We gather here resources back from 2019, so some of the resources below might be outdated."
+    "text": "Books, documentation, tutorials and talks about the golemverse, gathered since 2019. The ecosystem keeps moving, so some of the oldest entries below may be out of date."
   },
   {
-    "objectID": "resources/index.html#book",
-    "href": "resources/index.html#book",
+    "objectID": "resources/index.html#books",
+    "href": "resources/index.html#books",
     "title": "Documentation and resources",
-    "section": "Book 📚",
-    "text": "Book 📚\n\n“Engineering Production-grade Shiny Apps”"
+    "section": "Books 📚",
+    "text": "Books 📚\n\n“Engineering Production-grade Shiny Apps” — the book behind the golemverse, by Colin Fay, Sébastien Rochette, Vincent Guyader and Cervan Girard. Free to read online, and in print in the R Series by Chapman and Hall/CRC.\n“Shiny App-Packages” — a whole chapter builds the same app with {golem}, by Martin Frigaard.\n“Shiny Frameworks” — {golem}, {leprechaun} and {rhino} side by side, by Martin Frigaard.\n🇧🇷 “Programando em Shiny” — chapter 11 covers {golem} in Portuguese, by Curso-R."
+  },
+  {
+    "objectID": "resources/index.html#documentation",
+    "href": "resources/index.html#documentation",
+    "title": "Documentation and resources",
+    "section": "Documentation 📖",
+    "text": "Documentation 📖\n\nGetting started — from create_golem() to a first working app.\nDay to day development — modules, functions, tests, the dev/ scripts.\nDeploy your app — Docker, {renv}, Posit Connect, shinyapps.io, ShinyProxy.\nJavaScript and configuration.\nExtending {golem} — write your own templates and hooks.\nTest your app with Playwright — the {pw} package documentation.\ngolem agent skills — teach your coding assistant the golem conventions."
+  },
+  {
+    "objectID": "resources/index.html#cheatsheet",
+    "href": "resources/index.html#cheatsheet",
+    "title": "Documentation and resources",
+    "section": "Cheatsheet 📑",
+    "text": "Cheatsheet 📑\n\n{golem} cheatsheet, also in the Posit cheatsheet gallery."
   },
   {
     "objectID": "resources/index.html#blog-posts",
     "href": "resources/index.html#blog-posts",
     "title": "Documentation and resources",
     "section": "Blog posts ✍️",
-    "text": "Blog posts ✍️\nFor the latest news, read the golemverse blog.\nYou can also browse the “golem” tag on the RTask website."
+    "text": "Blog posts ✍️\nFor the latest news, read the golemverse blog.\nYou can also browse the “golem” tag on the RTask website.\nWritten elsewhere in the community:\n\n“{rhino} vs {golem} vs {leprechaun}: Which R/Shiny Library is Right for You?” — Gift Kenneth, Appsilon, 2023.\n“Navigating the Shiny Universe with Golem” — Thiago de Paula Oliveira, 2023.\n“Deploying a Golem Shiny App to ShinyApps.io” — Mauricio Vargas Sepúlveda, 2025.\ngolemWebR — a worked example of a {golem} app served with webR, by David Granjon."
   },
   {
     "objectID": "resources/index.html#conferences-videos-podcasts",
@@ -52,36 +66,50 @@
     "objectID": "resources/index.html#section",
     "href": "resources/index.html#section",
     "title": "Documentation and resources",
-    "section": "2022",
-    "text": "2022\n\n2022-11-23 🎥 Building Production-Quality Shiny Applications R/Pharma, by Eric Nantz\n2022-07-27 🎥 🇫🇷 Déploiement d’une application {shiny} dans docker avec {renv} et {golem}. Online, by Vincent Guyader\n2022-02-24 🎥 🇫🇷 De la Création au Déploiement d’Applications {shiny} avec {golem} Meetup R Lille et Tunis R User Group, by Margot Brard\n2022-02-16 🎥 Building Multiple Page Shiny Apps with {brochure} NHSR, by Colin Fay"
+    "section": "2025",
+    "text": "2025\n\n2025-10-08 Workshop - Production-Proof Shiny: end-to-end testing with Playwright and {golem} Shiny in Production, Newcastle, by Colin Fay\n2025-07-20 🎥 Golem is a Must-Know Framework For R-Shiny (and here’s how to use it) Online, by Albert Rapp"
   },
   {
     "objectID": "resources/index.html#section-1",
     "href": "resources/index.html#section-1",
     "title": "Documentation and resources",
-    "section": "2021",
-    "text": "2021\n\n2021-12-13 🎥 Shiny Dev Series - Colin Fay is back Shiny Dev Series, by Colin Fay\n2021-10-15 Workshop - Good Practices for {shiny} development with {golem} EARL, by Colin Fay\n2021-07-12 🎥 🇫🇷 Conception d’applications Shiny avec {golem} Online, by Vincent Guyader\n2021-05-18 🎥 Mastering Shiny Book Club the golem package Online, by Colin Fay"
+    "section": "2023",
+    "text": "2023\n\n2023-06-29 🎥 Building a basic Shiny app with {golem} - Part II Online, by Mauricio Vargas Sepulveda\n2023-04-15 🎥 Building a basic Shiny app with {golem} - Part I Online, by Mauricio Vargas Sepulveda\n2023-03-16 🎥 Keynote - Production is like ultra running: brutal, ungrateful, but worth every step ShinyConf 2023, by Colin Fay"
   },
   {
     "objectID": "resources/index.html#section-2",
     "href": "resources/index.html#section-2",
     "title": "Documentation and resources",
-    "section": "2020",
-    "text": "2020\n\n2020-10-01 Building a modularized Shiny App with {golem} and htmlwidgets CorrelCon, by Cedric Scherer\n2020-09-25 Workshop - Engineering {shiny} with {golem} WhyR, by Colin Fay\n2020-09-09 An overview of testing in R AI Testing online meetup, by Colin Fay\n2020-08-26 🎥 Production R Shiny Made Easy– the Golem Framework Cleveland R User Group, by Liz Nelson\n2020-07-28 🎥 Everything not Tested Will Eventually Fail NYR Meetup, by Colin Fay\n2020-06-18 Testing Shiny - Why, what, and how e-Rum, by Colin Fay\n2020-04-27 🎥 Engineering Shiny Apps with {golem} BristolR Online Meetup, by Colin Fay\n2020-03-26 🎥 Create meaningful fake tidy datasets in R using fakir Online, by Abdul Majed\n2020-03-06 Workshop - Building Successful Shiny Apps with {golem} satRday Johannesburg, by Colin Fay\n2020-01-30 🎥 Production-grade Shiny Apps with golem rstudio::conf(2020L), by Colin Fay / Vincent Guyader"
+    "section": "2022",
+    "text": "2022\n\n2022-11-23 🎥 Building Production-Quality Shiny Applications R/Pharma, by Eric Nantz\n2022-10-07 🎥 DESTROY ALL WIDGETS! Shiny in Production, Newcastle, by Colin Fay\n2022-07-27 🎥 🇫🇷 Déploiement d’une application {shiny} dans docker avec {renv} et {golem}. Online, by Vincent Guyader\n2022-02-24 🎥 🇫🇷 De la Création au Déploiement d’Applications {shiny} avec {golem} Meetup R Lille et Tunis R User Group, by Margot Brard\n2022-02-16 🎥 Building Multiple Page Shiny Apps with {brochure} NHSR, by Colin Fay"
   },
   {
     "objectID": "resources/index.html#section-3",
     "href": "resources/index.html#section-3",
     "title": "Documentation and resources",
-    "section": "2019",
-    "text": "2019\n\n2019-12-03 {golem} - Engineering Production-Grade Shiny Apps Barcelona R Meetup, by Colin Fay\n2019-11-20 🇫🇷 Introduction à {golem} en français Online, by Cervan Girard\n2019-08-22 Creating (and Reviving) Shiny apps with {golem}! R Pharma 2019, by Eric Nantz\n2019-07-10 🎥 A Framework for Building Robust & Production Ready Shiny Apps useR! 2019, by Vincent Guyader\n2019-06-19 🎥 Hands-on demonstration of {golem} Shiny Dev Series, by Colin Fay\n2019-06-19 🎥 golem} and Effective Shiny Development Methods Shiny Dev Series, by Colin Fay\n2019-05-24 Production-grade Shiny Apps with {golem} Paris, by Colin Fay"
+    "section": "2021",
+    "text": "2021\n\n2021-12-13 🎥 Shiny Dev Series - Colin Fay is back Shiny Dev Series, by Colin Fay\n2021-10-15 Workshop - Good Practices for {shiny} development with {golem} EARL, by Colin Fay\n2021-07-12 🎥 🇫🇷 Conception d’applications Shiny avec {golem} Online, by Vincent Guyader\n2021-05-18 🎥 Mastering Shiny Book Club the golem package Online, by Colin Fay"
   },
   {
-    "objectID": "resources/index.html#cheatsheet",
-    "href": "resources/index.html#cheatsheet",
+    "objectID": "resources/index.html#section-4",
+    "href": "resources/index.html#section-4",
     "title": "Documentation and resources",
-    "section": "Cheatsheet 📑",
-    "text": "Cheatsheet 📑\n\n{golem} cheatsheet"
+    "section": "2020",
+    "text": "2020\n\n2020-10-01 Building a modularized Shiny App with {golem} and htmlwidgets CorrelCon, by Cedric Scherer\n2020-09-25 Workshop - Engineering {shiny} with {golem} WhyR, by Colin Fay\n2020-09-09 An overview of testing in R AI Testing online meetup, by Colin Fay\n2020-08-26 🎥 Production R Shiny Made Easy– the Golem Framework Cleveland R User Group, by Liz Nelson\n2020-07-28 🎥 Everything not Tested Will Eventually Fail NYR Meetup, by Colin Fay\n2020-06-18 Testing Shiny - Why, what, and how e-Rum, by Colin Fay\n2020-04-27 🎥 Engineering Shiny Apps with {golem} BristolR Online Meetup, by Colin Fay\n2020-03-26 🎥 Create meaningful fake tidy datasets in R using fakir Online, by Abdul Majed\n2020-03-06 Workshop - Building Successful Shiny Apps with {golem} satRday Johannesburg, by Colin Fay\n2020-01-30 🎥 Production-grade Shiny Apps with golem rstudio::conf(2020L), by Colin Fay / Vincent Guyader"
+  },
+  {
+    "objectID": "resources/index.html#section-5",
+    "href": "resources/index.html#section-5",
+    "title": "Documentation and resources",
+    "section": "2019",
+    "text": "2019\n\n2019-12-03 {golem} - Engineering Production-Grade Shiny Apps Barcelona R Meetup, by Colin Fay\n2019-11-20 🇫🇷 Introduction à {golem} en français Online, by Cervan Girard\n2019-08-22 Creating (and Reviving) Shiny apps with {golem}! R Pharma 2019, by Eric Nantz\n2019-07-17 🎥 🇧🇷 Usando o pacote {golem} para criar Shiny Apps com o R Online, by Curso-R\n2019-07-10 🎥 A Framework for Building Robust & Production Ready Shiny Apps useR! 2019, by Vincent Guyader\n2019-06-19 🎥 Hands-on demonstration of {golem} Shiny Dev Series, by Colin Fay\n2019-06-19 🎥 {golem} and Effective Shiny Development Methods Shiny Dev Series, by Colin Fay\n2019-05-24 Production-grade Shiny Apps with {golem} Paris, by Colin Fay"
+  },
+  {
+    "objectID": "resources/index.html#apps-built-with-golem",
+    "href": "resources/index.html#apps-built-with-golem",
+    "title": "Documentation and resources",
+    "section": "Apps built with {golem} 🚀",
+    "text": "Apps built with {golem} 🚀\nA list of open-source applications built with {golem}, from research tools to NHS dashboards, is kept in the package documentation."
   },
   {
     "objectID": "packages/bank/index.html#install",
@@ -228,21 +256,21 @@
     "href": "roadmap/index.html",
     "title": "golemverse’s roadmap",
     "section": "",
-    "text": "Here is a list of things the golemverse team plans on working on.\nIf you feel like helping, feel free to open an issue / discussion / PR on one of the repository.\nLast edit: (2026-07-10)"
+    "text": "Here is a list of things the golemverse team plans on working on.\nIf you feel like helping, feel free to open an issue / discussion / PR on one of the repository.\nLast edit: (2026-09-15)"
   },
   {
     "objectID": "roadmap/index.html#short-term-roadmap-3-to-6-months",
     "href": "roadmap/index.html#short-term-roadmap-3-to-6-months",
     "title": "golemverse’s roadmap",
     "section": "Short term roadmap (3 to 6 months)",
-    "text": "Short term roadmap (3 to 6 months)\n\nStable, production ready version of {brochure}\nRework of the golemverse website:\n\nAuto generate website content from yaml\nRepair badge in package table\n\ngolemverse package triage:\n\nCreate a lifecycle policy (Core, experimental, Abandoned)\nBring the following package to the golemverse:\n\n{pw}\n{bootstrict}\ngolem-agent-skills\n\nTag these as “Core”:\n\n{bootstrict}\n{brochure}\n{dockerfiler}\n{fakir}\n{gargoyle}\n{golem}\n{pw}\n{shinipsum}\n\nTag these as “Experimental”:\n\n{bank}\n{elvis}\n{ghooks}\n{shinidraw}\n\nTag these as “Abandoned”:\n\n{gemstones}\n{minifyr}\n{w3css}\n\n\nDashboard template for {brochure}\nClean {shinipsum} repository (CRAN sync, rebuild README)"
+    "text": "Short term roadmap (3 to 6 months)\n\nStable, CRAN version for {brochure}\nStable, CRAN version for {bootstrict}\nStable, CRAN version for {pw}"
   },
   {
     "objectID": "roadmap/index.html#mid-term-6-to-12-months",
     "href": "roadmap/index.html#mid-term-6-to-12-months",
     "title": "golemverse’s roadmap",
     "section": "Mid term (6 to 12 months)",
-    "text": "Mid term (6 to 12 months)\n\nStable, CRAN version for {bootstrict}\nStable, CRAN version for {pw}\n{golemverse} package à la {tidyverse} to simplify installation.\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\nWrite a blogpost about {gargoyle}"
+    "text": "Mid term (6 to 12 months)\n\nDashboard template for {brochure}\n{golemverse} package à la {tidyverse} to simplify installation.\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\nWrite a blogpost about {gargoyle}"
   },
   {
     "objectID": "news/golem-0.3.1-release-on-cran/index.html",
