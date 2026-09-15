@@ -7,15 +7,11 @@ Here is a list of things the `golemverse` team plans on working on.
 
 If you feel like helping, feel free to open an issue / discussion / PR on one of the repository.
 
-Last edit: (2026-09-07)
+Last edit: (2026-09-15)
 
 ## Short term roadmap (3 to 6 months)
 
-+ Stable, production ready version of `{brochure}`
-
-+ Dashboard template for `{brochure}`
-
-+ Clean `{shinipsum}` repository (CRAN sync, rebuild README)
++ Stable, CRAN version for  `{brochure}`
 
 + Stable, CRAN version for `{bootstrict}`
 
@@ -23,6 +19,7 @@ Last edit: (2026-09-07)
 
 ## Mid term (6 to 12 months)
 
++ Dashboard template for `{brochure}`
 
 + `{golemverse}` package à la `{tidyverse}` to simplify installation.
 
