@@ -11,8 +11,6 @@ Last edit: (2026-09-15)
 
 ## Short term roadmap (3 to 6 months)
 
-+ Stable, CRAN version for  `{brochure}`
-
 + Stable, CRAN version for `{bootstrict}`
 
 + Stable, CRAN version for `{pw}`

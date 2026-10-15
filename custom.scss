@@ -76,6 +76,7 @@ div.sourceCode code, div.sourceCode pre { color: #E8EAED; font-size: 0.9rem; lin
 .gv-hero h1 { font-size: 4.1rem; font-weight: 800; line-height: 1.02; letter-spacing: -0.03em; margin: 1.5rem 0; text-wrap: balance; }
 .gv-eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 6px 12px 6px 6px; border-radius: 999px; border: 1px solid $gv-line; background: $gv-surface; color: $gv-slate; font-size: 0.85rem; font-weight: 500; text-decoration: none; }
 .gv-eyebrow:hover { color: $gv-ink; border-color: $gv-slate; }
+#listing-latest-post { padding-bottom: 0; }
 .gv-eyebrow .gv-pill { background: $gv-orange; color: #fff; }
 .gv-lede { font-size: 1.25rem; line-height: 1.5; color: $gv-muted; max-width: 560px; }
 .gv-hero .gv-actions { margin-bottom: 1.5rem; }
