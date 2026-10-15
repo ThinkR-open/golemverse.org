@@ -9,8 +9,314 @@
 <link>https://www.golemverse.org/</link>
 <atom:link href="https://www.golemverse.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>Welcome to the golemverse!</description>
-<generator>quarto-1.10.18</generator>
-<lastBuildDate>Fri, 10 Jul 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.10.19</generator>
+<lastBuildDate>Thu, 15 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>{brochure} 1.0.0 is now on CRAN</title>
+  <dc:creator>colin </dc:creator>
+  <link>https://www.golemverse.org/news/brochure-1.0.0-release-on-cran/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.golemverse.org/img/brochure.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="200"></p>
+</figure>
+</div>
+<p>A <code>{shiny}</code> app is a single page: one url, one UI, one server function. That is comfortable while the app stays small. As soon as you want an actual site, with a home page, a contact page, one page per user, urls people can bookmark or send by email, you end up faking pages with tabs and <code>conditionalPanel()</code>, and carrying the whole app in memory on every one of them.</p>
+<p><code>{brochure}</code> takes the problem the other way around: every page is a real page, with its own url, its own UI, its own server function and its own Shiny session. It is now on CRAN, in a stable 1.0.0.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"brochure"</span>)</span></code></pre></div></div>
+<section id="a-first-app" class="level2">
+<h2 class="anchored" data-anchor-id="a-first-app">A first app</h2>
+<p>You declare a <code>page()</code> with its own href, its UI, and a server function if the page needs one. <code>brochureApp()</code> assembles them into an app you run like any other.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(shiny)</span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(brochure)</span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">brochureApp</span>(</span>
+<span id="cb2-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">page</span>(</span>
+<span id="cb2-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">href =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/"</span>,</span>
+<span id="cb2-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fluidPage</span>(</span>
+<span id="cb2-8">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h1</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Home"</span>),</span>
+<span id="cb2-9">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plotOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot"</span>),</span>
+<span id="cb2-10">      tags<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">a</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">href =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/contact"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Contact us"</span>)</span>
+<span id="cb2-11">    ),</span>
+<span id="cb2-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">server =</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">function</span>(input, output, session) {</span>
+<span id="cb2-13">      output<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>plot <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">renderPlot</span>({</span>
+<span id="cb2-14">        <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(iris)</span>
+<span id="cb2-15">      })</span>
+<span id="cb2-16">    }</span>
+<span id="cb2-17">  ),</span>
+<span id="cb2-18">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">page</span>(</span>
+<span id="cb2-19">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">href =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/contact"</span>,</span>
+<span id="cb2-20">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fluidPage</span>(</span>
+<span id="cb2-21">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h1</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Contact"</span>),</span>
+<span id="cb2-22">      tags<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">p</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"No server function in this one."</span>)</span>
+<span id="cb2-23">    )</span>
+<span id="cb2-24">  ),</span>
+<span id="cb2-25">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">redirect</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">from =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/index.html"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">to =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/"</span>)</span>
+<span id="cb2-26">)</span></code></pre></div></div>
+<p>Navigate to <code>/</code> and to <code>/contact</code>. Moving from one to the other is a plain link: the browser leaves the first page and opens a new session on the second one. The home page runs its <code>renderPlot()</code>, and the contact page has no server function, so nothing runs there.</p>
+</section>
+<section id="urls-that-carry-something" class="level2">
+<h2 class="anchored" data-anchor-id="urls-that-carry-something">Urls that carry something</h2>
+<p>An href can hold a variable segment, and the page reads what it matched with <code>get_keys()</code>: no argument inside the server, the <code>request</code> inside the UI.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">page</span>(</span>
+<span id="cb3-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">href =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/user/:id"</span>,</span>
+<span id="cb3-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">function</span>(request) {</span>
+<span id="cb3-4">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fluidPage</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h1</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"User"</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_keys</span>(request)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>id)))</span>
+<span id="cb3-5">  },</span>
+<span id="cb3-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">server =</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">function</span>(input, output, session) {</span>
+<span id="cb3-7">    <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">message</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Serving user "</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_keys</span>()<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>id)</span>
+<span id="cb3-8">  }</span>
+<span id="cb3-9">)</span></code></pre></div></div>
+<p><a href="https://routr.data-imaginist.com/"><code>{routr}</code></a> handles the dispatch. A page can also answer on a method other than <code>GET</code>, which is what you want for a form post or a webhook.</p>
+</section>
+<section id="doing-things-before-shiny" class="level2">
+<h2 class="anchored" data-anchor-id="doing-things-before-shiny">Doing things before Shiny</h2>
+<p>Between the moment a browser asks for a page and the moment it gets an answer, <code>{brochure}</code> gives you two places to intervene: <code>req_handlers</code> run before Shiny builds anything, <code>res_handlers</code> run on the way out. In <code>{shiny}</code> terms, this is code that runs where no reactive context exists yet.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">brochureApp</span>(</span>
+<span id="cb4-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">page</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">href =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tagList</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h1</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Home"</span>))),</span>
+<span id="cb4-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">req_handlers =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb4-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">function</span>(req) {</span>
+<span id="cb4-5">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">message</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Sys.time</span>(), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" - "</span>, req<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>PATH_INFO)</span>
+<span id="cb4-6">      req</span>
+<span id="cb4-7">    }</span>
+<span id="cb4-8">  )</span>
+<span id="cb4-9">)</span></code></pre></div></div>
+<p>A request handler that returns an <code>httpResponse</code> short-circuits: the response is sent immediately and no Shiny session is created. That is how you serve something that is not a page from inside a Shiny app, like a healthcheck for your orchestrator, a webhook receiver or a small JSON endpoint.</p>
+</section>
+<section id="carrying-state-between-pages" class="level2">
+<h2 class="anchored" data-anchor-id="carrying-state-between-pages">Carrying state between pages</h2>
+<p>Every page is a new session, so nothing computed on one survives a navigation to another. State shared between pages has to be written down somewhere, and the usual place is a cookie, set from a response handler and read back from the page server.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">page</span>(</span>
+<span id="cb5-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">href =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/login"</span>,</span>
+<span id="cb5-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tagList</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">h1</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"You are logged in"</span>)),</span>
+<span id="cb5-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">res_handlers =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb5-5">    <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set_cookie</span>(.x, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SESSION"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a-random-id"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">path =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"/"</span>)</span>
+<span id="cb5-6">  )</span>
+<span id="cb5-7">)</span></code></pre></div></div>
+<p><code>set_cookie()</code> defaults to <code>http_only = TRUE</code> and <code>same_site = "Lax"</code>, and checks names and values against the character set cookies allow. <code>vignette("cookies")</code> covers the whole pattern, logout included.</p>
+</section>
+<section id="deploying-it" class="level2">
+<h2 class="anchored" data-anchor-id="deploying-it">Deploying it</h2>
+<p>A brochure app is a Shiny app, so it deploys like one. The part specific to serving several urls is the prefix your app is mounted under: behind a reverse proxy, on shinyProxy or on Posit Connect, <code>{brochure}</code> finds that mount, strips it from incoming requests and prefixes the urls the app emits. <code>vignette("deployment")</code> walks through the configurations.</p>
+</section>
+<section id="and-with-golem" class="level2">
+<h2 class="anchored" data-anchor-id="and-with-golem">And with <code>{golem}</code></h2>
+<p>If you build your Shiny apps as packages, <code>golem_hook()</code> turns a golem app into a brochure app: it sets up the app object, creates a first page as a module, adds <code>{brochure}</code> to your <code>Imports</code>, and writes a test for that page along with the testthat structure to run it under <code>R CMD check</code>.</p>
+</section>
+<section id="what-it-costs" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-costs">What it costs</h2>
+<p>A brochure app is not a single page application any more, and that changes things: a navigation is a full page load, nothing computed on one page is available on the next, all pages share one R process, and a page that blocks holds up every other page. <code>vignette("design")</code> says all of it, including when <em>not</em> to reach for <code>{brochure}</code>.</p>
+</section>
+<section id="where-to-read-more" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-read-more">Where to read more</h2>
+<p>Everything lives at <a href="https://colinfay.me/brochure/">colinfay.me/brochure</a>: <a href="https://colinfay.me/brochure/articles/brochure.html">get started</a>, <a href="https://colinfay.me/brochure/articles/handlers.html">handlers</a>, <a href="https://colinfay.me/brochure/articles/cookies.html">cookies</a>, <a href="https://colinfay.me/brochure/articles/design.html">design</a>, <a href="https://colinfay.me/brochure/articles/deployment.html">deployment</a>, <a href="https://colinfay.me/brochure/articles/testing.html">testing</a> and <a href="https://colinfay.me/brochure/articles/golem.html">golem</a>.</p>
+</section>
+<section id="if-you-were-running-the-github-version" class="level2">
+<h2 class="anchored" data-anchor-id="if-you-were-running-the-github-version">If you were running the GitHub version</h2>
+<p>1.0.0 rewrites the routing on top of <code>{routr}</code> and fixes a long list of bugs, so a few things change on the way:</p>
+<ul>
+<li><code>keys</code> is gone. A parameterised page used to read its matched values from a <code>keys</code> object installed in the global environment, invisible from a module, a golem app or any <code>local()</code>. Use <code>get_keys()</code>.</li>
+<li><code>set_cookie()</code> has safer defaults (<code>http_only = TRUE</code>, <code>same_site = "Lax"</code>), and cookie values, domains, paths and redirect targets are validated rather than interpolated as is.</li>
+<li><code>...</code> in <code>brochureApp()</code> is typed. It takes <code>page()</code>s, <code>redirect()</code>s, tags, tag lists, html dependencies and strings; anything else is an error. A bare list of pages is spliced, so <code>brochureApp(list(page_1(), page_2()))</code> builds two pages.</li>
+</ul>
+<p>The <a href="https://colinfay.me/brochure/news/index.html">changelog</a> has the rest.</p>
+</section>
+<section id="feedback" class="level2">
+<h2 class="anchored" data-anchor-id="feedback">Feedback</h2>
+<p>Bugs, ideas and questions go to the <a href="https://github.com/ColinFay/brochure/issues">issue tracker</a>.</p>
+<p>Happy multipaging 🚀</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://www.golemverse.org/news/brochure-1.0.0-release-on-cran/</guid>
+  <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://www.golemverse.org/img/brochure.png" medium="image" type="image/png" height="167" width="144"/>
+</item>
 <item>
   <title>{golem} 1.0.0 is here</title>
   <dc:creator>colin </dc:creator>
@@ -2364,7 +2670,7 @@ font-style: inherit;">"ThinkR-open/golem"</span>)</span></code></pre></div></div
  ]]></description>
   <category>Core</category>
   <guid>https://www.golemverse.org/packages/golem/</guid>
-  <pubDate>Tue, 15 Sep 2026 12:08:40 GMT</pubDate>
+  <pubDate>Thu, 15 Oct 2026 16:10:49 GMT</pubDate>
   <media:content url="https://www.golemverse.org/img/golem.png" medium="image" type="image/png" height="166" width="144"/>
 </item>
 <item>
@@ -2444,7 +2750,7 @@ font-style: inherit;">"ThinkR-open/shinipsum"</span>)</span></code></pre></div><
  ]]></description>
   <category>Core</category>
   <guid>https://www.golemverse.org/packages/shinipsum/</guid>
-  <pubDate>Tue, 15 Sep 2026 12:08:40 GMT</pubDate>
+  <pubDate>Thu, 15 Oct 2026 16:10:49 GMT</pubDate>
   <media:content url="https://www.golemverse.org/img/shinipsum.png" medium="image" type="image/png" height="166" width="144"/>
 </item>
 <item>
@@ -2524,7 +2830,7 @@ font-style: inherit;">"ThinkR-open/fakir"</span>)</span></code></pre></div></div
  ]]></description>
   <category>Core</category>
   <guid>https://www.golemverse.org/packages/fakir/</guid>
-  <pubDate>Tue, 15 Sep 2026 12:08:40 GMT</pubDate>
+  <pubDate>Thu, 15 Oct 2026 16:10:49 GMT</pubDate>
   <media:content url="https://www.golemverse.org/img/fakir.png" medium="image" type="image/png" height="166" width="144"/>
 </item>
 <item>
@@ -2604,7 +2910,7 @@ font-style: inherit;">"colinfay/gargoyle"</span>)</span></code></pre></div></div
  ]]></description>
   <category>Core</category>
   <guid>https://www.golemverse.org/packages/gargoyle/</guid>
-  <pubDate>Tue, 15 Sep 2026 12:08:40 GMT</pubDate>
+  <pubDate>Thu, 15 Oct 2026 16:10:49 GMT</pubDate>
   <media:content url="https://www.golemverse.org/img/gargoyle.png" medium="image" type="image/png" height="167" width="144"/>
 </item>
 <item>
@@ -2684,7 +2990,7 @@ font-style: inherit;">"thinkr-open/dockerfiler"</span>)</span></code></pre></div
  ]]></description>
   <category>Core</category>
   <guid>https://www.golemverse.org/packages/dockerfiler/</guid>
-  <pubDate>Tue, 15 Sep 2026 12:08:40 GMT</pubDate>
+  <pubDate>Thu, 15 Oct 2026 16:10:49 GMT</pubDate>
   <media:content url="https://www.golemverse.org/img/dockerfiler.png" medium="image" type="image/png" height="167" width="144"/>
 </item>
 <item>
@@ -2752,7 +3058,7 @@ font-style: inherit;">"ThinkR-open/pw"</span>)</span></code></pre></div></div>
  ]]></description>
   <category>Core</category>
   <guid>https://www.golemverse.org/packages/pw/</guid>
-  <pubDate>Tue, 15 Sep 2026 12:08:40 GMT</pubDate>
+  <pubDate>Thu, 15 Oct 2026 16:10:49 GMT</pubDate>
   <media:content url="https://www.golemverse.org/img/pw.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
@@ -2820,7 +3126,7 @@ font-style: inherit;">"ThinkR-open/bootstrict"</span>)</span></code></pre></div>
  ]]></description>
   <category>Core</category>
   <guid>https://www.golemverse.org/packages/bootstrict/</guid>
-  <pubDate>Tue, 15 Sep 2026 12:08:40 GMT</pubDate>
+  <pubDate>Thu, 15 Oct 2026 16:10:49 GMT</pubDate>
   <media:content url="https://www.golemverse.org/img/bootstrict.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
@@ -2888,76 +3194,8 @@ font-style: inherit;">"ThinkR-open/golem-agent-skills"</span>)</span></code></pr
  ]]></description>
   <category>Core</category>
   <guid>https://www.golemverse.org/packages/golem-agent-skills/</guid>
-  <pubDate>Tue, 15 Sep 2026 12:08:40 GMT</pubDate>
+  <pubDate>Thu, 15 Oct 2026 16:10:49 GMT</pubDate>
   <media:content url="https://www.golemverse.org/img/golem-agent-skills.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>brochure</title>
-  <link>https://www.golemverse.org/packages/brochure/</link>
-  <description><![CDATA[ 
-
-<header id="title-block-header">
-
-
-</header>
-
-
-<div class="gv-pkg-head">
-<p><img src="https://www.golemverse.org/img/brochure.png" class="img-fluid"></p>
-<div class="gv-pkg-body">
-<div class="gv-chips">
-<span class="gv-pill gv-pill-core">Core</span><span class="gv-pill gv-pill-dormant">dormant</span>
-</div>
-<h1>
-brochure
-</h1>
-<p><span class="gv-pkg-tagline">Natively multipage <code>{shiny}</code> apps.</span></p>
-<p>The goal of <code>{brochure}</code> is to provide a mechanism for creating natively multi-page <code>{shiny}</code>applications, i.e that can serve content on multiple endpoints.</p>
-<div class="gv-actions" data-gv-cran="brochure">
-<a class="gv-btn gv-btn-primary" data-gv="pkgdown" href="https://colinfay.me/brochure/">Documentation</a><a class="gv-btn" href="https://github.com/colinfay/brochure">GitHub</a>
-</div>
-</div>
-</div>
-<div class="gv-tiles" data-gv-repo="colinfay/brochure" data-gv-cran="brochure">
-<div class="gv-tile">
-<span class="gv-tile-value" data-gv="stars">—</span><span class="gv-tile-label">GitHub stars</span>
-</div>
-<div class="gv-tile">
-<span class="gv-tile-value" data-gv="issues">—</span><span class="gv-tile-label">open issues</span>
-</div>
-<div class="gv-tile">
-<span class="gv-tile-value" data-gv="pushed">—</span><span class="gv-tile-label">last commit</span>
-</div>
-</div>
-<div class="gv-pkg-cols">
-<section id="install" class="level2 gv-col">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Development version</span></span>
-<span id="cb1-2">pak<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">pak</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"colinfay/brochure"</span>)</span></code></pre></div></div>
-</section>
-<section id="links" class="level2 gv-col">
-<h2 class="anchored" data-anchor-id="links">Links</h2>
-<div class="gv-links" data-gv-cran="brochure">
-<p><a data-gv="pkgdown" href="https://github.com/colinfay/brochure" hidden="">Reference and vignettes <small>pkgdown</small></a> <a href="https://github.com/colinfay/brochure">Source <small>colinfay/brochure</small></a> <a href="https://github.com/colinfay/brochure/issues">Report an issue <small>issues</small></a> <a href="https://github.com/colinfay/brochure/actions">CI status <small>R-CMD-check</small></a></p>
-</div>
-</section>
-</div>
-
-
-
- ]]></description>
-  <category>Core</category>
-  <guid>https://www.golemverse.org/packages/brochure/</guid>
-  <pubDate>Tue, 15 Sep 2026 12:08:40 GMT</pubDate>
-  <media:content url="https://www.golemverse.org/img/brochure.png" medium="image" type="image/png" height="167" width="144"/>
 </item>
 </channel>
 </rss>

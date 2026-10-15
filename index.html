@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -80,10 +80,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-44c26d94c645141caa34d9aa5a30e1b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-20a00a5ad20e8de2ed03a9b933582116.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c6aeeb5cc6557f1ecb881839b153e874.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-235abf28b9cd72e37e564c299e620985.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -127,6 +127,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-core-packages'] = new List('listing-core-packages', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-latest-post .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-engines','listing-language','listing-freeze','listing-title-block-banner','listing-title','listing-author','listing-date','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-slug','listing-aliases','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-engines","listing-language","listing-freeze","listing-title-block-banner","listing-title","listing-author","listing-date","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-slug","listing-aliases","listing-categories","listing-image"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-latest-post'] = new List('listing-latest-post', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -295,7 +323,10 @@ window.Quarto = {
 
 <div class="gv-hero">
 <div class="gv-hero-copy">
-<p><a class="gv-eyebrow" href="news/golem-1.0.0-release-on-cran/"><span class="gv-pill">New</span>{golem} 1.0 is out: agent skills, Docker + renv, cli output</a></p>
+<div id="listing-latest-post" class="quarto-listing quarto-listing-container-custom">
+<p><a class="gv-eyebrow" href="./news/brochure-1.0.0-release-on-cran/index.html"><span class="gv-pill">New</span>{brochure} 1.0.0 is now on CRAN</a></p>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 <h1>
 Shiny apps, engineered for production.
 </h1>
@@ -489,7 +520,22 @@ From the blog
 </div>
 <div id="listing-blog-listings" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1783641600000" data-listing-file-modified-sort="1789474094998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1025">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1792022400000" data-listing-file-modified-sort="1792080633695" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="925">
+<a href="./news/brochure-1.0.0-release-on-cran/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+{brochure} 1.0.0 is now on CRAN
+</h5>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 15, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1783641600000" data-listing-file-modified-sort="1792080633706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1025">
 <a href="./news/golem-1.0.0-release-on-cran/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -504,7 +550,7 @@ Jul 10, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1736294400000" data-listing-file-modified-sort="1789474094999" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<div class="g-col-1" data-index="2" data-listing-date-sort="1736294400000" data-listing-file-modified-sort="1792080633707" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
 <a href="./news/golem-shinylive/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -514,21 +560,6 @@ Serve your {golem} app to {shinylive}
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jan 8, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1724803200000" data-listing-file-modified-sort="1789474094997" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="481">
-<a href="./news/golem-0.5.1-release-on-cran/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-{golem} 0.5.1 is now available
-</h5>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Aug 28, 2024
 </div>
 </div>
 </div>

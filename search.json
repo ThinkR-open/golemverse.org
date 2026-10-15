@@ -1,276 +1,10 @@
 [
   {
-    "objectID": "stream/2020-01-13-twitch/index.html",
-    "href": "stream/2020-01-13-twitch/index.html",
-    "title": "First live stream 🎂",
+    "objectID": "news/golem-hacktoberfest-2021/index.html",
+    "href": "news/golem-hacktoberfest-2021/index.html",
+    "title": "Join HacktoberFest 2021 with {golem} (and more)!",
     "section": "",
-    "text": "Colin will live stream on Twitch how to build a Shiny application with {golem}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-01-13 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-01-13 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-01-13 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-01-13 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-01-13 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-01-14 07:00:00 AEDT\""
-  },
-  {
-    "objectID": "stream/2022-02-10-twitch/index.html",
-    "href": "stream/2022-02-10-twitch/index.html",
-    "title": "Let’s build a new app!",
-    "section": "",
-    "text": "Let’s start building a new app with {golem} and {brochure}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2022-02-10 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2022-02-10 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2022-02-10 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2022-02-10 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2022-02-10 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2022-02-11 07:00:00 AEDT\""
-  },
-  {
-    "objectID": "stream/2020-04-02-twitch/index.html",
-    "href": "stream/2020-04-02-twitch/index.html",
-    "title": "Overview of {hexmake}",
-    "section": "",
-    "text": "Colin will be live talking about the internals of {hexmake}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-04-02 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-04-02 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-04-02 19:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-04-02 15:00:00 EDT\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-04-02 12:00:00 PDT\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-04-03 06:00:00 AEDT\""
-  },
-  {
-    "objectID": "resources/index.html",
-    "href": "resources/index.html",
-    "title": "Documentation and resources",
-    "section": "",
-    "text": "Books, documentation, tutorials and talks about the golemverse, gathered since 2019. The ecosystem keeps moving, so some of the oldest entries below may be out of date."
-  },
-  {
-    "objectID": "resources/index.html#books",
-    "href": "resources/index.html#books",
-    "title": "Documentation and resources",
-    "section": "Books 📚",
-    "text": "Books 📚\n\n“Engineering Production-grade Shiny Apps” — the book behind the golemverse, by Colin Fay, Sébastien Rochette, Vincent Guyader and Cervan Girard. Free to read online, and in print in the R Series by Chapman and Hall/CRC.\n“Shiny App-Packages” — a whole chapter builds the same app with {golem}, by Martin Frigaard.\n“Shiny Frameworks” — {golem}, {leprechaun} and {rhino} side by side, by Martin Frigaard.\n🇧🇷 “Programando em Shiny” — chapter 11 covers {golem} in Portuguese, by Curso-R."
-  },
-  {
-    "objectID": "resources/index.html#documentation",
-    "href": "resources/index.html#documentation",
-    "title": "Documentation and resources",
-    "section": "Documentation 📖",
-    "text": "Documentation 📖\n\nGetting started — from create_golem() to a first working app.\nDay to day development — modules, functions, tests, the dev/ scripts.\nDeploy your app — Docker, {renv}, Posit Connect, shinyapps.io, ShinyProxy.\nJavaScript and configuration.\nExtending {golem} — write your own templates and hooks.\nTest your app with Playwright — the {pw} package documentation.\ngolem agent skills — teach your coding assistant the golem conventions."
-  },
-  {
-    "objectID": "resources/index.html#cheatsheet",
-    "href": "resources/index.html#cheatsheet",
-    "title": "Documentation and resources",
-    "section": "Cheatsheet 📑",
-    "text": "Cheatsheet 📑\n\n{golem} cheatsheet, also in the Posit cheatsheet gallery."
-  },
-  {
-    "objectID": "resources/index.html#blog-posts",
-    "href": "resources/index.html#blog-posts",
-    "title": "Documentation and resources",
-    "section": "Blog posts ✍️",
-    "text": "Blog posts ✍️\nFor the latest news, read the golemverse blog.\nYou can also browse the “golem” tag on the RTask website.\nWritten elsewhere in the community:\n\n“{rhino} vs {golem} vs {leprechaun}: Which R/Shiny Library is Right for You?” — Gift Kenneth, Appsilon, 2023.\n“Navigating the Shiny Universe with Golem” — Thiago de Paula Oliveira, 2023.\n“Deploying a Golem Shiny App to ShinyApps.io” — Mauricio Vargas Sepúlveda, 2025.\ngolemWebR — a worked example of a {golem} app served with webR, by David Granjon."
-  },
-  {
-    "objectID": "resources/index.html#conferences-videos-podcasts",
-    "href": "resources/index.html#conferences-videos-podcasts",
-    "title": "Documentation and resources",
-    "section": "Conferences, videos, podcasts 🤩",
-    "text": "Conferences, videos, podcasts 🤩\nHave any resource to add here? Feel free to open an issue!."
-  },
-  {
-    "objectID": "resources/index.html#section",
-    "href": "resources/index.html#section",
-    "title": "Documentation and resources",
-    "section": "2025",
-    "text": "2025\n\n2025-10-08 Workshop - Production-Proof Shiny: end-to-end testing with Playwright and {golem} Shiny in Production, Newcastle, by Colin Fay\n2025-07-20 🎥 Golem is a Must-Know Framework For R-Shiny (and here’s how to use it) Online, by Albert Rapp"
-  },
-  {
-    "objectID": "resources/index.html#section-1",
-    "href": "resources/index.html#section-1",
-    "title": "Documentation and resources",
-    "section": "2023",
-    "text": "2023\n\n2023-06-29 🎥 Building a basic Shiny app with {golem} - Part II Online, by Mauricio Vargas Sepulveda\n2023-04-15 🎥 Building a basic Shiny app with {golem} - Part I Online, by Mauricio Vargas Sepulveda\n2023-03-16 🎥 Keynote - Production is like ultra running: brutal, ungrateful, but worth every step ShinyConf 2023, by Colin Fay"
-  },
-  {
-    "objectID": "resources/index.html#section-2",
-    "href": "resources/index.html#section-2",
-    "title": "Documentation and resources",
-    "section": "2022",
-    "text": "2022\n\n2022-11-23 🎥 Building Production-Quality Shiny Applications R/Pharma, by Eric Nantz\n2022-10-07 🎥 DESTROY ALL WIDGETS! Shiny in Production, Newcastle, by Colin Fay\n2022-07-27 🎥 🇫🇷 Déploiement d’une application {shiny} dans docker avec {renv} et {golem}. Online, by Vincent Guyader\n2022-02-24 🎥 🇫🇷 De la Création au Déploiement d’Applications {shiny} avec {golem} Meetup R Lille et Tunis R User Group, by Margot Brard\n2022-02-16 🎥 Building Multiple Page Shiny Apps with {brochure} NHSR, by Colin Fay"
-  },
-  {
-    "objectID": "resources/index.html#section-3",
-    "href": "resources/index.html#section-3",
-    "title": "Documentation and resources",
-    "section": "2021",
-    "text": "2021\n\n2021-12-13 🎥 Shiny Dev Series - Colin Fay is back Shiny Dev Series, by Colin Fay\n2021-10-15 Workshop - Good Practices for {shiny} development with {golem} EARL, by Colin Fay\n2021-07-12 🎥 🇫🇷 Conception d’applications Shiny avec {golem} Online, by Vincent Guyader\n2021-05-18 🎥 Mastering Shiny Book Club the golem package Online, by Colin Fay"
-  },
-  {
-    "objectID": "resources/index.html#section-4",
-    "href": "resources/index.html#section-4",
-    "title": "Documentation and resources",
-    "section": "2020",
-    "text": "2020\n\n2020-10-01 Building a modularized Shiny App with {golem} and htmlwidgets CorrelCon, by Cedric Scherer\n2020-09-25 Workshop - Engineering {shiny} with {golem} WhyR, by Colin Fay\n2020-09-09 An overview of testing in R AI Testing online meetup, by Colin Fay\n2020-08-26 🎥 Production R Shiny Made Easy– the Golem Framework Cleveland R User Group, by Liz Nelson\n2020-07-28 🎥 Everything not Tested Will Eventually Fail NYR Meetup, by Colin Fay\n2020-06-18 Testing Shiny - Why, what, and how e-Rum, by Colin Fay\n2020-04-27 🎥 Engineering Shiny Apps with {golem} BristolR Online Meetup, by Colin Fay\n2020-03-26 🎥 Create meaningful fake tidy datasets in R using fakir Online, by Abdul Majed\n2020-03-06 Workshop - Building Successful Shiny Apps with {golem} satRday Johannesburg, by Colin Fay\n2020-01-30 🎥 Production-grade Shiny Apps with golem rstudio::conf(2020L), by Colin Fay / Vincent Guyader"
-  },
-  {
-    "objectID": "resources/index.html#section-5",
-    "href": "resources/index.html#section-5",
-    "title": "Documentation and resources",
-    "section": "2019",
-    "text": "2019\n\n2019-12-03 {golem} - Engineering Production-Grade Shiny Apps Barcelona R Meetup, by Colin Fay\n2019-11-20 🇫🇷 Introduction à {golem} en français Online, by Cervan Girard\n2019-08-22 Creating (and Reviving) Shiny apps with {golem}! R Pharma 2019, by Eric Nantz\n2019-07-17 🎥 🇧🇷 Usando o pacote {golem} para criar Shiny Apps com o R Online, by Curso-R\n2019-07-10 🎥 A Framework for Building Robust & Production Ready Shiny Apps useR! 2019, by Vincent Guyader\n2019-06-19 🎥 Hands-on demonstration of {golem} Shiny Dev Series, by Colin Fay\n2019-06-19 🎥 {golem} and Effective Shiny Development Methods Shiny Dev Series, by Colin Fay\n2019-05-24 Production-grade Shiny Apps with {golem} Paris, by Colin Fay"
-  },
-  {
-    "objectID": "resources/index.html#apps-built-with-golem",
-    "href": "resources/index.html#apps-built-with-golem",
-    "title": "Documentation and resources",
-    "section": "Apps built with {golem} 🚀",
-    "text": "Apps built with {golem} 🚀\nA list of open-source applications built with {golem}, from research tools to NHS dashboards, is kept in the package documentation."
-  },
-  {
-    "objectID": "packages/bank/index.html#install",
-    "href": "packages/bank/index.html#install",
-    "title": "bank",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"thinkr-open/bank\")"
-  },
-  {
-    "objectID": "packages/bank/index.html#links",
-    "href": "packages/bank/index.html#links",
-    "title": "bank",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/bank Report an issue issues CI status R-CMD-check"
-  },
-  {
-    "objectID": "packages/golem-agent-skills/index.html#install",
-    "href": "packages/golem-agent-skills/index.html#install",
-    "title": "golem-agent-skills",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"ThinkR-open/golem-agent-skills\")"
-  },
-  {
-    "objectID": "packages/golem-agent-skills/index.html#links",
-    "href": "packages/golem-agent-skills/index.html#links",
-    "title": "golem-agent-skills",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/golem-agent-skills Report an issue issues"
-  },
-  {
-    "objectID": "packages/gemstones/index.html#install",
-    "href": "packages/gemstones/index.html#install",
-    "title": "gemstones",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"thinkr-open/gemstones\")"
-  },
-  {
-    "objectID": "packages/gemstones/index.html#links",
-    "href": "packages/gemstones/index.html#links",
-    "title": "gemstones",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/gemstones Report an issue issues CI status R-CMD-check"
-  },
-  {
-    "objectID": "packages/minifyr/index.html#install",
-    "href": "packages/minifyr/index.html#install",
-    "title": "minifyr",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"colinfay/minifyr\")"
-  },
-  {
-    "objectID": "packages/minifyr/index.html#links",
-    "href": "packages/minifyr/index.html#links",
-    "title": "minifyr",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source colinfay/minifyr Report an issue issues CI status R-CMD-check"
-  },
-  {
-    "objectID": "packages/elvis/index.html#install",
-    "href": "packages/elvis/index.html#install",
-    "title": "elvis",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"thinkr-open/elvis\")"
-  },
-  {
-    "objectID": "packages/elvis/index.html#links",
-    "href": "packages/elvis/index.html#links",
-    "title": "elvis",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/elvis Report an issue issues CI status R-CMD-check"
-  },
-  {
-    "objectID": "packages/golem/index.html#install",
-    "href": "packages/golem/index.html#install",
-    "title": "golem",
-    "section": "Install",
-    "text": "Install\n# From CRAN\ninstall.packages(\"golem\")\n\n# Development version\npak::pak(\"ThinkR-open/golem\")"
-  },
-  {
-    "objectID": "packages/golem/index.html#links",
-    "href": "packages/golem/index.html#links",
-    "title": "golem",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/golem Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
-  },
-  {
-    "objectID": "packages/brochure/index.html#install",
-    "href": "packages/brochure/index.html#install",
-    "title": "brochure",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"colinfay/brochure\")"
-  },
-  {
-    "objectID": "packages/brochure/index.html#links",
-    "href": "packages/brochure/index.html#links",
-    "title": "brochure",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source colinfay/brochure Report an issue issues CI status R-CMD-check"
-  },
-  {
-    "objectID": "packages/w3css/index.html#install",
-    "href": "packages/w3css/index.html#install",
-    "title": "w3css",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"thinkr-open/w3css\")"
-  },
-  {
-    "objectID": "packages/w3css/index.html#links",
-    "href": "packages/w3css/index.html#links",
-    "title": "w3css",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/w3css Report an issue issues CI status R-CMD-check"
-  },
-  {
-    "objectID": "packages/skeleton/index.html#install",
-    "href": "packages/skeleton/index.html#install",
-    "title": "skeleton",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"colinfay/skeleton\")"
-  },
-  {
-    "objectID": "packages/skeleton/index.html#links",
-    "href": "packages/skeleton/index.html#links",
-    "title": "skeleton",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source colinfay/skeleton Report an issue issues CI status R-CMD-check"
-  },
-  {
-    "objectID": "gameofgoose/index.html",
-    "href": "gameofgoose/index.html",
-    "title": "Golemverse Game of Goose",
-    "section": "",
-    "text": "Welcome to the Golemverse Game of Goose!\n\n\n\nStart with the idea 💡\nRole the dice 🎲\nMove your pawn ♟️\nIf you end on a bridge: move to the next bridge 🌉\nIf you end on a dice: play again 🎲\nIf you end on the skull: start again 💀\nIf you end on the well: skip one turn ䷯\nThe game is finished when you reach the end user 👩‍💻"
-  },
-  {
-    "objectID": "gameofgoose/index.html#rules-of-the-game",
-    "href": "gameofgoose/index.html#rules-of-the-game",
-    "title": "Golemverse Game of Goose",
-    "section": "",
-    "text": "Start with the idea 💡\nRole the dice 🎲\nMove your pawn ♟️\nIf you end on a bridge: move to the next bridge 🌉\nIf you end on a dice: play again 🎲\nIf you end on the skull: start again 💀\nIf you end on the well: skip one turn ䷯\nThe game is finished when you reach the end user 👩‍💻"
-  },
-  {
-    "objectID": "roadmap/index.html",
-    "href": "roadmap/index.html",
-    "title": "golemverse’s roadmap",
-    "section": "",
-    "text": "Here is a list of things the golemverse team plans on working on.\nIf you feel like helping, feel free to open an issue / discussion / PR on one of the repository.\nLast edit: (2026-09-15)"
-  },
-  {
-    "objectID": "roadmap/index.html#short-term-roadmap-3-to-6-months",
-    "href": "roadmap/index.html#short-term-roadmap-3-to-6-months",
-    "title": "golemverse’s roadmap",
-    "section": "Short term roadmap (3 to 6 months)",
-    "text": "Short term roadmap (3 to 6 months)\n\nStable, CRAN version for {brochure}\nStable, CRAN version for {bootstrict}\nStable, CRAN version for {pw}"
-  },
-  {
-    "objectID": "roadmap/index.html#mid-term-6-to-12-months",
-    "href": "roadmap/index.html#mid-term-6-to-12-months",
-    "title": "golemverse’s roadmap",
-    "section": "Mid term (6 to 12 months)",
-    "text": "Mid term (6 to 12 months)\n\nDashboard template for {brochure}\n{golemverse} package à la {tidyverse} to simplify installation.\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\nWrite a blogpost about {gargoyle}"
+    "text": "Join us for Hacktoberfest 2021 with {golem}!\nHacktoberfest is an online event, happening all over the world, where everyone is invited to open a pull request on a repo that has issues labelled hacktoberfest. The idea of this event is to gather developers (newbies or seasoned), and make them work together on open source projects.\nFor this second year, I’m happy to invite developers from the R community to take part to Hacktoberfest with {golem}. I’ve started to label some issues inside the repository with the hacktoberfest label, so that you can join the party, starting tomorrow!\nEvery time you’ll open an issue with this label, you’ll also find two other labels: the difficulty level (novice, intermediate, advanced), and a time estimate (low, medium, high). This will help you evaluate if you can try and tackle this issue or not.\nYou’ll find them all on the GitHub repository. Feel free to leave a comment on the issue you’d like to tackle, and of course to ask questions if the issue is not detailed enough.\nI’m planning on release a minor version of {golem} (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘\nYou don’t feel like working on {golem}? We have also labelled other repositories inside the ThinkR GitHub organisation with the hacktoberfest tag:\n\n{attachment}, a package for working with dependencies in your scripts, Rmds, and packages.\n{fusen}, a package to build a package from a Rmd.\n{shinipsum}, a lorem-ipsum generator for {shiny} elements.\n{fakir}, a fake data generator.\nCompanies, Officials and NGO Using R, our collaborative list of R in the real world.\nAnd more…\n\nSee you on GitHub!"
   },
   {
     "objectID": "news/golem-0.3.1-release-on-cran/index.html",
@@ -327,13 +61,6 @@
     "title": "About {golem} 0.3.1",
     "section": "Thanks",
     "text": "Thanks\nWe want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.\n@abidawson, @abnercasallo, @aftonsteps, @AMillanFL, @antoine-sachet, @ArthurPERE, @artpulsion, @cderv, @chintanp, @ChrisBeeley, @CorradoLanera, @csgillespie, @daattali, @DivadNojnarg, @durandsinclair, @dwhdai, @dylanrussellmd, @earnaud, @fBedecarrats, @feddelegrand7, @fizic37, @fvitalini, @gacolitti, @genobobeno, @hadley, @HanjoStudy, @henrique1008, @jacksonschan, @jacobwindsor, @jaybee84, @jcrodriguez1989, @jennahamlin, @julianstanley, @KasperThystrup, @Kastakin, @KoderKow, @kprimice, @mahelious, @MayaGans, @mcsiple, @michaelhogersnplm, @moodymudskipper, @mraess, @novica, @nvelden, @quickbendelat, @rgaube, @riccardoporreca, @RichardPilbery, @robertoromor, @seanhardison1, @ShinyFabio, @sjspielman, @Swechhya, @TimotheeTournier, @VincentAlcazer, @Welsh44, @yogat3ch, @yonicd, @zchmielewska, and @ZimmermannYves."
-  },
-  {
-    "objectID": "news/2020-05-10_shinipsum-cran-realease/index.html",
-    "href": "news/2020-05-10_shinipsum-cran-realease/index.html",
-    "title": "{shinipsum} is now on CRAN",
-    "section": "",
-    "text": "I’m very happy to announce that {shinipsum} is now on CRAN!\n{shinipsum} is a package that can help you build {shiny} prototypes faster by providing a series of functions that can generate random elements to populate your UI. If you are familiar with “lorem ipsum”, the fake text generator that is used in software design as a placeholder for text, the idea is the same: generating placeholders for Shiny outputs.\n{shinipsum} can be installed from CRAN with:\n\ninstall.packages(\"shinipsum\")\n\nYou can install this package from GitHub with:\n\nremotes::install_github(\"Thinkr-open/shinipsum\")\n\nIn this package, a series of functions that generates random placeholders. For example, random_ggplot() generates random {ggplot2} elements:\n\nlibrary(shinipsum)\nlibrary(ggplot2)\n\n\nrandom_ggplot() +\n  labs(title = \"Random plot\")\n\n\n\n\n\n\n\n\n\nrandom_ggplot() +\n  labs(title = \"Random plot\")\n\n\n\n\n\n\n\n\nOf course, the idea is to combine this with a Shiny interface, for example random_ggplot() will be used with a renderPlot() and plotOutput(). And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, random_ggplot() has a type parameter that can help you select a specific geom.\n\nlibrary(shiny)\nlibrary(shinipsum)\nlibrary(DT)\nui &lt;- fluidPage(\n  h2(\"A Random DT\"),\n  DTOutput(\"data_table\"),\n  h2(\"A Random Plot\"),\n  plotOutput(\"plot\"),\n  h2(\"A Random Text\"),\n  tableOutput(\"text\")\n)\n\nserver &lt;- function(input, output, session) {\n  output$data_table &lt;- DT::renderDT({\n    random_DT(5, 5)\n  })\n  output$plot &lt;- renderPlot({\n    random_ggplot(type = \"point\")\n  })\n  output$text &lt;- renderText({\n    random_text(nwords = 50)\n  })\n}\nshinyApp(ui, server)\n\nOther {shinipsum} functions include:\n\ntables:\n\n\nrandom_table(nrow = 3, ncol = 10)\n\n  Plant   Type  Treatment conc uptake Plant.1 Type.1 Treatment.1 conc.1\n1   Qn1 Quebec nonchilled   95   16.0     Qn1 Quebec  nonchilled     95\n2   Qn1 Quebec nonchilled  175   30.4     Qn1 Quebec  nonchilled    175\n3   Qn1 Quebec nonchilled  250   34.8     Qn1 Quebec  nonchilled    250\n  uptake.1\n1     16.0\n2     30.4\n3     34.8\n\n\n\nprint outputs:\n\n\nrandom_print(type = \"model\")\n\n\n    Pearson's product-moment correlation\n\ndata:  datasets::mtcars$mpg and datasets::mtcars$cyl\nt = -8.9197, df = 30, p-value = 6.113e-10\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n -0.9257694 -0.7163171\nsample estimates:\n      cor \n-0.852162 \n\n\n… and text, image, ggplotly, dygraph, and DT.\nLearn more about {shinipsum}:\n\n{shinipsum} website\nChapter 10 Building an “ipsum-app” - Engineering Production-Grade Shiny Apps"
   },
   {
     "objectID": "news/golem-0.4.0-release-on-cran/index.html",
@@ -462,20 +189,6 @@
     "text": "Thanks\nThis release is the result of many contributors’ work — a special thank you to Ilya Zarubin (@ilyaZar) for his massive involvement, and to everyone who opened issues, submitted PRs, and tested the development versions.\nHappy coding 🚀\n\nReport any issue on the issue tracker. Full documentation is available at thinkr-open.github.io/golem."
   },
   {
-    "objectID": "news/index.html",
-    "href": "news/index.html",
-    "title": "Posts",
-    "section": "",
-    "text": "{golem} 1.0.0 is here\n\n\n\n\n\n\n\n\nJul 10, 2026\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nServe your {golem} app to {shinylive}\n\n\n\n\n\n\n\n\nJan 8, 2025\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.5.1 is now available\n\n\n\n\n\n\n\n\nAug 28, 2024\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{fakir} 1.0.0 is now on CRAN\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "news/golem-hacktoberfest-2021/index.html",
-    "href": "news/golem-hacktoberfest-2021/index.html",
-    "title": "Join HacktoberFest 2021 with {golem} (and more)!",
-    "section": "",
-    "text": "Join us for Hacktoberfest 2021 with {golem}!\nHacktoberfest is an online event, happening all over the world, where everyone is invited to open a pull request on a repo that has issues labelled hacktoberfest. The idea of this event is to gather developers (newbies or seasoned), and make them work together on open source projects.\nFor this second year, I’m happy to invite developers from the R community to take part to Hacktoberfest with {golem}. I’ve started to label some issues inside the repository with the hacktoberfest label, so that you can join the party, starting tomorrow!\nEvery time you’ll open an issue with this label, you’ll also find two other labels: the difficulty level (novice, intermediate, advanced), and a time estimate (low, medium, high). This will help you evaluate if you can try and tackle this issue or not.\nYou’ll find them all on the GitHub repository. Feel free to leave a comment on the issue you’d like to tackle, and of course to ask questions if the issue is not detailed enough.\nI’m planning on release a minor version of {golem} (0.3.1) at the end of this month, with all the new features and bug fixes that we will all have worked on during the month 🤘\nYou don’t feel like working on {golem}? We have also labelled other repositories inside the ThinkR GitHub organisation with the hacktoberfest tag:\n\n{attachment}, a package for working with dependencies in your scripts, Rmds, and packages.\n{fusen}, a package to build a package from a Rmd.\n{shinipsum}, a lorem-ipsum generator for {shiny} elements.\n{fakir}, a fake data generator.\nCompanies, Officials and NGO Using R, our collaborative list of R in the real world.\nAnd more…\n\nSee you on GitHub!"
-  },
-  {
     "objectID": "news/golem-0.5.1-release-on-cran/index.html",
     "href": "news/golem-0.5.1-release-on-cran/index.html",
     "title": "{golem} 0.5.1 is now available",
@@ -488,83 +201,6 @@
     "title": "{golem} 0.5.1 is now available",
     "section": "What’s New in This Version?",
     "text": "What’s New in This Version?\nThe latest update of {golem} introduces several new functions and improvements, designed to enhance your experience when building and deploying Shiny applications.\n\nMajor Highlights\n\ngolem::welcome_page()\nThe golem::welcome_page() function now displays a welcome page in the default scaffold app, offering a smoother onboarding experience for new users.\n\n\n\nNew Files Added\n\nuse_readme_rmd(): This function adds a {golem}-specific README.Rmd to your project, making documentation easier and more consistent.\nadd_empty_file(): Creates an empty file in the www directory, allowing for better management of static assets.\nadd_r6(): Adds an empty R6 class template, facilitating object-oriented programming in your Shiny apps.\nadd_fct() now includes a function skeleton to guide users in creating consistent functions across their projects.\n\n\n\n\nNew Features and Enhancements\nThis release comes with a variety of new features and user-visible changes:\n\nThe is_golem() function has been introduced to help determine if the current folder is a {golem}-based app. This function can be used especially useful for extending golem with project hooks.\nThe fill_desc() function now automatically calls set_options() and uses a person vector for better project metadata management.\nThe module skeleton has been updated to adhere to the tidyverse style.\n\n\n\nDeployment Improvements\n\nA .rscignore file is now created in the golem directory whenever connect-related files are generated, simplifying deployment to RStudio Connect.\nThe writeManifest() function has been added to deploy.R, improving deployment workflows by ensuring all necessary dependencies are captured.\n\n\n\nBug Fixes\nWe’ve addressed several issues in this release, including:\n\nuse_{internal,external}_XXX_file() now works correctly with the default missing name argument.\nrun_dev() now installs the necessary dependencies to source dev/run_dev.R if they are missing.\nuse_readme_rmd() no longer pops up when open=FALSE is set, providing a smoother setup process.\nDocker commands now include the -it flag, allowing processes to be interrupted with ^C.\n\n\n\nInternal Changes\nThis release also includes some internal improvements:\n\nWe’ve added tests for previously untested files and functions, improving the overall code coverage of {golem}.\nThe guess_where_config() function now locates user config YAML files based on changes made in R/app_config.R.\nThe test suite has been refactored for faster execution and reduced verbosity.\n\nThis release marks a significant step forward for the {golem} package, offering new tools and enhancements to make your Shiny app development smoother and more efficient. We hope you enjoy the new features and improvements!\nHappy coding! 🚀\nThanks to everyone who contributed to this new version!"
-  },
-  {
-    "objectID": "news/golem-0.3.2-release-on-cran/index.html",
-    "href": "news/golem-0.3.2-release-on-cran/index.html",
-    "title": "{golem} 0.3.2 is now available",
-    "section": "",
-    "text": "The new version of {golem} is now available!\nYou can download it from your favorite CRAN repository, or by running the following command:"
-  },
-  {
-    "objectID": "news/golem-0.3.2-release-on-cran/index.html#whats-up-with-this-new-version",
-    "href": "news/golem-0.3.2-release-on-cran/index.html#whats-up-with-this-new-version",
-    "title": "{golem} 0.3.2 is now available",
-    "section": "What’s up with this new version?",
-    "text": "What’s up with this new version?\nIn this release, we have been focusing on a closer integration of tests inside the application building process, notably via Server function testing with Shiny, adding tests to fct, utils, and the ui & server functions that comes with {golem}.\nStarting with this version of {golem}, the integration of tests is opt-in:\ngolem::add_module(\"plop\", with_test = TRUE)\ngolem::add_fct(\"helpers\", with_test = TRUE)\nNote that these will be opt-out in the next release — in other words they will be TRUE by default in the future.\nWe also have squashed a bunch of issues, for example amend_config() now keeps !expr (this use to cause some errors when the project was shared across multiple computers), expect_running() now finds R.exe, some adjustments has been made to fit new version of packages (for example testthat::expect_is is no longer used, and we require the correct version of {usethis}).\nFor a full list of changes, please refer to the NEWS.md file."
-  },
-  {
-    "objectID": "news/golem-0.3.2-release-on-cran/index.html#whats-next",
-    "href": "news/golem-0.3.2-release-on-cran/index.html#whats-next",
-    "title": "{golem} 0.3.2 is now available",
-    "section": "What’s next",
-    "text": "What’s next\nNow that this version is stable, we can start working on the next version, which will be 0.4.0.\nOne of the thing that has been an issue with the way {golem} works is that it is used in two contexts: for dev, and for deployment.\nThe issue with that approach is that when deloying a golem-based app, you will have to install packages that are only used for dev, for exemple {usethis}, while they are not required to run the app.\nThis next version will focus on removing these packages from hard dependencies and move them to suggest, so that you can install them while developing but not when deploying, making the deployment process way easier and lighter. Note that the current version of {golem} (0.3.2) has already made a move in this direction by moving {dockerfiler} to Suggest, and making it only required when building the containers.\nFollow the Version 0.4.0 board for more!"
-  },
-  {
-    "objectID": "news/golem-0.3.2-release-on-cran/index.html#thanks",
-    "href": "news/golem-0.3.2-release-on-cran/index.html#thanks",
-    "title": "{golem} 0.3.2 is now available",
-    "section": "Thanks",
-    "text": "Thanks\nWe want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.\n@abidawson, @abnercasallo, @aftonsteps, @AMillanFL, @antoine-sachet, @ArthurPERE, @artpulsion, @cderv, @chintanp, @ChrisBeeley, @CorradoLanera, @csgillespie, @daattali, @DivadNojnarg, @durandsinclair, @dwhdai, @dylanrussellmd, @earnaud, @fBedecarrats, @feddelegrand7, @fizic37, @fvitalini, @gacolitti, @genobobeno, @hadley, @HanjoStudy, @henrique1008, @jacksonschan, @jacobwindsor, @jaybee84, @jcrodriguez1989, @jennahamlin, @julianstanley, @KasperThystrup, @Kastakin, @KoderKow, @kprimice, @mahelious, @MayaGans, @mcsiple, @michaelhogersnplm, @moodymudskipper, @mraess, @novica, @nvelden, @quickbendelat, @rgaube, @riccardoporreca, @RichardPilbery, @robertoromor, @seanhardison1, @ShinyFabio, @sjspielman, @Swechhya, @TimotheeTournier, @VincentAlcazer, @Welsh44, @yogat3ch, @yonicd, @zchmielewska, and @ZimmermannYves."
-  },
-  {
-    "objectID": "news/fakir-1.0.0-on-cran/index.html",
-    "href": "news/fakir-1.0.0-on-cran/index.html",
-    "title": "{fakir} 1.0.0 is now on CRAN",
-    "section": "",
-    "text": "I’m very happy to announce that {fakir} is now on CRAN.\n{fakir} stands for FAKe In R. It’s a package that generates fake datasets that can be used for prototyping {shiny} apps or for teaching."
-  },
-  {
-    "objectID": "news/fakir-1.0.0-on-cran/index.html#installation",
-    "href": "news/fakir-1.0.0-on-cran/index.html#installation",
-    "title": "{fakir} 1.0.0 is now on CRAN",
-    "section": "Installation",
-    "text": "Installation\nYou can install the latest version from your favorite CRAN repository with:\ninstall.packages(\"fakir\")"
-  },
-  {
-    "objectID": "news/fakir-1.0.0-on-cran/index.html#examples",
-    "href": "news/fakir-1.0.0-on-cran/index.html#examples",
-    "title": "{fakir} 1.0.0 is now on CRAN",
-    "section": "Examples",
-    "text": "Examples\n\nFake support tickets\n\nfakir::fake_ticket_client(vol = 10)\n\n# A tibble: 10 × 25\n   ref           num_client first    last  job     age region id_dpt departement\n   &lt;chr&gt;         &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;      \n 1 DOSS-AMQN-002 79         Jovan    O'Ke… Gene…    22 Bourg… 58     Nièvre     \n 2 DOSS-NCKJ-010 69         Miss     Lean… Emer…    68 &lt;NA&gt;   36     Indre      \n 3 DOSS-GPBE-009 120        Odell    Stok… Engi…    24 Limou… 87     Haute-Vien…\n 4 DOSS-GRLN-001 31         Loren    Lars… &lt;NA&gt;     NA Centre 36     Indre      \n 5 DOSS-LEPJ-004 59         Maybelle Maye… Furt…    18 Champ… 08     Ardennes   \n 6 DOSS-DUCL-005 118        Jamarion Ober… Engi…    18 Alsace 67     Bas-Rhin   \n 7 DOSS-OCED-003 77         Lee      Scha… Admi…    NA Auver… 03     Allier     \n 8 DOSS-KXSJ-007 65         Demetric Auer  Cont…    21 Centre 45     Loiret     \n 9 DOSS-UITD-006 141        Wilfrid  Harv… Educ…    53 Aquit… 40     Landes     \n10 DOSS-SHKL-008 182        Addyson  Nien… Earl…    65 Prove… 84     Vaucluse   \n# ℹ 16 more variables: cb_provider &lt;chr&gt;, name &lt;chr&gt;, entry_date &lt;dttm&gt;,\n#   fidelity_points &lt;dbl&gt;, priority_encoded &lt;dbl&gt;, priority &lt;fct&gt;,\n#   timestamp &lt;date&gt;, year &lt;dbl&gt;, month &lt;dbl&gt;, day &lt;int&gt;, supported &lt;chr&gt;,\n#   supported_encoded &lt;int&gt;, type &lt;chr&gt;, type_encoded &lt;int&gt;, state &lt;fct&gt;,\n#   source_call &lt;fct&gt;\n\n\n\n\nFake dataset of connected wearables\n\nfakir::fake_products(10)\n\n# A tibble: 10 × 8\n   name                 brand color price body_location category sent_from    id\n   &lt;chr&gt;                &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;    &lt;chr&gt;     &lt;int&gt;\n 1 Step and Distance P… Lark… Pink      3 Waist         Industr… Taiwan        1\n 2 Biking Tracker U Pr… Lark… Oliv…     5 Waist         Pets an… United S…     2\n 3 Wearable Transmitte… Moen… Beige     4 Feet          Lifesty… Netherla…     3\n 4 Multifunction Track… Weim… Yell…     5 Head          Lifesty… China         4\n 5 Action Camera Pro    Blan… Mocc…    10 Brain         Lifesty… Italy         5\n 6 Strapless Heart Rat… Mann… Deep…     4 Head          Medical  Finland       6\n 7 Action Camera RE Pr… Mann… Maro…     5 Feet          Enterta… Finland       7\n 8 Microcontroller ES   Moen… Pink      3 Neck          Fitness  Finland       8\n 9 Microcontroller OGB… Moen… Plum      5 Arms          Awesome  France        9\n10 Wearable AUSG with … Moen… Dark…     9 Torso         Medical  Italy        10\n\n\n\n\nFake website visits\n\nfakir::fake_visits(\n  from = \"2017-01-01\",\n  to = \"2017-01-31\"\n)\n\n# A tibble: 31 × 8\n   timestamp   year month   day  home about  blog contact\n * &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;\n 1 2017-01-01  2017     1     1   369   220   404     210\n 2 2017-01-02  2017     1     2   159   250   414     490\n 3 2017-01-03  2017     1     3   436   170   498     456\n 4 2017-01-04  2017     1     4    NA   258   526     392\n 5 2017-01-05  2017     1     5   362    NA   407     291\n 6 2017-01-06  2017     1     6   245   145   576      90\n 7 2017-01-07  2017     1     7    NA    NA   484     167\n 8 2017-01-08  2017     1     8   461   103   441      NA\n 9 2017-01-09  2017     1     9   337   113   673     379\n10 2017-01-10  2017     1    10    NA   169   308     139\n# ℹ 21 more rows"
-  },
-  {
-    "objectID": "news/fakir-1.0.0-on-cran/index.html#contribution-feedback",
-    "href": "news/fakir-1.0.0-on-cran/index.html#contribution-feedback",
-    "title": "{fakir} 1.0.0 is now on CRAN",
-    "section": "Contribution & Feedback",
-    "text": "Contribution & Feedback\nYou can contribute to {fakir} in various ways:\n\nFeedback\nIf you discover any bug or have any feedback on the dataset generators, feel free to open an issue on the repo.\n\n\nTranslate\nSome datasets are available in french and english:\n\nfakir::fake_visits(\n  from = \"2017-01-01\",\n  to = \"2017-01-31\",\n  local = \"fr_FR\"\n)\n\n# A tibble: 31 × 8\n   dates         an  mois  jour accueil a_propos  blog contact\n * &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;   &lt;int&gt;    &lt;int&gt; &lt;int&gt;   &lt;int&gt;\n 1 2017-01-01  2017     1     1     369      220   404     210\n 2 2017-01-02  2017     1     2     159      250   414     490\n 3 2017-01-03  2017     1     3     436      170   498     456\n 4 2017-01-04  2017     1     4      NA      258   526     392\n 5 2017-01-05  2017     1     5     362       NA   407     291\n 6 2017-01-06  2017     1     6     245      145   576      90\n 7 2017-01-07  2017     1     7      NA       NA   484     167\n 8 2017-01-08  2017     1     8     461      103   441      NA\n 9 2017-01-09  2017     1     9     337      113   673     379\n10 2017-01-10  2017     1    10      NA      169   308     139\n# ℹ 21 more rows\n\n\nAnd we will be very happy to bring new languages in the package.\n\n\nNew dataset\nFeel free to create new datasets generators.\n\nIf you want to contribute a new language or a new dataset, please open an issue first so that we can discuss and keep track of it!"
-  },
-  {
-    "objectID": "news/golem-0.1.0-release-on-cran/index.html",
-    "href": "news/golem-0.1.0-release-on-cran/index.html",
-    "title": "{golem} 0.1.0 has been released on CRAN",
-    "section": "",
-    "text": "golem (v0.1) A Framework for Building Robust Shiny Apps:\n\n{golem} on CRAN\n{golem} on GitHub\npkgdown and vignettes"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "\nShiny apps, engineered for production.\n",
-    "section": "",
-    "text": "New{golem} 1.0 is out: agent skills, Docker + renv, cli output\n\nThe golemverse is a family of R packages for building, testing and shipping robust {shiny} applications, from the first prototype to the Dockerfile.\n\nGet started with {golem}Read the book\n\n# From CRAN\ninstall.packages(\"golem\")\ngolem::create_golem(\"myapp\", with_agents = TRUE)\n\n\n\n\n\n\n\n\n      \n\n+ 16 more"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "\nShiny apps, engineered for production.\n",
-    "section": "Contact",
-    "text": "Contact\nContact us via the ThinkR website."
   },
   {
     "objectID": "plan-professionnalisation-golemverse.html",
@@ -616,102 +252,123 @@
     "text": "Le golemverse a un noyau solide — golem (94), dockerfiler (90), fakir (86), shinipsum (78) — mais il est présenté dans un cadre qui érode sa crédibilité : une promesse meta-package fictive, 9 packages dormants mal étiquetés (dont 2 quasi non-fonctionnels et toujours mis en avant), une propriété éclatée entre l’org et un compte perso, un site vitrine qui se contredit, et zéro licence détectable sur les 14 repos.\nWins crédibilité les moins chers, dans l’ordre : (1) fix licence MIT sur les 14 repos ; (2) corriger la table du site (minifyr + badges CRAN conditionnels + labels lifecycle) ; (3) construire un vrai {golemverse} ou supprimer la promesse d’install ; (4) archiver/relabel honnêtement elvis, w3css et le reste de la traîne ; (5) régler la propriété org/perso (gargoyle en premier)."
   },
   {
-    "objectID": "documentation/index.html",
-    "href": "documentation/index.html",
-    "title": "golemverse",
+    "objectID": "resources/index.html",
+    "href": "resources/index.html",
+    "title": "Documentation and resources",
     "section": "",
-    "text": "&lt;!doctype html&gt;"
+    "text": "Books, documentation, tutorials and talks about the golemverse, gathered since 2019. The ecosystem keeps moving, so some of the oldest entries below may be out of date."
   },
   {
-    "objectID": "packages/index.html",
-    "href": "packages/index.html",
-    "title": "Packages",
-    "section": "",
-    "text": "17 packages in three tiers. Core packages are maintained and safe to build on. Experimental ones move fast. Abandoned ones stay online for reference.\n\n\nCore\n\nMaintained by ThinkR, safe to build on\n\n\n\n\n\n\ngolem{golem} is an opinionated framework for building production-grade {shiny} applications.\n\nCoreCRAN\n\n\n\n\n\n\nshinipsum{shinipsum} provides a set of functions to generate dummy widgets and content for {shiny} applications.\n\nCoreCRAN\n\n\n\n\n\n\nfakir{fakir} provides a set of functions to generate random data that can be used for prototyping.\n\nCoreCRAN\n\n\n\n\n\n\ngargoyle{gargoyle} is an alternative way to manage reactivity in {shiny}.\n\nCoreCRAN\n\n\n\n\n\n\ndockerfilerBuild dockerfile straight from R.\n\nCoreCRAN\n\n\n\n\n\n\npw{pw} lets you test your {golem} and {shiny} applications with Playwright.\n\nCoreGitHub only\n\n\n\n\n\n\nbootstrict{bootstrict} provides strict, faithful Bootstrap 5 widgets for {shiny}.\n\nCoreGitHub only\n\n\n\n\n\n\ngolem-agent-skillsgolem-agent-skills brings agentic coding to {golem}.\n\nCoreGitHub only\n\n\n\n\n\n\nbrochureNatively multipage {shiny} apps.\n\nCoreGitHub only\n\n\n\n\nNo matching items\n\n\n\nExperimental\n\nMoving fast, expect rough edges\n\n\n\n\n\n\nbankAlternative caching backends for {memoise} & {shiny}.\n\nExperimentalGitHub only\n\n\n\n\n\n\nelvis‘Shiny’ renderers and observers made safer.\n\nExperimentalGitHub only\n\n\n\n\n\n\nghooks{golem} hooks.\n\nExperimentalGitHub only\n\n\n\n\n\n\nshinidrawExcalidraw in {shiny}.\n\nExperimentalGitHub only\n\n\n\n\nNo matching items\n\n\n\nAbandoned\n\nNo longer maintained, kept for reference\n\n\n\n\n\n\ngemstonesExtend your {golem} application with external JS libraries.\n\nAbandonedGitHub only\n\n\n\n\n\n\nw3cssW3 CSS in {shiny}.\n\nAbandonedGitHub only\n\n\n\n\n\n\nskeletonSkeleton CSS in {shiny}.\n\nAbandonedGitHub only\n\n\n\n\n\n\nminifyrMinify CSS, HTML and JavaScript Files.\n\nAbandonedGitHub only\n\n\n\n\nNo matching items\n\n\n\n\nHealth at a glance\n\n\nLive numbers from CRAN and GitHub.\n\n\n\n\n\n\n\n\nPackage\n\n\nTier\n\n\nLifecycle\n\n\nCRAN\n\n\nDownloads / month\n\n\nStars\n\n\nOpen issues\n\n\nLast commit\n\n\n\n\n\n\ngolem\n\n\nCore\n\n\nstable\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nshinipsum\n\n\nCore\n\n\nstable\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nfakir\n\n\nCore\n\n\nstable\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\ngargoyle\n\n\nCore\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\ndockerfiler\n\n\nCore\n\n\nstable\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\npw\n\n\nCore\n\n\nexperimental\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nbootstrict\n\n\nCore\n\n\nexperimental\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\ngolem-agent-skills\n\n\nCore\n\n\nexperimental\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nbrochure\n\n\nCore\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nbank\n\n\nExperimental\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nelvis\n\n\nExperimental\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nghooks\n\n\nExperimental\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nshinidraw\n\n\nExperimental\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\ngemstones\n\n\nAbandoned\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nw3css\n\n\nAbandoned\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nskeleton\n\n\nAbandoned\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nminifyr\n\n\nAbandoned\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\n\n\nDownloads are the last 30 days on CRAN, from cranlogs via r-universe; they are shown only for packages on CRAN. Stars and issues come from the GitHub API."
+    "objectID": "resources/index.html#books",
+    "href": "resources/index.html#books",
+    "title": "Documentation and resources",
+    "section": "Books 📚",
+    "text": "Books 📚\n\n“Engineering Production-grade Shiny Apps” — the book behind the golemverse, by Colin Fay, Sébastien Rochette, Vincent Guyader and Cervan Girard. Free to read online, and in print in the R Series by Chapman and Hall/CRC.\n“Shiny App-Packages” — a whole chapter builds the same app with {golem}, by Martin Frigaard.\n“Shiny Frameworks” — {golem}, {leprechaun} and {rhino} side by side, by Martin Frigaard.\n🇧🇷 “Programando em Shiny” — chapter 11 covers {golem} in Portuguese, by Curso-R."
   },
   {
-    "objectID": "packages/fakir/index.html#install",
-    "href": "packages/fakir/index.html#install",
-    "title": "fakir",
+    "objectID": "resources/index.html#documentation",
+    "href": "resources/index.html#documentation",
+    "title": "Documentation and resources",
+    "section": "Documentation 📖",
+    "text": "Documentation 📖\n\nGetting started — from create_golem() to a first working app.\nDay to day development — modules, functions, tests, the dev/ scripts.\nDeploy your app — Docker, {renv}, Posit Connect, shinyapps.io, ShinyProxy.\nJavaScript and configuration.\nExtending {golem} — write your own templates and hooks.\nTest your app with Playwright — the {pw} package documentation.\ngolem agent skills — teach your coding assistant the golem conventions."
+  },
+  {
+    "objectID": "resources/index.html#cheatsheet",
+    "href": "resources/index.html#cheatsheet",
+    "title": "Documentation and resources",
+    "section": "Cheatsheet 📑",
+    "text": "Cheatsheet 📑\n\n{golem} cheatsheet, also in the Posit cheatsheet gallery."
+  },
+  {
+    "objectID": "resources/index.html#blog-posts",
+    "href": "resources/index.html#blog-posts",
+    "title": "Documentation and resources",
+    "section": "Blog posts ✍️",
+    "text": "Blog posts ✍️\nFor the latest news, read the golemverse blog.\nYou can also browse the “golem” tag on the RTask website.\nWritten elsewhere in the community:\n\n“{rhino} vs {golem} vs {leprechaun}: Which R/Shiny Library is Right for You?” — Gift Kenneth, Appsilon, 2023.\n“Navigating the Shiny Universe with Golem” — Thiago de Paula Oliveira, 2023.\n“Deploying a Golem Shiny App to ShinyApps.io” — Mauricio Vargas Sepúlveda, 2025.\ngolemWebR — a worked example of a {golem} app served with webR, by David Granjon."
+  },
+  {
+    "objectID": "resources/index.html#conferences-videos-podcasts",
+    "href": "resources/index.html#conferences-videos-podcasts",
+    "title": "Documentation and resources",
+    "section": "Conferences, videos, podcasts 🤩",
+    "text": "Conferences, videos, podcasts 🤩\nHave any resource to add here? Feel free to open an issue!."
+  },
+  {
+    "objectID": "resources/index.html#section",
+    "href": "resources/index.html#section",
+    "title": "Documentation and resources",
+    "section": "2025",
+    "text": "2025\n\n2025-10-08 Workshop - Production-Proof Shiny: end-to-end testing with Playwright and {golem} Shiny in Production, Newcastle, by Colin Fay\n2025-07-20 🎥 Golem is a Must-Know Framework For R-Shiny (and here’s how to use it) Online, by Albert Rapp"
+  },
+  {
+    "objectID": "resources/index.html#section-1",
+    "href": "resources/index.html#section-1",
+    "title": "Documentation and resources",
+    "section": "2023",
+    "text": "2023\n\n2023-06-29 🎥 Building a basic Shiny app with {golem} - Part II Online, by Mauricio Vargas Sepulveda\n2023-04-15 🎥 Building a basic Shiny app with {golem} - Part I Online, by Mauricio Vargas Sepulveda\n2023-03-16 🎥 Keynote - Production is like ultra running: brutal, ungrateful, but worth every step ShinyConf 2023, by Colin Fay"
+  },
+  {
+    "objectID": "resources/index.html#section-2",
+    "href": "resources/index.html#section-2",
+    "title": "Documentation and resources",
+    "section": "2022",
+    "text": "2022\n\n2022-11-23 🎥 Building Production-Quality Shiny Applications R/Pharma, by Eric Nantz\n2022-10-07 🎥 DESTROY ALL WIDGETS! Shiny in Production, Newcastle, by Colin Fay\n2022-07-27 🎥 🇫🇷 Déploiement d’une application {shiny} dans docker avec {renv} et {golem}. Online, by Vincent Guyader\n2022-02-24 🎥 🇫🇷 De la Création au Déploiement d’Applications {shiny} avec {golem} Meetup R Lille et Tunis R User Group, by Margot Brard\n2022-02-16 🎥 Building Multiple Page Shiny Apps with {brochure} NHSR, by Colin Fay"
+  },
+  {
+    "objectID": "resources/index.html#section-3",
+    "href": "resources/index.html#section-3",
+    "title": "Documentation and resources",
+    "section": "2021",
+    "text": "2021\n\n2021-12-13 🎥 Shiny Dev Series - Colin Fay is back Shiny Dev Series, by Colin Fay\n2021-10-15 Workshop - Good Practices for {shiny} development with {golem} EARL, by Colin Fay\n2021-07-12 🎥 🇫🇷 Conception d’applications Shiny avec {golem} Online, by Vincent Guyader\n2021-05-18 🎥 Mastering Shiny Book Club the golem package Online, by Colin Fay"
+  },
+  {
+    "objectID": "resources/index.html#section-4",
+    "href": "resources/index.html#section-4",
+    "title": "Documentation and resources",
+    "section": "2020",
+    "text": "2020\n\n2020-10-01 Building a modularized Shiny App with {golem} and htmlwidgets CorrelCon, by Cedric Scherer\n2020-09-25 Workshop - Engineering {shiny} with {golem} WhyR, by Colin Fay\n2020-09-09 An overview of testing in R AI Testing online meetup, by Colin Fay\n2020-08-26 🎥 Production R Shiny Made Easy– the Golem Framework Cleveland R User Group, by Liz Nelson\n2020-07-28 🎥 Everything not Tested Will Eventually Fail NYR Meetup, by Colin Fay\n2020-06-18 Testing Shiny - Why, what, and how e-Rum, by Colin Fay\n2020-04-27 🎥 Engineering Shiny Apps with {golem} BristolR Online Meetup, by Colin Fay\n2020-03-26 🎥 Create meaningful fake tidy datasets in R using fakir Online, by Abdul Majed\n2020-03-06 Workshop - Building Successful Shiny Apps with {golem} satRday Johannesburg, by Colin Fay\n2020-01-30 🎥 Production-grade Shiny Apps with golem rstudio::conf(2020L), by Colin Fay / Vincent Guyader"
+  },
+  {
+    "objectID": "resources/index.html#section-5",
+    "href": "resources/index.html#section-5",
+    "title": "Documentation and resources",
+    "section": "2019",
+    "text": "2019\n\n2019-12-03 {golem} - Engineering Production-Grade Shiny Apps Barcelona R Meetup, by Colin Fay\n2019-11-20 🇫🇷 Introduction à {golem} en français Online, by Cervan Girard\n2019-08-22 Creating (and Reviving) Shiny apps with {golem}! R Pharma 2019, by Eric Nantz\n2019-07-17 🎥 🇧🇷 Usando o pacote {golem} para criar Shiny Apps com o R Online, by Curso-R\n2019-07-10 🎥 A Framework for Building Robust & Production Ready Shiny Apps useR! 2019, by Vincent Guyader\n2019-06-19 🎥 Hands-on demonstration of {golem} Shiny Dev Series, by Colin Fay\n2019-06-19 🎥 {golem} and Effective Shiny Development Methods Shiny Dev Series, by Colin Fay\n2019-05-24 Production-grade Shiny Apps with {golem} Paris, by Colin Fay"
+  },
+  {
+    "objectID": "resources/index.html#apps-built-with-golem",
+    "href": "resources/index.html#apps-built-with-golem",
+    "title": "Documentation and resources",
+    "section": "Apps built with {golem} 🚀",
+    "text": "Apps built with {golem} 🚀\nA list of open-source applications built with {golem}, from research tools to NHS dashboards, is kept in the package documentation."
+  },
+  {
+    "objectID": "packages/bank/index.html#install",
+    "href": "packages/bank/index.html#install",
+    "title": "bank",
     "section": "Install",
-    "text": "Install\n# From CRAN\ninstall.packages(\"fakir\")\n\n# Development version\npak::pak(\"ThinkR-open/fakir\")"
+    "text": "Install\n# Development version\npak::pak(\"thinkr-open/bank\")"
   },
   {
-    "objectID": "packages/fakir/index.html#links",
-    "href": "packages/fakir/index.html#links",
-    "title": "fakir",
+    "objectID": "packages/bank/index.html#links",
+    "href": "packages/bank/index.html#links",
+    "title": "bank",
     "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/fakir Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
+    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/bank Report an issue issues CI status R-CMD-check"
   },
   {
-    "objectID": "packages/shinipsum/index.html#install",
-    "href": "packages/shinipsum/index.html#install",
-    "title": "shinipsum",
+    "objectID": "packages/golem/index.html#install",
+    "href": "packages/golem/index.html#install",
+    "title": "golem",
     "section": "Install",
-    "text": "Install\n# From CRAN\ninstall.packages(\"shinipsum\")\n\n# Development version\npak::pak(\"ThinkR-open/shinipsum\")"
+    "text": "Install\n# From CRAN\ninstall.packages(\"golem\")\n\n# Development version\npak::pak(\"ThinkR-open/golem\")"
   },
   {
-    "objectID": "packages/shinipsum/index.html#links",
-    "href": "packages/shinipsum/index.html#links",
-    "title": "shinipsum",
+    "objectID": "packages/golem/index.html#links",
+    "href": "packages/golem/index.html#links",
+    "title": "golem",
     "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/shinipsum Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
-  },
-  {
-    "objectID": "packages/gargoyle/index.html#install",
-    "href": "packages/gargoyle/index.html#install",
-    "title": "gargoyle",
-    "section": "Install",
-    "text": "Install\n# From CRAN\ninstall.packages(\"gargoyle\")\n\n# Development version\npak::pak(\"colinfay/gargoyle\")"
-  },
-  {
-    "objectID": "packages/gargoyle/index.html#links",
-    "href": "packages/gargoyle/index.html#links",
-    "title": "gargoyle",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source colinfay/gargoyle Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
-  },
-  {
-    "objectID": "packages/shinidraw/index.html#install",
-    "href": "packages/shinidraw/index.html#install",
-    "title": "shinidraw",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"thinkr-open/shinidraw\")"
-  },
-  {
-    "objectID": "packages/shinidraw/index.html#links",
-    "href": "packages/shinidraw/index.html#links",
-    "title": "shinidraw",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/shinidraw Report an issue issues CI status R-CMD-check"
-  },
-  {
-    "objectID": "packages/ghooks/index.html#install",
-    "href": "packages/ghooks/index.html#install",
-    "title": "ghooks",
-    "section": "Install",
-    "text": "Install\n# Development version\npak::pak(\"thinkr-open/ghooks\")"
-  },
-  {
-    "objectID": "packages/ghooks/index.html#links",
-    "href": "packages/ghooks/index.html#links",
-    "title": "ghooks",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/ghooks Report an issue issues CI status R-CMD-check"
-  },
-  {
-    "objectID": "packages/dockerfiler/index.html#install",
-    "href": "packages/dockerfiler/index.html#install",
-    "title": "dockerfiler",
-    "section": "Install",
-    "text": "Install\n# From CRAN\ninstall.packages(\"dockerfiler\")\n\n# Development version\npak::pak(\"thinkr-open/dockerfiler\")"
-  },
-  {
-    "objectID": "packages/dockerfiler/index.html#links",
-    "href": "packages/dockerfiler/index.html#links",
-    "title": "dockerfiler",
-    "section": "Links",
-    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/dockerfiler Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
+    "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/golem Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
   },
   {
     "objectID": "packages/pw/index.html#install",
@@ -728,6 +385,69 @@
     "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/pw Report an issue issues CI status R-CMD-check"
   },
   {
+    "objectID": "packages/gargoyle/index.html#install",
+    "href": "packages/gargoyle/index.html#install",
+    "title": "gargoyle",
+    "section": "Install",
+    "text": "Install\n# From CRAN\ninstall.packages(\"gargoyle\")\n\n# Development version\npak::pak(\"colinfay/gargoyle\")"
+  },
+  {
+    "objectID": "packages/gargoyle/index.html#links",
+    "href": "packages/gargoyle/index.html#links",
+    "title": "gargoyle",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source colinfay/gargoyle Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
+  },
+  {
+    "objectID": "packages/gemstones/index.html#install",
+    "href": "packages/gemstones/index.html#install",
+    "title": "gemstones",
+    "section": "Install",
+    "text": "Install\n# Development version\npak::pak(\"thinkr-open/gemstones\")"
+  },
+  {
+    "objectID": "packages/gemstones/index.html#links",
+    "href": "packages/gemstones/index.html#links",
+    "title": "gemstones",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/gemstones Report an issue issues CI status R-CMD-check"
+  },
+  {
+    "objectID": "packages/index.html",
+    "href": "packages/index.html",
+    "title": "Packages",
+    "section": "",
+    "text": "17 packages in three tiers. Core packages are maintained and safe to build on. Experimental ones move fast. Abandoned ones stay online for reference.\n\n\nCore\n\nMaintained by ThinkR, safe to build on\n\n\n\n\n\n\ngolem{golem} is an opinionated framework for building production-grade {shiny} applications.\n\nCoreCRAN\n\n\n\n\n\n\nshinipsum{shinipsum} provides a set of functions to generate dummy widgets and content for {shiny} applications.\n\nCoreCRAN\n\n\n\n\n\n\nfakir{fakir} provides a set of functions to generate random data that can be used for prototyping.\n\nCoreCRAN\n\n\n\n\n\n\ngargoyle{gargoyle} is an alternative way to manage reactivity in {shiny}.\n\nCoreCRAN\n\n\n\n\n\n\ndockerfilerBuild dockerfile straight from R.\n\nCoreCRAN\n\n\n\n\n\n\npw{pw} lets you test your {golem} and {shiny} applications with Playwright.\n\nCoreGitHub only\n\n\n\n\n\n\nbootstrict{bootstrict} provides strict, faithful Bootstrap 5 widgets for {shiny}.\n\nCoreGitHub only\n\n\n\n\n\n\ngolem-agent-skillsgolem-agent-skills brings agentic coding to {golem}.\n\nCoreGitHub only\n\n\n\n\n\n\nbrochureNatively multipage {shiny} apps.\n\nCoreGitHub only\n\n\n\n\nNo matching items\n\n\n\nExperimental\n\nMoving fast, expect rough edges\n\n\n\n\n\n\nbankAlternative caching backends for {memoise} & {shiny}.\n\nExperimentalGitHub only\n\n\n\n\n\n\nelvis‘Shiny’ renderers and observers made safer.\n\nExperimentalGitHub only\n\n\n\n\n\n\nghooks{golem} hooks.\n\nExperimentalGitHub only\n\n\n\n\n\n\nshinidrawExcalidraw in {shiny}.\n\nExperimentalGitHub only\n\n\n\n\nNo matching items\n\n\n\nAbandoned\n\nNo longer maintained, kept for reference\n\n\n\n\n\n\ngemstonesExtend your {golem} application with external JS libraries.\n\nAbandonedGitHub only\n\n\n\n\n\n\nw3cssW3 CSS in {shiny}.\n\nAbandonedGitHub only\n\n\n\n\n\n\nskeletonSkeleton CSS in {shiny}.\n\nAbandonedGitHub only\n\n\n\n\n\n\nminifyrMinify CSS, HTML and JavaScript Files.\n\nAbandonedGitHub only\n\n\n\n\nNo matching items\n\n\n\n\nHealth at a glance\n\n\nLive numbers from CRAN and GitHub.\n\n\n\n\n\n\n\n\nPackage\n\n\nTier\n\n\nLifecycle\n\n\nCRAN\n\n\nDownloads / month\n\n\nStars\n\n\nOpen issues\n\n\nLast commit\n\n\n\n\n\n\ngolem\n\n\nCore\n\n\nstable\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nshinipsum\n\n\nCore\n\n\nstable\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nfakir\n\n\nCore\n\n\nstable\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\ngargoyle\n\n\nCore\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\ndockerfiler\n\n\nCore\n\n\nstable\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\npw\n\n\nCore\n\n\nexperimental\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nbootstrict\n\n\nCore\n\n\nexperimental\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\ngolem-agent-skills\n\n\nCore\n\n\nexperimental\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nbrochure\n\n\nCore\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nbank\n\n\nExperimental\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nelvis\n\n\nExperimental\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nghooks\n\n\nExperimental\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nshinidraw\n\n\nExperimental\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\ngemstones\n\n\nAbandoned\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nw3css\n\n\nAbandoned\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nskeleton\n\n\nAbandoned\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\nminifyr\n\n\nAbandoned\n\n\ndormant\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n—\n\n\n\n\n\n\nDownloads are the last 30 days on CRAN, from cranlogs via r-universe; they are shown only for packages on CRAN. Stars and issues come from the GitHub API."
+  },
+  {
+    "objectID": "packages/minifyr/index.html#install",
+    "href": "packages/minifyr/index.html#install",
+    "title": "minifyr",
+    "section": "Install",
+    "text": "Install\n# Development version\npak::pak(\"colinfay/minifyr\")"
+  },
+  {
+    "objectID": "packages/minifyr/index.html#links",
+    "href": "packages/minifyr/index.html#links",
+    "title": "minifyr",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source colinfay/minifyr Report an issue issues CI status R-CMD-check"
+  },
+  {
+    "objectID": "packages/fakir/index.html#install",
+    "href": "packages/fakir/index.html#install",
+    "title": "fakir",
+    "section": "Install",
+    "text": "Install\n# From CRAN\ninstall.packages(\"fakir\")\n\n# Development version\npak::pak(\"ThinkR-open/fakir\")"
+  },
+  {
+    "objectID": "packages/fakir/index.html#links",
+    "href": "packages/fakir/index.html#links",
+    "title": "fakir",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/fakir Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
+  },
+  {
     "objectID": "packages/bootstrict/index.html#install",
     "href": "packages/bootstrict/index.html#install",
     "title": "bootstrict",
@@ -742,6 +462,48 @@
     "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/bootstrict Report an issue issues CI status R-CMD-check"
   },
   {
+    "objectID": "stream/2020-01-23-twitch/index.html",
+    "href": "stream/2020-01-23-twitch/index.html",
+    "title": "Second live stream",
+    "section": "",
+    "text": "Colin will live stream on Twitch how to build a Shiny application with {golem}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-01-23 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-01-23 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-01-23 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-01-23 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-01-23 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-01-24 07:00:00 AEDT\""
+  },
+  {
+    "objectID": "stream/2020-01-13-twitch/index.html",
+    "href": "stream/2020-01-13-twitch/index.html",
+    "title": "First live stream 🎂",
+    "section": "",
+    "text": "Colin will live stream on Twitch how to build a Shiny application with {golem}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-01-13 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-01-13 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-01-13 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-01-13 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-01-13 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-01-14 07:00:00 AEDT\""
+  },
+  {
+    "objectID": "stream/2022-02-10-twitch/index.html",
+    "href": "stream/2022-02-10-twitch/index.html",
+    "title": "Let’s build a new app!",
+    "section": "",
+    "text": "Let’s start building a new app with {golem} and {brochure}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2022-02-10 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2022-02-10 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2022-02-10 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2022-02-10 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2022-02-10 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2022-02-11 07:00:00 AEDT\""
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nShiny apps, engineered for production.\n",
+    "section": "",
+    "text": "New{brochure} 1.0.0 is now on CRAN\nNo matching items\n\n\nThe golemverse is a family of R packages for building, testing and shipping robust {shiny} applications, from the first prototype to the Dockerfile.\n\nGet started with {golem}Read the book\n\n# From CRAN\ninstall.packages(\"golem\")\ngolem::create_golem(\"myapp\", with_agents = TRUE)\n\n\n\n\n\n\n\n\n      \n\n+ 16 more"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "\nShiny apps, engineered for production.\n",
+    "section": "Contact",
+    "text": "Contact\nContact us via the ThinkR website."
+  },
+  {
+    "objectID": "documentation/index.html",
+    "href": "documentation/index.html",
+    "title": "golemverse",
+    "section": "",
+    "text": "&lt;!doctype html&gt;"
+  },
+  {
     "objectID": "stream/index.html",
     "href": "stream/index.html",
     "title": "Streams",
@@ -749,10 +511,325 @@
     "text": "Let’s build a new app!\n\n\n\n\n\n\n\n\nFeb 10, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nOverview of {hexmake}\n\n\n\n\n\n\n\n\nApr 2, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nSecond live stream\n\n\n\n\n\n\n\n\nJan 23, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nFirst live stream 🎂\n\n\n\n\n\n\n\n\nJan 13, 2020\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "stream/2020-01-23-twitch/index.html",
-    "href": "stream/2020-01-23-twitch/index.html",
-    "title": "Second live stream",
+    "objectID": "stream/2020-04-02-twitch/index.html",
+    "href": "stream/2020-04-02-twitch/index.html",
+    "title": "Overview of {hexmake}",
     "section": "",
-    "text": "Colin will live stream on Twitch how to build a Shiny application with {golem}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-01-23 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-01-23 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-01-23 20:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-01-23 15:00:00 EST\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-01-23 12:00:00 PST\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-01-24 07:00:00 AEDT\""
+    "text": "Colin will be live talking about the internals of {hexmake}.\n\n\n👨‍💻 Colin Fay, @_ColinFay\n\n\n🔗 https://www.twitch.tv/thinkr_fr\n\n\n⏳ 2020-04-02 21:00:00 Paris Time.\n\n\n\n\n See Event in Other Timezones \n\n\ndate &lt;- lubridate::ymd_hms(\"2020-04-02 21:00:00\", tz = \"Europe/Paris\")\n\nlubridate::with_tz(date, \"UTC\")\n\n[1] \"2020-04-02 19:00:00 UTC\"\n\nlubridate::with_tz(date, \"America/New_York\")\n\n[1] \"2020-04-02 15:00:00 EDT\"\n\nlubridate::with_tz(date, \"America/Los_Angeles\")\n\n[1] \"2020-04-02 12:00:00 PDT\"\n\nlubridate::with_tz(date, \"Australia/Sydney\")\n\n[1] \"2020-04-03 06:00:00 AEDT\""
+  },
+  {
+    "objectID": "gameofgoose/index.html",
+    "href": "gameofgoose/index.html",
+    "title": "Golemverse Game of Goose",
+    "section": "",
+    "text": "Welcome to the Golemverse Game of Goose!\n\n\n\nStart with the idea 💡\nRole the dice 🎲\nMove your pawn ♟️\nIf you end on a bridge: move to the next bridge 🌉\nIf you end on a dice: play again 🎲\nIf you end on the skull: start again 💀\nIf you end on the well: skip one turn ䷯\nThe game is finished when you reach the end user 👩‍💻"
+  },
+  {
+    "objectID": "gameofgoose/index.html#rules-of-the-game",
+    "href": "gameofgoose/index.html#rules-of-the-game",
+    "title": "Golemverse Game of Goose",
+    "section": "",
+    "text": "Start with the idea 💡\nRole the dice 🎲\nMove your pawn ♟️\nIf you end on a bridge: move to the next bridge 🌉\nIf you end on a dice: play again 🎲\nIf you end on the skull: start again 💀\nIf you end on the well: skip one turn ䷯\nThe game is finished when you reach the end user 👩‍💻"
+  },
+  {
+    "objectID": "packages/brochure/index.html#install",
+    "href": "packages/brochure/index.html#install",
+    "title": "brochure",
+    "section": "Install",
+    "text": "Install\n# Development version\npak::pak(\"colinfay/brochure\")"
+  },
+  {
+    "objectID": "packages/brochure/index.html#links",
+    "href": "packages/brochure/index.html#links",
+    "title": "brochure",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source colinfay/brochure Report an issue issues CI status R-CMD-check"
+  },
+  {
+    "objectID": "packages/elvis/index.html#install",
+    "href": "packages/elvis/index.html#install",
+    "title": "elvis",
+    "section": "Install",
+    "text": "Install\n# Development version\npak::pak(\"thinkr-open/elvis\")"
+  },
+  {
+    "objectID": "packages/elvis/index.html#links",
+    "href": "packages/elvis/index.html#links",
+    "title": "elvis",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/elvis Report an issue issues CI status R-CMD-check"
+  },
+  {
+    "objectID": "packages/dockerfiler/index.html#install",
+    "href": "packages/dockerfiler/index.html#install",
+    "title": "dockerfiler",
+    "section": "Install",
+    "text": "Install\n# From CRAN\ninstall.packages(\"dockerfiler\")\n\n# Development version\npak::pak(\"thinkr-open/dockerfiler\")"
+  },
+  {
+    "objectID": "packages/dockerfiler/index.html#links",
+    "href": "packages/dockerfiler/index.html#links",
+    "title": "dockerfiler",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/dockerfiler Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
+  },
+  {
+    "objectID": "packages/ghooks/index.html#install",
+    "href": "packages/ghooks/index.html#install",
+    "title": "ghooks",
+    "section": "Install",
+    "text": "Install\n# Development version\npak::pak(\"thinkr-open/ghooks\")"
+  },
+  {
+    "objectID": "packages/ghooks/index.html#links",
+    "href": "packages/ghooks/index.html#links",
+    "title": "ghooks",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/ghooks Report an issue issues CI status R-CMD-check"
+  },
+  {
+    "objectID": "packages/w3css/index.html#install",
+    "href": "packages/w3css/index.html#install",
+    "title": "w3css",
+    "section": "Install",
+    "text": "Install\n# Development version\npak::pak(\"thinkr-open/w3css\")"
+  },
+  {
+    "objectID": "packages/w3css/index.html#links",
+    "href": "packages/w3css/index.html#links",
+    "title": "w3css",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/w3css Report an issue issues CI status R-CMD-check"
+  },
+  {
+    "objectID": "packages/golem-agent-skills/index.html#install",
+    "href": "packages/golem-agent-skills/index.html#install",
+    "title": "golem-agent-skills",
+    "section": "Install",
+    "text": "Install\n# Development version\npak::pak(\"ThinkR-open/golem-agent-skills\")"
+  },
+  {
+    "objectID": "packages/golem-agent-skills/index.html#links",
+    "href": "packages/golem-agent-skills/index.html#links",
+    "title": "golem-agent-skills",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/golem-agent-skills Report an issue issues"
+  },
+  {
+    "objectID": "packages/skeleton/index.html#install",
+    "href": "packages/skeleton/index.html#install",
+    "title": "skeleton",
+    "section": "Install",
+    "text": "Install\n# Development version\npak::pak(\"colinfay/skeleton\")"
+  },
+  {
+    "objectID": "packages/skeleton/index.html#links",
+    "href": "packages/skeleton/index.html#links",
+    "title": "skeleton",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source colinfay/skeleton Report an issue issues CI status R-CMD-check"
+  },
+  {
+    "objectID": "packages/shinipsum/index.html#install",
+    "href": "packages/shinipsum/index.html#install",
+    "title": "shinipsum",
+    "section": "Install",
+    "text": "Install\n# From CRAN\ninstall.packages(\"shinipsum\")\n\n# Development version\npak::pak(\"ThinkR-open/shinipsum\")"
+  },
+  {
+    "objectID": "packages/shinipsum/index.html#links",
+    "href": "packages/shinipsum/index.html#links",
+    "title": "shinipsum",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source ThinkR-open/shinipsum Report an issue issues CI status R-CMD-check CRAN page cran.r-project.org"
+  },
+  {
+    "objectID": "packages/shinidraw/index.html#install",
+    "href": "packages/shinidraw/index.html#install",
+    "title": "shinidraw",
+    "section": "Install",
+    "text": "Install\n# Development version\npak::pak(\"thinkr-open/shinidraw\")"
+  },
+  {
+    "objectID": "packages/shinidraw/index.html#links",
+    "href": "packages/shinidraw/index.html#links",
+    "title": "shinidraw",
+    "section": "Links",
+    "text": "Links\n\nReference and vignettes pkgdown Source thinkr-open/shinidraw Report an issue issues CI status R-CMD-check"
+  },
+  {
+    "objectID": "roadmap/index.html",
+    "href": "roadmap/index.html",
+    "title": "golemverse’s roadmap",
+    "section": "",
+    "text": "Here is a list of things the golemverse team plans on working on.\nIf you feel like helping, feel free to open an issue / discussion / PR on one of the repository.\nLast edit: (2026-09-15)"
+  },
+  {
+    "objectID": "roadmap/index.html#short-term-roadmap-3-to-6-months",
+    "href": "roadmap/index.html#short-term-roadmap-3-to-6-months",
+    "title": "golemverse’s roadmap",
+    "section": "Short term roadmap (3 to 6 months)",
+    "text": "Short term roadmap (3 to 6 months)\n\nStable, CRAN version for {bootstrict}\nStable, CRAN version for {pw}"
+  },
+  {
+    "objectID": "roadmap/index.html#mid-term-6-to-12-months",
+    "href": "roadmap/index.html#mid-term-6-to-12-months",
+    "title": "golemverse’s roadmap",
+    "section": "Mid term (6 to 12 months)",
+    "text": "Mid term (6 to 12 months)\n\nDashboard template for {brochure}\n{golemverse} package à la {tidyverse} to simplify installation.\nIntegrate a storage mechanism in {gargoyle}. I’m thinking of a simple port of https://github.com/ColinFay/odds. https://github.com/ColinFay/gargoyle/issues/12\nWrite a blogpost about {gargoyle}"
+  },
+  {
+    "objectID": "news/fakir-1.0.0-on-cran/index.html",
+    "href": "news/fakir-1.0.0-on-cran/index.html",
+    "title": "{fakir} 1.0.0 is now on CRAN",
+    "section": "",
+    "text": "I’m very happy to announce that {fakir} is now on CRAN.\n{fakir} stands for FAKe In R. It’s a package that generates fake datasets that can be used for prototyping {shiny} apps or for teaching."
+  },
+  {
+    "objectID": "news/fakir-1.0.0-on-cran/index.html#installation",
+    "href": "news/fakir-1.0.0-on-cran/index.html#installation",
+    "title": "{fakir} 1.0.0 is now on CRAN",
+    "section": "Installation",
+    "text": "Installation\nYou can install the latest version from your favorite CRAN repository with:\ninstall.packages(\"fakir\")"
+  },
+  {
+    "objectID": "news/fakir-1.0.0-on-cran/index.html#examples",
+    "href": "news/fakir-1.0.0-on-cran/index.html#examples",
+    "title": "{fakir} 1.0.0 is now on CRAN",
+    "section": "Examples",
+    "text": "Examples\n\nFake support tickets\n\nfakir::fake_ticket_client(vol = 10)\n\n# A tibble: 10 × 25\n   ref           num_client first    last  job     age region id_dpt departement\n   &lt;chr&gt;         &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;      \n 1 DOSS-AMQN-002 79         Jovan    O'Ke… Gene…    22 Bourg… 58     Nièvre     \n 2 DOSS-NCKJ-010 69         Miss     Lean… Emer…    68 &lt;NA&gt;   36     Indre      \n 3 DOSS-GPBE-009 120        Odell    Stok… Engi…    24 Limou… 87     Haute-Vien…\n 4 DOSS-GRLN-001 31         Loren    Lars… &lt;NA&gt;     NA Centre 36     Indre      \n 5 DOSS-LEPJ-004 59         Maybelle Maye… Furt…    18 Champ… 08     Ardennes   \n 6 DOSS-DUCL-005 118        Jamarion Ober… Engi…    18 Alsace 67     Bas-Rhin   \n 7 DOSS-OCED-003 77         Lee      Scha… Admi…    NA Auver… 03     Allier     \n 8 DOSS-KXSJ-007 65         Demetric Auer  Cont…    21 Centre 45     Loiret     \n 9 DOSS-UITD-006 141        Wilfrid  Harv… Educ…    53 Aquit… 40     Landes     \n10 DOSS-SHKL-008 182        Addyson  Nien… Earl…    65 Prove… 84     Vaucluse   \n# ℹ 16 more variables: cb_provider &lt;chr&gt;, name &lt;chr&gt;, entry_date &lt;dttm&gt;,\n#   fidelity_points &lt;dbl&gt;, priority_encoded &lt;dbl&gt;, priority &lt;fct&gt;,\n#   timestamp &lt;date&gt;, year &lt;dbl&gt;, month &lt;dbl&gt;, day &lt;int&gt;, supported &lt;chr&gt;,\n#   supported_encoded &lt;int&gt;, type &lt;chr&gt;, type_encoded &lt;int&gt;, state &lt;fct&gt;,\n#   source_call &lt;fct&gt;\n\n\n\n\nFake dataset of connected wearables\n\nfakir::fake_products(10)\n\n# A tibble: 10 × 8\n   name                 brand color price body_location category sent_from    id\n   &lt;chr&gt;                &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;    &lt;chr&gt;     &lt;int&gt;\n 1 Step and Distance P… Lark… Pink      3 Waist         Industr… Taiwan        1\n 2 Biking Tracker U Pr… Lark… Oliv…     5 Waist         Pets an… United S…     2\n 3 Wearable Transmitte… Moen… Beige     4 Feet          Lifesty… Netherla…     3\n 4 Multifunction Track… Weim… Yell…     5 Head          Lifesty… China         4\n 5 Action Camera Pro    Blan… Mocc…    10 Brain         Lifesty… Italy         5\n 6 Strapless Heart Rat… Mann… Deep…     4 Head          Medical  Finland       6\n 7 Action Camera RE Pr… Mann… Maro…     5 Feet          Enterta… Finland       7\n 8 Microcontroller ES   Moen… Pink      3 Neck          Fitness  Finland       8\n 9 Microcontroller OGB… Moen… Plum      5 Arms          Awesome  France        9\n10 Wearable AUSG with … Moen… Dark…     9 Torso         Medical  Italy        10\n\n\n\n\nFake website visits\n\nfakir::fake_visits(\n  from = \"2017-01-01\",\n  to = \"2017-01-31\"\n)\n\n# A tibble: 31 × 8\n   timestamp   year month   day  home about  blog contact\n * &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;\n 1 2017-01-01  2017     1     1   369   220   404     210\n 2 2017-01-02  2017     1     2   159   250   414     490\n 3 2017-01-03  2017     1     3   436   170   498     456\n 4 2017-01-04  2017     1     4    NA   258   526     392\n 5 2017-01-05  2017     1     5   362    NA   407     291\n 6 2017-01-06  2017     1     6   245   145   576      90\n 7 2017-01-07  2017     1     7    NA    NA   484     167\n 8 2017-01-08  2017     1     8   461   103   441      NA\n 9 2017-01-09  2017     1     9   337   113   673     379\n10 2017-01-10  2017     1    10    NA   169   308     139\n# ℹ 21 more rows"
+  },
+  {
+    "objectID": "news/fakir-1.0.0-on-cran/index.html#contribution-feedback",
+    "href": "news/fakir-1.0.0-on-cran/index.html#contribution-feedback",
+    "title": "{fakir} 1.0.0 is now on CRAN",
+    "section": "Contribution & Feedback",
+    "text": "Contribution & Feedback\nYou can contribute to {fakir} in various ways:\n\nFeedback\nIf you discover any bug or have any feedback on the dataset generators, feel free to open an issue on the repo.\n\n\nTranslate\nSome datasets are available in french and english:\n\nfakir::fake_visits(\n  from = \"2017-01-01\",\n  to = \"2017-01-31\",\n  local = \"fr_FR\"\n)\n\n# A tibble: 31 × 8\n   dates         an  mois  jour accueil a_propos  blog contact\n * &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;   &lt;int&gt;    &lt;int&gt; &lt;int&gt;   &lt;int&gt;\n 1 2017-01-01  2017     1     1     369      220   404     210\n 2 2017-01-02  2017     1     2     159      250   414     490\n 3 2017-01-03  2017     1     3     436      170   498     456\n 4 2017-01-04  2017     1     4      NA      258   526     392\n 5 2017-01-05  2017     1     5     362       NA   407     291\n 6 2017-01-06  2017     1     6     245      145   576      90\n 7 2017-01-07  2017     1     7      NA       NA   484     167\n 8 2017-01-08  2017     1     8     461      103   441      NA\n 9 2017-01-09  2017     1     9     337      113   673     379\n10 2017-01-10  2017     1    10      NA      169   308     139\n# ℹ 21 more rows\n\n\nAnd we will be very happy to bring new languages in the package.\n\n\nNew dataset\nFeel free to create new datasets generators.\n\nIf you want to contribute a new language or a new dataset, please open an issue first so that we can discuss and keep track of it!"
+  },
+  {
+    "objectID": "news/index.html",
+    "href": "news/index.html",
+    "title": "Posts",
+    "section": "",
+    "text": "{brochure} 1.0.0 is now on CRAN\n\n\n\n\n\n\n\n\nOct 15, 2026\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 1.0.0 is here\n\n\n\n\n\n\n\n\nJul 10, 2026\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nServe your {golem} app to {shinylive}\n\n\n\n\n\n\n\n\nJan 8, 2025\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.5.1 is now available\n\n\n\n\n\n\n\n\nAug 28, 2024\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{fakir} 1.0.0 is now on CRAN\n\n\n\n\n\n\n\n\nApr 19, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nMinimalist and Elegant {shiny} apps with {skeleton}\n\n\n\n\n\n\n\n\nApr 13, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.4.0 is now available\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.3.2 is now available\n\n\n\n\n\n\n\n\nMar 11, 2022\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nJoin HacktoberFest 2021 with {golem} (and more)!\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\nAbout {golem} 0.3.1\n\n\n\n\n\n\n\n\nMay 28, 2021\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{shinipsum} is now on CRAN\n\n\n\n\n\n\n\n\nMay 10, 2020\n\n\ncolin\n\n\n\n\n\n\n\n\n\n\n\n\n{golem} 0.1.0 has been released on CRAN\n\n\n\n\n\n\n\n\nAug 5, 2019\n\n\nSebastien Rochette\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "news/golem-0.3.2-release-on-cran/index.html",
+    "href": "news/golem-0.3.2-release-on-cran/index.html",
+    "title": "{golem} 0.3.2 is now available",
+    "section": "",
+    "text": "The new version of {golem} is now available!\nYou can download it from your favorite CRAN repository, or by running the following command:"
+  },
+  {
+    "objectID": "news/golem-0.3.2-release-on-cran/index.html#whats-up-with-this-new-version",
+    "href": "news/golem-0.3.2-release-on-cran/index.html#whats-up-with-this-new-version",
+    "title": "{golem} 0.3.2 is now available",
+    "section": "What’s up with this new version?",
+    "text": "What’s up with this new version?\nIn this release, we have been focusing on a closer integration of tests inside the application building process, notably via Server function testing with Shiny, adding tests to fct, utils, and the ui & server functions that comes with {golem}.\nStarting with this version of {golem}, the integration of tests is opt-in:\ngolem::add_module(\"plop\", with_test = TRUE)\ngolem::add_fct(\"helpers\", with_test = TRUE)\nNote that these will be opt-out in the next release — in other words they will be TRUE by default in the future.\nWe also have squashed a bunch of issues, for example amend_config() now keeps !expr (this use to cause some errors when the project was shared across multiple computers), expect_running() now finds R.exe, some adjustments has been made to fit new version of packages (for example testthat::expect_is is no longer used, and we require the correct version of {usethis}).\nFor a full list of changes, please refer to the NEWS.md file."
+  },
+  {
+    "objectID": "news/golem-0.3.2-release-on-cran/index.html#whats-next",
+    "href": "news/golem-0.3.2-release-on-cran/index.html#whats-next",
+    "title": "{golem} 0.3.2 is now available",
+    "section": "What’s next",
+    "text": "What’s next\nNow that this version is stable, we can start working on the next version, which will be 0.4.0.\nOne of the thing that has been an issue with the way {golem} works is that it is used in two contexts: for dev, and for deployment.\nThe issue with that approach is that when deloying a golem-based app, you will have to install packages that are only used for dev, for exemple {usethis}, while they are not required to run the app.\nThis next version will focus on removing these packages from hard dependencies and move them to suggest, so that you can install them while developing but not when deploying, making the deployment process way easier and lighter. Note that the current version of {golem} (0.3.2) has already made a move in this direction by moving {dockerfiler} to Suggest, and making it only required when building the containers.\nFollow the Version 0.4.0 board for more!"
+  },
+  {
+    "objectID": "news/golem-0.3.2-release-on-cran/index.html#thanks",
+    "href": "news/golem-0.3.2-release-on-cran/index.html#thanks",
+    "title": "{golem} 0.3.2 is now available",
+    "section": "Thanks",
+    "text": "Thanks\nWe want to thank all the people who have contributed to this version, either by opening PR, feature requests, or bug report.\n@abidawson, @abnercasallo, @aftonsteps, @AMillanFL, @antoine-sachet, @ArthurPERE, @artpulsion, @cderv, @chintanp, @ChrisBeeley, @CorradoLanera, @csgillespie, @daattali, @DivadNojnarg, @durandsinclair, @dwhdai, @dylanrussellmd, @earnaud, @fBedecarrats, @feddelegrand7, @fizic37, @fvitalini, @gacolitti, @genobobeno, @hadley, @HanjoStudy, @henrique1008, @jacksonschan, @jacobwindsor, @jaybee84, @jcrodriguez1989, @jennahamlin, @julianstanley, @KasperThystrup, @Kastakin, @KoderKow, @kprimice, @mahelious, @MayaGans, @mcsiple, @michaelhogersnplm, @moodymudskipper, @mraess, @novica, @nvelden, @quickbendelat, @rgaube, @riccardoporreca, @RichardPilbery, @robertoromor, @seanhardison1, @ShinyFabio, @sjspielman, @Swechhya, @TimotheeTournier, @VincentAlcazer, @Welsh44, @yogat3ch, @yonicd, @zchmielewska, and @ZimmermannYves."
+  },
+  {
+    "objectID": "news/2020-05-10_shinipsum-cran-realease/index.html",
+    "href": "news/2020-05-10_shinipsum-cran-realease/index.html",
+    "title": "{shinipsum} is now on CRAN",
+    "section": "",
+    "text": "I’m very happy to announce that {shinipsum} is now on CRAN!\n{shinipsum} is a package that can help you build {shiny} prototypes faster by providing a series of functions that can generate random elements to populate your UI. If you are familiar with “lorem ipsum”, the fake text generator that is used in software design as a placeholder for text, the idea is the same: generating placeholders for Shiny outputs.\n{shinipsum} can be installed from CRAN with:\n\ninstall.packages(\"shinipsum\")\n\nYou can install this package from GitHub with:\n\nremotes::install_github(\"Thinkr-open/shinipsum\")\n\nIn this package, a series of functions that generates random placeholders. For example, random_ggplot() generates random {ggplot2} elements:\n\nlibrary(shinipsum)\nlibrary(ggplot2)\n\n\nrandom_ggplot() +\n  labs(title = \"Random plot\")\n\n\n\n\n\n\n\n\n\nrandom_ggplot() +\n  labs(title = \"Random plot\")\n\n\n\n\n\n\n\n\nOf course, the idea is to combine this with a Shiny interface, for example random_ggplot() will be used with a renderPlot() and plotOutput(). And as we want to prototype but still be close to what your final application will look like, these functions take arguments that can shape the output: for example, random_ggplot() has a type parameter that can help you select a specific geom.\n\nlibrary(shiny)\nlibrary(shinipsum)\nlibrary(DT)\nui &lt;- fluidPage(\n  h2(\"A Random DT\"),\n  DTOutput(\"data_table\"),\n  h2(\"A Random Plot\"),\n  plotOutput(\"plot\"),\n  h2(\"A Random Text\"),\n  tableOutput(\"text\")\n)\n\nserver &lt;- function(input, output, session) {\n  output$data_table &lt;- DT::renderDT({\n    random_DT(5, 5)\n  })\n  output$plot &lt;- renderPlot({\n    random_ggplot(type = \"point\")\n  })\n  output$text &lt;- renderText({\n    random_text(nwords = 50)\n  })\n}\nshinyApp(ui, server)\n\nOther {shinipsum} functions include:\n\ntables:\n\n\nrandom_table(nrow = 3, ncol = 10)\n\n  Plant   Type  Treatment conc uptake Plant.1 Type.1 Treatment.1 conc.1\n1   Qn1 Quebec nonchilled   95   16.0     Qn1 Quebec  nonchilled     95\n2   Qn1 Quebec nonchilled  175   30.4     Qn1 Quebec  nonchilled    175\n3   Qn1 Quebec nonchilled  250   34.8     Qn1 Quebec  nonchilled    250\n  uptake.1\n1     16.0\n2     30.4\n3     34.8\n\n\n\nprint outputs:\n\n\nrandom_print(type = \"model\")\n\n\n    Pearson's product-moment correlation\n\ndata:  datasets::mtcars$mpg and datasets::mtcars$cyl\nt = -8.9197, df = 30, p-value = 6.113e-10\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n -0.9257694 -0.7163171\nsample estimates:\n      cor \n-0.852162 \n\n\n… and text, image, ggplotly, dygraph, and DT.\nLearn more about {shinipsum}:\n\n{shinipsum} website\nChapter 10 Building an “ipsum-app” - Engineering Production-Grade Shiny Apps"
+  },
+  {
+    "objectID": "news/golem-0.1.0-release-on-cran/index.html",
+    "href": "news/golem-0.1.0-release-on-cran/index.html",
+    "title": "{golem} 0.1.0 has been released on CRAN",
+    "section": "",
+    "text": "golem (v0.1) A Framework for Building Robust Shiny Apps:\n\n{golem} on CRAN\n{golem} on GitHub\npkgdown and vignettes"
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "",
+    "text": "A {shiny} app is a single page: one url, one UI, one server function. That is comfortable while the app stays small. As soon as you want an actual site, with a home page, a contact page, one page per user, urls people can bookmark or send by email, you end up faking pages with tabs and conditionalPanel(), and carrying the whole app in memory on every one of them.\n{brochure} takes the problem the other way around: every page is a real page, with its own url, its own UI, its own server function and its own Shiny session. It is now on CRAN, in a stable 1.0.0."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#a-first-app",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#a-first-app",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "A first app",
+    "text": "A first app\nYou declare a page() with its own href, its UI, and a server function if the page needs one. brochureApp() assembles them into an app you run like any other.\nlibrary(shiny)\nlibrary(brochure)\n\nbrochureApp(\n  page(\n    href = \"/\",\n    ui = fluidPage(\n      h1(\"Home\"),\n      plotOutput(\"plot\"),\n      tags$a(href = \"/contact\", \"Contact us\")\n    ),\n    server = function(input, output, session) {\n      output$plot &lt;- renderPlot({\n        plot(iris)\n      })\n    }\n  ),\n  page(\n    href = \"/contact\",\n    ui = fluidPage(\n      h1(\"Contact\"),\n      tags$p(\"No server function in this one.\")\n    )\n  ),\n  redirect(from = \"/index.html\", to = \"/\")\n)\nNavigate to / and to /contact. Moving from one to the other is a plain link: the browser leaves the first page and opens a new session on the second one. The home page runs its renderPlot(), and the contact page has no server function, so nothing runs there."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#urls-that-carry-something",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#urls-that-carry-something",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "Urls that carry something",
+    "text": "Urls that carry something\nAn href can hold a variable segment, and the page reads what it matched with get_keys(): no argument inside the server, the request inside the UI.\npage(\n  href = \"/user/:id\",\n  ui = function(request) {\n    fluidPage(h1(paste(\"User\", get_keys(request)$id)))\n  },\n  server = function(input, output, session) {\n    message(\"Serving user \", get_keys()$id)\n  }\n)\n{routr} handles the dispatch. A page can also answer on a method other than GET, which is what you want for a form post or a webhook."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#doing-things-before-shiny",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#doing-things-before-shiny",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "Doing things before Shiny",
+    "text": "Doing things before Shiny\nBetween the moment a browser asks for a page and the moment it gets an answer, {brochure} gives you two places to intervene: req_handlers run before Shiny builds anything, res_handlers run on the way out. In {shiny} terms, this is code that runs where no reactive context exists yet.\nbrochureApp(\n  page(href = \"/\", ui = tagList(h1(\"Home\"))),\n  req_handlers = list(\n    function(req) {\n      message(Sys.time(), \" - \", req$PATH_INFO)\n      req\n    }\n  )\n)\nA request handler that returns an httpResponse short-circuits: the response is sent immediately and no Shiny session is created. That is how you serve something that is not a page from inside a Shiny app, like a healthcheck for your orchestrator, a webhook receiver or a small JSON endpoint."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#carrying-state-between-pages",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#carrying-state-between-pages",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "Carrying state between pages",
+    "text": "Carrying state between pages\nEvery page is a new session, so nothing computed on one survives a navigation to another. State shared between pages has to be written down somewhere, and the usual place is a cookie, set from a response handler and read back from the page server.\npage(\n  href = \"/login\",\n  ui = tagList(h1(\"You are logged in\")),\n  res_handlers = list(\n    ~ set_cookie(.x, \"SESSION\", \"a-random-id\", path = \"/\")\n  )\n)\nset_cookie() defaults to http_only = TRUE and same_site = \"Lax\", and checks names and values against the character set cookies allow. vignette(\"cookies\") covers the whole pattern, logout included."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#deploying-it",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#deploying-it",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "Deploying it",
+    "text": "Deploying it\nA brochure app is a Shiny app, so it deploys like one. The part specific to serving several urls is the prefix your app is mounted under: behind a reverse proxy, on shinyProxy or on Posit Connect, {brochure} finds that mount, strips it from incoming requests and prefixes the urls the app emits. vignette(\"deployment\") walks through the configurations."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#and-with-golem",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#and-with-golem",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "And with {golem}",
+    "text": "And with {golem}\nIf you build your Shiny apps as packages, golem_hook() turns a golem app into a brochure app: it sets up the app object, creates a first page as a module, adds {brochure} to your Imports, and writes a test for that page along with the testthat structure to run it under R CMD check."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#what-it-costs",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#what-it-costs",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "What it costs",
+    "text": "What it costs\nA brochure app is not a single page application any more, and that changes things: a navigation is a full page load, nothing computed on one page is available on the next, all pages share one R process, and a page that blocks holds up every other page. vignette(\"design\") says all of it, including when not to reach for {brochure}."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#where-to-read-more",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#where-to-read-more",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "Where to read more",
+    "text": "Where to read more\nEverything lives at colinfay.me/brochure: get started, handlers, cookies, design, deployment, testing and golem."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#if-you-were-running-the-github-version",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#if-you-were-running-the-github-version",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "If you were running the GitHub version",
+    "text": "If you were running the GitHub version\n1.0.0 rewrites the routing on top of {routr} and fixes a long list of bugs, so a few things change on the way:\n\nkeys is gone. A parameterised page used to read its matched values from a keys object installed in the global environment, invisible from a module, a golem app or any local(). Use get_keys().\nset_cookie() has safer defaults (http_only = TRUE, same_site = \"Lax\"), and cookie values, domains, paths and redirect targets are validated rather than interpolated as is.\n... in brochureApp() is typed. It takes page()s, redirect()s, tags, tag lists, html dependencies and strings; anything else is an error. A bare list of pages is spliced, so brochureApp(list(page_1(), page_2())) builds two pages.\n\nThe changelog has the rest."
+  },
+  {
+    "objectID": "news/brochure-1.0.0-release-on-cran/index.html#feedback",
+    "href": "news/brochure-1.0.0-release-on-cran/index.html#feedback",
+    "title": "{brochure} 1.0.0 is now on CRAN",
+    "section": "Feedback",
+    "text": "Feedback\nBugs, ideas and questions go to the issue tracker.\nHappy multipaging 🚀"
   }
 ]
